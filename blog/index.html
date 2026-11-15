@@ -9,6 +9,8 @@
 <meta property="og:description" content="No training, no engine change: the </think> row reads the model's own hidden state. DeepSeek V4.1 (763B on a laptop) and Qwen3.5-4B.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -38,7 +40,10 @@ a{color:var(--accent);text-underline-offset:2px}
 .tldr{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:6px;padding:18px 22px 6px;margin:0 0 30px}
 .tldr b.t{font:600 13px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px}
 .tldr ul{margin:0;padding-left:20px}.tldr li{margin:0 0 10px}
-code,.mono{font-family:var(--mono);font-size:.84em}
+code,.mono{font-family:var(--mono);font-size:.84em;font-variant-ligatures:none}
+pre{font-variant-ligatures:none}
+.eq .katex-display{margin:0}
+@media (max-width:600px){.eq{padding:12px 6px}.eq .katex{font-size:.8em!important}}.eq .katex{font-size:1.12em}.m .katex{font-size:1.04em}
 code{background:var(--soft);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
 pre{font:13.5px/1.55 var(--mono);background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto;margin:0 0 20px}
 pre code{background:none;padding:0;font-size:inherit}
@@ -135,13 +140,14 @@ figcaption b{color:var(--fg)}
 
 <h2 id="idea">The idea</h2>
 <p>A reasoning model ends its thinking by emitting one token, <code>&lt;/think&gt;</code>. Like every token, its logit is a dot product of that token's row of the output layer (the "head") with the final normalized hidden state <i>h</i>. So adding a vector to that single row adds a linear readout of <i>h</i> to one decision, the decision to stop:</p>
-<div class="eq">ℓ<sub>close</sub> = w<sub>close</sub>·h &nbsp;→&nbsp; (w<sub>close</sub> + β g)·h = ℓ<sub>close</sub> + β (g·h)</div>
+<div class="eq" data-tex="\ell_{\text{close}} = w_{\text{close}}^{\top} h \;\;\longrightarrow\;\; (w_{\text{close}} + \beta g)^{\top} h \;=\; \ell_{\text{close}} + \beta\, g^{\top} h">ℓ<sub>close</sub> = w<sub>close</sub>·h &nbsp;→&nbsp; (w<sub>close</sub> + β g)·h = ℓ<sub>close</sub> + β (g·h)</div>
 <p><i>g</i> is a linear probe that separates two kinds of positions in the model's own thinking: <b>paragraph ends after the right answer has already appeared</b> (the model is only re-checking), and <b>everything else</b> (still solving, or mid-sentence). β sets how hard the edit pushes. The row is re-quantized into the file's own format and shipped as an ordinary weights file. The engine, chat template and agent harness are untouched, and the model costs exactly as much to run as before.</p>
 <p>Two properties make this unusually easy to reason about:</p>
-<p><b>1. The edited stop probability is exact.</b> Only ℓ<sub>close</sub> changes, so with <i>o</i> the base model's log-odds of <code>&lt;/think&gt;</code> at a position,</p>
-<div class="eq">P′(close | h) = e<sup>ℓ+βg·h</sup> / (e<sup>ℓ+βg·h</sup> + Σ<sub>j≠close</sub> e<sup>ℓ<sub>j</sub></sup>) = σ(o + β g·h),&nbsp;&nbsp; o = ℓ<sub>close</sub> − log Σ<sub>j≠close</sub> e<sup>ℓ<sub>j</sub></sup></div>
+<p><b>1. The edited stop probability is exact.</b> Only <span class="m" data-tex="\ell_{\text{close}}">ℓ<sub>close</sub></span> changes, so with <span class="m" data-tex="o"><i>o</i></span> the base model's log-odds of <code>&lt;/think&gt;</code> at a position,</p>
+<div class="eq" data-tex="P'(\text{close}\mid h) \;=\; \frac{e^{\,\ell_{\text{close}} + \beta g^{\top} h}}{e^{\,\ell_{\text{close}} + \beta g^{\top} h} + \sum_{j\neq\text{close}} e^{\,\ell_j}} \;=\; \sigma\!\left(o + \beta\, g^{\top} h\right)">P′(close | h) = σ(o + β g·h)</div>
+<div class="eq" data-tex="\text{where}\quad o \;=\; \ell_{\text{close}} - \log\!\sum_{j\neq\text{close}} e^{\,\ell_j}">where o = ℓ<sub>close</sub> − log Σ<sub>j≠close</sub> e<sup>ℓ<sub>j</sub></sup></div>
 <p>Given recorded hidden states, the edited model's stop probability at every position of every trace is a closed-form function of β. No generation is needed to tune it.</p>
-<p><b>2. Every other token's distribution is unchanged, conditional on not stopping.</b> For any j ≠ close, P′(j | not close) = P(j | not close). So a trace sampled from the <i>original</i> model is also a valid sample from the <i>edited</i> model up to the point where the edit stops it, and the probability of that stop is exactly 1 − Π<sub>t</sub>(1 − p′<sub>t</sub>). That is what Figure 1 plots, and it is how I searched for harmful early stops (below).</p>
+<p><b>2. Every other token's distribution is unchanged, conditional on not stopping.</b> For any <span class="m" data-tex="j \neq \text{close}">j ≠ close</span>, <span class="m" data-tex="P'(j \mid \text{not close}) = P(j \mid \text{not close})">P′(j | not close) = P(j | not close)</span>. So a trace sampled from the <i>original</i> model is also a valid sample from the <i>edited</i> model up to the point where the edit stops it, and the probability of that stop is exactly <span class="m" data-tex="1 - \prod_t \left(1 - p'_t\right)">1 − Π<sub>t</sub>(1 − p′<sub>t</sub>)</span>. That is what Figure 1 plots, and it is how I searched for harmful early stops (below).</p>
 
 <h2 id="qwen">Experiment 1: Qwen3.5-4B</h2>
 <div class="setup">
@@ -200,7 +206,7 @@ figcaption b{color:var(--fg)}
 <p>On the three AIME problems, the original had already written the right answer inside its thinking every time, and ran out of budget while re-checking it. The edited model's one miss was the model still working: it was moving between candidate counts, and the edit correctly stayed silent. Qwen recommends up to 81,920 tokens for competition maths, where the original would likely finish, so the fair reading is that at a fixed budget, the edit turns more of the budget into answers.</p>
 
 <h3>Searching for harmful early stops</h3>
-<p>The failure that matters is an early stop on a <i>wrong</i> answer that the original would have corrected by re-checking. Property 2 makes this searchable without sampling: on an original trace, the probability that the edited model stops at position t is p′<sub>t</sub> Π<sub>s&lt;t</sub>(1 − p′<sub>s</sub>). For every window with real stop mass, I forced <code>&lt;/think&gt;</code> there, let the edited model write its answer (greedy) and graded it.</p>
+<p>The failure that matters is an early stop on a <i>wrong</i> answer that the original would have corrected by re-checking. Property 2 makes this searchable without sampling: on an original trace, the probability that the edited model stops at position <span class="m" data-tex="t">t</span> is <span class="m" data-tex="p'_t \prod_{s<t} \left(1 - p'_s\right)">p′<sub>t</sub> Π<sub>s&lt;t</sub>(1 − p′<sub>s</sub>)</span>. For every window with real stop mass, I forced <code>&lt;/think&gt;</code> there, let the edited model write its answer (greedy) and graded it.</p>
 <p>On the 6 held-out traces checked so far, 5 give the right answer at every possible stop. In the sixth, the stops at two paragraph ends (21% of the stop mass) produced no <code>\boxed{}</code> answer within 1,500 tokens. The thinking there had just concluded "the solution x = 2 is unique", so this is probably formatting rather than a wrong answer, but it isn't confirmed. I haven't yet found a case where the edited model is wrong and the original right.</p>
 
 <h2 id="try">Try it</h2>
@@ -446,6 +452,14 @@ stopped_by_t = 1 - np.cumprod(1 - p)
       const tx=el('text',{x:gl+w+6,y:y0+k*(bh+2)+11,'font-size':11,fill:css('--muted')},G);tx.textContent=v.toLocaleString()+(m[4+k]?' ✗':'');}});
   el('line',{x1:gl,x2:gl,y1:6,y2:10+M.length*rowH,stroke:css('--rule')},G);
 })();
+</script>
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+  if(!window.katex)return;
+  document.querySelectorAll('[data-tex]').forEach(function(el){
+    try{katex.render(el.getAttribute('data-tex'),el,{displayMode:el.classList.contains('eq'),throwOnError:false});}catch(e){}
+  });
+});
 </script>
 </body>
 </html>
