@@ -1,0 +1,35 @@
+tag,run,task,arm,engine,dsh_patch,check,ok,wall_s,output_tokens,uncached_input_tokens,cache_read_tokens,steps,thinking_tokens,capped_steps,zero_thinking_steps,error_results_seen
+before,1,eyes,"original, dsh default (medium)","kf43 (production, Nov 13)",,2618/59049,True,172.5,934,6215,13881,3,640,0,0,0
+before,1,orders,"original, dsh default (medium)","kf43 (production, Nov 13)",,OK,True,255.2,1754,3234,39541,5,701,0,2,0
+after-off,1,eyes,thinking off,"kf43 (production, Nov 13)",patch-off.yml,2618/59049,True,131.0,542,6196,13040,3,0,0,3,0
+after-off,1,orders,thinking off,"kf43 (production, Nov 13)",patch-off.yml,OK,True,188.5,1348,3613,64824,8,0,0,8,0
+after-kf45,1,eyes,"(infrastructure failure, ignore)",kf45,patch-8096.yml,no answer.txt,False,2.7,0,0,0,,,,,
+after-kf45,1,orders,"(infrastructure failure, ignore)",kf45,patch-8096.yml,"FAILED (failures=2, errors=5)",False,1.9,0,0,0,,,,,
+ag-base,1,eyes,"original, dsh medium",kf43,patch-8096.yml,2618/59049,True,477.1,3840,8733,34909,5,2828,1,0,0
+ag-base,1,orders,"original, dsh medium",kf43,patch-8096.yml,OK,True,206.0,1489,3339,38988,5,271,0,2,0
+ag-graft,1,eyes,"graft2, dsh medium",kf43,patch-8096.yml,2618/59049,True,128.4,486,6227,19762,4,0,0,4,0
+ag-graft,1,orders,"graft2, dsh medium",kf43,patch-8096.yml,OK,True,163.6,1112,3066,38095,5,220,0,4,0
+ag-base,1,site,"original, dsh medium",kf43,patch-8096.yml,10/10,True,1995.3,18962,9571,158003,10,13106,4,0,0
+ag-graft,1,site,"graft2, dsh medium",kf43,patch-8096.yml,10/10,True,1041.8,10009,3102,63897,6,2062,1,5,0
+ag5-base,1,eyes,"original, dsh medium",kf45 (lossy deferral),patch-8096.yml,2618/59049,True,180.6,1051,6247,14073,3,813,0,0,0
+ag5-base,2,eyes,"original, dsh medium",kf45 (lossy deferral),patch-8096.yml,2618/59049,True,113.3,1106,76,20561,,,,,
+ag5-base,1,orders,"original, dsh medium",kf45 (lossy deferral),patch-8096.yml,OK,True,185.0,1455,2779,55702,7,338,0,2,0
+ag5-base,3,eyes,"original, dsh medium",kf45 (lossy deferral),patch-8096.yml,2618/59049,True,160.6,833,6210,13696,,,,,
+ag5-base,2,orders,"original, dsh medium",kf45 (lossy deferral),patch-8096.yml,OK,True,170.1,1142,3268,38613,,,,,
+ag5-off,1,eyes,thinking off,kf45 (lossy deferral),patch-8096-off.yml,2618/59049,True,152.6,721,6248,20195,4,0,0,4,0
+ag5-off,1,orders,thinking off,kf45 (lossy deferral),patch-8096-off.yml,OK,True,135.3,845,3159,37536,5,0,0,5,0
+ag5-base,1,site,"original, dsh medium",kf45 (lossy deferral),patch-8096.yml,10/10,True,2108.8,23034,12361,342095,17,14689,5,0,0
+ag5-off,1,site,thinking off,kf45 (lossy deferral),patch-8096-off.yml,10/10,True,572.0,5752,1820,91354,9,0,0,9,0
+ag5-v5,1,eyes,"graft v5, dsh medium",kf45 (lossy deferral),patch-8096.yml,2618/59049,True,141.0,639,6212,13401,3,337,0,1,0
+ag5-v5,1,orders,"graft v5, dsh medium",kf45 (lossy deferral),patch-8096.yml,OK,True,174.0,1072,3090,37599,5,357,0,1,0
+ag5-v5,1,site,"graft v5, dsh medium",kf45 (lossy deferral),patch-8096.yml,10/10,True,787.6,8100,1113,58348,5,3425,1,0,0
+ag5-v4,1,eyes,"graft v4, dsh medium",kf45 (lossy deferral),patch-8096.yml,214/19683,False,132.6,526,6232,19734,4,29,0,2,0
+ag5-v4,1,orders,"graft v4, dsh medium",kf45 (lossy deferral),patch-8096.yml,OK,True,220.0,1554,2663,45787,6,520,0,4,0
+ag5-v4,1,site,"graft v4, dsh medium",kf45 (lossy deferral),patch-8096.yml,10/10,True,884.1,8815,900,78029,7,2548,0,1,0
+k43-g7,1,site,"graft v7, dsh medium",kf43,patch-8096.yml,10/10,True,1366.6,12413,6604,136924,10,3583,1,0,0
+k43-g7,1,eyes,"graft v7, dsh medium",kf43,patch-8096.yml,2618/59049,True,218.3,1800,715,28747,4,1164,0,0,0
+k43-g7,1,orders,"graft v7, dsh medium",kf43,patch-8096.yml,OK,True,289.4,1800,3269,39689,5,861,0,0,0
+k43-g2,1,promo,"graft2, dsh medium",kf43,patch-8096.yml,"hidden 9/9, all tests OK",True,1179.7,9061,11926,138498,11,3994,1,4,0
+k43-g2,1,analysis,"graft2, dsh medium",kf43,patch-8096.yml,"report 7529 chars, 1 png, 1 referenced",True,1292.5,11288,4718,213816,15,4693,0,9,1
+k43-low,1,site,"original, dsh LOW",kf43,patch-8096-low.yml,10/10,True,2701.8,25746,10163,885027,36,12530,5,0,0
+k43-low,1,analysis,"original, dsh LOW",kf43,patch-8096-low.yml,"report 7944 chars, 1 png, 1 referenced",True,2164.4,18773,8824,393886,22,10160,5,3,1

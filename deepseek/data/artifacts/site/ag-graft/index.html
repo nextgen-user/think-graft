@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crumb & Co. — Neighbourhood Bakery</title>
+<style>
+  /* ---------- Base ---------- */
+  *,
+  *::before,
+  *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: #f7efe0;
+    color: #2c2118;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+
+  body.dark {
+    background: #17120e;
+    color: #f3e7d7;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(196, 114, 66, 0.10), transparent 32%),
+      radial-gradient(circle at 85% 80%, rgba(196, 114, 66, 0.08), transparent 38%);
+    z-index: 0;
+  }
+
+  body.dark::before {
+    background:
+      radial-gradient(circle at 15% 10%, rgba(224, 138, 82, 0.08), transparent 34%),
+      radial-gradient(circle at 85% 80%, rgba(224, 138, 82, 0.06), transparent 40%);
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  h1 { font-size: clamp(2.8rem, 8vw, 5.2rem); }
+  h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
+  h3 { font-size: 1.18rem; }
+
+  p { margin: 0; }
+
+  a { color: inherit; }
+
+  .wrap {
+    width: min(1080px, 100%);
+    margin: 0 auto;
+    padding: clamp(1rem, 3vw, 2.2rem);
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem clamp(1rem, 3vw, 2.2rem);
+    background: rgba(247, 239, 224, 0.82);
+    border-bottom: 1px solid rgba(92, 64, 41, 0.14);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+  }
+
+  body.dark .site-header {
+    background: rgba(23, 18, 14, 0.85);
+    border-bottom-color: rgba(224, 138, 82, 0.14);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-size: 1.05rem;
+  }
+
+  .brand-mark {
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid #b9653a;
+    border-radius: 50%;
+    font-size: 0.82rem;
+    letter-spacing: 0;
+    color: #b9653a;
+  }
+
+  body.dark .brand-mark {
+    border-color: #e08a52;
+    color: #e08a52;
+  }
+
+  .theme-toggle {
+    appearance: none;
+    border: 1px solid #c7b598;
+    background: transparent;
+    color: #3a2a1d;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .theme-toggle:hover {
+    background: rgba(185, 101, 58, 0.12);
+    border-color: #b9653a;
+  }
+
+  .theme-toggle:focus-visible,
+  .btn:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid #c97745;
+    outline-offset: 2px;
+  }
+
+  body.dark .theme-toggle {
+    color: #f0e2d1;
+    border-color: #4a3829;
+  }
+
+  body.dark .theme-toggle:hover {
+    background: rgba(224, 138, 82, 0.14);
+    border-color: #e08a52;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(92, 64, 41, 0.16);
+    border-radius: 24px;
+    background: #fffaf0;
+    padding: clamp(1.8rem, 6vw, 3.6rem);
+    margin-top: clamp(1rem, 3vw, 1.8rem);
+    box-shadow: 0 18px 45px rgba(70, 46, 26, 0.08);
+    transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  body.dark .hero {
+    background: #241b15;
+    border-color: rgba(224, 138, 82, 0.18);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  }
+
+  .hero-grain {
+    position: absolute;
+    right: -4rem;
+    top: -5rem;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background:
+      repeating-linear-gradient(45deg, rgba(190, 111, 65, 0.10) 0 2px, transparent 2px 12px),
+      radial-gradient(circle, rgba(196, 114, 66, 0.14), transparent 68%);
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b9653a;
+  }
+
+  body.dark .eyebrow { color: #e08a52; }
+
+  .hero h1 {
+    margin-top: 0.6rem;
+    color: #2c2118;
+  }
+
+  body.dark .hero h1 { color: #f7ecdd; }
+
+  .hero .amp { color: #b9653a; font-weight: 500; }
+
+  body.dark .hero .amp { color: #e08a52; }
+
+  .tagline {
+    max-width: 42rem;
+    margin-top: 0.9rem;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    color: #6a5540;
+  }
+
+  body.dark .tagline { color: #cdb9a2; }
+
+  .hero-meta {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-chip {
+    padding: 0.55rem 0.9rem;
+    border: 1px solid #d9c6aa;
+    border-radius: 8px;
+    background: rgba(185, 101, 58, 0.06);
+    font-size: 0.88rem;
+    color: #5b442f;
+  }
+
+  body.dark .hero-chip {
+    border-color: #4a3829;
+    background: rgba(224, 138, 82, 0.08);
+    color: #cdb9a2;
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.72rem 1.15rem;
+    border-radius: 10px;
+    background: #b9653a;
+    color: #fffaf0;
+    border: 1px solid #b9653a;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .btn:hover {
+    background: #a3532d;
+    transform: translateY(-1px);
+  }
+
+  .btn.ghost {
+    background: transparent;
+    color: #573d27;
+    border-color: #c7b598;
+  }
+
+  .btn.ghost:hover { background: rgba(185, 101, 58, 0.10); }
+
+  body.dark .btn {
+    background: #e08a52;
+    border-color: #e08a52;
+    color: #1b1410;
+  }
+
+  body.dark .btn:hover { background: #c97643; }
+
+  body.dark .btn.ghost {
+    background: transparent;
+    color: #f0e2d1;
+    border-color: #4a3829;
+  }
+
+  body.dark .btn.ghost:hover { background: rgba(224, 138, 82, 0.12); }
+
+  /* ---------- Sections ---------- */
+  section.block {
+    margin-top: clamp(2rem, 5vw, 3rem);
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-head p {
+    color: #6f5b45;
+    font-size: 0.9rem;
+    max-width: 40rem;
+  }
+
+  body.dark .section-head p { color: #b8a690; }
+
+  /* ---------- Menu ---------- */
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .menu-card {
+    position: relative;
+    border: 1px solid rgba(92, 64, 41, 0.16);
+    border-radius: 16px;
+    background: #fffaf0;
+    padding: 1.2rem 1.25rem;
+    transition: background-color 0.35s ease, border-color 0.35s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .menu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(70, 46, 26, 0.10);
+  }
+
+  body.dark .menu-card {
+    background: #241b15;
+    border-color: rgba(224, 138, 82, 0.16);
+  }
+
+  body.dark .menu-card:hover { box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3); }
+
+  .menu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .menu-top h3 { color: #2f2419; }
+  body.dark .menu-top h3 { color: #f7ecdd; }
+
+  .price {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #8e4025;
+    background: rgba(185, 101, 58, 0.12);
+    padding: 0.28rem 0.55rem;
+    border-radius: 6px;
+  }
+
+  body.dark .price {
+    color: #f4b183;
+    background: rgba(224, 138, 82, 0.14);
+  }
+
+  .menu-card p {
+    margin-top: 0.55rem;
+    color: #6a5540;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  body.dark .menu-card p { color: #c1ad96; }
+
+  /* ---------- Hours ---------- */
+  .hours-card {
+    border: 1px solid rgba(92, 64, 41, 0.16);
+    border-radius: 16px;
+    background: #fffaf0;
+    padding: 1.3rem;
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+  }
+
+  body.dark .hours-card {
+    background: #241b15;
+    border-color: rgba(224, 138, 82, 0.16);
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.94rem;
+  }
+
+  .hours-table th,
+  .hours-table td {
+    text-align: left;
+    padding: 0.55rem 0.25rem;
+    border-bottom: 1px solid #e4d5c0;
+  }
+
+  .hours-table th {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9b7f64;
+    font-weight: 700;
+  }
+
+  .hours-table td:last-child {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    color: #462f1e;
+  }
+
+  .hours-table tr:last-child td { border-bottom: none; }
+
+  body.dark .hours-table th,
+  body.dark .hours-table td { border-bottom-color: #3a2f24; }
+  body.dark .hours-table th { color: #a58e75; }
+  body.dark .hours-table td:last-child { color: #f0e2d1; }
+
+  .hours-note {
+    margin-top: 0.9rem;
+    font-size: 0.82rem;
+    color: #7c664e;
+  }
+
+  body.dark .hours-note { color: #b8a690; }
+
+  /* ---------- Contact ---------- */
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    border: 1px solid rgba(92, 64, 41, 0.16);
+    border-radius: 16px;
+    background: #fffaf0;
+    padding: 1.4rem;
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+  }
+
+  body.dark .contact-card {
+    background: #241b15;
+    border-color: rgba(224, 138, 82, 0.16);
+  }
+
+  .contact-info p {
+    margin-top: 0.6rem;
+    color: #6a5540;
+    font-size: 0.9rem;
+  }
+
+  body.dark .contact-info p { color: #c1ad96; }
+
+  .contact-info strong {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9b7f64;
+  }
+
+  body.dark .contact-info strong { color: #a58e75; }
+
+  form { display: grid; gap: 0.9rem; }
+
+  .field { display: grid; gap: 0.35rem; }
+
+  .field label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #4a3320;
+  }
+
+  body.dark .field label { color: #e6d5c2; }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 0.92rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #c7b598;
+    border-radius: 8px;
+    background: #fdf8ed;
+    color: #2c2118;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .field textarea { resize: vertical; min-height: 110px; }
+
+  body.dark .field input,
+  body.dark .field textarea {
+    background: #1d1510;
+    border-color: #4a3829;
+    color: #f0e2d1;
+  }
+
+  .field input.invalid,
+  .field textarea.invalid { border-color: #c0392b; }
+
+  body.dark .field input.invalid,
+  body.dark .field textarea.invalid { border-color: #e06a58; }
+
+  .field-error {
+    font-size: 0.8rem;
+    color: #b23a2b;
+    margin-top: 0.1rem;
+  }
+
+  body.dark .field-error { color: #f08a76; }
+
+  .form-status {
+    margin-top: 0.2rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #7fae84;
+    background: rgba(127, 174, 132, 0.14);
+    border-radius: 8px;
+    font-size: 0.86rem;
+    color: #356a3e;
+  }
+
+  body.dark .form-status {
+    border-color: #7fae84;
+    background: rgba(127, 174, 132, 0.12);
+    color: #a9d3ab;
+  }
+
+  [hidden] { display: none; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: clamp(2rem, 5vw, 3rem);
+    padding: 1.4rem 0 2rem;
+    border-top: 1px solid rgba(92, 64, 41, 0.16);
+    font-size: 0.82rem;
+    color: #7c664e;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  body.dark footer {
+    border-top-color: #3a2f24;
+    color: #b8a690;
+  }
+
+  /* ---------- Responsive: one column below 600px ---------- */
+  @media (max-width: 600px) {
+    .wrap { padding: 1rem; }
+
+    .site-header {
+      padding: 0.75rem 1rem;
+    }
+
+    .hero {
+      margin-top: 0.8rem;
+      padding: 1.5rem;
+    }
+
+    .hero-meta {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero-meta .btn,
+    .hero-meta .hero-chip {
+      display: block;
+      text-align: center;
+    }
+
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .section-head {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .hero-grain {
+      right: -7rem;
+      top: -7rem;
+      width: 18rem;
+      height: 18rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">C&amp;</span>
+      <span>Crumb &amp; Co.</span>
+    </div>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <p class="eyebrow">Neighbourhood bakery · baked daily</p>
+      <h1 id="hero-title">Crumb <span class="amp">&amp;</span> Co.</h1>
+      <p class="tagline">Small-batch breads, pastries and slow coffee — fresh from the oven, just around the corner.</p>
+      <div class="hero-meta">
+        <span class="hero-chip">Open today · 7:00–18:00</span>
+        <a class="btn" href="#menu">See the menu</a>
+        <a class="btn ghost" href="#contact">Say hello</a>
+      </div>
+    </section>
+
+    <section class="block" id="menu" aria-labelledby="menu-title">
+      <div class="section-head">
+        <h2 id="menu-title">Today’s counter</h2>
+        <p>Eight small-batch favourites, priced plainly. Everything is mixed, proofed and baked here each morning.</p>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Sourdough Loaf</h3>
+            <span class="price">$7.50</span>
+          </div>
+          <p>Naturally leavened for 24 hours, with a crackly crust and a tangy, open crumb.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Butter Croissant</h3>
+            <span class="price">$4.00</span>
+          </div>
+          <p>Laminated overnight with cultured butter — flaky layers that pull apart cleanly.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Cinnamon Roll</h3>
+            <span class="price">$4.50</span>
+          </div>
+          <p>Soft brioche spiralled with cinnamon sugar and finished with a brown-butter glaze.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Seeded Rye Baguette</h3>
+            <span class="price">$6.00</span>
+          </div>
+          <p>Earthy rye dough rolled with toasted sunflower and flax seeds; ideal for the table.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Morning Bun</h3>
+            <span class="price">$4.25</span>
+          </div>
+          <p>Citrus-scented, sugar-crusted and coiled — best eaten warm with a cup of coffee.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Rosemary Focaccia</h3>
+            <span class="price">$8.00</span>
+          </div>
+          <p>Olive-oil rich, dimpled and salted, with fresh rosemary pressed into the top.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Chocolate Babka</h3>
+            <span class="price">$6.50</span>
+          </div>
+          <p>Twisted brioche filled with dark chocolate and a pinch of sea salt.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-top">
+            <h3>Seasonal Fruit Tart</h3>
+            <span class="price">$5.50</span>
+          </div>
+          <p>A crisp pastry shell, vanilla custard and whatever fruit is ripest that week.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="hours" aria-labelledby="hours-title">
+      <div class="section-head">
+        <h2 id="hours-title">Opening hours</h2>
+        <p>Come early for the warm batch; the counter closes when the last loaf sells out.</p>
+      </div>
+
+      <div class="hours-card">
+        <table class="hours-table">
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>7:00 – 18:00</td></tr>
+            <tr><td>Tuesday</td><td>7:00 – 18:00</td></tr>
+            <tr><td>Wednesday</td><td>7:00 – 18:00</td></tr>
+            <tr><td>Thursday</td><td>7:00 – 18:00</td></tr>
+            <tr><td>Friday</td><td>7:00 – 19:00</td></tr>
+            <tr><td>Saturday</td><td>8:00 – 16:00</td></tr>
+            <tr><td>Sunday</td><td>8:00 – 13:00</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note">Closed on public holidays. Last bake leaves the oven at 15:00 daily.</p>
+      </div>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Say hello</h2>
+        <p>Order a loaf for tomorrow, ask about allergens, or just tell us what you’d like to see on the counter.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-card contact-info">
+          <h3>Find us</h3>
+          <p>24 Willow Lane, corner of Alder Street<br>Open every day of the week.</p>
+          <strong>Bakery counter</strong>
+          <p>hello@crumbandco.example<br>(555) 014-2288</p>
+          <strong>Small-batch notes</strong>
+          <p>We bake in the morning, sell out by afternoon, and mix the next day’s dough at closing.</p>
+        </div>
+
+        <div class="contact-card">
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+              <p class="field-error" id="nameError" role="alert" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-describedby="emailError" required>
+              <p class="field-error" id="emailError" role="alert" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="What would you like to order?" required></textarea>
+              <p class="field-error" id="messageError" role="alert" aria-live="polite" hidden></p>
+            </div>
+
+            <button class="btn" type="submit">Send message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Crumb &amp; Co. — baked in the neighbourhood since 2014.</span>
+    <span>© 2026 · Small-batch, every morning.</span>
+  </footer>
+
+  <script>
+    (function () {
+      /* ---------- Dark-mode toggle with localStorage ---------- */
+      const body = document.body;
+      const toggle = document.getElementById('themeToggle');
+      const key = 'crumb-co-theme';
+
+      function setTheme(isDark) {
+        body.classList.toggle('dark', isDark);
+        toggle.setAttribute('aria-pressed', String(isDark));
+        toggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+      }
+
+      let saved = null;
+      try {
+        saved = localStorage.getItem(key);
+      } catch (err) {
+        saved = null;
+      }
+      setTheme(saved === 'dark');
+
+      toggle.addEventListener('click', function () {
+        const nextDark = !body.classList.contains('dark');
+        setTheme(nextDark);
+        try {
+          localStorage.setItem(key, nextDark ? 'dark' : 'light');
+        } catch (err) {
+          /* Storage unavailable; the toggle still works for this visit. */
+        }
+      });
+
+      /* ---------- Contact form validation ---------- */
+      const form = document.getElementById('contactForm');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const messageError = document.getElementById('messageError');
+      const formStatus = document.getElementById('formStatus');
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function showError(input, node, text) {
+        node.textContent = text;
+        node.hidden = false;
+        input.classList.add('invalid');
+        input.setAttribute('aria-invalid', 'true');
+      }
+
+      function clearError(input, node) {
+        node.textContent = '';
+        node.hidden = true;
+        input.classList.remove('invalid');
+        input.removeAttribute('aria-invalid');
+      }
+
+      function validate() {
+        let valid = true;
+        formStatus.hidden = true;
+
+        if (!nameInput.value.trim()) {
+          showError(nameInput, nameError, 'Please enter your name.');
+          valid = false;
+        } else {
+          clearError(nameInput, nameError);
+        }
+
+        const email = emailInput.value.trim();
+        if (!emailPattern.test(email)) {
+          showError(emailInput, emailError, 'Please enter a valid email address, e.g. you@example.com.');
+          valid = false;
+        } else {
+          clearError(emailInput, emailError);
+        }
+
+        if (!messageInput.value.trim()) {
+          showError(messageInput, messageError, 'Please write a short message.');
+          valid = false;
+        } else {
+          clearError(messageInput, messageError);
+        }
+
+        return valid;
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (!validate()) {
+          const active = document.querySelector('.field input.invalid');
+          if (active) active.focus();
+          return; /* Do not "submit" while invalid. */
+        }
+
+        formStatus.textContent = "Thanks — your message is ready to send. We'll reply within a day.";
+        formStatus.hidden = false;
+        form.reset();
+        emailInput.classList.remove('invalid');
+      });
+
+      /* Clear a field's inline error as soon as the person starts correcting it. */
+      [nameInput, emailInput, messageInput].forEach(function (input) {
+        input.addEventListener('input', function () {
+          const node = input === nameInput ? nameError
+            : input === emailInput ? emailError
+            : messageError;
+          if (!node.hidden) clearError(input, node);
+          if (input === emailInput && node.hidden) {
+            emailInput.removeAttribute('aria-invalid');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

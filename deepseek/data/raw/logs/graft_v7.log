@@ -1,0 +1,54 @@
+<string>:42: RuntimeWarning: invalid value encountered in divide
+hx: 19551 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 131
+hx1: 12198 head rows for segment lengths [5599, 6599]
+hx1: 12198 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 46
+hx6 labels {np.str_('solve'): 53821, np.str_('check'): 29702, np.str_('pos'): 320, np.str_('ans'): 6096, np.str_('astart'): 627, np.str_('aneg'): 13777, np.str_('apos'): 51, np.str_('acap'): 75}
+alignment: top-1 = next token on 0.794 of rows, mean log P(next) -0.650 (maths -0.641)
+labels after the cap fix {np.str_('solve'): 53821, np.str_('check'): 29702, np.str_('pos'): 320, np.str_('ans'): 6096, np.str_('astart'): 627, np.str_('aneg'): 13777, np.str_('apos'): 51, np.str_('acap'): 75}
+tool-call rows 9208 in 22 steps (held out: 5059 rows)
+== no edit
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.000; checking kept max-effort 1.00 v5 1.00 low 0.99 graft2 1.00
+   maths train: worst solve-close graft2-held:bitstrings 0.000; checking kept max-effort 1.00 v5 1.00 low 1.00
+   strays: graft2 answers (held-out half) 0.000/answer, held-out maths answers total 0.000; tool calls (held-out 11) total 0.000, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.007 max 0.054; site plan step P32 0.067; cap-hitting steps close at [2056, 2054, 2027, 2061, 2063] (draft began [607, 136, 50, 218, 62]); all agentic thinking 14255/14530
+== v5 as deployed (LDA, beta 14)
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.192; checking kept max-effort 0.35 v5 0.49 low 0.85 graft2 0.99
+   maths train: worst solve-close v5k43-tough:digit_sum_double 0.015; checking kept max-effort 0.41 v5 0.77 low 0.65
+   strays: graft2 answers (held-out half) 0.411/answer, held-out maths answers total 1.004; tool calls (held-out 11) total 0.000, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.007 max 0.054; site plan step P32 0.080; cap-hitting steps close at [2047, 2055, 2005, 2061, 2063] (draft began [607, 136, 50, 218, 62]); all agentic thinking 14201/14530
+   fit: 86 iterations, loss 0.00031, 5 s, groups maths close-here 198, agentic close-here 35, maths solving (1 in 3) 10312, maths checking, mid-paragraph 19412, maths answers 3537, graft2 answers 4732, agentic thinking 8414, agentic step starts (chunk) 331, agentic step starts (decode) 503, tool-call content 4149, calib close-here (chunk) 58, calib close-here (decode) 17, calib other (chunk, 1 in 2) 3871, calib other (decode, 1 in 2) 2744
+== v7 base config
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 1.000; checking kept max-effort 0.02 v5 0.06 low 0.02 graft2 0.99
+   maths train: worst solve-close v5k43-held:dice_nine 0.949; checking kept max-effort 0.05 v5 0.05 low 0.05
+   strays: graft2 answers (held-out half) 2.626/answer, held-out maths answers total 1.612; tool calls (held-out 11) total 0.077, worst call 0.077
+   agentic: step starts (held-out long prompts) mean 0.098 max 0.590; site plan step P32 0.001; cap-hitting steps close at [346, 186, 60, 222, 76] (draft began [607, 136, 50, 218, 62]); all agentic thinking 4852/14530
+   fit: 98 iterations, loss 0.00006, 6 s, groups maths close-here 198, agentic close-here 35, maths solving (1 in 3) 10312, maths checking, mid-paragraph 19412, maths answers 3537, graft2 answers 4732, agentic thinking 8414, agentic step starts (chunk) 331, agentic step starts (decode) 503, tool-call content 4149, calib close-here (chunk) 58, calib close-here (decode) 17, calib other (chunk, 1 in 2) 3871, calib other (decode, 1 in 2) 2744
+== v7 {'lam': 1e-05}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 1.000; checking kept max-effort 0.01 v5 0.05 low 0.02 graft2 0.99
+   maths train: worst solve-close v5k43-held:dice_nine 0.981; checking kept max-effort 0.05 v5 0.05 low 0.05
+   strays: graft2 answers (held-out half) 2.170/answer, held-out maths answers total 1.478; tool calls (held-out 11) total 0.018, worst call 0.017
+   agentic: step starts (held-out long prompts) mean 0.067 max 0.373; site plan step P32 0.000; cap-hitting steps close at [463, 144, 52, 219, 64] (draft began [607, 136, 50, 218, 62]); all agentic thinking 5015/14530
+   fit: 65 iterations, loss 0.00135, 4 s, groups maths close-here 198, agentic close-here 35, maths solving (1 in 3) 10312, maths checking, mid-paragraph 19412, maths answers 3537, graft2 answers 4732, agentic thinking 8414, agentic step starts (chunk) 331, agentic step starts (decode) 503, tool-call content 4149, calib close-here (chunk) 58, calib close-here (decode) 17, calib other (chunk, 1 in 2) 3871, calib other (decode, 1 in 2) 2744
+== v7 {'lam': 0.001}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 1.000; checking kept max-effort 0.03 v5 0.06 low 0.03 graft2 0.99
+   maths train: worst solve-close v5k43-tough:digit_sum_double 0.941; checking kept max-effort 0.05 v5 0.05 low 0.05
+   strays: graft2 answers (held-out half) 3.656/answer, held-out maths answers total 2.153; tool calls (held-out 11) total 0.405, worst call 0.402
+   agentic: step starts (held-out long prompts) mean 0.147 max 0.810; site plan step P32 0.020; cap-hitting steps close at [283, 387, 97, 226, 124] (draft began [607, 136, 50, 218, 62]); all agentic thinking 4666/14530
+   fit: 87 iterations, loss 0.00028, 5 s, groups maths close-here 198, agentic close-here 35, maths solving (1 in 3) 10312, maths checking, mid-paragraph 19412, maths answers 3537, graft2 answers 4732, agentic thinking 8414, agentic step starts (chunk) 331, agentic step starts (decode) 503, tool-call content 4149, calib close-here (chunk) 58, calib close-here (decode) 17, calib other (chunk, 1 in 2) 3871, calib other (decode, 1 in 2) 2744
+== v7 {'wans': 5.0, 'wstart': 5.0, 'wcall': 5.0}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 1.000; checking kept max-effort 0.04 v5 0.08 low 0.03 graft2 0.99
+   maths train: worst solve-close v5k43-held:dice_nine 0.934; checking kept max-effort 0.05 v5 0.05 low 0.05
+   strays: graft2 answers (held-out half) 1.849/answer, held-out maths answers total 1.302; tool calls (held-out 11) total 0.037, worst call 0.037
+   agentic: step starts (held-out long prompts) mean 0.080 max 0.591; site plan step P32 0.000; cap-hitting steps close at [265, 210, 66, 225, 82] (draft began [607, 136, 50, 218, 62]); all agentic thinking 4833/14530
+   fit: 92 iterations, loss 0.00005, 5 s, groups maths close-here 198, agentic close-here 35, maths solving (1 in 3) 10312, maths checking, mid-paragraph 19412, maths answers 3537, graft2 answers 4732, agentic thinking 8414, agentic step starts (chunk) 331, agentic step starts (decode) 503, tool-call content 4149, calib close-here (chunk) 58, calib close-here (decode) 17, calib other (chunk, 1 in 2) 3871, calib other (decode, 1 in 2) 2744
+== v7 {'wans': 5.0, 'wstart': 5.0, 'wcall': 5.0, 'lam': 1e-05}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 1.000; checking kept max-effort 0.02 v5 0.06 low 0.02 graft2 0.99
+   maths train: worst solve-close v5k43-held:dice_nine 0.973; checking kept max-effort 0.05 v5 0.05 low 0.05
+   strays: graft2 answers (held-out half) 1.619/answer, held-out maths answers total 1.264; tool calls (held-out 11) total 0.010, worst call 0.010
+   agentic: step starts (held-out long prompts) mean 0.051 max 0.361; site plan step P32 0.000; cap-hitting steps close at [340, 148, 53, 219, 65] (draft began [607, 136, 50, 218, 62]); all agentic thinking 4935/14530
+   fit: 103 iterations, loss 0.00036, 6 s, groups maths close-here 198, agentic close-here 35, maths solving (1 in 3) 10312, maths checking, mid-paragraph 19412, maths answers 3537, graft2 answers 4732, agentic thinking 8414, agentic step starts (chunk) 331, agentic step starts (decode) 503, tool-call content 4149, calib close-here (chunk) 58, calib close-here (decode) 17, calib other (chunk, 1 in 2) 3871, calib other (decode, 1 in 2) 2744
+== v7 {'wans': 5.0, 'wstart': 5.0, 'wcall': 5.0, 'pm': 5.0, 'pa': 5.0}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 1.000; checking kept max-effort 0.02 v5 0.05 low 0.02 graft2 0.99
+   maths train: worst solve-close v5k43-held:dice_nine 0.984; checking kept max-effort 0.05 v5 0.05 low 0.05
+   strays: graft2 answers (held-out half) 2.558/answer, held-out maths answers total 1.511; tool calls (held-out 11) total 0.052, worst call 0.051
+   agentic: step starts (held-out long prompts) mean 0.105 max 0.719; site plan step P32 0.000; cap-hitting steps close at [233, 154, 53, 218, 66] (draft began [607, 136, 50, 218, 62]); all agentic thinking 4626/14530

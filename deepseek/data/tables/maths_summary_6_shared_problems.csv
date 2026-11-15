@@ -1,0 +1,5 @@
+arm,engines,problems,correct,total_tokens,thinking_tokens,solve_tokens,check_tokens,answer_tokens,minutes,round_table,round_table_tokens
+plain max,"kf14 (older engine, Nov 8);kf43",6,6,41559,39946,14583,25363,1613,64.1,no answer (32k cap),32000
+plain low,kf43,6,6,25548,24250,16469,7781,1298,36.3,no answer (32k cap),32000
+graft2,kf43,6,6,25112,17996,15366,2630,7116,35.3,right,27696
+graft v5,kf43,6,6,24612,22223,14214,8009,2389,34.5,no answer (32k cap),32000

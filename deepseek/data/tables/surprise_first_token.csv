@@ -1,0 +1,26 @@
+prompt,last_tool_result,p_no_thinking_unedited,p_no_thinking_graft2,p_no_thinking_v5,p_no_thinking_v7,original_thinking_on_that_step
+0,task start,0.006,0.319,0.009,0.000,>=48
+1,routine: script printed the answer,0.000,0.001,0.000,0.000,>=48
+2,routine: answer confirmed,0.011,0.948,0.024,0.000,45
+3,task start,0.285,0.995,0.636,0.000,13
+4,"SURPRISE: tests fail (..EFEF., traceback)",0.265,0.907,0.061,0.001,<4
+5,new info: test file contents read,0.000,0.002,0.000,0.000,>=48
+6,routine: file updated,0.119,0.945,0.052,0.008,<4
+7,routine: Ran 7 tests OK,0.109,0.941,0.046,0.002,<4
+8,task start,0.066,0.952,0.092,0.000,>=48
+9,routine: empty dir listing,0.000,0.004,0.000,0.000,>=48
+10,routine: other,0.001,0.168,0.001,0.000,>=48
+11,routine: other,0.002,0.696,0.005,0.000,>=48
+12,routine: other,0.000,0.282,0.001,0.000,>=48
+13,routine: other,0.000,0.099,0.000,0.000,>=48
+14,routine: file created,0.000,0.001,0.000,0.000,>=48
+15,routine: wc 487 lines,0.000,0.000,0.000,0.000,>=48
+16,routine: tail of file,0.000,0.001,0.000,0.000,>=48
+17,routine: (no output),0.000,0.002,0.000,0.000,>=48
+18,routine: other,0.000,0.002,0.000,0.000,>=48
+19,routine: node version,0.000,0.010,0.000,0.000,44
+20,routine: no mismatches,0.000,0.000,0.000,0.000,>=48
+21,SURPRISE: node ENOENT error,0.000,0.001,0.000,0.000,>=48
+22,routine: syntax OK,0.000,0.003,0.000,0.000,>=48
+23,routine: other,0.000,0.003,0.000,0.000,>=48
+24,SURPRISE: firefox failed to launch,0.000,0.000,0.000,0.000,>=48

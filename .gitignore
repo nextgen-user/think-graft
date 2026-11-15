@@ -1,0 +1,10 @@
+.vercel
+__pycache__/
+*.pyc
+qwen/cap-*/
+qwen/models/
+qwen/logs/
+qwen/tools/capt
+qwen/data/math500.jsonl
+qwen/data/aime25.json
+*.gguf

@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One Row to Stop Overthinking</title>
+<meta name="description" content="A training-free edit to a single row of an LLM's output layer lets the model's own hidden state decide when to stop thinking. Tested on DeepSeek V4.1 Flash (763B, on a laptop) and Qwen3.5-4B.">
+<meta property="og:title" content="Editing one row of an LLM's output layer to stop it overthinking">
+<meta property="og:description" content="No training, no engine change: the </think> row reads the model's own hidden state. DeepSeek V4.1 (763B on a laptop) and Qwen3.5-4B.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#fbfaf7;--surface:#ffffff;--fg:#1d1c1a;--muted:#6b675f;--rule:#e4e0d8;--soft:#f3f0ea;
+  --accent:#b4532a;--accent-soft:#f6e6dc;--base:#9a958c;--good:#2f7d4f;--good-soft:#e2f1e7;--bad:#b3261e;--bad-soft:#f8e0de;
+  --serif:"Newsreader",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141413;--surface:#1c1b19;--fg:#ebe7df;--muted:#a39e94;--rule:#33312d;--soft:#22211e;
+  --accent:#e8875a;--accent-soft:#3a2418;--base:#77736b;--good:#74c995;--good-soft:#173322;--bad:#f2867d;--bad-soft:#3a1b19;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141413;--surface:#1c1b19;--fg:#ebe7df;--muted:#a39e94;--rule:#33312d;--soft:#22211e;
+  --accent:#e8875a;--accent-soft:#3a2418;--base:#77736b;--good:#74c995;--good-soft:#173322;--bad:#f2867d;--bad-soft:#3a1b19;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:19px/1.65 var(--serif);font-optical-sizing:auto}
+main{max-width:740px;margin:0 auto;padding:56px 20px 80px}
+.wide{width:min(980px,calc(100vw - 40px));margin-left:50%;transform:translateX(-50%)}
+h1{font:600 clamp(32px,5.4vw,46px)/1.12 var(--serif);letter-spacing:-.015em;margin:10px 0 14px;text-wrap:balance}
+h2{font:600 28px/1.25 var(--serif);margin:56px 0 12px;text-wrap:balance}
+h3{font:600 15px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:32px 0 8px}
+p{margin:0 0 18px}
+a{color:var(--accent);text-underline-offset:2px}
+.kicker{font:500 13px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.sub{font-size:21px;color:var(--muted);margin:0 0 18px;font-style:italic}
+.byline{font:14px/1.5 var(--sans);color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0;margin-bottom:30px;display:flex;flex-wrap:wrap;gap:6px 16px}
+.tldr{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:6px;padding:18px 22px 6px;margin:0 0 30px}
+.tldr b.t{font:600 13px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px}
+.tldr ul{margin:0;padding-left:20px}.tldr li{margin:0 0 10px}
+code,.mono{font-family:var(--mono);font-size:.84em}
+code{background:var(--soft);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+pre{font:13.5px/1.55 var(--mono);background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto;margin:0 0 20px}
+pre code{background:none;padding:0;font-size:inherit}
+.eq{font:16px/1.6 var(--mono);text-align:center;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:14px 10px;margin:0 0 20px;overflow-x:auto}
+figure{margin:28px 0 30px}
+figcaption{font:14px/1.5 var(--sans);color:var(--muted);margin-top:10px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:16px 16px 10px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:20px}
+table{border-collapse:collapse;width:100%;font:14px/1.45 var(--sans);font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+td.n,th.n{text-align:right;white-space:nowrap}
+td:first-child{min-width:150px}
+tr.hl td{background:var(--accent-soft)}
+.ok{color:var(--good);font-weight:600}.no{color:var(--bad);font-weight:600}
+.pill{display:inline-block;font:600 11.5px/1.7 var(--sans);padding:0 7px;border-radius:99px;white-space:nowrap}
+.pill.ok{background:var(--good-soft)}.pill.no{background:var(--bad-soft)}
+.note{font:15px/1.55 var(--sans);color:var(--muted)}
+.callout{font:16px/1.6 var(--sans);background:var(--soft);border-radius:8px;padding:14px 18px;margin:0 0 22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid4 figure{margin:0}.grid4 a{display:block;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--surface);height:420px}
+.grid4 img{width:100%;display:block}
+.grid4 .cap{font:13px/1.45 var(--sans);color:var(--muted);margin-top:8px}.grid4 .cap b{color:var(--fg)}
+@media (max-width:820px){.grid4{grid-template-columns:repeat(2,1fr)}.grid4 a{height:300px}}
+@media (max-width:480px){body{font-size:18px}.grid4{grid-template-columns:1fr 1fr;gap:10px}.grid4 a{height:220px}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font:13px/1.4 var(--sans);color:var(--muted);margin:2px 0 8px}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:4px;margin-right:6px}
+.legend i.sq{height:12px;width:12px;vertical-align:-1px}
+svg text{font-family:var(--sans)}
+.chartwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.chartwrap svg{min-width:640px;display:block}
+#hero-tip{font:13px/1.45 var(--sans);min-height:42px;color:var(--muted);padding:6px 2px 0}
+#hero-tip b{color:var(--fg)}
+.toc{font:14.5px/1.5 var(--sans);margin:0 0 30px;color:var(--muted)}
+.toc summary{cursor:pointer;font-weight:600;color:var(--fg)}
+.toc ol{margin:8px 0 0;padding-left:22px}.toc a{color:var(--muted)}
+footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--rule);font:15px/1.6 var(--sans);color:var(--muted)}
+.fn{font:14.5px/1.55 var(--sans);color:var(--muted)}.fn ol{padding-left:20px}.fn li{margin-bottom:8px}
+sup a{text-decoration:none;font:600 12px var(--sans)}
+.theme{position:fixed;top:12px;right:12px;font:12px var(--sans);background:var(--surface);color:var(--muted);border:1px solid var(--rule);border-radius:99px;padding:5px 11px;cursor:pointer}
+.setup{font:15px/1.55 var(--sans);background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:14px 18px 4px;margin:0 0 24px}
+.setup>b{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.setup ul{margin:8px 0 10px;padding-left:18px}.setup li{margin:0 0 6px}
+table.big td,table.big th{font-size:14.5px}
+figcaption b{color:var(--fg)}
+</style>
+</head>
+<body>
+<button class="theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<main>
+<div class="kicker">Training-free · one row of weights · laptop GPU</div>
+<h1>Editing one row of an LLM's output layer to stop it overthinking</h1>
+<p class="sub">A linear probe folded into the <code>&lt;/think&gt;</code> row lets the model's own hidden state decide when its thinking is done. Tested on Qwen3.5-4B and on DeepSeek V4.1 Flash (763B, running on a laptop).</p>
+<div class="byline"><span>Vaibhav</span><span>15 November 2026</span><span><a href="https://github.com/nextgen-user/think-graft">Code &amp; logs</a></span><span><a href="https://huggingface.co/vaibhavrpi/Qwen3.5-4B-think-graft-GGUF">Edited Qwen3.5-4B GGUF</a></span></div>
+
+<div class="tldr">
+<b class="t">TL;DR</b>
+<ul>
+<li>I changed <b>one row</b> of the output layer: the row that produces the <code>&lt;/think&gt;</code> token. Its logit now also reads a linear probe that fires when the hidden state looks like "the answer is settled, I'm only re-checking". No training, no gradients, no engine or harness change, zero runtime cost. Because only one logit changes, the edited model's behaviour can be computed <i>exactly</i> offline.</li>
+<li><b>Qwen3.5-4B</b> (stock llama.cpp): on held-out MATH-500 problems, <b>same accuracy with 54% fewer tokens</b> (60% less thinking). At a 32k budget it solved 2 of 3 AIME 2025 problems on which the unedited model ran out of budget while re-checking an answer it already had. The live model matches the offline prediction to within 0.01 in probability. <a href="https://huggingface.co/vaibhavrpi/Qwen3.5-4B-think-graft-GGUF">GGUF on Hugging Face</a>.</li>
+<li><b>DeepSeek V4.1 Flash</b> (763B MoE, 2-bit, streamed from SSD on an 8 GB laptop GPU): maths <b>7/7 vs 6/7</b> at max effort with <b>40% fewer tokens</b>, including the hardest problem, which max and low effort both left unanswered. On an agentic website task: <b>84% less thinking</b> and the highest blind rating of four settings (9.5/10 vs 8.2).</li>
+<li>It is not "low effort": it skips thinking after routine tool results (P ≈ 0.95) and still thinks after errors or new information (P(skip) ≤ 0.004).</li>
+</ul>
+</div>
+
+<figure class="wide" style="margin-top:0">
+<div class="scroll" style="margin-bottom:0"><table class="big">
+<thead><tr><th>Model</th><th>Benchmark</th><th>Original</th><th>With the one-row edit</th><th>Change</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><b>Qwen3.5-4B</b><br><span class="note">stock llama.cpp</span></td><td>MATH-500, 8 held-out problems</td><td>8/8 · 34,955 tokens</td><td>8/8 · 16,080 tokens</td><td class="ok">−54% tokens</td></tr>
+<tr><td>AIME 2025, 3 problems (32k budget)</td><td>0/3 (out of budget)</td><td>2/3</td><td class="ok">+2 solved</td></tr>
+<tr><td rowspan="5"><b>DeepSeek V4.1 Flash</b><br><span class="note">763B, 2-bit, on a laptop</span></td><td>Maths, 7 problems, max effort</td><td>6/7 · 41,559 tokens<sup>a</sup></td><td>7/7 · 25,112 tokens<sup>a</sup></td><td class="ok">+1 solved, −40% tokens</td></tr>
+<tr><td>Agent: build a website (blind rating /10)</td><td>8.2 · 13,106 thinking</td><td>9.5 · 2,062 thinking</td><td class="ok">−84% thinking</td></tr>
+<tr><td>Agent: puzzle + bug fix (2 tasks)</td><td>both right · 3,099 thinking</td><td>both right · 220 thinking</td><td class="ok">−93% thinking</td></tr>
+<tr><td>Agent: data analysis, never seen<sup>b</sup></td><td>4/6 findings · 10,160 thinking</td><td>4.5/6 findings · 4,693 thinking</td><td class="ok">−54% thinking</td></tr>
+<tr><td>Still thinks after errors / new info</td><td>P(skip) 0.000</td><td>P(skip) ≤ 0.004</td><td class="ok">still thinks</td></tr>
+</tbody></table></div>
+<figcaption><sup>a</sup> Tokens on the 6 problems both solved. <sup>b</sup> Compared with the original at low effort (medium wasn't run on this task); findings = 3 planted effects + 3 planted data problems, "partly" counted as 0.5; false claims 1 (original) vs 2 (edited). One run per cell; details and caveats below.</figcaption>
+</figure>
+
+<details class="toc"><summary>On this page</summary><ol>
+<li><a href="#idea">The idea</a></li><li><a href="#qwen">Experiment 1: Qwen3.5-4B</a></li><li><a href="#try">Try it</a></li>
+<li><a href="#deepseek">Experiment 2: DeepSeek V4.1 Flash (763B)</a></li><li><a href="#agents">Agent tasks</a></li><li><a href="#low">Isn't this just low effort?</a></li>
+<li><a href="#method">Method in detail</a></li><li><a href="#ablations">Ablations and dead ends</a></li><li><a href="#story">How it started</a></li>
+<li><a href="#prior">Prior work</a></li><li><a href="#limits">Limitations</a></li><li><a href="#repro">Reproduce</a></li></ol></details>
+
+<figure class="wide">
+<div class="card">
+<div class="legend"><span><i style="background:var(--base)"></i>original model</span><span><i style="background:var(--accent)"></i>with the one-row edit</span><span><i class="sq" style="background:var(--good-soft);border:1px solid var(--good)"></i>after the right answer first appears</span><span><i style="background:var(--accent);width:2px;height:12px;vertical-align:-1px"></i>places the edited model is likely to stop</span></div>
+<div class="chartwrap"><svg id="hero" viewBox="0 0 940 300" width="100%" role="img" aria-label="Chance the thinking has ended by each token, original vs edited"></svg></div>
+<div id="hero-tip">Hover or tap the ticks to read the thinking where the edited model would stop.</div>
+</div>
+<figcaption><b>Figure 1.</b> A real Qwen3.5-4B thinking trace on a MATH-500 problem it never saw during fitting. Curves: the probability that the thinking has already ended by each token, computed exactly from the model's own <code>&lt;/think&gt;</code> probabilities along this trace. The answer, x = 2, first appears at token 567; the original kept re-checking until token 7,415. With the edit, the per-token stop probability stays below 0.0003 while the model is still solving, then fires at the ends of re-checking paragraphs ("Thus, the solution x=2 is unique."). It stops by token 2,000 with probability 0.98. No other token's probability changes.</figcaption>
+</figure>
+
+<h2 id="idea">The idea</h2>
+<p>A reasoning model ends its thinking by emitting one token, <code>&lt;/think&gt;</code>. Like every token, its logit is a dot product of that token's row of the output layer (the "head") with the final normalized hidden state <i>h</i>. So adding a vector to that single row adds a linear readout of <i>h</i> to one decision, the decision to stop:</p>
+<div class="eq">ℓ<sub>close</sub> = w<sub>close</sub>·h &nbsp;→&nbsp; (w<sub>close</sub> + β g)·h = ℓ<sub>close</sub> + β (g·h)</div>
+<p><i>g</i> is a linear probe that separates two kinds of positions in the model's own thinking: <b>paragraph ends after the right answer has already appeared</b> (the model is only re-checking), and <b>everything else</b> (still solving, or mid-sentence). β sets how hard the edit pushes. The row is re-quantized into the file's own format and shipped as an ordinary weights file. The engine, chat template and agent harness are untouched, and the model costs exactly as much to run as before.</p>
+<p>Two properties make this unusually easy to reason about:</p>
+<p><b>1. The edited stop probability is exact.</b> Only ℓ<sub>close</sub> changes, so with <i>o</i> the base model's log-odds of <code>&lt;/think&gt;</code> at a position,</p>
+<div class="eq">P′(close | h) = e<sup>ℓ+βg·h</sup> / (e<sup>ℓ+βg·h</sup> + Σ<sub>j≠close</sub> e<sup>ℓ<sub>j</sub></sup>) = σ(o + β g·h),&nbsp;&nbsp; o = ℓ<sub>close</sub> − log Σ<sub>j≠close</sub> e<sup>ℓ<sub>j</sub></sup></div>
+<p>Given recorded hidden states, the edited model's stop probability at every position of every trace is a closed-form function of β. No generation is needed to tune it.</p>
+<p><b>2. Every other token's distribution is unchanged, conditional on not stopping.</b> For any j ≠ close, P′(j | not close) = P(j | not close). So a trace sampled from the <i>original</i> model is also a valid sample from the <i>edited</i> model up to the point where the edit stops it, and the probability of that stop is exactly 1 − Π<sub>t</sub>(1 − p′<sub>t</sub>). That is what Figure 1 plots, and it is how I searched for harmful early stops (below).</p>
+
+<h2 id="qwen">Experiment 1: Qwen3.5-4B</h2>
+<div class="setup">
+<b>Setup</b>
+<ul>
+<li><b>Model:</b> Qwen3.5-4B (hybrid Gated-DeltaNet/attention, vocab 248,320, hidden size 2,560), Q8_0 GGUF, fully on an RTX 4060 Laptop (8 GB).</li>
+<li><b>Engine:</b> upstream llama.cpp, unmodified. Thinking mode on via the model's own chat template; temperature 0.6, top-p 0.95, top-k 20; fixed seed per problem.</li>
+<li><b>Fit data:</b> the model's own thinking on 24 MATH-500 problems (levels 3–5), 12k-token cap. 22 traces usable (the right answer appears in the thinking), containing 146k tokens of re-checking after the answer first appears: about 6,600 per problem.</li>
+<li><b>Held out:</b> every problem in the results below; none was used to fit or choose β.</li>
+<li><b>Edit:</b> β = 14 (the same value as on DeepSeek). Qwen3.5-4B ties its head to the input embedding, so the edited GGUF adds a separate <code>output.weight</code>: the embedding matrix with one row changed, Q8_0. llama.cpp loads an untied head automatically.</li>
+<li><b>Cost:</b> ~30 min to generate the fit traces, 2 min to capture hidden states, ~7 min for the fit and the β simulation (mostly the log-sum-exp over 248k logits per position). No GPU training.</li>
+</ul>
+</div>
+
+<h3>Choosing β on held-out traces</h3>
+<p>I split the 22 traces in two halves, fitted on one half and simulated exactly on the other, then swapped. "P(stop before answer)" is the probability that the edited model would end its thinking before the right answer first appears, which almost certainly means a wrong or missing answer. "Re-checking kept" is the expected share of post-answer thinking that survives.</p>
+<div class="scroll"><table>
+<thead><tr><th class="n">β</th><th class="n">P(stop before answer): mean</th><th class="n">worst trace</th><th class="n">Re-checking kept</th></tr></thead>
+<tbody>
+<tr><td class="n">0 (original)</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">97–99%</td></tr>
+<tr><td class="n">8</td><td class="n">0.000</td><td class="n">0.000–0.002</td><td class="n">90–95%</td></tr>
+<tr><td class="n">10</td><td class="n">0.000–0.001</td><td class="n">0.002–0.008</td><td class="n">81–92%</td></tr>
+<tr><td class="n">12</td><td class="n">0.002–0.005</td><td class="n">0.012–0.037</td><td class="n">66–85%</td></tr>
+<tr class="hl"><td class="n"><b>14</b></td><td class="n"><b>0.008–0.020</b></td><td class="n"><b>0.069–0.170</b></td><td class="n"><b>52–73%</b></td></tr>
+<tr><td class="n">16</td><td class="n">0.036–0.074</td><td class="n">0.311–0.589</td><td class="n">36–64%</td></tr>
+<tr><td class="n">20</td><td class="n">0.164–0.237</td><td class="n">0.956–1.000</td><td class="n">23–50%</td></tr>
+</tbody></table></div>
+<p class="note" style="margin-top:-6px">Ranges are the two held-out halves (11 traces each). "Re-checking kept" is measured over the long tails of these 12k-capped traces; on full runs the saving is larger, because the model closes early instead of re-checking until a budget runs out.</p>
+<p>The trade-off is smooth up to β ≈ 14 and then turns sharply: at 16–20 the edit starts stopping before the answer. 14 is the last safe-looking point, and it happens to be the value I'd already used on DeepSeek, so I kept it rather than tune it per model.</p>
+
+<h3>Does the live model do what the maths says?</h3>
+<p>I wrote the edited GGUF, loaded it in llama-server, and compared live next-token probabilities with the offline prediction at positions chosen from recorded traces:</p>
+<div class="scroll"><table>
+<thead><tr><th>Position</th><th class="n">Original P(&lt;/think&gt;)</th><th class="n">Edited, predicted offline</th><th class="n">Edited, live</th></tr></thead>
+<tbody>
+<tr><td>re-checking, algebra problem</td><td class="n">9 × 10⁻⁹</td><td class="n">0.605</td><td class="n">0.597</td></tr>
+<tr><td>re-checking, prealgebra problem</td><td class="n">2 × 10⁻⁸</td><td class="n">0.942</td><td class="n">0.944</td></tr>
+<tr><td>re-checking, geometry problem</td><td class="n">1.7 × 10⁻⁶</td><td class="n">0.993</td><td class="n">0.993</td></tr>
+<tr><td>6 solving positions</td><td class="n">not in top 30</td><td class="n">≈ 0</td><td class="n">not in top 30</td></tr>
+</tbody></table></div>
+<p>At all nine positions the other tokens kept exactly their relative probabilities (the spread of their log-probability shifts was 0.0000). The Q8_0 re-quantization of the edited row had a relative error of 1.2% on the added vector.</p>
+
+<h3>Results</h3>
+<figure class="wide"><div class="card">
+<div class="legend"><span><i class="sq" style="background:var(--base)"></i>original, thinking on</span><span><i class="sq" style="background:var(--accent)"></i>edited</span><span>darker part = thinking, lighter = visible answer</span></div>
+<div class="chartwrap"><svg id="qwen-chart" viewBox="0 0 940 330" width="100%" role="img" aria-label="Tokens per MATH-500 problem, original vs edited Qwen3.5-4B"></svg></div>
+</div>
+<figcaption><b>Figure 2.</b> Qwen3.5-4B on 8 held-out MATH-500 problems, one sample each, both arms right on all 8. Total tokens 34,955 → 16,080 (−54%); thinking 30,452 → 12,263 (−60%). No stray <code>&lt;/think&gt;</code> in any edited answer.</figcaption></figure>
+
+<div class="scroll"><table>
+<thead><tr><th>Set (one sample each, 32k budget)</th><th>Thinking on</th><th>Edited</th><th>Thinking off</th></tr></thead>
+<tbody>
+<tr><td>MATH-500, 8 held-out problems</td><td>8/8 · 34,955 tok</td><td class="ok">8/8 · 16,080 tok</td><td>–</td></tr>
+<tr><td>AIME 2025 I-7, I-9, II-8</td><td class="no">0/3 (all hit 32k)</td><td class="ok">2/3</td><td>1/3</td></tr>
+</tbody></table></div>
+<p>On the three AIME problems, the original had already written the right answer inside its thinking every time, and ran out of budget while re-checking it. The edited model's one miss was the model still working: it was moving between candidate counts, and the edit correctly stayed silent. Qwen recommends up to 81,920 tokens for competition maths, where the original would likely finish, so the fair reading is that at a fixed budget, the edit turns more of the budget into answers.</p>
+
+<h3>Searching for harmful early stops</h3>
+<p>The failure that matters is an early stop on a <i>wrong</i> answer that the original would have corrected by re-checking. Property 2 makes this searchable without sampling: on an original trace, the probability that the edited model stops at position t is p′<sub>t</sub> Π<sub>s&lt;t</sub>(1 − p′<sub>s</sub>). For every window with real stop mass, I forced <code>&lt;/think&gt;</code> there, let the edited model write its answer (greedy) and graded it.</p>
+<p>On the 6 held-out traces checked so far, 5 give the right answer at every possible stop. In the sixth, the stops at two paragraph ends (21% of the stop mass) produced no <code>\boxed{}</code> answer within 1,500 tokens. The thinking there had just concluded "the solution x = 2 is unique", so this is probably formatting rather than a wrong answer, but it isn't confirmed. I haven't yet found a case where the edited model is wrong and the original right.</p>
+
+<h2 id="try">Try it</h2>
+<pre><code>hf download vaibhavrpi/Qwen3.5-4B-think-graft-GGUF Qwen3.5-4B-Q8_0-think-graft.gguf --local-dir .
+llama-server -m Qwen3.5-4B-Q8_0-think-graft.gguf -ngl 99 -fa on -c 32768 --jinja
+# use thinking mode as usual; only the timing of &lt;/think&gt; changes</code></pre>
+<p class="note">5.2 GB (Q8_0). Fits an 8 GB GPU with a 32k context. Stock llama.cpp, no patches.</p>
+
+<h2 id="deepseek">Experiment 2: DeepSeek V4.1 Flash (763B) on a laptop</h2>
+<div class="setup">
+<b>Setup</b>
+<ul>
+<li><b>Model:</b> DeepSeek V4.1 Flash, 763B-parameter mixture of experts, IQ2_XXS (2-bit, 243 GB).</li>
+<li><b>Hardware:</b> HP Victus laptop: RTX 4060 Laptop (8 GB), Ryzen 7 8845HS, 30 GB RAM, one NVMe SSD. Experts are streamed from the SSD through a modified build of <a href="https://github.com/Niko1221/Strata">Strata</a>, at about 12 tokens a second, so every thousand tokens of unnecessary re-checking costs well over a minute.</li>
+<li><b>Sampling:</b> temperature 1.0, top-p 1.0 (the model card's setting); fixed seed per problem; reasoning effort via the chat template (max = 100, low = 50).</li>
+<li><b>Fit data:</b> the head inputs over the model's own thinking on <b>two</b> maths problems (digit_sum and coin; 19.5k positions), captured on the one-token decode path that runs the edit.</li>
+<li><b>Edit:</b> β = 14 on the <code>&lt;/think&gt;</code> row (token 128822), re-quantized to the head's Q5_K format with ggml's own quantizer: ±0.04 nats on that logit; the head tensor differs from the original in 3,463 bytes.</li>
+<li><b>Held out:</b> seven more maths problems (budgets 32k for the three tough ones, 16k for the rest) and every agent task. The probe never saw an agent prompt.</li>
+</ul>
+</div>
+<p>Left alone at max effort, the model spends most of its thinking re-checking answers it already has. On the six problems every setting solved, <b>25,363 of its 39,946 thinking tokens came after the right answer had first appeared</b>. On the hardest problem it reached the right answer at ~17,800 tokens and kept verifying until the 32k budget ran out, without ever writing an answer.</p>
+
+<figure class="wide"><div class="card">
+<div class="legend"><span><i class="sq" style="background:var(--base)"></i>max effort (original)</span><span><i class="sq" style="background:#c9b79f"></i>low effort (original)</span><span><i class="sq" style="background:var(--accent)"></i>edited, max effort</span><span>✗ no answer</span></div>
+<div class="chartwrap"><svg id="maths-chart" viewBox="0 0 940 430" width="100%" role="img" aria-label="Tokens per maths problem by setting"></svg></div>
+</div>
+<figcaption><b>Figure 3.</b> DeepSeek V4.1 Flash, total tokens (thinking + answer) per problem, one run each. Max effort's runs on the first three problems used an older build of the engine (same model, same flags).</figcaption></figure>
+
+<div class="scroll"><table>
+<thead><tr><th>Setting</th><th class="n">Right</th><th class="n">Tokens<br>(6 shared)</th><th class="n">Re-checking</th><th class="n">Minutes</th><th>Hardest problem</th></tr></thead>
+<tbody>
+<tr><td>Original, max effort</td><td class="n">6/7</td><td class="n">41,559</td><td class="n">25,363</td><td class="n">64.1</td><td><span class="pill no">no answer</span></td></tr>
+<tr><td>Original, low effort</td><td class="n">6/7</td><td class="n">25,548</td><td class="n">7,781</td><td class="n">36.3</td><td><span class="pill no">no answer</span></td></tr>
+<tr class="hl"><td><b>Edited</b>, max effort</td><td class="n"><b>7/7</b></td><td class="n"><b>25,112</b></td><td class="n"><b>2,630</b></td><td class="n"><b>35.3</b></td><td><span class="pill ok">right</span></td></tr>
+</tbody></table></div>
+<p class="note" style="margin-top:-6px">"Re-checking" = thinking tokens written after the right answer first appeared. Two further held-out problems (a number-theory count and an edit distance by hand) ran out of the 16k budget for both the original at max effort and the edited model, so the full count is 7/9 vs 6/9.</p>
+<p>Two more measurements on this model. On the two fitting traces, teacher-forced, the edit moves P(<code>&lt;/think&gt;</code>) at re-checking paragraph ends from 0.000 to 0.50 and 0.23, while on solving positions the per-token KL divergence from the original is 0.0003 with 99.6% top-1 agreement. On a general held-out text set (~1,000 positions), KL against the 6-expert reference was 0.1155 vs 0.1119 for the unedited model (top-1 82.9% vs 83.4%), inside this configuration's run-to-run noise.</p>
+
+<h2 id="agents">Agent tasks</h2>
+<p>I ran the same edited DeepSeek through a terminal coding-agent harness ("dsh") at its default medium effort, which allows up to 2,048 thinking tokens per step. The main task: build a polished single-page website for a bakery, with a menu, opening hours, a validated contact form, a persistent dark mode and a responsive layout.</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Website task</th><th class="n">Thinking tokens</th><th class="n">Steps</th><th class="n">Capped steps<sup><a href="#f1">1</a></sup></th><th class="n">Blind rating<sup><a href="#f2">2</a></sup></th></tr></thead>
+<tbody>
+<tr><td>Original, medium (default)</td><td class="n">13,106</td><td class="n">10</td><td class="n">4</td><td class="n">8.2</td></tr>
+<tr><td>Original, low effort</td><td class="n">12,530</td><td class="n">36</td><td class="n">5</td><td class="n">9.1</td></tr>
+<tr><td>Original, thinking off</td><td class="n">0</td><td class="n">9</td><td class="n">0</td><td class="n">8.5</td></tr>
+<tr class="hl"><td><b>Edited</b>, medium</td><td class="n"><b>2,062</b></td><td class="n"><b>6</b></td><td class="n"><b>1</b></td><td class="n"><b>9.5</b></td></tr>
+</tbody></table></div>
+
+<figure class="wide">
+<div class="grid4">
+<figure><a href="img/site-original-medium.webp" target="_blank"><img src="img/site-original-medium.webp" alt="Bakery site built by the original model at medium effort"></a><div class="cap"><b>Original, medium · 8.2</b><br>Six menu items, hours side card, plain form.</div></figure>
+<figure><a href="img/site-original-low.webp" target="_blank"><img src="img/site-original-low.webp" alt="Bakery site built by the original model at low effort"></a><div class="cap"><b>Original, low effort · 9.1</b><br>Polished, but took 36 steps and scrolls sideways on a phone.</div></figure>
+<figure><a href="img/site-thinking-off.webp" target="_blank"><img src="img/site-thinking-off.webp" alt="Bakery site built with thinking off"></a><div class="cap"><b>Thinking off · 8.5</b><br>Plainest: six items, no navigation, no contact details.</div></figure>
+<figure><a href="img/site-edited.webp" target="_blank"><img src="img/site-edited.webp" alt="Bakery site built by the edited model"></a><div class="cap"><b>Edited · 9.5</b><br>Eight items with price badges, hero buttons, an hours table, a "find us" panel.</div></figure>
+</div>
+<figcaption><b>Figure 4.</b> The four sites (click for full size), in the order they were rated. All four work: dark mode persists, invalid emails show an inline error, no console errors.</figcaption>
+</figure>
+
+<p>The edited model's page was rated highest, with 84% less thinking than the original at the same setting. It spent its 2,062 thinking tokens on one step, planning the page, and none while writing the file or checking its work. The original spent 63–70% of its thinking on a failure mode I hadn't seen described before, which I'll call <b>cap-thrash</b>:</p>
+<div class="callout">The original drafts the entire HTML/CSS line by line <i>inside its thinking</i>, counting lines to respect the harness's 200-lines-per-write rule. The per-step budget cuts it off mid-draft; it emits a stalling <code>ls</code>, and drafts the whole file again from scratch in the next step, 4–5 times per run. Its earlier thinking was in its context; it restarted anyway.</div>
+
+<h3>Does it still think when something surprising happens?</h3>
+<p>Skipping thinking on easy steps only helps if the model still thinks when it matters. By property 1, the probability that the edited model skips thinking entirely on a step is exactly P′(<code>&lt;/think&gt;</code>) at the first thinking position, computable from the original's recorded prompts:</p>
+<div class="scroll"><table>
+<thead><tr><th>What the last tool result was</th><th class="n">Original: P(skip thinking)</th><th class="n">Edited: P(skip thinking)</th></tr></thead>
+<tbody>
+<tr><td>Routine: "Ran 7 tests … OK"</td><td class="n">0.11</td><td class="n">0.94</td></tr>
+<tr><td>Routine: file updated</td><td class="n">0.12</td><td class="n">0.95</td></tr>
+<tr><td>Routine: answer confirmed</td><td class="n">0.01</td><td class="n">0.95</td></tr>
+<tr><td>Task start</td><td class="n">0.01–0.29</td><td class="n">0.32–1.00</td></tr>
+<tr class="hl"><td>New information: the test file's contents</td><td class="n">0.000</td><td class="n">0.002</td></tr>
+<tr class="hl"><td>New information: empty directory (time to plan)</td><td class="n">0.000</td><td class="n">0.004</td></tr>
+<tr class="hl"><td>Error: <code>node</code> ENOENT</td><td class="n">0.000</td><td class="n">0.001</td></tr>
+<tr class="hl"><td>Error: browser failed to launch</td><td class="n">0.000</td><td class="n">0.000</td></tr>
+<tr><td>Tests fail (<code>..EFEF.</code>)</td><td class="n">0.27</td><td class="n">0.91</td></tr>
+</tbody></table></div>
+<p class="note" style="margin-top:-6px">25 recorded prompts from the original's own runs (representative rows; all 25 in the repo). For the failing tests the next sensible action is "read the code", which needs no thought; after reading it, the edited model thought for 220 tokens and fixed the bug.</p>
+<p>The same thing happened live on a task it had never seen: adding promo-code support to a small codebase, checked by hidden tests. After <code>Ran 25 tests … FAILED (failures=6)</code>, the edited model thought for 128 tokens and found the cause ("The tests pass code as parse_order only, not parse_code!"), spent 76 tokens on the fix, and passed all 9 hidden tests.</p>
+
+<h3>Two more small tasks</h3>
+<div class="scroll"><table>
+<thead><tr><th>Task</th><th class="n">Original thinking</th><th class="n">Edited thinking</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><b>eyes</b>: probability puzzle (may write code)</td><td class="n">2,828</td><td class="n">0</td><td>both right</td></tr>
+<tr><td><b>orders</b>: fix 3 bugs so hidden tests pass</td><td class="n">271</td><td class="n">220</td><td>both pass</td></tr>
+</tbody></table></div>
+
+<h3>A data-analysis task it had never seen</h3>
+<p>A bakery chain's sales CSV with three planted effects and three planted data problems; the model writes a report with findings and a chart. (The original at medium wasn't run on this task; low effort was.)</p>
+<div class="scroll"><table>
+<thead><tr><th>Analysis task</th><th class="n">Original, low effort</th><th class="n">Edited, medium</th></tr></thead>
+<tbody>
+<tr><td>Thinking tokens</td><td class="n">10,160</td><td class="n"><b>4,693</b></td></tr>
+<tr><td>Weekend effect (+59%)</td><td class="n ok">found</td><td class="n ok">found</td></tr>
+<tr><td>Data problems (duplicates, negative quantities, missing prices)</td><td class="n ok">3/3</td><td class="n ok">3/3</td></tr>
+<tr><td>Steadily declining product</td><td class="n no">missed</td><td class="n no">missed</td></tr>
+<tr><td>A store's step up in March</td><td class="n no">missed</td><td class="n">partly</td></tr>
+<tr><td>False claims</td><td class="n">1</td><td class="n">2</td></tr>
+</tbody></table></div>
+
+<h2 id="low">"Isn't this just low effort?"</h2>
+<p>This was my own first question, and the answer depends on the task.</p>
+<p><b>On maths, the token count is about the same, but different tokens get cut.</b> The edited model used 25,112 tokens on the six shared problems; low effort used 25,548. Low effort cuts the re-checking too (7,781 tokens left) but also solves less carefully: on the code-tracing problem its first pass got 93, a shallow check said "Correct", and only a full re-derivation found 85. The edited model keeps max-effort solving (15,366 solve tokens vs 14,583 at max and 16,469 at low) and drops the re-checking (2,630 left). It was the only setting that answered the hardest problem.</p>
+<p><b>On agent tasks, low effort backfires.</b> It halves the per-step budget, so the model hits the cap more often and cap-thrash gets worse: <b>36 steps instead of 10</b>, and 885k tokens of context re-read versus ~64k for the edited model.</p>
+<p><b>Thinking off can't react.</b> It never thinks, so it can't stop to think when a test fails or a tool errors, and its page was rated below the edited model's (8.5 vs 9.5).</p>
+<p><b>The edited model decides per step</b>, from its own state: it skips thinking after routine results and thinks after surprises. Effort levels, budgets and "thinking off" apply one setting to every step.</p>
+
+<h2 id="method">Method in detail</h2>
+<h3>1. Capture the head's exact input</h3>
+<p>Let the unedited model re-read its own traces and save the final normalized hidden state at every position: the exact vector the head multiplies. On Qwen this is a small libllama tool (embeddings on, pooling none, causal chunks of 1,024 tokens with the KV cache kept between chunks). Checks: the captured states reproduce the model's own sampling log-probability (−0.18 nats per token at T = 0.6), and the generated token is the argmax at 93.7% of positions. Capture on the path that will run the edit: on DeepSeek, chunked prefill and one-token decode differ by 1–3 nats on this logit (details under ablations).</p>
+<h3>2. Label</h3>
+<p>For each trace, find the first position where the right answer is stated in the thinking. For short numeric answers, require it to be stated as a result ("= 5", "is 5", "answer … 5") rather than appear as an intermediate value. Positives: positions right after a paragraph break (<code>\n\n</code>) after that point. Negatives: every other thinking position, which covers the entire solving phase plus mid-paragraph positions while re-checking. On Qwen this gave 595 positives against ~64k (subsampled) negatives.</p>
+<h3>3. Fit a closed-form probe</h3>
+<p>Shrinkage linear discriminant analysis, no gradients:</p>
+<pre><code># H: (n, d) head inputs; P / N: boolean masks for positives / negatives
+mu_p, mu_n = H[P].mean(0), H[N].mean(0)
+S = np.cov(H[N].T, bias=True)
+S = 0.8*S + 0.2*np.trace(S)/d*np.eye(d)   # shrinkage 0.2
+w = np.linalg.solve(S, mu_p - mu_n)
+a, b = np.median(H[N] @ w), np.median(H[P] @ w)
+g = w / (b - a)          # medians: negatives → 0, positives → 1</code></pre>
+<p>Scaling g so the two medians sit one unit apart makes β interpretable: at a typical re-checking paragraph end the edit adds about β nats to the close logit; at a typical solving position it adds about zero. The negatives are what make this safe. Every solving position and every mid-sentence position is a negative, so the discriminant direction is the one that is <i>specifically</i> high at "settled" paragraph ends.</p>
+<h3>4. Simulate β exactly</h3>
+<pre><code>o = l_close - logsumexp(l_others)   # base log-odds per position
+p = sigmoid(o + beta * H @ g)        # edited stop probability (exact)
+stopped_by_t = 1 - np.cumprod(1 - p)
+# report: P(stop before answer), re-checking kept, stray &lt;/think&gt;</code></pre>
+<h3>5. Write the row back</h3>
+<p>Add β·g to the <code>&lt;/think&gt;</code> row (in float), re-quantize that one row with ggml's quantizer, and write a new GGUF with every other tensor byte-identical. For a tied-embedding model, add <code>output.weight</code> as a copy of the embedding with the edited row, so the input embedding of <code>&lt;/think&gt;</code> is untouched. Check the effective edit after re-quantization: 1.2% relative error on Qwen (Q8_0); ±0.04 nats on DeepSeek (Q5_K).</p>
+
+<h2 id="ablations">Ablations and dead ends</h2>
+<p><b>The model's own stop probability gives no warning.</b> On DeepSeek, P(<code>&lt;/think&gt;</code>) stayed ≈ 0 through 4,700 tokens of re-checking on digit_sum, was 0.02 just 37 tokens before the model finally closed, and 0.51 at the close. Early-exit rules that threshold the model's own confidence in ending (DEER-style) have nothing to work with here. The information is in the hidden state, just not on the close logit's axis.</p>
+<p><b>Mid-layer edits don't move the decision.</b> Re-checking vs solving is linearly separable in the residual stream (cross-problem AUC 0.91–0.99 for the mean-difference direction), but every intervention there left the stop probability at re-checking paragraph ends ≈ 0 (max 0.02):</p>
+<div class="scroll"><table>
+<thead><tr><th>Intervention (DeepSeek)</th><th class="n">KL vs original (solving)</th><th class="n">P(&lt;/think&gt;) at re-checking ends</th></tr></thead>
+<tbody>
+<tr><td>Delete 16 shared-expert neurons per layer, layers 24–39 (two selection rules)</td><td class="n">≈ 0.007</td><td class="n">≈ 0 (once 0.15)</td></tr>
+<tr><td>Mask the top-2 "re-checking" routed experts per layer, layers 20–39</td><td class="n">≈ 0.001</td><td class="n">≈ 0</td></tr>
+<tr><td>Add or subtract 0.25 × the re-check − solve mean difference at layer 24</td><td class="n">≈ 0.01</td><td class="n">≈ 0</td></tr>
+<tr><td>Project that direction out (shared-expert output, layers 24–39; residual streams)</td><td class="n">0.004–0.006</td><td class="n">≈ 0</td></tr>
+<tr class="hl"><td><b>One-row head edit (this post)</b></td><td class="n">0.0003</td><td class="n"><b>0.23–0.50</b></td></tr>
+</tbody></table></div>
+<p class="note" style="margin-top:-6px">Top-1 agreement with the original stayed at 96–99% for every mid-layer edit (99.6% for the head edit). The original model's own value at those positions is 0.000 (max 0.02).</p>
+<p>While re-checking, the close logit sits 10–15 nats below closing. Nudging a mid-layer state by an amount that keeps KL small doesn't come close to moving it. The head is where the decision is made, so that's where the edit has leverage.</p>
+<p><b>Mean-difference probe vs discriminant.</b> Putting the plain mean difference (re-check − solve) on the row saves as many tokens on paper, but it fires during solving and mid-sentence: P(stop before the answer) 5–100% at β ≥ 8. The shrinkage discriminant, with all solving and mid-paragraph positions as negatives, keeps it ≤ 0.001 at the same β on the fitting traces.</p>
+<p><b>Calibrate on the path that runs the edit.</b> The first DeepSeek probe was fitted on hidden states from chunked prompt processing. Teacher-forced through one-token decode, its stop probability at the same paragraph ends dropped from 0.51 / 0.23 / 0.93 to 0.13 / 0.08 / 0.32, and the first real run didn't stop early at all. Refitting on decode-path states (median alignment with the engine's own scores: 0.008 nats) fixed it. On Qwen, captures with 1,024- and 256-token chunks differ by a median 2% per row (kernel numerics, not chunk boundaries), small enough not to matter for a linear probe.</p>
+
+<h2 id="story">How it started</h2>
+<p>I'd been running DeepSeek V4.1 Flash on my laptop for a while, streaming it off the SSD through a heavily modified engine, and I wanted it faster and less wasteful. I'm GPU-poor, so the constraint was training-free methods only. The <a href="https://rikiyat.github.io/blog/weight-space-programming/">weight-space programming</a> posts had me curious whether you could just edit a model into reasoning more efficiently.</p>
+<p><b>First I asked GPT-6 Astra (through Codex) to do exactly that</b>: edit DeepSeek's weights so it reasons compactly instead of in long prose. It edited 5.4–16.8 million shared-expert weights over two days. Thinking length didn't move (695 tokens before, 699–729 after); stronger edits just caused repetition. Maybe that works better on small models; on this one the decision to stop is held in the head, as the table above shows.</p>
+<p><b>Then latent reasoning</b>: keep the reasoning inside the hidden state instead of writing it out. On a 2-bit model a single forward pass copies digits from the clues but never applies the logic. No gain.</p>
+<p><b>So I gave up and set thinking to low.</b> Then I read a post claiming DeepSeek was trained at max effort, and that lower settings make it worse and even longer. My agent runs agreed: low effort took 36 steps where medium took 10. But reading the maths traces, I noticed the model usually had the right answer early, and most of the thinking was re-checking something it already knew.</p>
+<p>That's what early-exit research is about, but most methods I found need training or a component running next to the model. I let Claude Code work through it overnight on my machine. The approach that worked is the one-row edit above.</p>
+
+<h2 id="prior">Prior work</h2>
+<p>The core idea isn't mine. That a reasoning model's hidden state knows the answer is settled, and that a probe can end the thinking early, is published: <a href="https://arxiv.org/abs/2504.05419">Zhang et al. 2025</a> (probe-driven early exit), <a href="https://arxiv.org/abs/2506.08390">Sheng et al., NeurIPS 2025</a> (a direction that sets the <code>&lt;/think&gt;</code> logit) and <a href="https://arxiv.org/abs/2603.22016">ROM</a> (a trained overthinking detector). <a href="https://arxiv.org/abs/2503.22048">ThinkEdit</a> edits weights for thinking that is too short. What's here is narrower: folding the probe into the <code>&lt;/think&gt;</code> row, so that the edit is just a weights file with no runtime component, and measurements on a 763B model on a laptop, including agent tasks.</p>
+<p>The other common route to a model that thinks less is training a "think less" variant. <a href="https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.8-27B">ThinkingCap-Qwen3.8-27B</a>, a fine-tune of Qwen3.8-27B, reports 37% fewer reasoning tokens on average (85.8% vs 86.6% accuracy), and its GGUF alone has been downloaded almost 900k times, so people clearly want this. <a href="https://arxiv.org/abs/2505.13379">Thinkless</a> uses reinforcement learning to teach a model to choose, per prompt, between a short answer and long reasoning (50–90% less long-chain thinking). <a href="https://huggingface.co/Xin-Rui/BudgetThinker-1.5b">BudgetThinker</a> and similar models train token budgets in. All of these need training data and GPU time for every model you want to change. This edit is a training-free alternative: a few dozen of the model's own traces, closed-form linear algebra, and one changed row.</p>
+<p>What surprised me is how little this is used. In 2026 I couldn't find it, or anything like it, in the popular inference engines and tools: they offer effort levels, token budgets and "thinking off", but nothing that lets the model's own state decide when to stop. It's a simple and effective way to cut thinking, and it doesn't seem to be widely known.</p>
+
+<h2 id="limits">Limitations</h2>
+<ul>
+<li><b>Small numbers.</b> Every DeepSeek cell is one run, and run-to-run variance is large. The Qwen sets are small too. I'm GPU-poor, so this is still being benchmarked and validated on more problems, seeds and models.</li>
+<li><b>Stray <code>&lt;/think&gt;</code> tags.</b> On DeepSeek, the edited model's visible maths answers sometimes contain extra close tags (56 on the hardest problem, 1–2 on four others): re-checking inside the answer looks like re-checking inside the thinking, so the probe fires there too. Harmless for grading, untidy for users. Adding the model's own answer text as negatives removes them (in the repo). None appeared on Qwen.</li>
+<li><b>Some checking moves into the answer.</b> When the model still has a checking plan, stopping the thinking can move part of it into the visible answer (DeepSeek, coin problem: 3,611 answer tokens). It still came out 36% shorter overall.</li>
+<li><b>Fitted on maths only.</b> The DeepSeek probe saw two maths traces; everything agentic is transfer.</li>
+</ul>
+
+<h2 id="repro">Reproduce</h2>
+<p>Everything is in <a href="https://github.com/nextgen-user/think-graft">github.com/nextgen-user/think-graft</a>:</p>
+<ul>
+<li><b>Qwen3.5-4B, end to end</b> on one 8 GB GPU with upstream llama.cpp: trace generation, head-input capture, the fit, the β simulation, writing the GGUF, live verification, and the benchmark and exit-risk scripts.</li>
+<li><b>DeepSeek V4.1</b>: the fit scripts, the edited rows and probes, every run's logs and tables, the agent task prompts and answer keys, and all site screenshots. The engine capture hook is specific to my Strata build.</li>
+</ul>
+
+<footer>
+<p>Questions, ideas, or results on other models? I'd love to hear them: <a href="https://www.linkedin.com/in/vaibhav-arduino-913938212/">LinkedIn</a> · <a href="mailto:vaibhavarduino@gmail.com">vaibhavarduino@gmail.com</a></p>
+<div class="fn"><ol>
+<li id="f1">Steps whose thinking hit the 2,048-token per-step budget, where the harness forces the thinking to close.</li>
+<li id="f2">Rated blind by ChatGPT: it was shown the four screenshots unlabelled, side by side in the order above, and asked to rate each UI out of 10.</li>
+</ol></div>
+</footer>
+
+</main>
+
+<script id="hero-data" type="application/json">{"n":7415,"B":8,"ans":567,"sg":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0003,0.0021,0.0021,0.0021,0.0021,0.0021,0.0021,0.0021,0.0021,0.0021,0.0021,0.0021,0.0021,0.0024,0.0024,0.0024,0.0024,0.0024,0.0024,0.0024,0.0024,0.0024,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0102,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.0572,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2055,0.2056,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9533,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9829,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9995,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,0.9999,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0],"sb":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.0002,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.007,0.0071,0.0071,0.0071,0.0071,0.0071,0.0071,0.0071,0.0071,0.0071,0.0071,0.0071,0.1412,0.1412,0.1412,0.1412,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.1658,0.6814,0.6814,0.6814,0.6814,0.6814,0.6814,0.6814,0.6814],"ticks":[[1595,0.941,"2$ works.\n    *   Argue uniqueness using monotonicity (derivative).\n    *   State final answer.\n\n   "],[1825,0.634,"This confirms uniqueness without explicit derivatives, just properties of increasing functions.\n\n   "],[2205,0.969,"      So $h(x)$ is strictly increasing.\n       Since $h(2) = 19$, $x=2$ is the unique solution.\n\n   "],[2331,0.764," expected. The phrasing \"Solve for x\" usually implies real $x$. I will stick to real solutions.\n\n   "],[2435,0.991," Try $x=2$: $100 - 81 = 19$. Correct.\n    Monotonicity argument holds.\n    Result is $x=2$.\n\n   "],[2442,0.996,". Correct.\n    Monotonicity argument holds.\n    Result is $x=2$.\n\n    The solution seems solid.\n\n   "],[3265,0.785,"$g'(x) > 0$.\n    So $g(x)$ is strictly increasing.\n    Therefore, $x=2$ is the unique solution.\n\n   "],[3336,0.994," + 19 = 100$.\n    $10^2 = 100$.\n    $100 = 100$.\n    Correct.\n\n   "],[5409,0.699,"\n    Thus $f(x) = 19$ has no solutions for $x \\le 0$.\n    So $x=2$ is the unique real solution.\n\n   "],[5990,0.633,"f(x) = 19 > 0$, there are no solutions for $x < 0$.\n    So $x=2$ is indeed the unique solution.\n\n   "],[5996,0.856,"no solutions for $x < 0$.\n    So $x=2$ is indeed the unique solution.\n\n    This seems complete.\n\n   "],[6261,0.63," *   Since $f(2) = 19$ and $f$ is strictly increasing for $x > 0$, $x=2$ is the unique solution.\n   "],[6271,0.995,"$ is strictly increasing for $x > 0$, $x=2$ is the unique solution.\n    5.  Final answer boxed.\n\n   "],[6357,0.984,"9^x + 19 = 10^x$.\n    $10^x - 9^x = 19$.\n    Yes, everything is consistent.\n\n   "],[6465,0.601,"$.\n    So $x=2$ is the only integer.\n    The function analysis confirms no non-integers either.\n\n   "],[6755,0.601," $f'(x) > 0$.\n    Strictly increasing.\n    $f(0)=0$.\n    $f(2)=19$.\n    Unique solution.\n\n   "],[6762,0.968,"Strictly increasing.\n    $f(0)=0$.\n    $f(2)=19$.\n    Unique solution.\n\n    The logic holds up.\n\n   "],[6829,0.982,"= 10^x$.\"\n    No constraints on $x$ (e.g. integer).\n    So real $x$.\n    The solution is $x=2$.\n\n   "],[6894,0.837,"? No.\n    Is it possible $10^x$ is base 10? Yes, standard notation.\n    Everything is standard.\n\n   "],[6904,0.83," Yes, standard notation.\n    Everything is standard.\n\n    I will write out the solution clearly.\n   "],[6939,0.414,"1. Simplify term.\n    2. Form equation.\n    3. Guess and check integer.\n    4. Prove uniqueness.\n   "],[6947,0.961,"  2. Form equation.\n    3. Guess and check integer.\n    4. Prove uniqueness.\n    5. Box answer.\n\n   "],[7351,0.45," 9^x < 0$.\n    Since $19 > 0$, no solution for $x \\le 0$.\n    So $x=2$ is unique.\n\n   "],[7357,0.993,"0$.\n    Since $19 > 0$, no solution for $x \\le 0$.\n    So $x=2$ is unique.\n\n    Ready to write.\n   "],[7377,0.885,"ady to write.\n    The prompt asks to reason step by step.\n    I will follow the steps outlined.\n\n   "],[7410,0.638,"tlined.\n\n    Double check LaTeX formatting.\n    $3^{2x}$\n    $10^x$\n    Boxed answer \\boxed{2}.\n\n   "]],"exp":1573,"p2000":0.983,"base_end":0.681}</script>
+<script>
+(function(){
+  const root=document.documentElement,tb=document.getElementById('theme');
+  try{const t=localStorage.getItem('theme');if(t)root.dataset.theme=t;}catch(e){}
+  tb.onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}};
+  const NS='http://www.w3.org/2000/svg';
+  const el=(n,a,p)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
+  const css=v=>`var(${v})`;
+  // hero: chance the thinking has already ended by token t
+  const D=JSON.parse(document.getElementById('hero-data').textContent);
+  const S=document.getElementById('hero'),W=940,H=300,L=52,R=16,T=16,Bm=56,pw=W-L-R,ph=H-T-Bm;
+  const x=t=>L+t/D.n*pw,y=v=>T+(1-v)*ph;
+  el('rect',{x:x(D.ans),y:T,width:x(D.n)-x(D.ans),height:ph,fill:css('--good-soft')},S);
+  [0,.25,.5,.75,1].forEach(v=>{el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:css('--rule'),'stroke-width':1},S);
+    const t=el('text',{x:L-8,y:y(v)+4,'text-anchor':'end','font-size':11,fill:css('--muted')},S);t.textContent=Math.round(v*100)+'%';});
+  for(let k=0;k<=7000;k+=1000){const t=el('text',{x:x(k),y:T+ph+38,'text-anchor':'middle','font-size':11,fill:css('--muted')},S);t.textContent=k.toLocaleString();}
+  const tl=el('text',{x:L+pw/2,y:H-2,'text-anchor':'middle','font-size':12,fill:css('--muted')},S);tl.textContent='thinking token';
+  const path=a=>a.map((v,i)=>(i?'L':'M')+x(Math.min(D.n,(i+1)*D.B)).toFixed(1)+','+y(v).toFixed(1)).join('');
+  el('path',{d:'M'+x(0)+','+y(0)+path(D.sb).slice(1).replace(/^/,'L'),fill:'none',stroke:css('--base'),'stroke-width':2},S);
+  el('path',{d:'M'+x(0)+','+y(0)+path(D.sg).slice(1).replace(/^/,'L'),fill:'none',stroke:css('--accent'),'stroke-width':2.5},S);
+  // rug: places where the edited model is likely to stop (P > 0.3)
+  const rugY=T+ph+8;
+  D.ticks.forEach(t=>el('line',{x1:x(t[0]),x2:x(t[0]),y1:rugY,y2:rugY+12,stroke:css('--accent'),'stroke-width':1.5,opacity:.35+.65*t[1]},S));
+  const lab=(t,txt,yy,anchor)=>{el('line',{x1:x(t),x2:x(t),y1:yy+4,y2:T+ph,stroke:css('--fg'),'stroke-width':1,'stroke-dasharray':'3 3',opacity:.45},S);
+    const e=el('text',{x:x(t)+(anchor==='end'?-5:5),y:yy+12,'text-anchor':anchor||'start','font-size':12,fill:css('--fg')},S);e.textContent=txt;};
+  lab(D.ans,'answer x = 2 first written (token '+D.ans+')',T+ph-66);
+  lab(D.n,'original stopped here (token 7,415)',T+ph-118,'end');
+  const g1=el('text',{x:x(2000)+8,y:y(D.p2000)+16,'font-size':12,fill:css('--accent'),'font-weight':600},S);g1.textContent='edited: stopped by token 2,000 in '+Math.round(D.p2000*100)+'% of runs';
+  const cur=el('line',{x1:0,x2:0,y1:T,y2:rugY+12,stroke:css('--accent'),'stroke-width':1,opacity:0},S);
+  const tip=document.getElementById('hero-tip');
+  const esc=s=>s.replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c])).replace(/\n/g,' ⏎ ');
+  const move=ev=>{const r=S.getBoundingClientRect(),px=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left,t=((px/r.width*W)-L)/pw*D.n;
+    let best=null,bd=1e9;D.ticks.forEach(k=>{const dd=Math.abs(k[0]-t);if(dd<bd){bd=dd;best=k}});
+    const i=Math.max(0,Math.min(D.sg.length-1,Math.floor(t/D.B)));
+    if(best&&bd<120){cur.setAttribute('x1',x(best[0]));cur.setAttribute('x2',x(best[0]));cur.setAttribute('opacity',.7);
+      tip.innerHTML=`<b>token ${best[0].toLocaleString()}</b> · edited model P(stop here) <b>${best[1].toFixed(2)}</b> · <span class="mono">…${esc(best[2])}</span>`;}
+    else{cur.setAttribute('opacity',0);tip.innerHTML=`<b>token ${(i*D.B).toLocaleString()}</b> · chance thinking has ended: original ${Math.round(D.sb[i]*100)}% · edited <b>${Math.round(D.sg[i]*100)}%</b>`;}};
+  S.addEventListener('mousemove',move);S.addEventListener('touchmove',move,{passive:true});S.addEventListener('touchstart',move,{passive:true});
+
+  // qwen paired bars: thinking (solid) + answer (light) per problem
+  const Q=[['intermediate_algebra/2046',7415,865,2356,789],['number_theory/234',4532,918,1165,624],['intermediate_algebra/1014',7893,778,4035,618],
+    ['geometry/1108',3023,432,845,316],['algebra/1937',2929,431,1195,476],['number_theory/572',2226,460,1065,416],['prealgebra/1840',1187,348,822,323],['algebra/864',1247,271,780,255]];
+  const QS=document.getElementById('qwen-chart'),ql=190,qw=940-ql-80,qr=38,qh=14,qmx=9000;
+  Q.forEach((m,r)=>{const y0=8+r*qr;const t=el('text',{x:ql-10,y:y0+19,'text-anchor':'end','font-size':12.5,fill:css('--fg')},QS);t.textContent=m[0];
+    [[m[1],m[2],css('--base')],[m[3],m[4],css('--accent')]].forEach((v,k)=>{const yy=y0+k*(qh+2),w1=v[0]/qmx*qw,w2=v[1]/qmx*qw;
+      el('rect',{x:ql,y:yy,width:w1,height:qh,rx:2,fill:v[2]},QS);el('rect',{x:ql+w1,y:yy,width:w2,height:qh,rx:2,fill:v[2],opacity:.4},QS);
+      const tx=el('text',{x:ql+w1+w2+6,y:yy+11,'font-size':11,fill:css('--muted')},QS);tx.textContent=(v[0]+v[1]).toLocaleString();});});
+  el('line',{x1:ql,x2:ql,y1:4,y2:8+Q.length*qr,stroke:css('--rule')},QS);
+  // maths bars
+  const M=[['digit_sum_double',8224,6821,4980,'','',''],['coin_pattern_race',11139,5295,7129,'','',''],['round_table_eyes',32000,32000,27696,'x','x',''],
+    ['code_trace',4669,5857,4988,'','',''],['bitstrings',5394,3774,3466,'','',''],['dice_nine',10309,2823,3317,'','',''],['makespan',1824,978,1232,'','','']];
+  const G=document.getElementById('maths-chart'),gl=150,gw=940-gl-70,rowH=58,bh=14,mx=32000;
+  const cols=[css('--base'),'#c9b79f',css('--accent')];
+  M.forEach((m,r)=>{const y0=10+r*rowH;const t=el('text',{x:gl-10,y:y0+25,'text-anchor':'end','font-size':13,fill:css('--fg')},G);t.textContent=m[0];
+    for(let k=0;k<3;k++){const v=m[1+k],w=v/mx*gw;el('rect',{x:gl,y:y0+k*(bh+2),width:w,height:bh,rx:2,fill:cols[k]},G);
+      const tx=el('text',{x:gl+w+6,y:y0+k*(bh+2)+11,'font-size':11,fill:css('--muted')},G);tx.textContent=v.toLocaleString()+(m[4+k]?' ✗':'');}});
+  el('line',{x1:gl,x2:gl,y1:6,y2:10+M.length*rowH,stroke:css('--rule')},G);
+})();
+</script>
+</body>
+</html>

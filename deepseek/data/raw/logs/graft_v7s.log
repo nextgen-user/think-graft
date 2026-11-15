@@ -1,0 +1,44 @@
+<string>:42: RuntimeWarning: invalid value encountered in divide
+hx: 19551 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 131
+hx1: 12198 head rows for segment lengths [5599, 6599]
+hx1: 12198 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 46
+hx6 labels {np.str_('solve'): 53821, np.str_('check'): 29702, np.str_('pos'): 320, np.str_('ans'): 6096, np.str_('astart'): 627, np.str_('aneg'): 13777, np.str_('apos'): 51, np.str_('acap'): 75}
+alignment: top-1 = next token on 0.794 of rows, mean log P(next) -0.650 (maths -0.641)
+labels after the cap fix {np.str_('solve'): 53821, np.str_('check'): 29702, np.str_('pos'): 320, np.str_('ans'): 6096, np.str_('astart'): 627, np.str_('aneg'): 13777, np.str_('apos'): 51, np.str_('acap'): 75}
+tool-call rows 9208 in 22 steps (held out: 5059 rows)
+   fit: 176 iterations, loss 0.000001, 9 s; 43371 no-close rows, 28 episodes with a window (5647 window rows)
+== v7s base config
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.032; checking kept max-effort 0.01 v5 0.91 low 0.13 graft2 1.00
+   maths train: worst solve-close base-held:makespan 0.001; checking kept max-effort 0.04 v5 0.08 low 0.04
+   strays: graft2 answers (held-out half) 0.015/answer, held-out maths answers total 0.027; tool calls (held-out 11) total 0.000, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.128 max 0.922; site plan step P32 0.000; cap-hitting steps close at [223, 301, 961, 218, 65] (draft began [607, 136, 50, 218, 62]); all agentic thinking 5367/14530
+   fit: 218 iterations, loss 0.000007, 11 s; 43371 no-close rows, 28 episodes with a window (5647 window rows)
+== v7s {'lam': 1e-05}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.041; checking kept max-effort 0.02 v5 0.91 low 0.13 graft2 1.00
+   maths train: worst solve-close base-held:makespan 0.007; checking kept max-effort 0.04 v5 0.08 low 0.04
+   strays: graft2 answers (held-out half) 0.031/answer, held-out maths answers total 0.041; tool calls (held-out 11) total 0.000, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.135 max 0.903; site plan step P32 0.000; cap-hitting steps close at [312, 440, 680, 219, 69] (draft began [607, 136, 50, 218, 62]); all agentic thinking 5267/14530
+   fit: 183 iterations, loss 0.000000, 9 s; 43371 no-close rows, 28 episodes with a window (5647 window rows)
+== v7s {'lam': 1e-07}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.024; checking kept max-effort 0.00 v5 0.91 low 0.14 graft2 1.00
+   maths train: worst solve-close base-held:makespan 0.000; checking kept max-effort 0.04 v5 0.07 low 0.04
+   strays: graft2 answers (held-out half) 0.010/answer, held-out maths answers total 0.021; tool calls (held-out 11) total 0.000, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.122 max 0.947; site plan step P32 0.000; cap-hitting steps close at [126, 276, 1183, 218, 64] (draft began [607, 136, 50, 218, 62]); all agentic thinking 5488/14530
+   fit: 191 iterations, loss 0.000001, 10 s; 43371 no-close rows, 28 episodes with a window (5647 window rows)
+== v7s {'pw': 3.0}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.050; checking kept max-effort 0.00 v5 0.91 low 0.13 graft2 1.00
+   maths train: worst solve-close base-held:makespan 0.001; checking kept max-effort 0.04 v5 0.07 low 0.04
+   strays: graft2 answers (held-out half) 0.021/answer, held-out maths answers total 0.037; tool calls (held-out 11) total 0.000, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.139 max 0.952; site plan step P32 0.000; cap-hitting steps close at [170, 241, 817, 218, 64] (draft began [607, 136, 50, 218, 62]); all agentic thinking 5033/14530
+   fit: 168 iterations, loss 0.000001, 9 s; 43371 no-close rows, 28 episodes with a window (5647 window rows)
+== v7s {'wans': 3.0, 'wstart': 3.0, 'wcall': 3.0}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.009; checking kept max-effort 0.01 v5 0.91 low 0.14 graft2 1.00
+   maths train: worst solve-close base-held:makespan 0.001; checking kept max-effort 0.04 v5 0.07 low 0.04
+   strays: graft2 answers (held-out half) 0.002/answer, held-out maths answers total 0.004; tool calls (held-out 11) total 0.000, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.028 max 0.140; site plan step P32 0.000; cap-hitting steps close at [247, 237, 1677, 219, 64] (draft began [607, 136, 50, 218, 62]); all agentic thinking 6045/14530
+   fit: 174 iterations, loss 0.000008, 9 s; 43371 no-close rows, 28 episodes with a window (5647 window rows)
+== v7s {'pw': 3.0, 'lam': 1e-05}
+   maths held-out (code_trace, coin_pattern_race): worst solve-close lowk43-held:code_trace 0.065; checking kept max-effort 0.01 v5 0.91 low 0.13 graft2 1.00
+   maths train: worst solve-close base-held:makespan 0.008; checking kept max-effort 0.04 v5 0.07 low 0.04
+   strays: graft2 answers (held-out half) 0.042/answer, held-out maths answers total 0.058; tool calls (held-out 11) total 0.001, worst call 0.000
+   agentic: step starts (held-out long prompts) mean 0.150 max 0.946; site plan step P32 0.000; cap-hitting steps close at [256, 351, 551, 218, 66] (draft began [607, 136, 50, 218, 62]); all agentic thinking 4903/14530

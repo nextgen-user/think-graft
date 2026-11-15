@@ -1,0 +1,192 @@
+[
+ {
+  "id": "test/intermediate_algebra/2046.json",
+  "expected": "2",
+  "base_right": true,
+  "n_think": 7415,
+  "exp_exit": 1572.566949882629,
+  "exits": [
+   {
+    "j0": 781,
+    "j": 781,
+    "mass": 0.007816414235924338,
+    "ans": "2",
+    "right": true,
+    "ctx": " Since $f(2) = 19$, and the function is strictly increasing, $x=2$ is the unique real solution. /  / "
+   },
+   {
+    "j0": 1314,
+    "j": 1314,
+    "mass": 0.1952842230659794,
+    "ans": null,
+    "right": false,
+    "ctx": "    So $f(x)$ is strictly increasing for all real $x$. /     Thus, the solution $x=2$ is unique. /  / "
+   },
+   {
+    "j0": 1595,
+    "j": 1595,
+    "mass": 0.7476989575967253,
+    "ans": "2",
+    "right": true,
+    "ctx": "x=2$ works. /     *   Argue uniqueness using monotonicity (derivative). /     *   State final answer. /  / "
+   },
+   {
+    "j0": 1825,
+    "j": 1825,
+    "mass": 0.029639089774453817,
+    "ans": "2",
+    "right": true,
+    "ctx": "g. /     This confirms uniqueness without explicit derivatives, just properties of increasing functions. /  / "
+   },
+   {
+    "j0": 2205,
+    "j": 2205,
+    "mass": 0.0165687945003205,
+    "ans": null,
+    "right": false,
+    "ctx": "(x)$ is strictly increasing. /        Since $h(2) = 19$, $x=2$ is the unique solution. /  / "
+   }
+  ]
+ },
+ {
+  "id": "test/geometry/1108.json",
+  "expected": "(2,4)",
+  "base_right": true,
+  "n_think": 3023,
+  "exp_exit": 1978.3874461777766,
+  "exits": [
+   {
+    "j0": 1610,
+    "j": 1610,
+    "mass": 0.0353070903407721,
+    "ans": "(2, 4)",
+    "right": true,
+    "ctx": " - (P-C) = 2C - P$. /             *   Yes, it is a point reflection about $(a,b)$. /  / "
+   },
+   {
+    "j0": 1838,
+    "j": 1838,
+    "mass": 0.4177514719139406,
+    "ans": "(2, 4)",
+    "right": true,
+    "ctx": "the Output:** /     *   The user wants step-by-step reasoning. /     *   Then the final answer in a box. /  / "
+   },
+   {
+    "j0": 2102,
+    "j": 2102,
+    "mass": 0.5438579056582499,
+    "ans": "(2, 4)",
+    "right": true,
+    "ctx": " = 4$. /             *   So, the resulting point is $(2,4)$. /     *   The logic holds up. /  / "
+   }
+  ]
+ },
+ {
+  "id": "test/prealgebra/1840.json",
+  "expected": "78",
+  "base_right": true,
+  "n_think": 1187,
+  "exp_exit": 914.1254561118182,
+  "exits": [
+   {
+    "j0": 847,
+    "j": 847,
+    "mass": 0.9991945113451077,
+    "ans": "78",
+    "right": true,
+    "ctx": " Total Cost: $15$. Correct. /     *   Profit: $93 - 15 = 78$. Correct. /  / "
+   }
+  ]
+ },
+ {
+  "id": "test/algebra/864.json",
+  "expected": "(-1,6)",
+  "base_right": true,
+  "n_think": 1247,
+  "exp_exit": 772.4295459323831,
+  "exits": [
+   {
+    "j0": 646,
+    "j": 646,
+    "mass": 0.993854887459225,
+    "ans": "(-1, 6)",
+    "right": true,
+    "ctx": " is $\\langle 4, 1 \\rangle$. /     *   Since the vectors are equal, the point is exactly in the middle. /  / "
+   },
+   {
+    "j0": 939,
+    "j": 939,
+    "mass": 0.006085114147910209,
+    "ans": "(-1, 6)",
+    "right": true,
+    "ctx": "{-2}{2}, \\frac{12}{2} \\right)$ /     *   Result: $(-1, 6)$ /  / "
+   }
+  ]
+ },
+ {
+  "id": "test/number_theory/234.json",
+  "expected": "16",
+  "base_right": true,
+  "n_think": 4532,
+  "exp_exit": 1608.185188004719,
+  "exits": [
+   {
+    "j0": 1199,
+    "j": 1199,
+    "mass": 0.004076743423083059,
+    "ans": "16",
+    "right": true,
+    "ctx": " 884,736$. /         *   $97^3 \\approx 912,673$. /  / "
+   },
+   {
+    "j0": 1483,
+    "j": 1483,
+    "mass": 0.7692897278792685,
+    "ans": "16",
+    "right": true,
+    "ctx": " /  / 6.  **Calculate A + B:** /     *   $A + B = 9 + 7 = 16$. /  / "
+   },
+   {
+    "j0": 1746,
+    "j": 1746,
+    "mass": 0.22127035855268185,
+    "ans": "16",
+    "right": true,
+    "ctx": "300 - 1 = 970,299$. /         *   So 97 is definitely the number. /  / "
+   }
+  ]
+ },
+ {
+  "id": "test/algebra/1937.json",
+  "expected": "1600",
+  "base_right": true,
+  "n_think": 2929,
+  "exp_exit": 955.4525314735066,
+  "exits": [
+   {
+    "j0": 690,
+    "j": 690,
+    "mass": 0.3716416133200358,
+    "ans": "1600",
+    "right": true,
+    "ctx": "1500 + 100 = 1600$. /     *   Both methods yield 1600. /  / "
+   },
+   {
+    "j0": 950,
+    "j": 950,
+    "mass": 0.4485890150360666,
+    "ans": "1600",
+    "right": true,
+    "ctx": ")^2$. /     *   $x = (40)^2$. /     *   $x = 1600$. /  / "
+   },
+   {
+    "j0": 1201,
+    "j": 1201,
+    "mass": 0.1783692667423626,
+    "ans": "1600",
+    "right": true,
+    "ctx": "61 = 1600$. Correct. /     *   Boxed answer format: $\\boxed{1600}$. /  / "
+   }
+  ]
+ }
+]

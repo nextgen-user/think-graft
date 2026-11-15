@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Crumb &amp; Co. — a neighbourhood bakery baking sourdough, pastries and small-batch treats daily.">
+  <title>Crumb &amp; Co. — Neighbourhood Bakery</title>
+  <style>
+    :root {
+      --cream: #fbf3e4;
+      --paper: #fffaf0;
+      --ink: #3b2a1e;
+      --muted: #7c6454;
+      --accent: #b9552f;
+      --accent-strong: #8f3d1f;
+      --gold: #d6a24a;
+      --line: rgba(59, 42, 30, 0.16);
+      --shadow: 0 18px 40px rgba(59, 42, 30, 0.12);
+    }
+
+    body.dark {
+      --cream: #221a15;
+      --paper: #2d231c;
+      --ink: #f6e7d4;
+      --muted: #c7b3a0;
+      --accent: #e38b5d;
+      --accent-strong: #f2a878;
+      --gold: #e2b468;
+      --line: rgba(246, 231, 212, 0.16);
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    .container {
+      width: min(1080px, 100% - 2.5rem);
+      margin-inline: auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3.5rem 0 3rem;
+      background:
+        radial-gradient(circle at 82% 12%, rgba(214, 162, 74, 0.22), transparent 58%),
+        radial-gradient(circle at 12% 90%, rgba(185, 85, 47, 0.16), transparent 55%),
+        var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        115deg,
+        rgba(59, 42, 30, 0.035) 0 1px,
+        transparent 1px 12px
+      );
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.55rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
+    }
+
+    .tagline {
+      margin: 0.85rem 0 1.3rem;
+      max-width: 46ch;
+      font-size: 1.12rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.42rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 250, 240, 0.55);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+    }
+
+    body.dark .badge { background: rgba(255, 255, 255, 0.06); }
+
+    .badge-dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(59, 42, 30, 0.1);
+      transition: transform 0.15s ease, background-color 0.25s ease;
+    }
+
+    .theme-toggle:hover { transform: translateY(-1px); }
+    .theme-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+    main { padding: 2.4rem 0 0; }
+
+    section { padding: 2.4rem 0; }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    .kicker {
+      margin: 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .menu-grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .menu-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      padding: 1.15rem 1.25rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .menu-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    .menu-name {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+    }
+
+    .menu-price {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .menu-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .menu-tag {
+      margin-top: auto;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .lower-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 1.2rem;
+    }
+
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.4rem 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hours-list {
+      list-style: none;
+      margin: 0.4rem 0 0;
+      padding: 0;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 0.92rem;
+    }
+
+    .hours-row:last-child { border-bottom: 0; }
+    .hours-row .day { font-weight: 600; }
+    .hours-row .time { color: var(--muted); font-variant: tabular-nums; }
+
+    .hours-note {
+      margin: 0.8rem 0 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    form { margin-top: 0.5rem; }
+
+    .field { margin-bottom: 0.9rem; }
+
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.35rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      font: inherit;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+      border-color: var(--accent);
+    }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    .error {
+      margin: 0.35rem 0 0;
+      color: #b3312b;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    body.dark .error { color: #ff9c86; }
+
+    .status {
+      margin: 0.9rem 0 0;
+      padding: 0.65rem 0.8rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: rgba(214, 162, 74, 0.18);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .submit-btn {
+      margin-top: 0.3rem;
+      padding: 0.7rem 1.15rem;
+      border: 0;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff8ec;
+      font: inherit;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .submit-btn:hover { background: var(--accent-strong); transform: translateY(-1px); }
+    .submit-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+    footer {
+      margin-top: 1.5rem;
+      padding: 1.6rem 0 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-name {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      .container { width: min(100% - 1.5rem, 1080px); }
+      .hero { padding: 2.6rem 0 2.2rem; }
+      .hero h1 { font-size: 2.55rem; }
+      .theme-toggle { top: 0.7rem; right: 0.7rem; }
+      .menu-grid,
+      .lower-grid { grid-template-columns: 1fr; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+      <span aria-hidden="true">🌙</span><span id="themeLabel">Dark mode</span>
+    </button>
+    <div class="hero-inner container">
+      <p class="eyebrow">Neighbourhood bakery · since 2012</p>
+      <h1>Crumb &amp; Co.</h1>
+      <p class="tagline">Slow-proofed sourdoughs, flaky pastries and small-batch treats — baked fresh each morning on our own corner.</p>
+      <div class="hero-badges">
+        <span class="badge"><span class="badge-dot"></span>Fresh daily</span>
+        <span class="badge"><span class="badge-dot"></span>Local flour</span>
+        <span class="badge"><span class="badge-dot"></span>Baked by hand</span>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section id="menu" aria-labelledby="menu-heading">
+      <div class="section-head">
+        <div>
+          <p class="kicker">What we bake</p>
+          <h2 id="menu-heading">Today's menu</h2>
+        </div>
+        <p class="hours-note">Everything is baked in small batches and sells out fast.</p>
+      </div>
+      <ul class="menu-grid">
+        <li class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">Sourdough Loaf</h3>
+            <span class="menu-price">$8.50</span>
+          </div>
+          <p class="menu-desc">Long-fermented white sourdough with a crackly crust and open, chewy crumb.</p>
+          <span class="menu-tag">Baked daily</span>
+        </li>
+        <li class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">Butter Croissant</h3>
+            <span class="menu-price">$3.75</span>
+          </div>
+          <p class="menu-desc">Laminated with local butter, folded by hand and baked to a golden, flaky finish.</p>
+          <span class="menu-tag">Morning batch</span>
+        </li>
+        <li class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">Cinnamon Roll</h3>
+            <span class="menu-price">$4.25</span>
+          </div>
+          <p class="menu-desc">Soft enriched dough swirled with cinnamon sugar and a light vanilla glaze.</p>
+          <span class="menu-tag">Weekend favourite</span>
+        </li>
+        <li class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">Seeded Rye</h3>
+            <span class="menu-price">$7.00</span>
+          </div>
+          <p class="menu-desc">Dense rye boule rolled in sunflower, flax and sesame seeds — earthy and nutty.</p>
+          <span class="menu-tag">Sliced to order</span>
+        </li>
+        <li class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">Blueberry Muffin</h3>
+            <span class="menu-price">$3.50</span>
+          </div>
+          <p class="menu-desc">Buttery muffin packed with wild blueberries and a crunchy sugar top.</p>
+          <span class="menu-tag">Fresh batch</span>
+        </li>
+        <li class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">Lemon Tart</h3>
+            <span class="menu-price">$5.50</span>
+          </div>
+          <p class="menu-desc">Crisp pastry shell filled with bright lemon curd and a dusting of icing sugar.</p>
+          <span class="menu-tag">Chilled set</span>
+        </li>
+        <li class="menu-card">
+          <div class="menu-top">
+            <h3 class="menu-name">Walnut Brownie</h3>
+            <span class="menu-price">$4.00</span>
+          </div>
+          <p class="menu-desc">Dark chocolate brownie with toasted walnuts and a fudgy, rich centre.</p>
+          <span class="menu-tag">Afternoon treat</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="lower-grid">
+      <section id="hours" class="panel" aria-labelledby="hours-heading">
+        <p class="kicker">Come by</p>
+        <h2 id="hours-heading">Opening hours</h2>
+        <ul class="hours-list">
+          <li class="hours-row"><span class="day">Monday</span><span class="time">7:00 am – 6:00 pm</span></li>
+          <li class="hours-row"><span class="day">Tuesday</span><span class="time">7:00 am – 6:00 pm</span></li>
+          <li class="hours-row"><span class="day">Wednesday</span><span class="time">7:00 am – 6:00 pm</span></li>
+          <li class="hours-row"><span class="day">Thursday</span><span class="time">7:00 am – 6:00 pm</span></li>
+          <li class="hours-row"><span class="day">Friday</span><span class="time">7:00 am – 6:00 pm</span></li>
+          <li class="hours-row"><span class="day">Saturday</span><span class="time">8:00 am – 4:00 pm</span></li>
+          <li class="hours-row"><span class="day">Sunday</span><span class="time">9:00 am – 1:00 pm</span></li>
+        </ul>
+        <p class="hours-note">Hot loaves leave the oven at 7 am and 3 pm daily.</p>
+      </section>
+
+      <section id="contact" class="panel" aria-labelledby="contact-heading">
+        <p class="kicker">Say hello</p>
+        <h2 id="contact-heading">Contact us</h2>
+        <p class="menu-desc">Questions, special orders or a quick hello — we'll reply within a day.</p>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Ada Lovelace">
+            <p class="error" id="nameError" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="ada@example.com">
+            <p class="error" id="emailError" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like to order…"></textarea>
+            <p class="error" id="messageError" role="alert" hidden></p>
+          </div>
+          <button class="submit-btn" type="submit">Send message</button>
+          <p class="status" id="status" role="status" hidden></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-name">Crumb &amp; Co.</span>
+        <span> · 14 Willow Lane, Marlborough</span>
+      </div>
+      <div>hello@crumbandco.example · (555) 019-2834</div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const STORAGE_KEY = "crumb-theme";
+      const body = document.body;
+      const toggle = document.getElementById("themeToggle");
+      const icon = toggle.querySelector("span[aria-hidden]");
+      const label = document.getElementById("themeLabel");
+
+      function applyTheme(isDark) {
+        body.classList.toggle("dark", isDark);
+        icon.textContent = isDark ? "☀️" : "🌙";
+        label.textContent = isDark ? "Light mode" : "Dark mode";
+        toggle.setAttribute("aria-pressed", String(isDark));
+      }
+
+      let saved = null;
+      try {
+        saved = localStorage.getItem(STORAGE_KEY);
+      } catch (e) {
+        saved = null;
+      }
+      applyTheme(saved === "dark");
+
+      toggle.addEventListener("click", function () {
+        const nextIsDark = !body.classList.contains("dark");
+        applyTheme(nextIsDark);
+        try {
+          localStorage.setItem(STORAGE_KEY, nextIsDark ? "dark" : "light");
+        } catch (e) {
+          /* storage unavailable: theme still applies for this visit */
+        }
+      });
+
+      const form = document.getElementById("contactForm");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const messageInput = document.getElementById("message");
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const messageError = document.getElementById("messageError");
+      const status = document.getElementById("status");
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      function showError(node, text) {
+        node.textContent = text;
+        node.hidden = false;
+      }
+
+      function clearError(node) {
+        node.textContent = "";
+        node.hidden = true;
+      }
+
+      [nameInput, emailInput, messageInput].forEach(function (input) {
+        input.addEventListener("input", function () {
+          const node = input === nameInput ? nameError
+            : input === emailInput ? emailError
+            : messageError;
+          clearError(node);
+          status.hidden = true;
+        });
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        clearError(nameError);
+        clearError(emailError);
+        clearError(messageError);
+        status.hidden = true;
+
+        let firstInvalid = null;
+
+        if (nameInput.value.trim() === "") {
+          showError(nameError, "Please enter your name.");
+          firstInvalid = firstInvalid || nameInput;
+        }
+
+        const email = emailInput.value.trim();
+        if (!emailPattern.test(email)) {
+          showError(emailError, "Please enter a valid email address, e.g. name@example.com.");
+          firstInvalid = firstInvalid || emailInput;
+        }
+
+        if (messageInput.value.trim() === "") {
+          showError(messageError, "Please enter a message.");
+          firstInvalid = firstInvalid || messageInput;
+        }
+
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return;
+        }
+
+        status.textContent = "Thanks, " + nameInput.value.trim() + "! Your message has been sent — we'll reply within a day.";
+        status.hidden = false;
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+ "tag": "ag5-off",
+ "errors": [],
+ "static": {
+  "lang": "en",
+  "viewport_meta": true,
+  "title": "Crumb & Co — Neighbourhood Bakery",
+  "prices": 6,
+  "words": 220,
+  "headings": [
+   "H1:Crumb & Co",
+   "H2:Today's menu",
+   "H3:Sourdough Loaf\n$8.50",
+   "H3:Butter Croissant\n$4.00",
+   "H3:Cinnamon Morning Bun\n$4.75",
+   "H3:Wholegrain Seed Roll\n$3.25",
+   "H3:Lemon Cardamom Bun\n$4.50",
+   "H3:Cold Brew & Cookie Box\n$6.00",
+   "H2:Opening hours",
+   "H2:Say hello"
+  ],
+  "inputs": 3,
+  "inputs_labelled": 3,
+  "nav_anchors": 0,
+  "nav_anchors_ok": 0,
+  "semantic": [
+   "header",
+   "main",
+   "section",
+   "footer"
+  ],
+  "html_kb": 13
+ },
+ "dark": {
+  "found": true,
+  "changes": true,
+  "storage": "{\"crumbco-theme\":\"dark\"}",
+  "persists": true
+ },
+ "form": {
+  "email_field": true,
+  "stayed": true,
+  "inline_error": true,
+  "native_invalid": null,
+  "valid_stays": true,
+  "valid_feedback": true
+ },
+ "mobile": {
+  "scroll_width": 375,
+  "no_hscroll": true,
+  "menu_columns_seen": 2
+ }
+}

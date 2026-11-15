@@ -1,0 +1,47 @@
+variant,arm,engine,effort,graft,set,problem,expected,answer,correct,closed_thinking,total_tokens,thinking_tokens,solve_tokens,check_tokens,answer_tokens,stray_close_tags,minutes,finish,budget
+graft2-tough,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",tough,digit_sum_double,791,791,True,True,4980,4208,3515,693,772,1,7.0,stop,32000
+graft2-tough,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",tough,round_table_eyes,2618/59049,\(\frac{2618}{59049}\),True,True,27696,27128,21485,5643,568,56,39.6,stop,32000
+graft2-tough,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",tough,coin_pattern_race,5/12,\(\frac{5}{12}\),True,True,7129,3518,3296,222,3611,2,10.2,stop,32000
+graft2-held,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",held,code_trace,85,85,True,True,4988,3066,2987,79,1922,1,6.6,stop,16000
+graft2-held,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",held,bitstrings,853,853,True,True,3466,3179,3036,143,287,0,4.8,stop,16000
+graft2-held,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",held,dice_nine,21/2,\(\frac{21}{2}\),True,True,3317,2934,2138,796,383,1,4.7,stop,16000
+graft2-held,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",held,numtheory,228,,False,True,16000,13216,,,2784,0,21.3,length,16000
+graft2-held,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",held,makespan,10,10,True,True,1232,1091,394,697,141,0,2.0,stop,16000
+graft2-held,graft2,kf43,max (100),"graft2 (LDA probe, beta 14)",held,edit_distance,8,x.,False,False,16000,16000,,,0,0,20.1,length,16000
+base-held,plain max,kf43,max (100),none,held,code_trace,85,85,True,True,4669,4578,2421,2157,91,0,6.4,stop,16000
+base-held,plain max,kf43,max (100),none,held,bitstrings,853,853,True,True,5394,5194,2228,2966,200,0,7.8,stop,16000
+base-held,plain max,kf43,max (100),none,held,dice_nine,21/2,\(\frac{21}{2}\),True,True,10309,9970,2429,7541,339,0,15.1,stop,16000
+base-held,plain max,kf43,max (100),none,held,numtheory,228,,False,False,16000,16000,,,0,0,21.2,length,16000
+base-held,plain max,kf43,max (100),none,held,makespan,10,10 hours,True,True,1824,1648,444,1204,176,0,2.9,stop,16000
+base-held,plain max,kf43,max (100),none,held,edit_distance,8,,False,False,16000,16000,,,0,0,20.8,length,16000
+graft4-tough,graft v4,kf43,max (100),v4,tough,digit_sum_double,791,785,False,True,7007,6540,,,467,0,9.9,stop,32000
+graft4-tough,graft v4,kf43,max (100),v4,tough,coin_pattern_race,5/12,\(\frac{5}{12}\),True,True,4129,3606,3304,302,523,0,5.9,stop,32000
+graft4-held,graft v4,kf43,max (100),v4,held,code_trace,85,85,True,True,2902,1934,1869,65,968,0,3.7,stop,16000
+graft4-held,graft v4,kf43,max (100),v4,held,dice_nine,21/2,\(\frac{21}{2}\),True,True,2036,1737,1303,434,299,0,2.9,stop,16000
+stack-held,graft v4d,kf45 (lossy deferral),max (100),v4d,held,code_trace,85,85,True,True,6016,5940,4166,1774,76,0,7.3,stop,16000
+stack-held,graft v4d,kf45 (lossy deferral),max (100),v4d,held,bitstrings,853,853,True,True,7448,7110,2789,4321,338,0,9.8,stop,16000
+stack-held,graft v4d,kf45 (lossy deferral),max (100),v4d,held,dice_nine,21/2,\(\frac{21}{2}\),True,True,3201,2932,1795,1137,269,0,4.5,stop,16000
+stack-held,graft v4d,kf45 (lossy deferral),max (100),v4d,held,makespan,10,10 hours,True,True,1369,1134,423,711,235,0,2.1,stop,16000
+stack-tough,graft v4d,kf45 (lossy deferral),max (100),v4d,tough,digit_sum_double,791,791,True,True,6153,5604,3824,1780,549,0,8.4,stop,32000
+stack-tough,graft v4d,kf45 (lossy deferral),max (100),v4d,tough,coin_pattern_race,5/12,\(\frac{5}{12}\),True,True,3646,3635,2558,1077,11,0,5.0,stop,32000
+g5-max-tough,graft v5,kf45 (lossy deferral),max (100),v5,tough,digit_sum_double,791,791,True,True,7328,6460,4857,1603,868,0,9.8,stop,32000
+g5-max-tough,graft v5,kf45 (lossy deferral),max (100),v5,tough,round_table_eyes,2618/59049,\(\frac{34562}{531441}\),False,True,29193,28734,,,459,0,37.5,stop,32000
+g5-max-tough,graft v5,kf45 (lossy deferral),max (100),v5,tough,coin_pattern_race,5/12,5/12,True,True,5119,5101,2810,2291,18,1,7.2,stop,32000
+g5-max-held,graft v5,kf45 (lossy deferral),max (100),v5,held,code_trace,85,85,True,True,5017,4848,2863,1985,169,0,6.1,stop,16000
+v5k43-tough,graft v5,kf43,max (100),v5 (graft5w8),tough,digit_sum_double,791,791,True,True,6326,5822,3995,1827,504,1,8.9,stop,32000
+v5k43-tough,graft v5,kf43,max (100),v5 (graft5w8),tough,round_table_eyes,2618/59049,,False,False,32000,32000,26853,5147,0,0,43.8,length,32000
+v5k43-tough,graft v5,kf43,max (100),v5 (graft5w8),tough,coin_pattern_race,5/12,\(\frac{5}{12}\),True,True,3901,3359,3103,256,542,0,5.6,stop,32000
+v5k43-held,graft v5,kf43,max (100),v5 (graft5w8),held,code_trace,85,85,True,True,6017,5683,2461,3222,334,0,8.2,stop,16000
+v5k43-held,graft v5,kf43,max (100),v5 (graft5w8),held,bitstrings,853,853,True,True,3095,2725,2237,488,370,0,4.1,stop,16000
+v5k43-held,graft v5,kf43,max (100),v5 (graft5w8),held,dice_nine,21/2,\(\frac{21}{2}\),True,True,3782,3318,2062,1256,464,0,5.4,stop,16000
+v5k43-held,graft v5,kf43,max (100),v5 (graft5w8),held,makespan,10,10 hours,True,True,1491,1316,356,960,175,0,2.3,stop,16000
+lowk43-tough,plain low,kf43,low (50),none,tough,digit_sum_double,791,791,True,True,6821,6374,4423,1951,447,0,9.4,stop,32000
+lowk43-tough,plain low,kf43,low (50),none,tough,round_table_eyes,2618/59049,,False,False,32000,32000,,,0,0,45.0,length,32000
+lowk43-tough,plain low,kf43,low (50),none,tough,coin_pattern_race,5/12,\(\frac{5}{12}\),True,True,5295,5071,2455,2616,224,0,7.8,stop,32000
+lowk43-held,plain low,kf43,low (50),none,held,code_trace,85,85,True,True,5857,5844,5421,423,13,0,7.8,stop,16000
+lowk43-held,plain low,kf43,low (50),none,held,bitstrings,853,853,True,True,3774,3591,2738,853,183,0,5.3,stop,16000
+lowk43-held,plain low,kf43,low (50),none,held,dice_nine,21/2,\(\frac{21}{2}\),True,True,2823,2571,1119,1452,252,0,4.2,stop,16000
+lowk43-held,plain low,kf43,low (50),none,held,makespan,10,10,True,True,978,799,313,486,179,0,1.8,stop,16000
+gf-tough,plain max,"kf14 (older engine, Nov 8)",max (100),none,tough,digit_sum_double,791,791,True,True,8224,7705,3022,4683,519,0,13.2,stop,32000
+gf-tough,plain max,"kf14 (older engine, Nov 8)",max (100),none,tough,round_table_eyes,2618/59049,"2618/59049"".",False,False,32000,32000,17878,14122,0,0,52.1,length,32000
+gf-tough,plain max,"kf14 (older engine, Nov 8)",max (100),none,tough,coin_pattern_race,5/12,5/12,True,True,11139,10851,4039,6812,288,0,18.7,stop,32000

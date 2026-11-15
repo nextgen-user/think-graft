@@ -1,0 +1,219 @@
+<string>:42: RuntimeWarning: invalid value encountered in divide
+hx: 19551 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 131
+hx1: 12198 head rows for segment lengths [5599, 6599]
+hx1: 12198 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 46
+hx6 labels {np.str_('solve'): 53821, np.str_('check'): 29702, np.str_('pos'): 320, np.str_('ans'): 6096, np.str_('astart'): 627, np.str_('aneg'): 13844, np.str_('apos'): 59}
+  head stats 16384/104469
+  head stats 32768/104469
+  head stats 49152/104469
+  head stats 65536/104469
+  head stats 81920/104469
+  head stats 98304/104469
+  head stats 104469/104469
+alignment: top-1 = next token on 0.794 of rows, mean log P(next) -0.650 (maths -0.641)
+fold bitstrings done
+fold code_trace done
+fold coin_pattern_race done
+fold dice_nine done
+fold digit_sum_double done
+fold makespan done
+
+MATHS, held-out problem (fit without it).  per arm: P(close while solving) max/mean, checking kept / own checking
+beta  0 | base: solve-close max 0.00 mean 0.00, check  13346/13361 | graft2: solve-close max 0.00 mean 0.00, check   1715/1715 | lowk43: solve-close max 0.00 mean 0.00, check   7637/7665 | v5k43: solve-close max 0.00 mean 0.00, check   7287/7287
+beta 10 | base: solve-close max 0.00 mean 0.00, check  11577/13361 | graft2: solve-close max 0.00 mean 0.00, check   1712/1715 | lowk43: solve-close max 0.03 mean 0.01, check   6144/7665 | v5k43: solve-close max 0.00 mean 0.00, check   6775/7287
+beta 12 | base: solve-close max 0.01 mean 0.00, check   8313/13361 | graft2: solve-close max 0.00 mean 0.00, check   1695/1715 | lowk43: solve-close max 0.26 mean 0.04, check   5744/7665 | v5k43: solve-close max 0.00 mean 0.00, check   5169/7287
+beta 14 | base: solve-close max 0.05 mean 0.01, check   3932/13361 | graft2: solve-close max 0.01 mean 0.00, check   1566/1715 | lowk43: solve-close max 0.82 mean 0.14, check   4811/7665 | v5k43: solve-close max 0.02 mean 0.01, check   3700/7287
+beta 16 | base: solve-close max 0.32 mean 0.06, check   2241/13361 | graft2: solve-close max 0.03 mean 0.01, check   1265/1715 | lowk43: solve-close max 0.99 mean 0.17, check   2527/7665 | v5k43: solve-close max 0.10 mean 0.03, check   2531/7287
+beta 18 | base: solve-close max 0.84 mean 0.16, check   1763/13361 | graft2: solve-close max 0.12 mean 0.03, check   1105/1715 | lowk43: solve-close max 1.00 mean 0.17, check   1401/7665 | v5k43: solve-close max 0.45 mean 0.16, check   2144/7287
+
+per trace beta 14:
+  base-held:bitstrings             solve-close 0.005  check kept    308 of 2500 (cut)
+  base-held:code_trace             solve-close 0.001  check kept    983 of 2157
+  base-held:dice_nine              solve-close 0.001  check kept   1159 of 2500 (cut)
+  base-held:makespan               solve-close 0.000  check kept    918 of 1204
+  base-tough:coin_pattern_race     solve-close 0.052  check kept    292 of 2500 (cut)
+  base-tough:digit_sum_double      solve-close 0.001  check kept    272 of 2500 (cut)
+  graft2-held:bitstrings           solve-close 0.001  check kept    132 of 143
+  graft2-held:code_trace           solve-close 0.008  check kept     78 of 79
+  graft2-held:dice_nine            solve-close 0.000  check kept    668 of 796
+  graft2-held:makespan             solve-close 0.000  check kept    687 of 697
+  lowk43-held:bitstrings           solve-close 0.003  check kept    192 of 853
+  lowk43-held:code_trace           solve-close 0.818  check kept    272 of 423
+  lowk43-held:dice_nine            solve-close 0.000  check kept    641 of 1452
+  lowk43-held:makespan             solve-close 0.000  check kept    470 of 486
+  lowk43-tough:coin_pattern_race   solve-close 0.000  check kept   1800 of 2500 (cut)
+  lowk43-tough:digit_sum_double    solve-close 0.000  check kept   1437 of 1951
+  v5k43-held:bitstrings            solve-close 0.000  check kept    146 of 488
+  v5k43-held:code_trace            solve-close 0.003  check kept     78 of 2500 (cut)
+  v5k43-held:dice_nine             solve-close 0.000  check kept   1155 of 1256
+  v5k43-held:makespan              solve-close 0.000  check kept    899 of 960
+  v5k43-tough:coin_pattern_race    solve-close 0.009  check kept    192 of 256
+  v5k43-tough:digit_sum_double     solve-close 0.019  check kept   1230 of 1827
+
+per trace beta 16:
+  base-held:bitstrings             solve-close 0.020  check kept    149 of 2500 (cut)
+  base-held:code_trace             solve-close 0.004  check kept    277 of 2157
+  base-held:dice_nine              solve-close 0.004  check kept    612 of 2500 (cut)
+  base-held:makespan               solve-close 0.000  check kept    894 of 1204
+  base-tough:coin_pattern_race     solve-close 0.322  check kept    145 of 2500 (cut)
+  base-tough:digit_sum_double      solve-close 0.004  check kept    163 of 2500 (cut)
+  graft2-held:bitstrings           solve-close 0.003  check kept    119 of 143
+  graft2-held:code_trace           solve-close 0.030  check kept     78 of 79
+  graft2-held:dice_nine            solve-close 0.001  check kept    412 of 796
+  graft2-held:makespan             solve-close 0.000  check kept    656 of 697
+  lowk43-held:bitstrings           solve-close 0.008  check kept    147 of 853
+  lowk43-held:code_trace           solve-close 0.991  check kept     97 of 423
+  lowk43-held:dice_nine            solve-close 0.000  check kept    631 of 1452
+  lowk43-held:makespan             solve-close 0.000  check kept    469 of 486
+  lowk43-tough:coin_pattern_race   solve-close 0.000  check kept    687 of 2500 (cut)
+  lowk43-tough:digit_sum_double    solve-close 0.001  check kept    495 of 1951
+  v5k43-held:bitstrings            solve-close 0.001  check kept     56 of 488
+  v5k43-held:code_trace            solve-close 0.032  check kept     27 of 2500 (cut)
+  v5k43-held:dice_nine             solve-close 0.001  check kept    771 of 1256
+  v5k43-held:makespan              solve-close 0.000  check kept    851 of 960
+  v5k43-tough:coin_pattern_race    solve-close 0.048  check kept    154 of 256
+  v5k43-tough:digit_sum_double     solve-close 0.103  check kept    672 of 1827
+
+AGENTIC beta 0 (full fit, in-sample): start rows (decode, 22 prompts) P(close) mean 0.027 max 0.317; strays/answer 0.00
+   sess22 step len   355     first draft at  None  P(close in first 32) 0.00  expected close at    311
+   sess22 step len   138     first draft at  None  P(close in first 32) 0.00  expected close at    133
+   sess23 step len    12     first draft at  None  P(close in first 32) 1.00  expected close at      8
+   sess23 step len     6     first draft at  None  P(close in first 32) 1.00  expected close at      4
+   sess23 step len   231     first draft at  None  P(close in first 32) 0.00  expected close at    230
+   sess23 step len     4     first draft at  None  P(close in first 32) 0.84  expected close at      3
+   sess24 step len  1174     first draft at  None  P(close in first 32) 0.07  expected close at   1090
+   sess24 step len  2064     first draft at   607  P(close in first 32) 0.00  expected close at   2056
+   sess24 step len  2064     first draft at   136  P(close in first 32) 0.00  expected close at   2054
+   sess24 step len  2064     first draft at    50  P(close in first 32) 0.01  expected close at   2027
+   sess24 step len  2064     first draft at   218  P(close in first 32) 0.00  expected close at   2061
+   sess24 step len   374     first draft at  None  P(close in first 32) 0.00  expected close at    369
+   sess24 step len    71     first draft at  None  P(close in first 32) 0.00  expected close at     70
+   sess24 step len   223     first draft at  None  P(close in first 32) 0.00  expected close at    200
+   sess24 step len  2064     first draft at    62  P(close in first 32) 0.00  expected close at   2063
+   sess24 step len   224     first draft at  None  P(close in first 32) 0.00  expected close at    200
+   sess24 step len   669     first draft at  None  P(close in first 32) 0.00  expected close at    656
+   sess24 step len   214     first draft at  None  P(close in first 32) 0.00  expected close at    213
+   sess24 step len    87     first draft at  None  P(close in first 32) 0.00  expected close at     82
+   sess24 step len   219     first draft at  None  P(close in first 32) 0.00  expected close at    217
+   sess24 step len    34     first draft at  None  P(close in first 32) 0.00  expected close at     33
+   sess24 step len   175     first draft at  None  P(close in first 32) 0.00  expected close at    175
+
+AGENTIC beta 10 (full fit, in-sample): start rows (decode, 22 prompts) P(close) mean 0.164 max 0.993; strays/answer 0.35
+   sess22 step len   355     first draft at  None  P(close in first 32) 0.02  expected close at    255
+   sess22 step len   138     first draft at  None  P(close in first 32) 0.00  expected close at    129
+   sess23 step len    12     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len     6     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len   231     first draft at  None  P(close in first 32) 0.00  expected close at    230
+   sess23 step len     4     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess24 step len  1174     first draft at  None  P(close in first 32) 0.45  expected close at    605
+   sess24 step len  2064     first draft at   607  P(close in first 32) 0.00  expected close at   1949
+   sess24 step len  2064     first draft at   136  P(close in first 32) 0.02  expected close at   1949
+   sess24 step len  2064     first draft at    50  P(close in first 32) 0.08  expected close at   1371
+   sess24 step len  2064     first draft at   218  P(close in first 32) 0.00  expected close at    465
+   sess24 step len   374     first draft at  None  P(close in first 32) 0.00  expected close at    280
+   sess24 step len    71     first draft at  None  P(close in first 32) 0.00  expected close at     56
+   sess24 step len   223     first draft at  None  P(close in first 32) 0.00  expected close at     59
+   sess24 step len  2064     first draft at    62  P(close in first 32) 0.00  expected close at    573
+   sess24 step len   224     first draft at  None  P(close in first 32) 0.00  expected close at     71
+   sess24 step len   669     first draft at  None  P(close in first 32) 0.00  expected close at    451
+   sess24 step len   214     first draft at  None  P(close in first 32) 0.00  expected close at    212
+   sess24 step len    87     first draft at  None  P(close in first 32) 0.00  expected close at     51
+   sess24 step len   219     first draft at  None  P(close in first 32) 0.00  expected close at    202
+   sess24 step len    34     first draft at  None  P(close in first 32) 0.00  expected close at     33
+   sess24 step len   175     first draft at  None  P(close in first 32) 0.00  expected close at    173
+
+AGENTIC beta 12 (full fit, in-sample): start rows (decode, 22 prompts) P(close) mean 0.191 max 0.998; strays/answer 0.57
+   sess22 step len   355     first draft at  None  P(close in first 32) 0.03  expected close at    250
+   sess22 step len   138     first draft at  None  P(close in first 32) 0.00  expected close at    129
+   sess23 step len    12     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len     6     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len   231     first draft at  None  P(close in first 32) 0.00  expected close at    229
+   sess23 step len     4     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess24 step len  1174     first draft at  None  P(close in first 32) 0.57  expected close at    452
+   sess24 step len  2064     first draft at   607  P(close in first 32) 0.00  expected close at   1847
+   sess24 step len  2064     first draft at   136  P(close in first 32) 0.03  expected close at   1723
+   sess24 step len  2064     first draft at    50  P(close in first 32) 0.11  expected close at    723
+   sess24 step len  2064     first draft at   218  P(close in first 32) 0.00  expected close at    353
+   sess24 step len   374     first draft at  None  P(close in first 32) 0.00  expected close at    267
+   sess24 step len    71     first draft at  None  P(close in first 32) 0.00  expected close at     51
+   sess24 step len   223     first draft at  None  P(close in first 32) 0.00  expected close at     55
+   sess24 step len  2064     first draft at    62  P(close in first 32) 0.00  expected close at    548
+   sess24 step len   224     first draft at  None  P(close in first 32) 0.00  expected close at     68
+   sess24 step len   669     first draft at  None  P(close in first 32) 0.00  expected close at    427
+   sess24 step len   214     first draft at  None  P(close in first 32) 0.01  expected close at    212
+   sess24 step len    87     first draft at  None  P(close in first 32) 0.01  expected close at     50
+   sess24 step len   219     first draft at  None  P(close in first 32) 0.00  expected close at    190
+   sess24 step len    34     first draft at  None  P(close in first 32) 0.00  expected close at     33
+   sess24 step len   175     first draft at  None  P(close in first 32) 0.00  expected close at    171
+
+AGENTIC beta 14 (full fit, in-sample): start rows (decode, 22 prompts) P(close) mean 0.210 max 1.000; strays/answer 1.07
+   sess22 step len   355     first draft at  None  P(close in first 32) 0.05  expected close at    245
+   sess22 step len   138     first draft at  None  P(close in first 32) 0.00  expected close at    129
+   sess23 step len    12     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len     6     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len   231     first draft at  None  P(close in first 32) 0.00  expected close at    229
+   sess23 step len     4     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess24 step len  1174     first draft at  None  P(close in first 32) 0.69  expected close at    309
+   sess24 step len  2064     first draft at   607  P(close in first 32) 0.00  expected close at   1625
+   sess24 step len  2064     first draft at   136  P(close in first 32) 0.04  expected close at   1176
+   sess24 step len  2064     first draft at    50  P(close in first 32) 0.17  expected close at    174
+   sess24 step len  2064     first draft at   218  P(close in first 32) 0.01  expected close at    244
+   sess24 step len   374     first draft at  None  P(close in first 32) 0.01  expected close at    261
+   sess24 step len    71     first draft at  None  P(close in first 32) 0.00  expected close at     47
+   sess24 step len   223     first draft at  None  P(close in first 32) 0.00  expected close at     53
+   sess24 step len  2064     first draft at    62  P(close in first 32) 0.00  expected close at    541
+   sess24 step len   224     first draft at  None  P(close in first 32) 0.00  expected close at     67
+   sess24 step len   669     first draft at  None  P(close in first 32) 0.00  expected close at    414
+   sess24 step len   214     first draft at  None  P(close in first 32) 0.01  expected close at    211
+   sess24 step len    87     first draft at  None  P(close in first 32) 0.01  expected close at     50
+   sess24 step len   219     first draft at  None  P(close in first 32) 0.00  expected close at    174
+   sess24 step len    34     first draft at  None  P(close in first 32) 0.00  expected close at     33
+   sess24 step len   175     first draft at  None  P(close in first 32) 0.00  expected close at    170
+
+AGENTIC beta 16 (full fit, in-sample): start rows (decode, 22 prompts) P(close) mean 0.223 max 1.000; strays/answer 2.00
+   sess22 step len   355     first draft at  None  P(close in first 32) 0.07  expected close at    238
+   sess22 step len   138     first draft at  None  P(close in first 32) 0.00  expected close at    129
+   sess23 step len    12     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len     6     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len   231     first draft at  None  P(close in first 32) 0.00  expected close at    227
+   sess23 step len     4     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess24 step len  1174     first draft at  None  P(close in first 32) 0.78  expected close at    190
+   sess24 step len  2064     first draft at   607  P(close in first 32) 0.00  expected close at   1214
+   sess24 step len  2064     first draft at   136  P(close in first 32) 0.06  expected close at    802
+   sess24 step len  2064     first draft at    50  P(close in first 32) 0.25  expected close at     47
+   sess24 step len  2064     first draft at   218  P(close in first 32) 0.01  expected close at    218
+   sess24 step len   374     first draft at  None  P(close in first 32) 0.01  expected close at    257
+   sess24 step len    71     first draft at  None  P(close in first 32) 0.00  expected close at     44
+   sess24 step len   223     first draft at  None  P(close in first 32) 0.00  expected close at     52
+   sess24 step len  2064     first draft at    62  P(close in first 32) 0.00  expected close at    464
+   sess24 step len   224     first draft at  None  P(close in first 32) 0.00  expected close at     67
+   sess24 step len   669     first draft at  None  P(close in first 32) 0.00  expected close at    406
+   sess24 step len   214     first draft at  None  P(close in first 32) 0.02  expected close at    209
+   sess24 step len    87     first draft at  None  P(close in first 32) 0.02  expected close at     50
+   sess24 step len   219     first draft at  None  P(close in first 32) 0.00  expected close at    156
+   sess24 step len    34     first draft at  None  P(close in first 32) 0.00  expected close at     33
+   sess24 step len   175     first draft at  None  P(close in first 32) 0.00  expected close at    167
+
+AGENTIC beta 18 (full fit, in-sample): start rows (decode, 22 prompts) P(close) mean 0.234 max 1.000; strays/answer 3.19
+   sess22 step len   355     first draft at  None  P(close in first 32) 0.09  expected close at    230
+   sess22 step len   138     first draft at  None  P(close in first 32) 0.00  expected close at    129
+   sess23 step len    12     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len     6     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess23 step len   231     first draft at  None  P(close in first 32) 0.00  expected close at    222
+   sess23 step len     4     first draft at  None  P(close in first 32) 1.00  expected close at      0
+   sess24 step len  1174     first draft at  None  P(close in first 32) 0.85  expected close at    105
+   sess24 step len  2064     first draft at   607  P(close in first 32) 0.00  expected close at    738
+   sess24 step len  2064     first draft at   136  P(close in first 32) 0.09  expected close at    652
+   sess24 step len  2064     first draft at    50  P(close in first 32) 0.35  expected close at     31
+   sess24 step len  2064     first draft at   218  P(close in first 32) 0.01  expected close at    212
+   sess24 step len   374     first draft at  None  P(close in first 32) 0.02  expected close at    253
+   sess24 step len    71     first draft at  None  P(close in first 32) 0.00  expected close at     42
+   sess24 step len   223     first draft at  None  P(close in first 32) 0.00  expected close at     52
+   sess24 step len  2064     first draft at    62  P(close in first 32) 0.00  expected close at    287
+   sess24 step len   224     first draft at  None  P(close in first 32) 0.00  expected close at     67
+   sess24 step len   669     first draft at  None  P(close in first 32) 0.00  expected close at    401
+   sess24 step len   214     first draft at  None  P(close in first 32) 0.03  expected close at    206
+   sess24 step len    87     first draft at  None  P(close in first 32) 0.03  expected close at     49
+   sess24 step len   219     first draft at  None  P(close in first 32) 0.00  expected close at    141
+   sess24 step len    34     first draft at  None  P(close in first 32) 0.00  expected close at     33
+   sess24 step len   175     first draft at  None  P(close in first 32) 0.00  expected close at    165

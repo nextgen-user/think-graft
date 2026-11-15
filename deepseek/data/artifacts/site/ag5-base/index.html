@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6ecdc">
+  <title>Crumb &amp; Co. | Neighbourhood Bakery</title>
+  <style>
+    :root {
+      --bg: #f6ecdc;
+      --surface: #fffbf2;
+      --surface-2: #f1e2cf;
+      --ink: #3b2d25;
+      --muted: #7d6959;
+      --accent: #a45137;
+      --accent-dark: #7e3b28;
+      --gold: #c4904d;
+      --line: #dec6ad;
+      --shadow: 0 18px 45px rgba(74, 52, 36, .12);
+      --radius: 20px;
+      --font-heading: Georgia, "Times New Roman", serif;
+      --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(232, 206, 176, .55), transparent 38%),
+        radial-gradient(circle at 88% 20%, rgba(194, 124, 91, .12), transparent 32%),
+        var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      transition: background-color .25s ease, color .25s ease;
+    }
+
+    body.dark {
+      --bg: #1b1613;
+      --surface: #2b221c;
+      --surface-2: #34291f;
+      --ink: #f5e8d7;
+      --muted: #bca892;
+      --accent: #e7a17f;
+      --accent-dark: #f0be9d;
+      --gold: #e5b879;
+      --line: #4c3c30;
+      --shadow: 0 18px 45px rgba(0, 0, 0, .35);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(94, 67, 48, .38), transparent 38%),
+        radial-gradient(circle at 88% 20%, rgba(231, 161, 127, .08), transparent 32%),
+        var(--bg);
+    }
+
+    .container { width: min(1100px, calc(100% - 48px)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 251, 242, .9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    body.dark .site-header { background: rgba(27, 22, 19, .9); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fff8ee;
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      transform: rotate(-3deg);
+      box-shadow: 0 7px 16px rgba(73, 43, 28, .18);
+    }
+    .brand strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 20px;
+      letter-spacing: .01em;
+    }
+    .brand-sub {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .03em;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease;
+    }
+    .theme-toggle:hover { border-color: var(--accent); background: var(--surface-2); }
+    .theme-toggle:focus-visible, nav a:focus-visible, .btn:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 3px solid rgba(164, 81, 55, .45);
+      outline-offset: 2px;
+    }
+    .theme-toggle .icon { font-size: 15px; line-height: 1; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr);
+      gap: 32px;
+      align-items: center;
+      padding: 56px 0 36px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--ink);
+    }
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -.035em;
+    }
+    .tagline {
+      max-width: 54ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff8ee;
+      box-shadow: 0 10px 24px rgba(126, 59, 40, .22);
+    }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-secondary {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--ink);
+    }
+    .btn-secondary:hover { background: var(--surface); border-color: var(--accent); }
+
+    .hero-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .hero-card .kicker {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .hero-card h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      line-height: 1.2;
+    }
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .hero-card .special {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--line);
+      font-size: 14px;
+    }
+    .hero-card .special strong { color: var(--accent-dark); }
+
+    .section {
+      padding: 34px 0 10px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 38px);
+      letter-spacing: -.02em;
+    }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .menu-item {
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: 0 6px 18px rgba(74, 52, 36, .06);
+    }
+    .menu-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 14px;
+    }
+    .menu-item h3 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.25;
+    }
+    .price {
+      color: var(--accent-dark);
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .menu-desc {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .menu-note {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hours-card, .contact-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .hours-card { padding: 22px; }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .hours-table caption {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: left;
+    }
+    .hours-table th, .hours-table td {
+      padding: 11px 4px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+    .hours-table tr:last-child th, .hours-table tr:last-child td {
+      border-bottom: 0;
+    }
+    .hours-table th {
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .hours-table td { color: var(--muted); }
+    .today {
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+    .hours-note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .65fr);
+      gap: 20px;
+    }
+    .contact-card { padding: 24px; }
+    .contact-card h3 {
+      margin: 0 0 6px;
+      font-size: 24px;
+    }
+    .contact-card > p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .field { margin-bottom: 15px; }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: var(--bg);
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      background: var(--surface);
+    }
+    textarea { min-height: 118px; resize: vertical; }
+    .error {
+      min-height: 1.2em;
+      margin: 6px 0 0;
+      color: #b3261e;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    body.dark .error { color: #ff9f8d; }
+    .form-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .form-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .success {
+      margin: 14px 0 0;
+      padding: 10px 12px;
+      border: 1px solid rgba(88, 124, 74, .35);
+      border-radius: 8px;
+      background: rgba(110, 150, 95, .15);
+      color: #3d6a35;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    body.dark .success {
+      color: #c8e8b8;
+      border-color: rgba(168, 211, 143, .25);
+    }
+    .contact-details {
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+    }
+    .contact-details h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
+    .contact-details p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contact-details strong { color: var(--ink); }
+
+    footer {
+      margin-top: 40px;
+      padding: 24px 0 30px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    footer p { margin: 0; }
+    footer .footer-brand {
+      color: var(--accent-dark);
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .container { width: calc(100% - 32px); }
+      .header-inner { align-items: flex-start; }
+      nav { gap: 14px; }
+      .hero { padding: 38px 0 24px; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .hero-card { max-width: 100%; }
+      .form-actions { flex-direction: column; align-items: stretch; }
+      .theme-toggle { font-size: 12px; padding: 8px 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn, .theme-toggle { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Crumb & Co. home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>
+          <strong>Crumb &amp; Co.</strong>
+          <span class="brand-sub">Neighbourhood bakery</span>
+        </span>
+      </a>
+      <nav aria-label="Page sections">
+        <a href="#menu">Menu</a>
+        <a href="#hours">Hours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
+        <span class="icon" aria-hidden="true">☾</span>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Elm Street · Since 2019</p>
+        <h1 id="hero-title">Crumb &amp; Co.</h1>
+        <p class="tagline">Slow-fermented breads, buttery pastries, and small-batch bakes — made fresh each morning and shared with the neighbourhood.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Explore the menu</a>
+          <a class="btn btn-secondary" href="#hours">See opening hours</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Today at the bakery">
+        <p class="kicker">Fresh from the oven</p>
+        <h2>Today's bake</h2>
+        <p>Our sourdough starter is 12 years old, and every loaf is shaped by hand before dawn.</p>
+        <div class="special">
+          <span>Cardamom buns</span>
+          <strong>$5.25</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section id="menu" class="section container" aria-labelledby="menu-title">
+      <div class="section-head">
+        <h2 id="menu-title">From the counter</h2>
+        <p>Baked daily · small batches · seasonal</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Heritage sourdough</h3>
+            <span class="price">$8.50</span>
+          </div>
+          <p class="menu-desc">Naturally leavened, crackly crust, open crumb.</p>
+        </article>
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Butter croissant</h3>
+            <span class="price">$4.25</span>
+          </div>
+          <p class="menu-desc">Folded with cultured butter for a flaky, golden layer.</p>
+        </article>
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Cardamom bun</h3>
+            <span class="price">$5.25</span>
+          </div>
+          <p class="menu-desc">Soft enriched dough, sugar-glazed and warmly spiced.</p>
+        </article>
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Blueberry muffins</h3>
+            <span class="price">$4.75</span>
+          </div>
+          <p class="menu-desc">Loaded with berries, a tender crumb and a crunchy top.</p>
+        </article>
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Cinnamon rolls</h3>
+            <span class="price">$5.50</span>
+          </div>
+          <p class="menu-desc">Slow-proofed, glossy with a buttery cinnamon swirl.</p>
+        </article>
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Rosemary focaccia</h3>
+            <span class="price">$7.00</span>
+          </div>
+          <p class="menu-desc">Olive oil, rosemary and a soft, dimpled crust.</p>
+        </article>
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Chocolate rye cookies</h3>
+            <span class="price">$3.50</span>
+          </div>
+          <p class="menu-desc">Deep cocoa, chewy centre, and a hint of rye flour.</p>
+        </article>
+        <article class="menu-item">
+          <div class="menu-head">
+            <h3>Seasonal galette</h3>
+            <span class="price">$6.00</span>
+          </div>
+          <p class="menu-desc">Market fruit wrapped in buttery pastry.</p>
+        </article>
+      </div>
+      <p class="menu-note">All prices in USD. Ask about allergies and daily specials at the counter.</p>
+    </section>
+
+    <section id="hours" class="section container" aria-labelledby="hours-title">
+      <div class="section-head">
+        <h2 id="hours-title">Opening hours</h2>
+        <p>Come early — the shelves fill up fast.</p>
+      </div>
+      <div class="hours-card">
+        <table class="hours-table">
+          <caption>Seven days a week, on Elm Street.</caption>
+          <tbody>
+            <tr><th scope="row">Monday</th><td>7:00&nbsp;am – 6:00&nbsp;pm</td></tr>
+            <tr><th scope="row">Tuesday</th><td>7:00&nbsp;am – 6:00&nbsp;pm</td></tr>
+            <tr><th scope="row">Wednesday</th><td>7:00&nbsp;am – 6:00&nbsp;pm</td></tr>
+            <tr><th scope="row">Thursday</th><td>7:00&nbsp;am – 6:00&nbsp;pm</td></tr>
+            <tr><th scope="row">Friday</th><td>7:00&nbsp;am – 6:00&nbsp;pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>8:00&nbsp;am – 5:00&nbsp;pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>8:00&nbsp;am – 2:00&nbsp;pm</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note">Holiday hours may vary; call ahead for special orders.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section container" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Say hello</h2>
+        <p>Orders, questions, or a note about a favourite pastry.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Send us a message</h3>
+          <p>We usually reply within one business day.</p>
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
+              <p class="error" id="nameError" role="alert" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+              <p class="error" id="emailError" role="alert" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you'd like to order or ask."></textarea>
+              <p class="error" id="messageError" role="alert" aria-live="polite"></p>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send message</button>
+              <p class="form-note">No spam. Just bread.</p>
+            </div>
+            <p id="formSuccess" class="success" hidden role="status">Thanks! Your message is ready for the bakery — this demo does not send it.</p>
+          </form>
+        </div>
+        <aside class="contact-details" aria-label="Bakery details">
+          <h3>Find us</h3>
+          <p><strong>Crumb &amp; Co.</strong><br>42 Elm Street, corner of 3rd Avenue</p>
+          <p><strong>Email</strong><br>hello@crumbandco.example</p>
+          <p><strong>Phone</strong><br>(555) 012-3456</p>
+          <p>Walk-ins welcome. For large orders, please give us a day's notice.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer-row">
+      <p><span class="footer-brand">Crumb &amp; Co.</span> · Baked with care on Elm Street.</p>
+      <p>Open every day · Fresh bread, no shortcuts.</p>
+    </div>
+  </footer>
+
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const formSuccess = document.getElementById('formSuccess');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function clearErrors() {
+      nameError.textContent = '';
+      emailError.textContent = '';
+      messageError.textContent = '';
+      formSuccess.hidden = true;
+    }
+
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      clearErrors();
+      let isValid = true;
+
+      if (!nameInput.value.trim()) {
+        nameError.textContent = 'Please enter your name.';
+        isValid = false;
+      }
+
+      if (!emailPattern.test(emailInput.value.trim())) {
+        emailError.textContent = 'Please enter a valid email address, e.g. you@example.com.';
+        isValid = false;
+      }
+
+      if (!messageInput.value.trim()) {
+        messageError.textContent = 'Please write a short message.';
+        isValid = false;
+      }
+
+      if (!isValid) {
+        return;
+      }
+
+      formSuccess.hidden = false;
+      contactForm.reset();
+    });
+
+    [nameInput, emailInput, messageInput].forEach((input) => {
+      input.addEventListener('input', () => {
+        const error = document.getElementById(`${input.id}Error`);
+        error.textContent = '';
+        formSuccess.hidden = true;
+      });
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLabel = document.getElementById('themeLabel');
+    const storageKey = 'crumb-theme';
+
+    function applyTheme(isDark) {
+      document.body.classList.toggle('dark', isDark);
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+      themeLabel.textContent = isDark ? 'Light mode' : 'Dark mode';
+      themeToggle.querySelector('.icon').textContent = isDark ? '☀' : '☾';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#1b1613' : '#f6ecdc');
+    }
+
+    const savedTheme = localStorage.getItem(storageKey);
+    applyTheme(savedTheme === 'dark');
+
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = !document.body.classList.contains('dark');
+      applyTheme(nextTheme);
+      localStorage.setItem(storageKey, nextTheme ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

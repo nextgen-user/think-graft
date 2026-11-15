@@ -1,0 +1,26 @@
+prompt what the last tool result was                 unedited    graft2        v5        v7   (P no thinking at all = P(</think>) at the first token)
+     0 task start                                       0.006     0.319     0.009     0.000   original thought >=48 tok
+     1 routine: script printed the answer               0.000     0.001     0.000     0.000   original thought >=48 tok
+     2 routine: answer confirmed                        0.011     0.948     0.024     0.000   original thought 45 tok
+     3 task start                                       0.285     0.995     0.636     0.000   original thought 13 tok
+     4 SURPRISE: tests fail (..EFEF., traceback)        0.265     0.907     0.061     0.001   original thought <4 tok
+     5 new info: test file contents read                0.000     0.002     0.000     0.000   original thought >=48 tok
+     6 routine: file updated                            0.119     0.945     0.052     0.008   original thought <4 tok
+     7 routine: Ran 7 tests OK                          0.109     0.941     0.046     0.002   original thought <4 tok
+     8 task start                                       0.066     0.952     0.092     0.000   original thought >=48 tok
+     9 routine: empty dir listing                       0.000     0.004     0.000     0.000   original thought >=48 tok
+    10 routine: other                                   0.001     0.168     0.001     0.000   original thought >=48 tok
+    11 routine: other                                   0.002     0.696     0.005     0.000   original thought >=48 tok
+    12 routine: other                                   0.000     0.282     0.001     0.000   original thought >=48 tok
+    13 routine: other                                   0.000     0.099     0.000     0.000   original thought >=48 tok
+    14 routine: file created                            0.000     0.001     0.000     0.000   original thought >=48 tok
+    15 routine: wc 487 lines                            0.000     0.000     0.000     0.000   original thought >=48 tok
+    16 routine: tail of file                            0.000     0.001     0.000     0.000   original thought >=48 tok
+    17 routine: (no output)                             0.000     0.002     0.000     0.000   original thought >=48 tok
+    18 routine: other                                   0.000     0.002     0.000     0.000   original thought >=48 tok
+    19 routine: node version                            0.000     0.010     0.000     0.000   original thought 44 tok
+    20 routine: no mismatches                           0.000     0.000     0.000     0.000   original thought >=48 tok
+    21 SURPRISE: node ENOENT error                      0.000     0.001     0.000     0.000   original thought >=48 tok
+    22 routine: syntax OK                               0.000     0.003     0.000     0.000   original thought >=48 tok
+    23 routine: other                                   0.000     0.003     0.000     0.000   original thought >=48 tok
+    24 SURPRISE: firefox failed to launch               0.000     0.000     0.000     0.000   original thought >=48 tok

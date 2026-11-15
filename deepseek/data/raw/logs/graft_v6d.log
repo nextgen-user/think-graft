@@ -1,0 +1,28 @@
+<string>:42: RuntimeWarning: invalid value encountered in divide
+hx: 19551 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 131
+hx1: 12198 head rows for segment lengths [5599, 6599]
+hx1: 12198 rows, traces ['digit_sum_double', 'coin_pattern_race'], verify paragraph ends 46
+hx6 labels {np.str_('solve'): 53821, np.str_('check'): 29702, np.str_('pos'): 320, np.str_('ans'): 6096, np.str_('astart'): 627, np.str_('aneg'): 13777, np.str_('apos'): 51, np.str_('acap'): 75}
+alignment: top-1 = next token on 0.794 of rows, mean log P(next) -0.650 (maths -0.641)
+labels after the cap fix {np.str_('solve'): 53821, np.str_('check'): 29702, np.str_('pos'): 320, np.str_('ans'): 6096, np.str_('astart'): 627, np.str_('aneg'): 13777, np.str_('apos'): 51, np.str_('acap'): 75}
+tool-call rows 9208 in 22 steps (held out: 5059 rows)
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+v5 alone beta_d  0.0: strays/answer 0.41 | maths worst solve-close lowk43-held:code_trace 0.19, v5k43-tough:digit_sum_double 0.01; checking kept base 0.39, lowk43 0.73, v5k43 0.66 | starts (long, held-out) mean 0.007 max 0.05 | site plan P32 0.08 | capped steps close at [2047, 2056, 2006, 2062, 2064] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 14205/14530
+   tool calls (held-out 11 steps): expected stray </think> total 2.66, worst call 2.66
+v6c as run (no call negatives) beta_d 12.0: strays/answer 0.42 | maths worst solve-close lowk43-held:code_trace 0.15, base-tough:coin_pattern_race 0.04; checking kept base 0.39, lowk43 0.75, v5k43 0.69 | starts (long, held-out) mean 0.107 max 0.91 | site plan P32 0.09 | capped steps close at [1900, 1493, 328, 261, 548] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 7667/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 8 beta_d  6.0: strays/answer 0.41 | maths worst solve-close lowk43-held:code_trace 0.21, base-tough:coin_pattern_race 0.03; checking kept base 0.36, lowk43 0.72, v5k43 0.63 | starts (long, held-out) mean 0.043 max 0.36 | site plan P32 0.09 | capped steps close at [1996, 2023, 1739, 2024, 2060] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 13345/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 8 beta_d  8.0: strays/answer 0.42 | maths worst solve-close lowk43-held:code_trace 0.22, base-tough:coin_pattern_race 0.04; checking kept base 0.35, lowk43 0.71, v5k43 0.62 | starts (long, held-out) mean 0.076 max 0.64 | site plan P32 0.09 | capped steps close at [1954, 1915, 1327, 1673, 1953] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 12121/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 8 beta_d 10.0: strays/answer 0.42 | maths worst solve-close lowk43-held:code_trace 0.22, base-tough:coin_pattern_race 0.05; checking kept base 0.34, lowk43 0.71, v5k43 0.60 | starts (long, held-out) mean 0.106 max 0.89 | site plan P32 0.10 | capped steps close at [1880, 1501, 527, 399, 908] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 8323/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 8 beta_d 12.0: strays/answer 0.42 | maths worst solve-close lowk43-held:code_trace 0.23, base-tough:coin_pattern_race 0.07; checking kept base 0.34, lowk43 0.70, v5k43 0.59 | starts (long, held-out) mean 0.120 max 0.98 | site plan P32 0.10 | capped steps close at [1737, 949, 108, 227, 550] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 6479/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 32 beta_d  6.0: strays/answer 0.42 | maths worst solve-close lowk43-held:code_trace 0.26, base-tough:coin_pattern_race 0.04; checking kept base 0.34, lowk43 0.70, v5k43 0.59 | starts (long, held-out) mean 0.053 max 0.45 | site plan P32 0.10 | capped steps close at [1970, 2000, 1641, 2003, 2062] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 13105/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 32 beta_d  8.0: strays/answer 0.42 | maths worst solve-close lowk43-held:code_trace 0.28, base-tough:coin_pattern_race 0.06; checking kept base 0.33, lowk43 0.68, v5k43 0.57 | starts (long, held-out) mean 0.092 max 0.78 | site plan P32 0.11 | capped steps close at [1891, 1787, 1065, 1513, 2044] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 11498/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 32 beta_d 10.0: strays/answer 0.43 | maths worst solve-close lowk43-held:code_trace 0.31, base-tough:coin_pattern_race 0.08; checking kept base 0.32, lowk43 0.67, v5k43 0.54 | starts (long, held-out) mean 0.116 max 0.96 | site plan P32 0.11 | capped steps close at [1736, 1178, 280, 463, 1738] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 8361/14530
+   tool calls (held-out 11 steps): expected stray </think> total 0.00, worst call 0.00
+w_call 32 beta_d 12.0: strays/answer 0.43 | maths worst solve-close lowk43-held:code_trace 0.33, base-tough:coin_pattern_race 0.12; checking kept base 0.31, lowk43 0.65, v5k43 0.52 | starts (long, held-out) mean 0.126 max 1.00 | site plan P32 0.12 | capped steps close at [1397, 783, 58, 222, 694] (draft began [607, 136, 50, 218, 62]) | all agentic thinking 5855/14530

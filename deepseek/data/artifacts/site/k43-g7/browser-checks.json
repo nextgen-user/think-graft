@@ -1,0 +1,55 @@
+{
+ "tag": "k43-g7",
+ "errors": [],
+ "static": {
+  "lang": "en",
+  "viewport_meta": true,
+  "title": "Crumb & Co. — Neighbourhood Bakery",
+  "prices": 6,
+  "words": 301,
+  "headings": [
+   "H1:Crumb & Co.",
+   "H2:The menu",
+   "H3:Country Sourdough",
+   "H3:Butter Croissant",
+   "H3:Seeded Rye Loaf",
+   "H3:Cardamom Bun",
+   "H3:Berry Crumble Tart",
+   "H3:Olive & Rosemary Focaccia",
+   "H2:Opening hours",
+   "H2:Contact",
+   "H3:Come by the corner shop"
+  ],
+  "inputs": 3,
+  "inputs_labelled": 3,
+  "nav_anchors": 6,
+  "nav_anchors_ok": 6,
+  "semantic": [
+   "header",
+   "nav",
+   "main",
+   "section",
+   "footer"
+  ],
+  "html_kb": 26
+ },
+ "dark": {
+  "found": true,
+  "changes": true,
+  "storage": "{\"crumb-co-theme\":\"dark\"}",
+  "persists": true
+ },
+ "form": {
+  "email_field": true,
+  "stayed": true,
+  "inline_error": true,
+  "native_invalid": true,
+  "valid_stays": true,
+  "valid_feedback": true
+ },
+ "mobile": {
+  "scroll_width": 375,
+  "no_hscroll": true,
+  "menu_columns_seen": 1
+ }
+}

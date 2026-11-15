@@ -1,0 +1,8 @@
+tag,arm,console_errors,dark_mode_works,dark_mode_persists,invalid_email_inline_error,valid_submit_feedback,mobile_no_horizontal_scroll,mobile_scroll_width_px,menu_prices,labelled_inputs,words
+ag-base,"original, dsh medium",0,True,True,True,True,True,375,6,3/3,203
+ag-graft,"graft2, dsh medium",0,True,True,True,True,True,375,8,3/3,323
+ag5-base,"original, dsh medium",0,True,True,True,True,True,375,9,3/3,324
+ag5-off,thinking off,0,True,True,True,True,True,375,6,3/3,220
+ag5-v5,"graft v5, dsh medium",0,True,True,True,True,True,375,8,3/3,245
+k43-g7,"graft v7, dsh medium",0,True,True,True,True,True,375,6,3/3,301
+k43-low,"original, dsh LOW",0,True,True,True,True,False,397,7,3/3,372
