@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "model_path": "loop-repair/Qwen3.5-0.8B-head-recovery-g4.gguf",
+  "model_sha256": "f3b305519ce9f86f603c657f8d6513a84738946b211829c35163f64d0eeb5a88",
+  "unchanged_base_tensors": 299,
+  "changed_output_rows": [
+    13428,
+    13784,
+    248069
+  ],
+  "checks": [
+    {
+      "id": "train/1752",
+      "row": 248,
+      "max_probability_error": 0.0,
+      "stop_predicted": 0,
+      "stop_live": 0
+    },
+    {
+      "id": "train/1752",
+      "row": 7635,
+      "max_probability_error": 0.0,
+      "stop_predicted": 0,
+      "stop_live": 0
+    },
+    {
+      "id": "train/5205",
+      "row": 8971,
+      "max_probability_error": 0.0,
+      "stop_predicted": 1.0,
+      "stop_live": 1.0
+    },
+    {
+      "id": "train/3313",
+      "row": 8570,
+      "max_probability_error": 0.0,
+      "stop_predicted": 0,
+      "stop_live": 0
+    }
+  ],
+  "method": "output-head-only; no FFN or other backbone tensor changed"
+}

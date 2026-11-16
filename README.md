@@ -1,5 +1,16 @@
 # think-graft: editing one row of an LLM's output layer to stop it overthinking
 
+## Follow-up: Qwen3.5-0.8B, three output rows
+
+[Post2](https://probe-graft.vercel.app/2/) · [Reproduction code and raw results](qwen08/) · [Experimental GGUF](https://huggingface.co/vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF)
+
+Full MATH-500:276/500(55.2%) versus261/500(52.2%) for the selected external
+reference sample. The candidate changes three output rows and no transformer
+blocks. It has substantial answer-phase looping and repeated closing tags;
+read the failure audit before using it. This is an experimental follow-up,
+not a universal early-stopping claim.
+
+
 A training-free way to cut a reasoning model's thinking: add a linear probe to the `</think>` row of the output layer,
 so the model's own hidden state decides when its thinking is done. No training, no gradients, no engine or harness
 changes; the result is an ordinary weights file.

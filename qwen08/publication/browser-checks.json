@@ -1,0 +1,23 @@
+[
+  {
+    "view": "desktop",
+    "status": 200,
+    "horizontal_overflow": false,
+    "math_elements": 5,
+    "errors": []
+  },
+  {
+    "view": "mobile",
+    "status": 200,
+    "horizontal_overflow": false,
+    "math_elements": 5,
+    "errors": []
+  },
+  {
+    "view": "dark",
+    "status": 200,
+    "horizontal_overflow": false,
+    "math_elements": 5,
+    "errors": []
+  }
+]

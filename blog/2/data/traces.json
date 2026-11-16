@@ -1,0 +1,22 @@
+[
+  {
+    "id": "test/number_theory/572.json",
+    "label": "Shorter successful run",
+    "file": "trace-0.json"
+  },
+  {
+    "id": "test/algebra/1349.json",
+    "label": "Only our sample gets the answer",
+    "file": "trace-1.json"
+  },
+  {
+    "id": "test/intermediate_algebra/1994.json",
+    "label": "A failure: the reference finishes",
+    "file": "trace-2.json"
+  },
+  {
+    "id": "test/prealgebra/1622.json",
+    "label": "A failure: all samples miss",
+    "file": "trace-3.json"
+  }
+]

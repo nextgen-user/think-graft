@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reasoning loops, three output rows — Probe graft, post 2</title>
+<meta name="description" content="An output-head-only edit reaches 55.2% on all 500 MATH-500 problems. A small linear probe, a full benchmark, and a failure that the small tests hid.">
+<link rel="canonical" href="https://probe-graft.vercel.app/2/">
+<meta property="og:title" content="Reasoning loops, three output rows">
+<meta property="og:description" content="A simple output-head edit, 500 math problems, recorded reasoning and reproducible artifacts. Includes the failure cases.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://probe-graft.vercel.app/2/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="./post.js"></script>
+</head>
+<body>
+<main>
+<nav aria-label="Posts"><a class="brand" href="/">Probe graft</a><span>Post 02</span><a href="/">Read post 01 ↗</a></nav>
+<header>
+<p class="eyebrow">An output-head experiment · 17 November 2026</p>
+<h1>Reasoning loops,<br>three output rows.</h1>
+<p class="lede">I wanted to reduce reasoning loops without changing the transformer’s internal layers. A small classifier built into three output rows reached 55.2% on MATH-500. The full run also exposed a failure that the small tests had missed.</p>
+<div class="byline"><span>Vaibhav</span><a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08">Code &amp; raw outputs</a><a href="https://huggingface.co/vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF">Experimental GGUF</a></div>
+</header>
+
+<section class="summary" aria-label="Result at a glance">
+<div><span class="metric">55.2<span>%</span></span><span class="metric-label">276 / 500 MATH-500</span></div>
+<div><span class="metric">3</span><span class="metric-label">output rows changed</span></div>
+<div><span class="metric">0</span><span class="metric-label">transformer tensors changed</span></div>
+</section>
+<p class="opening">The useful simplification is <em>where</em> to edit. A reasoning model already has a token for ending its scratchpad: <code>&lt;/think&gt;</code>. Instead of searching for internal layers to change, I fit a small classifier to its final hidden state and build that classifier into a few output-layer weights. Inference then uses an ordinary weights file.</p>
+<aside class="finding"><strong>The limit matters.</strong> This prototype is not a robust loop fix: 165 of 500 runs reached the token limit. In 163, thinking had already closed and the output kept going. Repeated closing tags are a substantial failure, not removed from the results. <a href="#limits">See the audit.</a></aside>
+
+<section id="results">
+<div class="section-label"><span>01</span> The complete math result</div>
+<h2>A different intervention, comparable observed accuracy.</h2>
+<p>All rows below cover the same 500 MATH-500 questions. Each uses one selected answer per question. The references come from external runs; this is a benchmark comparison, not a controlled same-engine experiment.</p>
+<div class="table-scroll"><table class="results"><caption>MATH-500 · thinking enabled · 32,768-token limit</caption><thead><tr><th scope="col">Model</th><th scope="col">Correct</th><th scope="col">Accuracy</th><th scope="col">Direct weight change</th></tr></thead><tbody>
+<tr><th scope="row">Unedited Qwen3.5-0.8B<sup>a</sup></th><td>35 / 500</td><td>7.0%</td><td>None</td></tr>
+<tr><th scope="row">RikiyaT / Astra edit<sup>b</sup></th><td>261 / 500</td><td>52.2%</td><td>Feed-forward layers 15 and 19</td></tr>
+<tr class="ours"><th scope="row">Output-head probe graft</th><td>276 / 500</td><td><strong>55.2%</strong></td><td>Three output rows</td></tr>
+</tbody></table></div>
+<p class="caption"><sup>a</sup> Sample 0 of the original author’s full unedited evaluation, not the 25-question smoke test. <sup>b</sup> Sample 0 of the independent Hugging Face rerun, the strongest of its four global sample indices. The same index is used for every problem. Different engines and random draws remain confounders.</p>
+<p>The observed lead is three percentage points. There are <strong>46 questions only our sample gets right and 31 only the reference gets right</strong>. An exploratory paired bootstrap gives a difference interval of −0.4 to +6.4 points; descriptive McNemar <i>p</i> = 0.110. This does not establish superiority or equivalence.</p>
+<p>Our mean total output is <strong>15,829 tokens</strong>. On the 20 questions with published reference sample text, ours averages 15,340 versus about 21,638 retokenized reference tokens: <strong>29.1% fewer on that subset</strong>. That is not a 500-question token-saving estimate.</p>
+<p class="status"><span class="dot"></span> GSM8K and IFEval are follow-up evaluations. Their final results are not included in this release. <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/results">Frozen results</a></p>
+</section>
+
+<section id="replay" class="wide">
+<div class="section-label"><span>02</span> Inspect the recorded reasoning</div>
+<h2>Watch the output, including the failures.</h2>
+<p>These are saved generations, replayed by token position—not live inference. The examples include a shorter success, an extra correct answer, and two failures. The complete 500 outputs are downloadable.</p>
+<div class="replay-box">
+<div class="case-select"><label for="trace-choice">Example</label><select id="trace-choice"><option value="0">Loading recorded runs…</option></select><span id="case-id" class="mono"></span></div>
+<div id="problem" class="problem" aria-live="polite">Loading…</div>
+<div class="replay-controls"><button id="play" type="button">Play recording</button><button id="reset" class="secondary" type="button">Reset</button><button id="ending" class="secondary" type="button">Endings</button><label for="speed">Playback speed</label><select id="speed"><option value="100">100 tokens/s</option><option value="500" selected>500 tokens/s</option><option value="2000">2,000 tokens/s</option></select></div>
+<div class="scrubber"><input id="position" type="range" min="0" max="32768" step="1" value="0" aria-label="Recorded token position"><output id="position-label" for="position">0 tokens</output></div>
+<div class="trace-grid">
+<article class="trace-panel"><header><span>Unedited</span><span id="base-status" class="result"></span></header><div class="trace-meta" id="base-meta"></div><pre id="base-text" tabindex="0" aria-label="Recorded unedited response"></pre></article>
+<article class="trace-panel"><header><span>RikiyaT edit</span><span id="reference-status" class="result"></span></header><div class="trace-meta" id="reference-meta"></div><pre id="reference-text" tabindex="0" aria-label="Recorded reference response"></pre></article>
+<article class="trace-panel edited"><header><span>Output-head graft</span><span id="ours-status" class="result"></span></header><div class="trace-meta" id="ours-meta"></div><pre id="ours-text" tabindex="0" aria-label="Recorded output-head response"></pre></article>
+</div>
+<p class="caption" id="replay-note">Reference token positions are approximate: the published text was retokenized. Playback speed is a reading control, not measured inference throughput.</p>
+<div id="replay-error" role="alert" hidden></div>
+</div>
+<noscript><p>The replay needs JavaScript. <a href="data/traces.json">Download the trace index</a> or <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/results">read the raw outputs</a>.</p></noscript>
+</section>
+
+<section id="method">
+<div class="section-label"><span>03</span> The small change</div>
+<h2>Read a signal. Edit its output row.</h2>
+<p>Before choosing a token, the model produces a vector called the <em>hidden state</em>. The output layer turns that vector into a score for each token. One row scores <code>&lt;/think&gt;</code>; other rows score <code>Wait</code> and <code> Wait</code>.</p>
+<figure class="mechanism"><svg class="desktop-diagram" viewBox="0 0 760 178" role="img" aria-label="Unchanged transformer blocks produce a hidden state, then three edited output rows adjust token scores"><g fill="none" stroke="currentColor"><rect x="10" y="26" width="202" height="122" rx="4"/><path d="M28 57H192M28 87H192M28 117H192" opacity=".2"/><path d="M222 87h42m-8-5 8 5-8 5"/><rect x="278" y="48" width="120" height="78" rx="4"/><path d="M408 87h36m-8-5 8 5-8 5"/><rect x="458" y="12" width="286" height="154" rx="4"/></g><g fill="currentColor" font-family="system-ui,sans-serif" font-size="14"><text x="31" y="48">Transformer blocks</text><text x="31" y="82">Attention, FFNs, norms</text><text x="31" y="112">299 tensors unchanged</text><text x="31" y="138" class="svg-muted">Original model weights</text><text x="296" y="79">Hidden state h</text><text x="296" y="104" class="svg-muted">1,024 numbers</text><text x="476" y="38">Output scores</text></g><g font-family="ui-monospace,monospace" font-size="14"><rect class="row-highlight" x="470" y="49" width="260" height="29" rx="2"/><rect class="row-highlight" x="470" y="81" width="260" height="29" rx="2"/><rect class="row-highlight" x="470" y="113" width="260" height="29" rx="2"/><text x="480" y="69" fill="currentColor">&lt;/think&gt;  + stopping signal</text><text x="480" y="101" fill="currentColor">Wait      − looping signal</text><text x="480" y="133" fill="currentColor"> Wait     − looping signal</text></g></svg><svg class="mobile-diagram" viewBox="0 0 360 390" role="img" aria-label="Unchanged transformer blocks feed a hidden state and then three edited output scores"><g fill="none" stroke="currentColor"><rect x="10" y="8" width="340" height="76" rx="4"/><path d="M180 87v27m-5-7 5 7 5-7"/><rect x="85" y="122" width="190" height="68" rx="4"/><path d="M180 193v28m-5-7 5 7 5-7"/><rect x="10" y="230" width="340" height="150" rx="4"/></g><g fill="currentColor" font-family="system-ui,sans-serif" font-size="15"><text x="28" y="35">Transformer blocks unchanged</text><text x="28" y="61">299 original tensors preserved</text><text x="109" y="150">Hidden state h</text><text x="109" y="174">1,024 numbers</text><text x="28" y="256">Output scores</text></g><g fill="currentColor" font-family="ui-monospace,monospace" font-size="13"><rect x="22" y="269" width="316" height="29" rx="2" class="row-highlight"/><rect x="22" y="302" width="316" height="29" rx="2" class="row-highlight"/><rect x="22" y="335" width="316" height="29" rx="2" class="row-highlight"/><text x="30" y="289">&lt;/think&gt;  + stopping signal</text><text x="30" y="322">Wait      − looping signal</text><text x="30" y="355"> Wait     − looping signal</text></g></svg><figcaption>Only these three output rows differ. The input embedding stays intact.</figcaption></figure>
+<p>A <em>linear probe</em> is a classifier that scores this state with a dot product. If its weights are <i>g</i>, its score is <i>g</i><sup>T</sup><i>h</i>. Adding the probe to an output row builds that same calculation into the token’s existing score. No separate probe runs during generation.</p>
+<div class="equation" data-tex="\ell'_j = (w_j + \alpha g)^\top h = \ell_j + \alpha g^\top h">ℓ′ⱼ = (wⱼ + αg)ᵀh = ℓⱼ + αgᵀh</div>
+<p>For this 0.8B candidate, the stop row combines a re-checking probe with a loop-boundary probe. A third probe suppresses the two Wait tokens when the state resembles looping. It is an extension of <a href="/">post 1’s single-row stopping edit</a>, not the exact same one-row model.</p>
+<details><summary>The actual three-row recipe</summary><div class="detail-body"><div class="equation" data-tex="\ell'_{\text{end}} = \ell_{\text{end}} + 12g_{\text{done}}^\top h + 24g_{\text{boundary}}^\top h">ℓ′end = ℓend + 12 gdoneᵀh + 24 gboundaryᵀh</div><div class="equation" data-tex="\ell'_{\text{Wait}} = \ell_{\text{Wait}} - 4g_{\text{loop}}^\top h">ℓ′Wait = ℓWait − 4 gloopᵀh</div><p>The second equation applies to both spellings of Wait. Coefficients were selected using development problems, not benchmark answers. This is still a weight edit; the intervention is at the output head rather than inside the transformer blocks.</p><p>At a fixed hidden state, the logit changes are directly calculable. Top-k/top-p filtering and subsequent generation prevent an exact reconstruction of every edited trajectory from an original trace. All scores here come from live generation.</p></div></details>
+</section>
+
+<section id="fit">
+<div class="section-label"><span>04</span> How it was fitted</div>
+<h2>A concrete example: 25 choose 2.</h2>
+<p>One fitting problem asks for <span class="inline-math" data-tex="\binom{25}{2}">C(25, 2)</span>. The base trace calculates <span class="inline-math" data-tex="25\times24/2 = 300">25 × 24 / 2 = 300</span>, states “Final Answer: 300,” and then keeps going to the 16,384-token fit limit.</p>
+<blockquote>Calculation: 25 × 12 = 300.<br>Final Answer: 300.<br><span>…followed by further checking.</span></blockquote>
+<p class="caption">A fitting example, <code>train/2006</code>, not a held-out benchmark question. <a href="data/fitting-example.json">Recorded excerpt</a>.</p>
+<ol class="steps"><li><strong>Record the base model.</strong> Save its final hidden states while it reads its own reasoning traces.</li><li><strong>Label useful distinctions.</strong> Mark paragraph boundaries after an answer appears, and repeated-line regions; use other reasoning states as negatives.</li><li><strong>Fit the directions.</strong> Shrinkage linear discriminant analysis finds directions separating those groups. It is a linear-algebra fit with labels, not gradient descent or base-model retraining.</li><li><strong>Calibrate, then freeze.</strong> Fit on 80 MATH-training questions, select strengths on 16 separate training questions, and keep the chosen weights fixed throughout the benchmark.</li></ol>
+<p>The output location is easy to specify: known token rows, no search over internal layers. The data work is not trivial. Collecting traces can take hours; the matrix solve is the quick part. An answer appearing in text is also an imperfect label—it does not prove the model has finished checking it.</p>
+</section>
+
+<section id="comparison">
+<div class="section-label"><span>05</span> Relation to the earlier work</div>
+<h2>Same problem. A different place to intervene.</h2>
+<p><a href="https://rikiyat.github.io/blog/weight-space-programming/">RikiyaT’s Astra experiment</a> removes a loop-associated direction from two internal feed-forward matrices. <a href="https://nathan.rs/posts/weight-space-lp/">Nathan’s LP follow-up</a> finds a related sparse internal edit. Here, the transformer computation is kept intact and the final token scores are edited directly.</p>
+<p>Both families use activations and can be state-dependent. “His is constant; ours is conditional” would be too broad: Nathan measured a near-constant effect for a particular LP edit. An ordinary checkpoint with no runtime hook is also a feature of his method, not unique to this one.</p>
+<p>The practical advantage I’m testing is a more mechanical recipe: record final states, fit a classifier, write a few output rows. Comparable accuracy from that recipe is interesting even without a higher headline score.</p>
+<details><summary>Earlier 4B, DeepSeek and agent observations</summary><div class="detail-body"><p>The earlier single-row method was tested separately on Qwen3.5-4B and DeepSeek V4.1 Flash. On eight paired 4B math questions, both models got 8/8 while total tokens fell 54%. DeepSeek’s six shared solved questions used about 40% fewer total tokens. Agent examples showed selective thinking around planning, errors and new information.</p><p>Those are small exploratory studies with configuration caveats, not proof of universal transfer. Our local DeepSeek internal-layer interventions failed to shorten reasoning, but they were not a controlled reproduction of RikiyaT’s exact method. I cannot conclude his method fails on DeepSeek.</p><p>The algebra does not depend on a particular model size. Useful signals, calibration and quality do. Each model needs its own fit. <a href="/">Read the original experiments and limitations.</a></p></div></details>
+<p class="small">Related work already includes <a href="https://arxiv.org/abs/2504.05419">probe-guided stopping</a>, <a href="https://arxiv.org/abs/2506.08390">activation directions controlling reasoning length</a>, and <a href="https://arxiv.org/abs/2506.08343">NoWait token suppression</a>. The contribution here is an output-weight implementation and its measurements, not the invention of early stopping.</p>
+</section>
+
+<section id="limits">
+<div class="section-label"><span>06</span> What the criticism changed</div>
+<h2>Ending thinking is not enough.</h2>
+<p>The largest failure became clear only after the full run. The edited model closed thinking in 163 of the 165 capped cases, then continued in the answer. Across 407 responses it emitted <strong>1,348,952 extra closing tags</strong>, around 17% of all generated tokens. The model has no hard phase gate; its stop boost can remain active after the first close.</p>
+<p>The grader does not automatically reject capped runs. It extracts the last boxed answer after the last close, or from the full response if thinking never closed. An audit found <strong>no correct boxed answer anywhere in the 165 capped responses</strong>. Unboxed candidates may still go uncredited under this protocol.</p>
+<p>A cheap 8-gram detector, applied to saved outputs, flagged all 165 capped runs and 206 of 335 completed runs. That is alert coverage, not independently annotated precision/recall. It does not establish that forcing a stop at the alert would produce the right answer.</p>
+<details><summary>Completed checks, open controls, and selection caveats</summary><div class="detail-body"><ul><li><strong>Done:</strong> complete MATH-500; separate fitting/development IDs; frozen weights; exact tensor comparison; sampler checks; capped-answer audit; a prefix-only repetition diagnostic; published raw results.</li><li><strong>Still missing:</strong> tuned penalty/sampling controls, avg@8 or larger repeated draws, independently labeled detector precision/recall, and systematic batch-invariance checks.</li><li>Presence penalty 1.5 is enabled. That is one setting, not a calibrated penalty sweep. A fixed seed does not remove serving noise.</li><li>The development set was reused for model selection. A fresh 16-question check scored 8/16 for this candidate versus 9/16 for the previous graft. This negative result is retained.</li><li>The earlier p = 0.0078 referred to token reductions on eight exploratory Qwen-4B pairs, not an accuracy improvement or a test that excludes sampling and serving noise.</li><li>Qwen’s tied embedding/head requires a new output matrix: roughly 0.51 GB extra. There is no extra transformer pass, but it is not zero memory overhead.</li><li>The reported p = 0.0078 from post 1 concerned token lengths on eight exploratory 4B pairs. It does not establish an accuracy gain here.</li><li>The current three-row model can change non-stop token choices. It must not be described as the old “only one logit changes” model.</li></ul><p><a href="data/study.json">Analysis snapshot</a> · <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/publication">Audits and provenance</a></p></div></details>
+</section>
+
+<section id="reproduce">
+<div class="section-label"><span>07</span> Reproduce</div>
+<h2>Reproduce this run.</h2>
+<p>The GGUF is an experimental artifact, including the failures above. Start with unedited Qwen3.5-0.8B. All 299 original tensors were checked byte-for-byte; only the separate output head differs. The portable rebuild matches the evaluated file’s SHA256.</p>
+<div class="actions"><a class="button" href="https://github.com/nextgen-user/think-graft/tree/main/qwen08">Code, probes &amp; raw outputs ↗</a><a class="button secondary" href="https://huggingface.co/vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF">Experimental model ↗</a></div>
+<pre><code>hf download vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF \
+  Qwen3.5-0.8B-BF16-probe-graft.gguf --local-dir .
+llama-server -m Qwen3.5-0.8B-BF16-probe-graft.gguf \
+  -ngl 99 -fa on -c 278528 -np 8 -b 256 -ub 256 --jinja</code></pre>
+<details><summary>Sampling, seeds, environment and scoring</summary><div class="detail-body"><div class="table-scroll"><table><tbody><tr><th>Sampling</th><td>temperature 0.6; top-p 0.95; top-k 20; min-p 0</td></tr><tr><th>Penalties</th><td>presence 1.5; frequency 0; repetition 1.0</td></tr><tr><th>Seed &amp; samples</th><td>Seed 0 for every request; one sample per problem</td></tr><tr><th>Budget</th><td>32,768 new tokens; thinking enabled</td></tr><tr><th>Sampler order</th><td>penalties → top-k → top-p → temperature</td></tr><tr><th>Serving</th><td>8 slots × 34,816 context; batch and microbatch 256; flash attention; all layers on GPU</td></tr><tr><th>Hardware</th><td>RTX 4060 Laptop, 8 GB; single GPU</td></tr><tr><th>Software</th><td>Ubuntu 26.04; CUDA 13.2.78; driver 595.71.05; Python 3.14.4 generation, 3.12.12 fitting/scoring</td></tr><tr><th>Engine source</th><td><code>3549c274dc22001d9118713fa56a10085b85de3b</code>, plus included sparse presence-penalty optimization</td></tr><tr><th>Base revision</th><td><code>2fc06364715b967f1860aea9cf38778875588b17</code></td></tr><tr><th>Scoring</th><td>math-verify 0.9.0; IFEval strict prompt-level checks</td></tr></tbody></table></div><p>The llama.cpp penalty window is 33,792 tokens and includes the prompt; the reference vLLM penalty covers generated tokens. The sparse implementation preserves penalty arithmetic; numerical checks are not a claim of zero serving noise.</p><p>For math, the exact user suffix is <code>\nPlease reason step by step, and put your final answer within \boxed{}.</code> Dataset revisions, package lock, environment manifest and reconstruction commands are in the repository. All benchmark generation is live; playback is for inspection.</p></div></details>
+</section>
+<footer><p>Vaibhav · <a href="https://www.linkedin.com/in/vaibhav-arduino-913938212/">LinkedIn</a> · <a href="mailto:vaibhavarduino@gmail.com">vaibhavarduino@gmail.com</a></p><p><a href="/">← Post 01: the original DeepSeek and 4B experiments</a><span class="footer-right">Post 02 / 17 Nov 2026</span></p></footer>
+</main>
+</body>
+</html>

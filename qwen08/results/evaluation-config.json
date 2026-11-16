@@ -1,0 +1,46 @@
+{
+  "samples_per_problem": 1,
+  "fixed_seed": 0,
+  "benchmarks": {
+    "math500": 500,
+    "gsm8k": 1319,
+    "ifeval": 541
+  },
+  "model_path": "loop-repair/Qwen3.5-0.8B-head-recovery-g4.gguf",
+  "model_sha256": "f3b305519ce9f86f603c657f8d6513a84738946b211829c35163f64d0eeb5a88",
+  "model_id": "output-head-repair-f3b305519ce9",
+  "model_label": "output-head-only loop repair (3 rows, gamma4)",
+  "output_budget": 32768,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "min_p": 0,
+  "presence_penalty": 1.5,
+  "repeat_penalty": 1,
+  "frequency_penalty": 0,
+  "slots": 8,
+  "total_context": 278528,
+  "batch": 256,
+  "microbatch": 256,
+  "planning_eta_hours": [
+    24,
+    40
+  ],
+  "math500_planning_eta_hours": [
+    6,
+    10
+  ],
+  "start_unix": 1794826163.144634,
+  "started_at": "2026-11-16T10:49:23.144637+00:00",
+  "reference_comparison": "Best global reference sample index per benchmark: MATH0,GSM1,IFEval1. Different engines, not identical draws.",
+  "latest_remaining_eta_hours": [
+    10,
+    20
+  ],
+  "latest_eta_unix": 1794850810.6967332,
+  "latest_eta_at": "2026-11-16T17:40:10.696737+00:00",
+  "gsm8k_remaining_eta_hours": [
+    5,
+    8
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "method": "output-head-only, three rows",
+  "stop_rechecking_strength": 12,
+  "stop_loop_strength": 24,
+  "loop_token_penalty_strength": 4.0,
+  "selected_tokens": [
+    {
+      "id": 13784,
+      "piece": "Wait",
+      "loop_count": 7666,
+      "productive_count": 1555,
+      "loop_trace_count": 17,
+      "ratio": 4.2588431843373185
+    },
+    {
+      "id": 13428,
+      "piece": " Wait",
+      "loop_count": 17890,
+      "productive_count": 5585,
+      "loop_trace_count": 49,
+      "ratio": 2.768276480098009
+    }
+  ],
+  "fit_problems": 80,
+  "calibration_problems": 16,
+  "backbone_changes": 0
+}

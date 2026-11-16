@@ -1,0 +1,16 @@
+{"key": "e451b35d483bb94559f80aa4b59970e8951fbb6a57eeae2f688592ae63873d86", "id": "train/1546", "sample": 0, "correct": true, "pred": "146", "n_gen": 1268, "thinking": 974, "cap": false}
+{"key": "2944d7a5825acca3b4795fdbd915d91c92a3be2a6e2bee8f34aa2f1085cc8386", "id": "train/4268", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "6c55e10b4828f9012dfe6a963fed94794695b8b6f4a98ac7b6b8ce8e23f245bd", "id": "train/1723", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "b243cae64bb338ac04073134926b39528a65ee60d1117d86f3dc59bf220f7c5f", "id": "train/5145", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "75204f0237e461c9ff483148ccf5b84e031d014977f4f1733380a7d14bca52a2", "id": "train/4130", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "c76180f15952408c5598f33232ef3befd31bfffa5b7b3e85b5b50acc024698a3", "id": "train/3561", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "64ac98dbfaa0dd75f5fdb7281aa363a7b46b2c4d8fe09ee76cc2d88d59902579", "id": "train/3818", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "3126a63336b5f8ec155515303d336405f4a12562a352eaf99448061bb5e0a265", "id": "train/6821", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "50c3baead621374d09e0a845280b7b936472a1e9e5111ed9d252263c9a6f65a0", "id": "train/1716", "sample": 0, "correct": false, "pred": "-3", "n_gen": 1221, "thinking": 851, "cap": false}
+{"key": "e973668a95d91cbf5e346198ee5cd27285cf8934e7336f6cb8d974bae49c2ad6", "id": "train/980", "sample": 0, "correct": true, "pred": "32", "n_gen": 1237, "thinking": 679, "cap": false}
+{"key": "e04453969c38f188f3c229420715471427dc8f0cdb7be4e6e5eeae9e3086d860", "id": "train/4745", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}
+{"key": "69c6ae7a2ada2ebb678f08be6427fe5f7629d90d3f5b277052765a66284719f9", "id": "train/5957", "sample": 0, "correct": true, "pred": "25", "n_gen": 1378, "thinking": 1126, "cap": false}
+{"key": "bf16f5a8e325bf83139d382b681a84995160d47416566b6b68cd9a0352269eba", "id": "train/943", "sample": 0, "correct": true, "pred": "9", "n_gen": 2544, "thinking": 1971, "cap": false}
+{"key": "687c9dce578b150739a864c709860961adf80e774ddf75134e5dc8672901bee9", "id": "train/5840", "sample": 0, "correct": false, "pred": "\\frac{\\sqrt{3}}{2}", "n_gen": 3861, "thinking": 2278, "cap": false}
+{"key": "f3715e87c9f2f0e49e27f536fe66f9a322e41033c2a78fe889aabe665674c0fc", "id": "train/5129", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 1725, "cap": true}
+{"key": "bc79e5d8392bc9bb0358bf2379ca689cda55f08a5edc1280e05b03a7e83171ef", "id": "train/6230", "sample": 0, "correct": false, "pred": null, "n_gen": 8192, "thinking": 8192, "cap": true}

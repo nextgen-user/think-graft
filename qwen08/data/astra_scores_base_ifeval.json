@@ -1,0 +1,4898 @@
+{
+  "per_problem": [
+    {
+      "id": "ifeval/1000",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1000"
+    },
+    {
+      "id": "ifeval/102",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_102"
+    },
+    {
+      "id": "ifeval/1072",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1072"
+    },
+    {
+      "id": "ifeval/1094",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1094"
+    },
+    {
+      "id": "ifeval/1127",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1127"
+    },
+    {
+      "id": "ifeval/1132",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1132"
+    },
+    {
+      "id": "ifeval/1153",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1153"
+    },
+    {
+      "id": "ifeval/1187",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1187"
+    },
+    {
+      "id": "ifeval/122",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_122"
+    },
+    {
+      "id": "ifeval/1242",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1242"
+    },
+    {
+      "id": "ifeval/1259",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1259"
+    },
+    {
+      "id": "ifeval/1281",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1281"
+    },
+    {
+      "id": "ifeval/1305",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1305"
+    },
+    {
+      "id": "ifeval/1332",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1332"
+    },
+    {
+      "id": "ifeval/1367",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1367"
+    },
+    {
+      "id": "ifeval/1381",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1381"
+    },
+    {
+      "id": "ifeval/1418",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1418"
+    },
+    {
+      "id": "ifeval/1466",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1466"
+    },
+    {
+      "id": "ifeval/1498",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1498"
+    },
+    {
+      "id": "ifeval/152",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_152"
+    },
+    {
+      "id": "ifeval/1548",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1548"
+    },
+    {
+      "id": "ifeval/1580",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1580"
+    },
+    {
+      "id": "ifeval/16",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_16"
+    },
+    {
+      "id": "ifeval/1627",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1627"
+    },
+    {
+      "id": "ifeval/1643",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1643"
+    },
+    {
+      "id": "ifeval/1656",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1656"
+    },
+    {
+      "id": "ifeval/1670",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1670"
+    },
+    {
+      "id": "ifeval/1705",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1705"
+    },
+    {
+      "id": "ifeval/1739",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1739"
+    },
+    {
+      "id": "ifeval/1779",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1779"
+    },
+    {
+      "id": "ifeval/1802",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1802"
+    },
+    {
+      "id": "ifeval/1834",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1834"
+    },
+    {
+      "id": "ifeval/1858",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1858"
+    },
+    {
+      "id": "ifeval/1893",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1893"
+    },
+    {
+      "id": "ifeval/1908",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1908"
+    },
+    {
+      "id": "ifeval/1936",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1936"
+    },
+    {
+      "id": "ifeval/1964",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1964"
+    },
+    {
+      "id": "ifeval/201",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_201"
+    },
+    {
+      "id": "ifeval/2028",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2028"
+    },
+    {
+      "id": "ifeval/2069",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2069"
+    },
+    {
+      "id": "ifeval/209",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_209"
+    },
+    {
+      "id": "ifeval/2136",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2136"
+    },
+    {
+      "id": "ifeval/2164",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2164"
+    },
+    {
+      "id": "ifeval/2192",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2192"
+    },
+    {
+      "id": "ifeval/2216",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2216"
+    },
+    {
+      "id": "ifeval/2243",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2243"
+    },
+    {
+      "id": "ifeval/2253",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2253"
+    },
+    {
+      "id": "ifeval/2273",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2273"
+    },
+    {
+      "id": "ifeval/2303",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2303"
+    },
+    {
+      "id": "ifeval/2314",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2314"
+    },
+    {
+      "id": "ifeval/2341",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2341"
+    },
+    {
+      "id": "ifeval/2362",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2362"
+    },
+    {
+      "id": "ifeval/2383",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2383"
+    },
+    {
+      "id": "ifeval/2396",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2396"
+    },
+    {
+      "id": "ifeval/2416",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2416"
+    },
+    {
+      "id": "ifeval/2439",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2439"
+    },
+    {
+      "id": "ifeval/2464",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2464"
+    },
+    {
+      "id": "ifeval/2475",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2475"
+    },
+    {
+      "id": "ifeval/251",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_251"
+    },
+    {
+      "id": "ifeval/2534",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2534"
+    },
+    {
+      "id": "ifeval/2577",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2577"
+    },
+    {
+      "id": "ifeval/2591",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2591"
+    },
+    {
+      "id": "ifeval/2616",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2616"
+    },
+    {
+      "id": "ifeval/2649",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2649"
+    },
+    {
+      "id": "ifeval/2677",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2677"
+    },
+    {
+      "id": "ifeval/2713",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2713"
+    },
+    {
+      "id": "ifeval/2739",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2739"
+    },
+    {
+      "id": "ifeval/2765",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2765"
+    },
+    {
+      "id": "ifeval/2787",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2787"
+    },
+    {
+      "id": "ifeval/2807",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2807"
+    },
+    {
+      "id": "ifeval/2825",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2825"
+    },
+    {
+      "id": "ifeval/2849",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2849"
+    },
+    {
+      "id": "ifeval/2870",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2870"
+    },
+    {
+      "id": "ifeval/2889",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2889"
+    },
+    {
+      "id": "ifeval/2912",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2912"
+    },
+    {
+      "id": "ifeval/2929",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2929"
+    },
+    {
+      "id": "ifeval/296",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_296"
+    },
+    {
+      "id": "ifeval/30",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_30"
+    },
+    {
+      "id": "ifeval/3041",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3041"
+    },
+    {
+      "id": "ifeval/3071",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3071"
+    },
+    {
+      "id": "ifeval/3089",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3089"
+    },
+    {
+      "id": "ifeval/3114",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3114"
+    },
+    {
+      "id": "ifeval/3156",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3156"
+    },
+    {
+      "id": "ifeval/3195",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3195"
+    },
+    {
+      "id": "ifeval/321",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_321"
+    },
+    {
+      "id": "ifeval/3241",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3241"
+    },
+    {
+      "id": "ifeval/3272",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3272"
+    },
+    {
+      "id": "ifeval/3294",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3294"
+    },
+    {
+      "id": "ifeval/332",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_332"
+    },
+    {
+      "id": "ifeval/3329",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3329"
+    },
+    {
+      "id": "ifeval/3351",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3351"
+    },
+    {
+      "id": "ifeval/3371",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3371"
+    },
+    {
+      "id": "ifeval/3401",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3401"
+    },
+    {
+      "id": "ifeval/3424",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3424"
+    },
+    {
+      "id": "ifeval/3434",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3434"
+    },
+    {
+      "id": "ifeval/3455",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3455"
+    },
+    {
+      "id": "ifeval/349",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_349"
+    },
+    {
+      "id": "ifeval/3513",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3513"
+    },
+    {
+      "id": "ifeval/3540",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3540"
+    },
+    {
+      "id": "ifeval/3567",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3567"
+    },
+    {
+      "id": "ifeval/3606",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3606"
+    },
+    {
+      "id": "ifeval/3623",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3623"
+    },
+    {
+      "id": "ifeval/3644",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3644"
+    },
+    {
+      "id": "ifeval/3682",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3682"
+    },
+    {
+      "id": "ifeval/3709",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3709"
+    },
+    {
+      "id": "ifeval/3724",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3724"
+    },
+    {
+      "id": "ifeval/3744",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3744"
+    },
+    {
+      "id": "ifeval/3752",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3752"
+    },
+    {
+      "id": "ifeval/3757",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3757"
+    },
+    {
+      "id": "ifeval/1001",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1001"
+    },
+    {
+      "id": "ifeval/1021",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1021"
+    },
+    {
+      "id": "ifeval/1075",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1075"
+    },
+    {
+      "id": "ifeval/1098",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1098"
+    },
+    {
+      "id": "ifeval/1128",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1128"
+    },
+    {
+      "id": "ifeval/1137",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1137"
+    },
+    {
+      "id": "ifeval/1154",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1154"
+    },
+    {
+      "id": "ifeval/1203",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1203"
+    },
+    {
+      "id": "ifeval/1220",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1220"
+    },
+    {
+      "id": "ifeval/1246",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1246"
+    },
+    {
+      "id": "ifeval/1262",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1262"
+    },
+    {
+      "id": "ifeval/1286",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1286"
+    },
+    {
+      "id": "ifeval/1307",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1307"
+    },
+    {
+      "id": "ifeval/1342",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1342"
+    },
+    {
+      "id": "ifeval/1372",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1372"
+    },
+    {
+      "id": "ifeval/1389",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1389"
+    },
+    {
+      "id": "ifeval/142",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_142"
+    },
+    {
+      "id": "ifeval/1476",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1476"
+    },
+    {
+      "id": "ifeval/1508",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1508"
+    },
+    {
+      "id": "ifeval/1531",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1531"
+    },
+    {
+      "id": "ifeval/1551",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1551"
+    },
+    {
+      "id": "ifeval/1582",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1582"
+    },
+    {
+      "id": "ifeval/1601",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1601"
+    },
+    {
+      "id": "ifeval/1629",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1629"
+    },
+    {
+      "id": "ifeval/1644",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1644"
+    },
+    {
+      "id": "ifeval/1658",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1658"
+    },
+    {
+      "id": "ifeval/1675",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1675"
+    },
+    {
+      "id": "ifeval/1713",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1713"
+    },
+    {
+      "id": "ifeval/1746",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1746"
+    },
+    {
+      "id": "ifeval/1781",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1781"
+    },
+    {
+      "id": "ifeval/181",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_181"
+    },
+    {
+      "id": "ifeval/1837",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1837"
+    },
+    {
+      "id": "ifeval/1879",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1879"
+    },
+    {
+      "id": "ifeval/1897",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1897"
+    },
+    {
+      "id": "ifeval/1922",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1922"
+    },
+    {
+      "id": "ifeval/1939",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1939"
+    },
+    {
+      "id": "ifeval/1967",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1967"
+    },
+    {
+      "id": "ifeval/2010",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2010"
+    },
+    {
+      "id": "ifeval/2034",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2034"
+    },
+    {
+      "id": "ifeval/2070",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2070"
+    },
+    {
+      "id": "ifeval/2097",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2097"
+    },
+    {
+      "id": "ifeval/2139",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2139"
+    },
+    {
+      "id": "ifeval/2169",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2169"
+    },
+    {
+      "id": "ifeval/2195",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2195"
+    },
+    {
+      "id": "ifeval/2225",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2225"
+    },
+    {
+      "id": "ifeval/2245",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2245"
+    },
+    {
+      "id": "ifeval/2265",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2265"
+    },
+    {
+      "id": "ifeval/2275",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2275"
+    },
+    {
+      "id": "ifeval/2304",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2304"
+    },
+    {
+      "id": "ifeval/2323",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2323"
+    },
+    {
+      "id": "ifeval/2350",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2350"
+    },
+    {
+      "id": "ifeval/2372",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2372"
+    },
+    {
+      "id": "ifeval/2386",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2386"
+    },
+    {
+      "id": "ifeval/2398",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2398"
+    },
+    {
+      "id": "ifeval/2417",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2417"
+    },
+    {
+      "id": "ifeval/2441",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2441"
+    },
+    {
+      "id": "ifeval/2465",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2465"
+    },
+    {
+      "id": "ifeval/2482",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2482"
+    },
+    {
+      "id": "ifeval/2515",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2515"
+    },
+    {
+      "id": "ifeval/2549",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2549"
+    },
+    {
+      "id": "ifeval/2583",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2583"
+    },
+    {
+      "id": "ifeval/2596",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2596"
+    },
+    {
+      "id": "ifeval/2617",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2617"
+    },
+    {
+      "id": "ifeval/2653",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2653"
+    },
+    {
+      "id": "ifeval/2683",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2683"
+    },
+    {
+      "id": "ifeval/2716",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2716"
+    },
+    {
+      "id": "ifeval/2749",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2749"
+    },
+    {
+      "id": "ifeval/2768",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2768"
+    },
+    {
+      "id": "ifeval/279",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_279"
+    },
+    {
+      "id": "ifeval/281",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_281"
+    },
+    {
+      "id": "ifeval/2828",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2828"
+    },
+    {
+      "id": "ifeval/2853",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2853"
+    },
+    {
+      "id": "ifeval/2871",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2871"
+    },
+    {
+      "id": "ifeval/2904",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2904"
+    },
+    {
+      "id": "ifeval/2918",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2918"
+    },
+    {
+      "id": "ifeval/2941",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2941"
+    },
+    {
+      "id": "ifeval/2969",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2969"
+    },
+    {
+      "id": "ifeval/3001",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3001"
+    },
+    {
+      "id": "ifeval/3048",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3048"
+    },
+    {
+      "id": "ifeval/3073",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3073"
+    },
+    {
+      "id": "ifeval/3091",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3091"
+    },
+    {
+      "id": "ifeval/3126",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3126"
+    },
+    {
+      "id": "ifeval/3166",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3166"
+    },
+    {
+      "id": "ifeval/3198",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3198"
+    },
+    {
+      "id": "ifeval/322",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_322"
+    },
+    {
+      "id": "ifeval/3243",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3243"
+    },
+    {
+      "id": "ifeval/3276",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3276"
+    },
+    {
+      "id": "ifeval/3305",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3305"
+    },
+    {
+      "id": "ifeval/3323",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3323"
+    },
+    {
+      "id": "ifeval/3335",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3335"
+    },
+    {
+      "id": "ifeval/3362",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3362"
+    },
+    {
+      "id": "ifeval/3376",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3376"
+    },
+    {
+      "id": "ifeval/3407",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3407"
+    },
+    {
+      "id": "ifeval/3425",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3425"
+    },
+    {
+      "id": "ifeval/3439",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3439"
+    },
+    {
+      "id": "ifeval/3456",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3456"
+    },
+    {
+      "id": "ifeval/3494",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3494"
+    },
+    {
+      "id": "ifeval/3518",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3518"
+    },
+    {
+      "id": "ifeval/3549",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3549"
+    },
+    {
+      "id": "ifeval/3569",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3569"
+    },
+    {
+      "id": "ifeval/3608",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3608"
+    },
+    {
+      "id": "ifeval/3624",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3624"
+    },
+    {
+      "id": "ifeval/3653",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3653"
+    },
+    {
+      "id": "ifeval/3690",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3690"
+    },
+    {
+      "id": "ifeval/371",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_371"
+    },
+    {
+      "id": "ifeval/3732",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3732"
+    },
+    {
+      "id": "ifeval/3748",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3748"
+    },
+    {
+      "id": "ifeval/3753",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3753"
+    },
+    {
+      "id": "ifeval/1005",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1005"
+    },
+    {
+      "id": "ifeval/1040",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1040"
+    },
+    {
+      "id": "ifeval/1082",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1082"
+    },
+    {
+      "id": "ifeval/1107",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1107"
+    },
+    {
+      "id": "ifeval/1129",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1129"
+    },
+    {
+      "id": "ifeval/1139",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1139"
+    },
+    {
+      "id": "ifeval/1162",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1162"
+    },
+    {
+      "id": "ifeval/1216",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1216"
+    },
+    {
+      "id": "ifeval/1233",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1233"
+    },
+    {
+      "id": "ifeval/1248",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1248"
+    },
+    {
+      "id": "ifeval/1265",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1265"
+    },
+    {
+      "id": "ifeval/1287",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1287"
+    },
+    {
+      "id": "ifeval/1314",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1314"
+    },
+    {
+      "id": "ifeval/1348",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1348"
+    },
+    {
+      "id": "ifeval/1375",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1375"
+    },
+    {
+      "id": "ifeval/1392",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1392"
+    },
+    {
+      "id": "ifeval/143",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_143"
+    },
+    {
+      "id": "ifeval/1477",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1477"
+    },
+    {
+      "id": "ifeval/1512",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1512"
+    },
+    {
+      "id": "ifeval/1535",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1535"
+    },
+    {
+      "id": "ifeval/1561",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1561"
+    },
+    {
+      "id": "ifeval/1591",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1591"
+    },
+    {
+      "id": "ifeval/1609",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1609"
+    },
+    {
+      "id": "ifeval/163",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_163"
+    },
+    {
+      "id": "ifeval/1645",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1645"
+    },
+    {
+      "id": "ifeval/1659",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1659"
+    },
+    {
+      "id": "ifeval/168",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_168"
+    },
+    {
+      "id": "ifeval/1730",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1730"
+    },
+    {
+      "id": "ifeval/1759",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1759"
+    },
+    {
+      "id": "ifeval/179",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_179"
+    },
+    {
+      "id": "ifeval/1813",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1813"
+    },
+    {
+      "id": "ifeval/1843",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1843"
+    },
+    {
+      "id": "ifeval/1880",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1880"
+    },
+    {
+      "id": "ifeval/19",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_19"
+    },
+    {
+      "id": "ifeval/1927",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1927"
+    },
+    {
+      "id": "ifeval/1943",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1943"
+    },
+    {
+      "id": "ifeval/1980",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1980"
+    },
+    {
+      "id": "ifeval/2015",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2015"
+    },
+    {
+      "id": "ifeval/2035",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2035"
+    },
+    {
+      "id": "ifeval/2071",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2071"
+    },
+    {
+      "id": "ifeval/2100",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2100"
+    },
+    {
+      "id": "ifeval/2142",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2142"
+    },
+    {
+      "id": "ifeval/218",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_218"
+    },
+    {
+      "id": "ifeval/2207",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2207"
+    },
+    {
+      "id": "ifeval/2229",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2229"
+    },
+    {
+      "id": "ifeval/2246",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2246"
+    },
+    {
+      "id": "ifeval/2266",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2266"
+    },
+    {
+      "id": "ifeval/2284",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2284"
+    },
+    {
+      "id": "ifeval/2305",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2305"
+    },
+    {
+      "id": "ifeval/2324",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2324"
+    },
+    {
+      "id": "ifeval/2355",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2355"
+    },
+    {
+      "id": "ifeval/2374",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2374"
+    },
+    {
+      "id": "ifeval/2391",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2391"
+    },
+    {
+      "id": "ifeval/24",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_24"
+    },
+    {
+      "id": "ifeval/2422",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2422"
+    },
+    {
+      "id": "ifeval/2447",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2447"
+    },
+    {
+      "id": "ifeval/2467",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2467"
+    },
+    {
+      "id": "ifeval/2485",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2485"
+    },
+    {
+      "id": "ifeval/2517",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2517"
+    },
+    {
+      "id": "ifeval/2563",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2563"
+    },
+    {
+      "id": "ifeval/2585",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2585"
+    },
+    {
+      "id": "ifeval/260",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_260"
+    },
+    {
+      "id": "ifeval/2622",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2622"
+    },
+    {
+      "id": "ifeval/2662",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2662"
+    },
+    {
+      "id": "ifeval/2685",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2685"
+    },
+    {
+      "id": "ifeval/2724",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2724"
+    },
+    {
+      "id": "ifeval/2751",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2751"
+    },
+    {
+      "id": "ifeval/2779",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2779"
+    },
+    {
+      "id": "ifeval/2790",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2790"
+    },
+    {
+      "id": "ifeval/2811",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2811"
+    },
+    {
+      "id": "ifeval/2829",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2829"
+    },
+    {
+      "id": "ifeval/2857",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2857"
+    },
+    {
+      "id": "ifeval/288",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_288"
+    },
+    {
+      "id": "ifeval/2905",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2905"
+    },
+    {
+      "id": "ifeval/292",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_292"
+    },
+    {
+      "id": "ifeval/2943",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2943"
+    },
+    {
+      "id": "ifeval/2977",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2977"
+    },
+    {
+      "id": "ifeval/301",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_301"
+    },
+    {
+      "id": "ifeval/3057",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3057"
+    },
+    {
+      "id": "ifeval/3079",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3079"
+    },
+    {
+      "id": "ifeval/3098",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3098"
+    },
+    {
+      "id": "ifeval/3130",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3130"
+    },
+    {
+      "id": "ifeval/3186",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3186"
+    },
+    {
+      "id": "ifeval/32",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_32"
+    },
+    {
+      "id": "ifeval/3221",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3221"
+    },
+    {
+      "id": "ifeval/3245",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3245"
+    },
+    {
+      "id": "ifeval/3280",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3280"
+    },
+    {
+      "id": "ifeval/331",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_331"
+    },
+    {
+      "id": "ifeval/3324",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3324"
+    },
+    {
+      "id": "ifeval/334",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_334"
+    },
+    {
+      "id": "ifeval/3367",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3367"
+    },
+    {
+      "id": "ifeval/3380",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3380"
+    },
+    {
+      "id": "ifeval/3409",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3409"
+    },
+    {
+      "id": "ifeval/3428",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3428"
+    },
+    {
+      "id": "ifeval/3442",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3442"
+    },
+    {
+      "id": "ifeval/3478",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3478"
+    },
+    {
+      "id": "ifeval/3502",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3502"
+    },
+    {
+      "id": "ifeval/3534",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3534"
+    },
+    {
+      "id": "ifeval/3557",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3557"
+    },
+    {
+      "id": "ifeval/357",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_357"
+    },
+    {
+      "id": "ifeval/3615",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3615"
+    },
+    {
+      "id": "ifeval/3629",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3629"
+    },
+    {
+      "id": "ifeval/3669",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3669"
+    },
+    {
+      "id": "ifeval/3691",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3691"
+    },
+    {
+      "id": "ifeval/3710",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3710"
+    },
+    {
+      "id": "ifeval/3739",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3739"
+    },
+    {
+      "id": "ifeval/3749",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3749"
+    },
+    {
+      "id": "ifeval/3754",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3754"
+    },
+    {
+      "id": "ifeval/1012",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1012"
+    },
+    {
+      "id": "ifeval/1051",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1051"
+    },
+    {
+      "id": "ifeval/1087",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1087"
+    },
+    {
+      "id": "ifeval/1108",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1108"
+    },
+    {
+      "id": "ifeval/1130",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1130"
+    },
+    {
+      "id": "ifeval/1147",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1147"
+    },
+    {
+      "id": "ifeval/1174",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1174"
+    },
+    {
+      "id": "ifeval/1217",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1217"
+    },
+    {
+      "id": "ifeval/1236",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1236"
+    },
+    {
+      "id": "ifeval/1251",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1251"
+    },
+    {
+      "id": "ifeval/1268",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1268"
+    },
+    {
+      "id": "ifeval/13",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_13"
+    },
+    {
+      "id": "ifeval/1322",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1322"
+    },
+    {
+      "id": "ifeval/136",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_136"
+    },
+    {
+      "id": "ifeval/1377",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1377"
+    },
+    {
+      "id": "ifeval/1393",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1393"
+    },
+    {
+      "id": "ifeval/1436",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1436"
+    },
+    {
+      "id": "ifeval/1480",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1480"
+    },
+    {
+      "id": "ifeval/1516",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1516"
+    },
+    {
+      "id": "ifeval/1537",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1537"
+    },
+    {
+      "id": "ifeval/1566",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1566"
+    },
+    {
+      "id": "ifeval/1592",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1592"
+    },
+    {
+      "id": "ifeval/1619",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1619"
+    },
+    {
+      "id": "ifeval/1634",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1634"
+    },
+    {
+      "id": "ifeval/1646",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1646"
+    },
+    {
+      "id": "ifeval/1667",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1667"
+    },
+    {
+      "id": "ifeval/1686",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1686"
+    },
+    {
+      "id": "ifeval/1733",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1733"
+    },
+    {
+      "id": "ifeval/1773",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1773"
+    },
+    {
+      "id": "ifeval/1793",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1793"
+    },
+    {
+      "id": "ifeval/1823",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1823"
+    },
+    {
+      "id": "ifeval/1845",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1845"
+    },
+    {
+      "id": "ifeval/1883",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1883"
+    },
+    {
+      "id": "ifeval/1902",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1902"
+    },
+    {
+      "id": "ifeval/1928",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1928"
+    },
+    {
+      "id": "ifeval/1944",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1944"
+    },
+    {
+      "id": "ifeval/1996",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1996"
+    },
+    {
+      "id": "ifeval/202",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_202"
+    },
+    {
+      "id": "ifeval/2041",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2041"
+    },
+    {
+      "id": "ifeval/2078",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2078"
+    },
+    {
+      "id": "ifeval/2107",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2107"
+    },
+    {
+      "id": "ifeval/2143",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2143"
+    },
+    {
+      "id": "ifeval/2180",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2180"
+    },
+    {
+      "id": "ifeval/2209",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2209"
+    },
+    {
+      "id": "ifeval/2230",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2230"
+    },
+    {
+      "id": "ifeval/2247",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2247"
+    },
+    {
+      "id": "ifeval/2268",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2268"
+    },
+    {
+      "id": "ifeval/2292",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2292"
+    },
+    {
+      "id": "ifeval/2309",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2309"
+    },
+    {
+      "id": "ifeval/2328",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2328"
+    },
+    {
+      "id": "ifeval/2357",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2357"
+    },
+    {
+      "id": "ifeval/2380",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2380"
+    },
+    {
+      "id": "ifeval/2392",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2392"
+    },
+    {
+      "id": "ifeval/240",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_240"
+    },
+    {
+      "id": "ifeval/2432",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2432"
+    },
+    {
+      "id": "ifeval/2449",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2449"
+    },
+    {
+      "id": "ifeval/247",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_247"
+    },
+    {
+      "id": "ifeval/2497",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2497"
+    },
+    {
+      "id": "ifeval/2531",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2531"
+    },
+    {
+      "id": "ifeval/2567",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2567"
+    },
+    {
+      "id": "ifeval/2589",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2589"
+    },
+    {
+      "id": "ifeval/2602",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2602"
+    },
+    {
+      "id": "ifeval/2628",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2628"
+    },
+    {
+      "id": "ifeval/2667",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2667"
+    },
+    {
+      "id": "ifeval/2691",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2691"
+    },
+    {
+      "id": "ifeval/2728",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2728"
+    },
+    {
+      "id": "ifeval/2752",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2752"
+    },
+    {
+      "id": "ifeval/2780",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2780"
+    },
+    {
+      "id": "ifeval/2798",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2798"
+    },
+    {
+      "id": "ifeval/2817",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2817"
+    },
+    {
+      "id": "ifeval/2832",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2832"
+    },
+    {
+      "id": "ifeval/2859",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2859"
+    },
+    {
+      "id": "ifeval/2880",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2880"
+    },
+    {
+      "id": "ifeval/2908",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2908"
+    },
+    {
+      "id": "ifeval/2921",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2921"
+    },
+    {
+      "id": "ifeval/295",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_295"
+    },
+    {
+      "id": "ifeval/2985",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2985"
+    },
+    {
+      "id": "ifeval/3025",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3025"
+    },
+    {
+      "id": "ifeval/3063",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3063"
+    },
+    {
+      "id": "ifeval/3081",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3081"
+    },
+    {
+      "id": "ifeval/3109",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3109"
+    },
+    {
+      "id": "ifeval/3131",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3131"
+    },
+    {
+      "id": "ifeval/3188",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3188"
+    },
+    {
+      "id": "ifeval/3203",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3203"
+    },
+    {
+      "id": "ifeval/3223",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3223"
+    },
+    {
+      "id": "ifeval/3256",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3256"
+    },
+    {
+      "id": "ifeval/3281",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3281"
+    },
+    {
+      "id": "ifeval/3311",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3311"
+    },
+    {
+      "id": "ifeval/3326",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3326"
+    },
+    {
+      "id": "ifeval/3345",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3345"
+    },
+    {
+      "id": "ifeval/3369",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3369"
+    },
+    {
+      "id": "ifeval/3386",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3386"
+    },
+    {
+      "id": "ifeval/3414",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3414"
+    },
+    {
+      "id": "ifeval/3429",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3429"
+    },
+    {
+      "id": "ifeval/3445",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3445"
+    },
+    {
+      "id": "ifeval/3479",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3479"
+    },
+    {
+      "id": "ifeval/3505",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3505"
+    },
+    {
+      "id": "ifeval/3536",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3536"
+    },
+    {
+      "id": "ifeval/3563",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3563"
+    },
+    {
+      "id": "ifeval/3572",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3572"
+    },
+    {
+      "id": "ifeval/3617",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3617"
+    },
+    {
+      "id": "ifeval/3631",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3631"
+    },
+    {
+      "id": "ifeval/3672",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3672"
+    },
+    {
+      "id": "ifeval/3697",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3697"
+    },
+    {
+      "id": "ifeval/3718",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3718"
+    },
+    {
+      "id": "ifeval/374",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_374"
+    },
+    {
+      "id": "ifeval/3750",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3750"
+    },
+    {
+      "id": "ifeval/3755",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3755"
+    },
+    {
+      "id": "ifeval/1019",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1019"
+    },
+    {
+      "id": "ifeval/1069",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1069"
+    },
+    {
+      "id": "ifeval/1092",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1092"
+    },
+    {
+      "id": "ifeval/1122",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1122"
+    },
+    {
+      "id": "ifeval/1131",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1131"
+    },
+    {
+      "id": "ifeval/1148",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1148"
+    },
+    {
+      "id": "ifeval/1180",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1180"
+    },
+    {
+      "id": "ifeval/1219",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1219"
+    },
+    {
+      "id": "ifeval/1237",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1237"
+    },
+    {
+      "id": "ifeval/1258",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1258"
+    },
+    {
+      "id": "ifeval/127",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_127"
+    },
+    {
+      "id": "ifeval/1300",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1300"
+    },
+    {
+      "id": "ifeval/1325",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1325"
+    },
+    {
+      "id": "ifeval/1361",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1361"
+    },
+    {
+      "id": "ifeval/1379",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1379"
+    },
+    {
+      "id": "ifeval/1402",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1402"
+    },
+    {
+      "id": "ifeval/1446",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1446"
+    },
+    {
+      "id": "ifeval/1481",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1481"
+    },
+    {
+      "id": "ifeval/1518",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1518"
+    },
+    {
+      "id": "ifeval/1546",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1546"
+    },
+    {
+      "id": "ifeval/1571",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1571"
+    },
+    {
+      "id": "ifeval/1593",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1593"
+    },
+    {
+      "id": "ifeval/1620",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1620"
+    },
+    {
+      "id": "ifeval/164",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_164"
+    },
+    {
+      "id": "ifeval/1653",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1653"
+    },
+    {
+      "id": "ifeval/167",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_167"
+    },
+    {
+      "id": "ifeval/1691",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1691"
+    },
+    {
+      "id": "ifeval/1738",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1738"
+    },
+    {
+      "id": "ifeval/1776",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1776"
+    },
+    {
+      "id": "ifeval/1800",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1800"
+    },
+    {
+      "id": "ifeval/1825",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1825"
+    },
+    {
+      "id": "ifeval/1857",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1857"
+    },
+    {
+      "id": "ifeval/1886",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1886"
+    },
+    {
+      "id": "ifeval/1906",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1906"
+    },
+    {
+      "id": "ifeval/1934",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1934"
+    },
+    {
+      "id": "ifeval/1954",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1954"
+    },
+    {
+      "id": "ifeval/1999",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_1999"
+    },
+    {
+      "id": "ifeval/2023",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2023"
+    },
+    {
+      "id": "ifeval/2063",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2063"
+    },
+    {
+      "id": "ifeval/2084",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2084"
+    },
+    {
+      "id": "ifeval/2118",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2118"
+    },
+    {
+      "id": "ifeval/2162",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2162"
+    },
+    {
+      "id": "ifeval/219",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_219"
+    },
+    {
+      "id": "ifeval/2215",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2215"
+    },
+    {
+      "id": "ifeval/2239",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2239"
+    },
+    {
+      "id": "ifeval/2250",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2250"
+    },
+    {
+      "id": "ifeval/227",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_227"
+    },
+    {
+      "id": "ifeval/2299",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2299"
+    },
+    {
+      "id": "ifeval/2311",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2311"
+    },
+    {
+      "id": "ifeval/2337",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2337"
+    },
+    {
+      "id": "ifeval/2359",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2359"
+    },
+    {
+      "id": "ifeval/2381",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2381"
+    },
+    {
+      "id": "ifeval/2395",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2395"
+    },
+    {
+      "id": "ifeval/2404",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2404"
+    },
+    {
+      "id": "ifeval/2436",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2436"
+    },
+    {
+      "id": "ifeval/2457",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2457"
+    },
+    {
+      "id": "ifeval/2471",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2471"
+    },
+    {
+      "id": "ifeval/2505",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2505"
+    },
+    {
+      "id": "ifeval/2532",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2532"
+    },
+    {
+      "id": "ifeval/2571",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2571"
+    },
+    {
+      "id": "ifeval/2590",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2590"
+    },
+    {
+      "id": "ifeval/2605",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2605"
+    },
+    {
+      "id": "ifeval/2637",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2637"
+    },
+    {
+      "id": "ifeval/2674",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2674"
+    },
+    {
+      "id": "ifeval/2704",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2704"
+    },
+    {
+      "id": "ifeval/2736",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2736"
+    },
+    {
+      "id": "ifeval/2759",
+      "correct": [
+        1,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2759"
+    },
+    {
+      "id": "ifeval/2785",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2785"
+    },
+    {
+      "id": "ifeval/2801",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2801"
+    },
+    {
+      "id": "ifeval/2820",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2820"
+    },
+    {
+      "id": "ifeval/2844",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2844"
+    },
+    {
+      "id": "ifeval/286",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_286"
+    },
+    {
+      "id": "ifeval/2887",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2887"
+    },
+    {
+      "id": "ifeval/2909",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2909"
+    },
+    {
+      "id": "ifeval/2925",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2925"
+    },
+    {
+      "id": "ifeval/2957",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2957"
+    },
+    {
+      "id": "ifeval/2997",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_2997"
+    },
+    {
+      "id": "ifeval/3035",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3035"
+    },
+    {
+      "id": "ifeval/3069",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3069"
+    },
+    {
+      "id": "ifeval/3084",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3084"
+    },
+    {
+      "id": "ifeval/3112",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3112"
+    },
+    {
+      "id": "ifeval/3150",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3150"
+    },
+    {
+      "id": "ifeval/3191",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3191"
+    },
+    {
+      "id": "ifeval/3204",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3204"
+    },
+    {
+      "id": "ifeval/3224",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3224"
+    },
+    {
+      "id": "ifeval/3263",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3263"
+    },
+    {
+      "id": "ifeval/3287",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3287"
+    },
+    {
+      "id": "ifeval/3315",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3315"
+    },
+    {
+      "id": "ifeval/3327",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3327"
+    },
+    {
+      "id": "ifeval/3350",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3350"
+    },
+    {
+      "id": "ifeval/337",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_337"
+    },
+    {
+      "id": "ifeval/340",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_340"
+    },
+    {
+      "id": "ifeval/3415",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3415"
+    },
+    {
+      "id": "ifeval/343",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_343"
+    },
+    {
+      "id": "ifeval/3453",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3453"
+    },
+    {
+      "id": "ifeval/3484",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3484"
+    },
+    {
+      "id": "ifeval/3506",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3506"
+    },
+    {
+      "id": "ifeval/3538",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3538"
+    },
+    {
+      "id": "ifeval/3565",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3565"
+    },
+    {
+      "id": "ifeval/3595",
+      "correct": [
+        0,
+        1
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3595"
+    },
+    {
+      "id": "ifeval/3619",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3619"
+    },
+    {
+      "id": "ifeval/3633",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3633"
+    },
+    {
+      "id": "ifeval/3680",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3680"
+    },
+    {
+      "id": "ifeval/3703",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3703"
+    },
+    {
+      "id": "ifeval/3719",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3719"
+    },
+    {
+      "id": "ifeval/3743",
+      "correct": [
+        0,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3743"
+    },
+    {
+      "id": "ifeval/3751",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3751"
+    },
+    {
+      "id": "ifeval/3756",
+      "correct": [
+        1,
+        0
+      ],
+      "pred_first": null,
+      "source_id": "ifeval_3756"
+    }
+  ],
+  "selected_sample_index": 0,
+  "correct_by_index": [
+    112,
+    115
+  ],
+  "selection": "RikiyaT: single highest-scoring global sample index per benchmark, ties lowest; baseline:index0.",
+  "source": {
+    "repository": "RikiyaT/lm_understand-logs",
+    "revision": "4d09ba6d6a7e891dd8063974dfe81b3d78e3494f",
+    "variant": "unedited",
+    "shards": 5
+  },
+  "summary": {
+    "problems": 541,
+    "samples": 2,
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "presence_penalty": 1.5,
+      "max_tokens": 32768,
+      "seed": 0
+    }
+  },
+  "limitation": "External vLLM text-export evaluation; not a same-engine matched control."
+}

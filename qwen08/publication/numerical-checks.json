@@ -1,0 +1,7 @@
+{
+  "sampler_cases": 1000,
+  "sampler_max_probability_error": 3.249885762723892e-07,
+  "label_cases": 5,
+  "penalty_patch_bit_exact_cases": 100,
+  "status": "passed"
+}

@@ -1,0 +1,5002 @@
+[
+  {
+    "id": "test/number_theory/572.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 1900,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1474,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/2036.json",
+    "correct": true,
+    "prediction": "3\\sqrt{13}",
+    "tokens": 1168,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 773,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/807.json",
+    "correct": true,
+    "prediction": "(3, \\frac{\\pi}{2})",
+    "tokens": 5413,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4626,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/515.json",
+    "correct": true,
+    "prediction": "27",
+    "tokens": 7362,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3558,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/1349.json",
+    "correct": true,
+    "prediction": "Evelyn",
+    "tokens": 8019,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3555,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/algebra/2584.json",
+    "correct": true,
+    "prediction": "\\frac{14}{3}",
+    "tokens": 9034,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7981,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/1032.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 10131,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1827,
+    "extra_close_tags": 10
+  },
+  {
+    "id": "test/precalculus/927.json",
+    "correct": false,
+    "prediction": "41.5^\\circ",
+    "tokens": 15970,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3243,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/number_theory/737.json",
+    "correct": true,
+    "prediction": "284",
+    "tokens": 9390,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 850,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/geometry/248.json",
+    "correct": true,
+    "prediction": "5",
+    "tokens": 10369,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9829,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/134.json",
+    "correct": false,
+    "prediction": "7301",
+    "tokens": 5910,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1326,
+    "extra_close_tags": 7
+  },
+  {
+    "id": "test/precalculus/1303.json",
+    "correct": true,
+    "prediction": "\\sqrt{51}",
+    "tokens": 9383,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6384,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/precalculus/990.json",
+    "correct": true,
+    "prediction": "6-5i",
+    "tokens": 8985,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7609,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1098.json",
+    "correct": true,
+    "prediction": "6+9i",
+    "tokens": 853,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 651,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/1199.json",
+    "correct": true,
+    "prediction": "\\pi",
+    "tokens": 7161,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6672,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1994.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6741,
+    "extra_close_tags": 8819
+  },
+  {
+    "id": "test/prealgebra/1622.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6080,
+    "extra_close_tags": 11485
+  },
+  {
+    "id": "test/prealgebra/1139.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5653,
+    "extra_close_tags": 11241
+  },
+  {
+    "id": "test/algebra/2427.json",
+    "correct": true,
+    "prediction": "10",
+    "tokens": 5032,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3419,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1197.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4718,
+    "extra_close_tags": 10808
+  },
+  {
+    "id": "test/algebra/2193.json",
+    "correct": true,
+    "prediction": "5",
+    "tokens": 9878,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1140,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/779.json",
+    "correct": true,
+    "prediction": "-2 + 7i",
+    "tokens": 1704,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1263,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/666.json",
+    "correct": true,
+    "prediction": "225",
+    "tokens": 6483,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3650,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/864.json",
+    "correct": true,
+    "prediction": "52_8",
+    "tokens": 4836,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2125,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/geometry/434.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10881,
+    "extra_close_tags": 4317
+  },
+  {
+    "id": "test/intermediate_algebra/1000.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2957,
+    "extra_close_tags": 10916
+  },
+  {
+    "id": "test/prealgebra/1302.json",
+    "correct": true,
+    "prediction": "11\\sqrt{2}",
+    "tokens": 2040,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1225,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/607.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7750,
+    "extra_close_tags": 8195
+  },
+  {
+    "id": "test/algebra/1837.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5055,
+    "extra_close_tags": 11722
+  },
+  {
+    "id": "test/number_theory/627.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 2037,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1261,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/geometry/967.json",
+    "correct": true,
+    "prediction": "72",
+    "tokens": 2633,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1924,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/24.json",
+    "correct": true,
+    "prediction": "2000",
+    "tokens": 3300,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2284,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1072.json",
+    "correct": true,
+    "prediction": "\\frac{243}{625}",
+    "tokens": 9366,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1182,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/119.json",
+    "correct": true,
+    "prediction": "-125",
+    "tokens": 10289,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3563,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/intermediate_algebra/1388.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 13609,
+    "extra_close_tags": 2197
+  },
+  {
+    "id": "test/prealgebra/930.json",
+    "correct": true,
+    "prediction": "12",
+    "tokens": 1697,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1128,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/525.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3612,
+    "extra_close_tags": 11766
+  },
+  {
+    "id": "test/number_theory/45.json",
+    "correct": true,
+    "prediction": "23",
+    "tokens": 4796,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3382,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2214.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 4157,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3697,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1840.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3015,
+    "extra_close_tags": 13397
+  },
+  {
+    "id": "test/geometry/178.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 2290,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1655,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/1265.json",
+    "correct": true,
+    "prediction": "\\frac{3}{2}",
+    "tokens": 1076,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 800,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/428.json",
+    "correct": true,
+    "prediction": "3, 5, 7",
+    "tokens": 16475,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3198,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1388.json",
+    "correct": true,
+    "prediction": "83",
+    "tokens": 1267,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 894,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/305.json",
+    "correct": true,
+    "prediction": "5",
+    "tokens": 4310,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 731,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1558.json",
+    "correct": true,
+    "prediction": "1.25",
+    "tokens": 7713,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1036,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/1055.json",
+    "correct": false,
+    "prediction": "24",
+    "tokens": 5162,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2799,
+    "extra_close_tags": 9
+  },
+  {
+    "id": "test/prealgebra/572.json",
+    "correct": true,
+    "prediction": "0.15",
+    "tokens": 202,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 0,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/1105.json",
+    "correct": true,
+    "prediction": "-\\frac{\\pi}{6}",
+    "tokens": 3792,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3066,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/951.json",
+    "correct": true,
+    "prediction": "12",
+    "tokens": 6054,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5442,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/1217.json",
+    "correct": false,
+    "prediction": "-2",
+    "tokens": 9465,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6571,
+    "extra_close_tags": 7
+  },
+  {
+    "id": "test/algebra/722.json",
+    "correct": true,
+    "prediction": "9901",
+    "tokens": 3245,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2300,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/134.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6738,
+    "extra_close_tags": 10654
+  },
+  {
+    "id": "test/algebra/769.json",
+    "correct": true,
+    "prediction": "11",
+    "tokens": 7150,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6347,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1168.json",
+    "correct": true,
+    "prediction": "16",
+    "tokens": 8670,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1978,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1247.json",
+    "correct": true,
+    "prediction": "5",
+    "tokens": 9860,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8398,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/187.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 18702,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10546,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/geometry/627.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7630,
+    "extra_close_tags": 4406
+  },
+  {
+    "id": "test/intermediate_algebra/1454.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 16620,
+    "extra_close_tags": 5605
+  },
+  {
+    "id": "test/prealgebra/1747.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 1079,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 952,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/285.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2239,
+    "extra_close_tags": 8034
+  },
+  {
+    "id": "test/precalculus/675.json",
+    "correct": false,
+    "prediction": "2",
+    "tokens": 13973,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8571,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/2046.json",
+    "correct": true,
+    "prediction": "x^3+3x-6",
+    "tokens": 6633,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5791,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/number_theory/46.json",
+    "correct": true,
+    "prediction": "40_9",
+    "tokens": 6851,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5271,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/1146.json",
+    "correct": false,
+    "prediction": "-1",
+    "tokens": 19323,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5590,
+    "extra_close_tags": 7
+  },
+  {
+    "id": "test/intermediate_algebra/956.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2959,
+    "extra_close_tags": 10948
+  },
+  {
+    "id": "test/intermediate_algebra/1247.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 15895,
+    "extra_close_tags": 1287
+  },
+  {
+    "id": "test/algebra/2253.json",
+    "correct": true,
+    "prediction": "\\frac{3\\sqrt{3}}{4}",
+    "tokens": 855,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 542,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/geometry/456.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 4383,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3738,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/24313.json",
+    "correct": true,
+    "prediction": "\\cot x",
+    "tokens": 3198,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1945,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1004.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 1868,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1536,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/279.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5439,
+    "extra_close_tags": 10397
+  },
+  {
+    "id": "test/prealgebra/192.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 996,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 696,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1233.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3238,
+    "extra_close_tags": 13031
+  },
+  {
+    "id": "test/precalculus/1313.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10941,
+    "extra_close_tags": 6626
+  },
+  {
+    "id": "test/intermediate_algebra/207.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3983,
+    "extra_close_tags": 11054
+  },
+  {
+    "id": "test/algebra/1035.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 7066,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6733,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/893.json",
+    "correct": true,
+    "prediction": "-1",
+    "tokens": 1940,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1045,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/geometry/353.json",
+    "correct": false,
+    "prediction": "2.5",
+    "tokens": 3628,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2134,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/516.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4067,
+    "extra_close_tags": 13273
+  },
+  {
+    "id": "test/prealgebra/307.json",
+    "correct": true,
+    "prediction": "240",
+    "tokens": 2475,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2209,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/2046.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 12036,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6662,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/567.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 7261,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6692,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/1114.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3427,
+    "extra_close_tags": 10837
+  },
+  {
+    "id": "test/intermediate_algebra/623.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5394,
+    "extra_close_tags": 11176
+  },
+  {
+    "id": "test/algebra/2023.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 1303,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 818,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/873.json",
+    "correct": true,
+    "prediction": "33",
+    "tokens": 2558,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2015,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/357.json",
+    "correct": true,
+    "prediction": "21",
+    "tokens": 8489,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1976,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/47.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8819,
+    "extra_close_tags": 7505
+  },
+  {
+    "id": "test/counting_and_probability/377.json",
+    "correct": true,
+    "prediction": "\\frac{448}{15625}",
+    "tokens": 4416,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2638,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1761.json",
+    "correct": true,
+    "prediction": "1.5",
+    "tokens": 5869,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4673,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1924.json",
+    "correct": true,
+    "prediction": "2k + 2",
+    "tokens": 805,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 554,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/105.json",
+    "correct": true,
+    "prediction": "East",
+    "tokens": 3512,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2153,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1849.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4325,
+    "extra_close_tags": 7289
+  },
+  {
+    "id": "test/algebra/2700.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3860,
+    "extra_close_tags": 12973
+  },
+  {
+    "id": "test/precalculus/34.json",
+    "correct": true,
+    "prediction": "-4",
+    "tokens": 15220,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 14547,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/431.json",
+    "correct": true,
+    "prediction": "(a + 5)(b + 2)",
+    "tokens": 7534,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7115,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/1300.json",
+    "correct": true,
+    "prediction": "\\begin{pmatrix} -1/3 \\\\ 2/3 \\\\ 5/3 \\end{pmatrix}",
+    "tokens": 18583,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 12071,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/892.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3144,
+    "extra_close_tags": 13031
+  },
+  {
+    "id": "test/intermediate_algebra/515.json",
+    "correct": true,
+    "prediction": "\\frac{4}{3}",
+    "tokens": 4458,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3706,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1646.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 9714,
+    "extra_close_tags": 8050
+  },
+  {
+    "id": "test/intermediate_algebra/662.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 11669,
+    "extra_close_tags": 4764
+  },
+  {
+    "id": "test/number_theory/914.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 8184,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3963,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/geometry/183.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4228,
+    "extra_close_tags": 8969
+  },
+  {
+    "id": "test/prealgebra/1804.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 17488,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 14002,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/intermediate_algebra/582.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4982,
+    "extra_close_tags": 11411
+  },
+  {
+    "id": "test/counting_and_probability/23957.json",
+    "correct": true,
+    "prediction": "210",
+    "tokens": 2586,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1377,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2593.json",
+    "correct": true,
+    "prediction": "8000",
+    "tokens": 8515,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7607,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/558.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 24809,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/2058.json",
+    "correct": true,
+    "prediction": "13",
+    "tokens": 10798,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8185,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2157.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 2198,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1620,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/2251.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 1340,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 873,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/1060.json",
+    "correct": true,
+    "prediction": "1260",
+    "tokens": 4351,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3776,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/1898.json",
+    "correct": true,
+    "prediction": "-5",
+    "tokens": 11481,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9990,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/362.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10787,
+    "extra_close_tags": 2456
+  },
+  {
+    "id": "test/prealgebra/505.json",
+    "correct": true,
+    "prediction": "6",
+    "tokens": 1571,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1107,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/1332.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 2458,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1673,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/894.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7683,
+    "extra_close_tags": 8488
+  },
+  {
+    "id": "test/algebra/972.json",
+    "correct": true,
+    "prediction": "\\frac{11}{2}",
+    "tokens": 11402,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7314,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/precalculus/44.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 11092,
+    "extra_close_tags": 2338
+  },
+  {
+    "id": "test/algebra/2232.json",
+    "correct": true,
+    "prediction": "-3",
+    "tokens": 1099,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 726,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/geometry/283.json",
+    "correct": true,
+    "prediction": "8",
+    "tokens": 14877,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10585,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/intermediate_algebra/345.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8643,
+    "extra_close_tags": 9164
+  },
+  {
+    "id": "test/number_theory/847.json",
+    "correct": false,
+    "prediction": "124_5",
+    "tokens": 8116,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 609,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/246.json",
+    "correct": true,
+    "prediction": "8",
+    "tokens": 1597,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 850,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1686.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 3816,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1450,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/intermediate_algebra/232.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4866,
+    "extra_close_tags": 8959
+  },
+  {
+    "id": "test/intermediate_algebra/1063.json",
+    "correct": false,
+    "prediction": "2+i",
+    "tokens": 16976,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 12005,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1733.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8615,
+    "extra_close_tags": 9837
+  },
+  {
+    "id": "test/intermediate_algebra/128.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": false,
+    "thinking_tokens": 32768,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1297.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 3833,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3066,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1807.json",
+    "correct": true,
+    "prediction": "120",
+    "tokens": 8914,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7189,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/number_theory/753.json",
+    "correct": true,
+    "prediction": "13",
+    "tokens": 20926,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 16706,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/intermediate_algebra/1126.json",
+    "correct": false,
+    "prediction": "15",
+    "tokens": 10572,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7481,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/661.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2877,
+    "extra_close_tags": 13743
+  },
+  {
+    "id": "test/number_theory/1257.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 15144,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2841,
+    "extra_close_tags": 33
+  },
+  {
+    "id": "test/geometry/1140.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7928,
+    "extra_close_tags": 8950
+  },
+  {
+    "id": "test/precalculus/43.json",
+    "correct": true,
+    "prediction": "(15, -29)",
+    "tokens": 1088,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 757,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/156.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 13945,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9073,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/number_theory/612.json",
+    "correct": false,
+    "prediction": "0",
+    "tokens": 10155,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4616,
+    "extra_close_tags": 15
+  },
+  {
+    "id": "test/algebra/1519.json",
+    "correct": true,
+    "prediction": "\\frac{\\sqrt{3}}{3}",
+    "tokens": 3917,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3483,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/477.json",
+    "correct": true,
+    "prediction": "3\\sqrt{5}",
+    "tokens": 8780,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7500,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1151.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 20869,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 14028,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/988.json",
+    "correct": true,
+    "prediction": "11",
+    "tokens": 6291,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5685,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/1408.json",
+    "correct": true,
+    "prediction": "-2",
+    "tokens": 13345,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4486,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/intermediate_algebra/2022.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 12481,
+    "extra_close_tags": 3649
+  },
+  {
+    "id": "test/counting_and_probability/430.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7374,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/counting_and_probability/159.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4361,
+    "extra_close_tags": 11582
+  },
+  {
+    "id": "test/intermediate_algebra/966.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 25107,
+    "extra_close_tags": 8
+  },
+  {
+    "id": "test/number_theory/931.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 16241,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/intermediate_algebra/964.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8826,
+    "extra_close_tags": 6387
+  },
+  {
+    "id": "test/precalculus/986.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 13194,
+    "extra_close_tags": 4369
+  },
+  {
+    "id": "test/geometry/172.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2875,
+    "extra_close_tags": 13279
+  },
+  {
+    "id": "test/algebra/621.json",
+    "correct": true,
+    "prediction": "3.21",
+    "tokens": 2046,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1675,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/230.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4716,
+    "extra_close_tags": 11053
+  },
+  {
+    "id": "test/algebra/1255.json",
+    "correct": true,
+    "prediction": "6",
+    "tokens": 828,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 579,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/2570.json",
+    "correct": true,
+    "prediction": "2107",
+    "tokens": 9862,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4261,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/geometry/880.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5727,
+    "extra_close_tags": 10220
+  },
+  {
+    "id": "test/intermediate_algebra/1410.json",
+    "correct": true,
+    "prediction": "6/5",
+    "tokens": 11853,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 11182,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1356.json",
+    "correct": true,
+    "prediction": "\\frac{4}{9}",
+    "tokens": 6781,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4922,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/478.json",
+    "correct": true,
+    "prediction": "65",
+    "tokens": 890,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 620,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/803.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6478,
+    "extra_close_tags": 8430
+  },
+  {
+    "id": "test/geometry/802.json",
+    "correct": true,
+    "prediction": "12",
+    "tokens": 1491,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1083,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/2517.json",
+    "correct": true,
+    "prediction": "\\frac{-35}{9}",
+    "tokens": 17092,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9718,
+    "extra_close_tags": 10
+  },
+  {
+    "id": "test/prealgebra/1272.json",
+    "correct": true,
+    "prediction": "\\frac{13}{15}",
+    "tokens": 1852,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1463,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/117.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7323,
+    "extra_close_tags": 11117
+  },
+  {
+    "id": "test/algebra/841.json",
+    "correct": true,
+    "prediction": "350",
+    "tokens": 5427,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4820,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/351.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 1576,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1140,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/521.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2588,
+    "extra_close_tags": 14103
+  },
+  {
+    "id": "test/prealgebra/1655.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 9664,
+    "extra_close_tags": 8816
+  },
+  {
+    "id": "test/precalculus/697.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10945,
+    "extra_close_tags": 244
+  },
+  {
+    "id": "test/prealgebra/1003.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3427,
+    "extra_close_tags": 8421
+  },
+  {
+    "id": "test/intermediate_algebra/991.json",
+    "correct": false,
+    "prediction": "4",
+    "tokens": 10449,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3055,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1113.json",
+    "correct": true,
+    "prediction": "60",
+    "tokens": 2285,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1675,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/598.json",
+    "correct": true,
+    "prediction": "0.0000672",
+    "tokens": 8335,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1965,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/prealgebra/1922.json",
+    "correct": true,
+    "prediction": "1251",
+    "tokens": 934,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 731,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/181.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 12476,
+    "extra_close_tags": 7512
+  },
+  {
+    "id": "test/prealgebra/1908.json",
+    "correct": false,
+    "prediction": "2",
+    "tokens": 9766,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5686,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1214.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 1475,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1137,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/659.json",
+    "correct": true,
+    "prediction": "5x - 7y + 11z + 4 = 0",
+    "tokens": 12783,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10460,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/297.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8681,
+    "extra_close_tags": 5728
+  },
+  {
+    "id": "test/algebra/2199.json",
+    "correct": true,
+    "prediction": "7",
+    "tokens": 1532,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1042,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/686.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5457,
+    "extra_close_tags": 4300
+  },
+  {
+    "id": "test/algebra/1275.json",
+    "correct": true,
+    "prediction": "\\frac{1}{\\sqrt{3}}",
+    "tokens": 15271,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6962,
+    "extra_close_tags": 8
+  },
+  {
+    "id": "test/algebra/109.json",
+    "correct": true,
+    "prediction": "0",
+    "tokens": 1574,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1160,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/1082.json",
+    "correct": true,
+    "prediction": "23",
+    "tokens": 14680,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 12337,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/978.json",
+    "correct": true,
+    "prediction": "7",
+    "tokens": 8514,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4200,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/intermediate_algebra/183.json",
+    "correct": false,
+    "prediction": "(0, \\infty)",
+    "tokens": 19043,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9277,
+    "extra_close_tags": 9
+  },
+  {
+    "id": "test/algebra/733.json",
+    "correct": true,
+    "prediction": "6",
+    "tokens": 13750,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9182,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/counting_and_probability/51.json",
+    "correct": false,
+    "prediction": "\\frac{2}{3}",
+    "tokens": 10924,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2230,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/geometry/65.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7136,
+    "extra_close_tags": 10473
+  },
+  {
+    "id": "test/algebra/1937.json",
+    "correct": true,
+    "prediction": "1600",
+    "tokens": 3463,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2939,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1907.json",
+    "correct": true,
+    "prediction": "17",
+    "tokens": 1019,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 681,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/508.json",
+    "correct": false,
+    "prediction": "120",
+    "tokens": 5207,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2423,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/geometry/221.json",
+    "correct": true,
+    "prediction": "30",
+    "tokens": 22026,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4482,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/prealgebra/2086.json",
+    "correct": true,
+    "prediction": "40",
+    "tokens": 9063,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8463,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/591.json",
+    "correct": false,
+    "prediction": "-24",
+    "tokens": 15183,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7711,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/intermediate_algebra/1422.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 22913,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10698,
+    "extra_close_tags": 12
+  },
+  {
+    "id": "test/algebra/291.json",
+    "correct": false,
+    "prediction": "1/2",
+    "tokens": 5617,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3830,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/geometry/702.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4410,
+    "extra_close_tags": 11771
+  },
+  {
+    "id": "test/counting_and_probability/389.json",
+    "correct": true,
+    "prediction": "28",
+    "tokens": 891,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 563,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/1555.json",
+    "correct": true,
+    "prediction": "12",
+    "tokens": 7434,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6480,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/1201.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 1559,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1024,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/2196.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3730,
+    "extra_close_tags": 12808
+  },
+  {
+    "id": "test/precalculus/541.json",
+    "correct": true,
+    "prediction": "(\\frac{3}{2}, -13)",
+    "tokens": 8471,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4481,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/number_theory/234.json",
+    "correct": true,
+    "prediction": "16",
+    "tokens": 7662,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6032,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/prealgebra/1555.json",
+    "correct": true,
+    "prediction": "5",
+    "tokens": 6530,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6108,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/838.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10782,
+    "extra_close_tags": 4563
+  },
+  {
+    "id": "test/algebra/907.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 2201,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1402,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2102.json",
+    "correct": true,
+    "prediction": "56",
+    "tokens": 8493,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5610,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/prealgebra/1436.json",
+    "correct": true,
+    "prediction": "6",
+    "tokens": 3820,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2711,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/864.json",
+    "correct": true,
+    "prediction": "(-1, 6)",
+    "tokens": 837,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 492,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/149.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4100,
+    "extra_close_tags": 7613
+  },
+  {
+    "id": "test/intermediate_algebra/1510.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 16620,
+    "extra_close_tags": 4736
+  },
+  {
+    "id": "test/precalculus/263.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3494,
+    "extra_close_tags": 10285
+  },
+  {
+    "id": "test/prealgebra/1961.json",
+    "correct": false,
+    "prediction": "\\frac{4}{3}",
+    "tokens": 10704,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5613,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/prealgebra/378.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2588,
+    "extra_close_tags": 6286
+  },
+  {
+    "id": "test/number_theory/183.json",
+    "correct": true,
+    "prediction": "14",
+    "tokens": 10113,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3599,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/intermediate_algebra/102.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 23284,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/number_theory/89.json",
+    "correct": false,
+    "prediction": "450",
+    "tokens": 16242,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9119,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/counting_and_probability/765.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6542,
+    "extra_close_tags": 9257
+  },
+  {
+    "id": "test/precalculus/819.json",
+    "correct": true,
+    "prediction": "C",
+    "tokens": 4788,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3724,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/71.json",
+    "correct": false,
+    "prediction": "1",
+    "tokens": 7085,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4398,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/number_theory/417.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3325,
+    "extra_close_tags": 12821
+  },
+  {
+    "id": "test/algebra/2159.json",
+    "correct": false,
+    "prediction": "0",
+    "tokens": 10253,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4133,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/counting_and_probability/282.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 9246,
+    "extra_close_tags": 7920
+  },
+  {
+    "id": "test/intermediate_algebra/986.json",
+    "correct": false,
+    "prediction": "4",
+    "tokens": 8235,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6622,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/2057.json",
+    "correct": false,
+    "prediction": "45",
+    "tokens": 10276,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7932,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/geometry/547.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6853,
+    "extra_close_tags": 11330
+  },
+  {
+    "id": "test/precalculus/441.json",
+    "correct": true,
+    "prediction": "30",
+    "tokens": 9831,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8186,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/153.json",
+    "correct": true,
+    "prediction": "\\frac{5}{9}",
+    "tokens": 5437,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1950,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/190.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2173,
+    "extra_close_tags": 12288
+  },
+  {
+    "id": "test/intermediate_algebra/337.json",
+    "correct": true,
+    "prediction": "22",
+    "tokens": 5931,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2699,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/975.json",
+    "correct": true,
+    "prediction": "\\{-4\\}",
+    "tokens": 12219,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8519,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/precalculus/1056.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7031,
+    "extra_close_tags": 8474
+  },
+  {
+    "id": "test/algebra/2626.json",
+    "correct": false,
+    "prediction": "26511",
+    "tokens": 3258,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2278,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1578.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5668,
+    "extra_close_tags": 7972
+  },
+  {
+    "id": "test/geometry/254.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 1483,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1107,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/1837.json",
+    "correct": true,
+    "prediction": "34",
+    "tokens": 25837,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 15607,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/algebra/1143.json",
+    "correct": false,
+    "prediction": "81",
+    "tokens": 7279,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5312,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1354.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4619,
+    "extra_close_tags": 10280
+  },
+  {
+    "id": "test/algebra/1787.json",
+    "correct": false,
+    "prediction": "12",
+    "tokens": 7531,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3901,
+    "extra_close_tags": 9
+  },
+  {
+    "id": "test/intermediate_algebra/1123.json",
+    "correct": true,
+    "prediction": "\\frac{10}{11}",
+    "tokens": 10189,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5324,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/precalculus/989.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4352,
+    "extra_close_tags": 7856
+  },
+  {
+    "id": "test/precalculus/920.json",
+    "correct": false,
+    "prediction": "-I",
+    "tokens": 12698,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4729,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1934.json",
+    "correct": true,
+    "prediction": "13",
+    "tokens": 3173,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2022,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1458.json",
+    "correct": true,
+    "prediction": "\\frac{1}{8}",
+    "tokens": 1514,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1131,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/894.json",
+    "correct": false,
+    "prediction": "720",
+    "tokens": 4744,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2255,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/2064.json",
+    "correct": true,
+    "prediction": "81",
+    "tokens": 4044,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3376,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/geometry/229.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3427,
+    "extra_close_tags": 13274
+  },
+  {
+    "id": "test/prealgebra/874.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4941,
+    "extra_close_tags": 10395
+  },
+  {
+    "id": "test/geometry/473.json",
+    "correct": true,
+    "prediction": "864",
+    "tokens": 1318,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 922,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/452.json",
+    "correct": true,
+    "prediction": "E",
+    "tokens": 3869,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3001,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/694.json",
+    "correct": true,
+    "prediction": "16",
+    "tokens": 3058,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1304,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/580.json",
+    "correct": true,
+    "prediction": "120^\\circ",
+    "tokens": 2385,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1192,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1317.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 1061,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 743,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/149.json",
+    "correct": true,
+    "prediction": "22",
+    "tokens": 6407,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5728,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/geometry/483.json",
+    "correct": true,
+    "prediction": "15",
+    "tokens": 3910,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2794,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1995.json",
+    "correct": true,
+    "prediction": "\\frac{8}{21}",
+    "tokens": 9580,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6841,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/524.json",
+    "correct": true,
+    "prediction": "4005",
+    "tokens": 995,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 674,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/geometry/347.json",
+    "correct": true,
+    "prediction": "76^\\circ",
+    "tokens": 6819,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6259,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1742.json",
+    "correct": true,
+    "prediction": "\\frac{33}{100}",
+    "tokens": 2054,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1530,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1251.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8032,
+    "extra_close_tags": 4090
+  },
+  {
+    "id": "test/intermediate_algebra/1210.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4580,
+    "extra_close_tags": 11235
+  },
+  {
+    "id": "test/algebra/2551.json",
+    "correct": true,
+    "prediction": "10",
+    "tokens": 1186,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 851,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/466.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 7798,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7138,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/913.json",
+    "correct": true,
+    "prediction": "6",
+    "tokens": 8637,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4235,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/number_theory/1065.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3259,
+    "extra_close_tags": 9014
+  },
+  {
+    "id": "test/algebra/346.json",
+    "correct": true,
+    "prediction": "7",
+    "tokens": 1131,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 837,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/counting_and_probability/1009.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3150,
+    "extra_close_tags": 11292
+  },
+  {
+    "id": "test/prealgebra/1834.json",
+    "correct": true,
+    "prediction": "\\sqrt{53}",
+    "tokens": 1621,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1037,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/1282.json",
+    "correct": true,
+    "prediction": "11",
+    "tokens": 12995,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9184,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/number_theory/691.json",
+    "correct": true,
+    "prediction": "255",
+    "tokens": 7638,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4152,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/geometry/826.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6359,
+    "extra_close_tags": 8373
+  },
+  {
+    "id": "test/geometry/226.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4026,
+    "extra_close_tags": 12808
+  },
+  {
+    "id": "test/number_theory/634.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5841,
+    "extra_close_tags": 10500
+  },
+  {
+    "id": "test/number_theory/533.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3806,
+    "extra_close_tags": 11882
+  },
+  {
+    "id": "test/prealgebra/1787.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 2692,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 942,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/993.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3543,
+    "extra_close_tags": 9488
+  },
+  {
+    "id": "test/geometry/686.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3515,
+    "extra_close_tags": 12435
+  },
+  {
+    "id": "test/prealgebra/260.json",
+    "correct": false,
+    "prediction": "108^\\circ",
+    "tokens": 16153,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9379,
+    "extra_close_tags": 6
+  },
+  {
+    "id": "test/prealgebra/1512.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4497,
+    "extra_close_tags": 12833
+  },
+  {
+    "id": "test/number_theory/1287.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 1736,
+    "extra_close_tags": 10062
+  },
+  {
+    "id": "test/algebra/1184.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2052,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/counting_and_probability/25149.json",
+    "correct": true,
+    "prediction": "63",
+    "tokens": 1863,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 987,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1300.json",
+    "correct": true,
+    "prediction": "16",
+    "tokens": 9447,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4546,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/precalculus/768.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6727,
+    "extra_close_tags": 10579
+  },
+  {
+    "id": "test/intermediate_algebra/1411.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6360,
+    "extra_close_tags": 658
+  },
+  {
+    "id": "test/intermediate_algebra/960.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4517,
+    "extra_close_tags": 5336
+  },
+  {
+    "id": "test/number_theory/631.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3041,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/algebra/634.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 15339,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5666,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/precalculus/1172.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3583,
+    "extra_close_tags": 10640
+  },
+  {
+    "id": "test/algebra/2486.json",
+    "correct": true,
+    "prediction": "\\left(\\frac{3}{5}, \\frac{8}{3}\\right]",
+    "tokens": 13467,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1531,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/geometry/1097.json",
+    "correct": true,
+    "prediction": "63",
+    "tokens": 8585,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2179,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/number_theory/1172.json",
+    "correct": true,
+    "prediction": "103",
+    "tokens": 15864,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2400,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/precalculus/881.json",
+    "correct": false,
+    "prediction": "\\begin{pmatrix} -12 \\\\ -69 \\\\ 96 \\end{pmatrix}",
+    "tokens": 20962,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 18931,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/90.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6012,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1044.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 12072,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5348,
+    "extra_close_tags": 20
+  },
+  {
+    "id": "test/number_theory/488.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2958,
+    "extra_close_tags": 12173
+  },
+  {
+    "id": "test/precalculus/1201.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4434,
+    "extra_close_tags": 9256
+  },
+  {
+    "id": "test/intermediate_algebra/754.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 9819,
+    "extra_close_tags": 9465
+  },
+  {
+    "id": "test/intermediate_algebra/446.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 11913,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4329,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/counting_and_probability/339.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10924,
+    "extra_close_tags": 7388
+  },
+  {
+    "id": "test/algebra/2257.json",
+    "correct": true,
+    "prediction": "\\frac{9}{19}",
+    "tokens": 14891,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7949,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/695.json",
+    "correct": false,
+    "prediction": "(-\\infty, 0)",
+    "tokens": 10162,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3730,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/intermediate_algebra/1714.json",
+    "correct": true,
+    "prediction": "(5, \\infty)",
+    "tokens": 1685,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1097,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1423.json",
+    "correct": true,
+    "prediction": "12\\pi",
+    "tokens": 6579,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5670,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/465.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7510,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/1842.json",
+    "correct": true,
+    "prediction": "49",
+    "tokens": 9583,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6844,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/geometry/1108.json",
+    "correct": true,
+    "prediction": "(2, 4)",
+    "tokens": 1307,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 786,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/276.json",
+    "correct": true,
+    "prediction": "12",
+    "tokens": 2970,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1350,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2735.json",
+    "correct": true,
+    "prediction": "\\frac{11+9a}{20}",
+    "tokens": 1663,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 782,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/425.json",
+    "correct": true,
+    "prediction": "-128",
+    "tokens": 1008,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 653,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/911.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 15829,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 11596,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/geometry/965.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 9270,
+    "extra_close_tags": 117
+  },
+  {
+    "id": "test/algebra/1936.json",
+    "correct": true,
+    "prediction": "-1",
+    "tokens": 1393,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1080,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/954.json",
+    "correct": true,
+    "prediction": "10",
+    "tokens": 2251,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1388,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1544.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2210,
+    "extra_close_tags": 10626
+  },
+  {
+    "id": "test/geometry/73.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 1846,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1365,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/791.json",
+    "correct": true,
+    "prediction": "41",
+    "tokens": 14768,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9340,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/geometry/711.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10712,
+    "extra_close_tags": 8100
+  },
+  {
+    "id": "test/counting_and_probability/870.json",
+    "correct": false,
+    "prediction": "1",
+    "tokens": 10050,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6482,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/geometry/947.json",
+    "correct": true,
+    "prediction": "-\\frac{24}{25}",
+    "tokens": 13246,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7358,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/prealgebra/1973.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 1211,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 816,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/203.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3033,
+    "extra_close_tags": 7777
+  },
+  {
+    "id": "test/algebra/509.json",
+    "correct": false,
+    "prediction": "\\dfrac{169}{36}",
+    "tokens": 6197,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4279,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/216.json",
+    "correct": true,
+    "prediction": "1940",
+    "tokens": 12445,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5147,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/algebra/1457.json",
+    "correct": true,
+    "prediction": "-120",
+    "tokens": 1703,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1201,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/2152.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10741,
+    "extra_close_tags": 3267
+  },
+  {
+    "id": "test/algebra/2592.json",
+    "correct": true,
+    "prediction": "26000",
+    "tokens": 1453,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1142,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1730.json",
+    "correct": true,
+    "prediction": "6",
+    "tokens": 1825,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1268,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/190.json",
+    "correct": false,
+    "prediction": "\\frac{4}{\\sqrt{3}}",
+    "tokens": 18929,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5474,
+    "extra_close_tags": 7
+  },
+  {
+    "id": "test/geometry/465.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3916,
+    "extra_close_tags": 11649
+  },
+  {
+    "id": "test/precalculus/742.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7467,
+    "extra_close_tags": 10206
+  },
+  {
+    "id": "test/intermediate_algebra/117.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6358,
+    "extra_close_tags": 10670
+  },
+  {
+    "id": "test/algebra/2176.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3027,
+    "extra_close_tags": 9792
+  },
+  {
+    "id": "test/counting_and_probability/737.json",
+    "correct": true,
+    "prediction": "58500",
+    "tokens": 4489,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3071,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1238.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 7489,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6841,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/1566.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 17381,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7386,
+    "extra_close_tags": 32
+  },
+  {
+    "id": "test/algebra/1529.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 2005,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1593,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/776.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6336,
+    "extra_close_tags": 11803
+  },
+  {
+    "id": "test/algebra/1547.json",
+    "correct": true,
+    "prediction": "6r^2 - 4r - 24",
+    "tokens": 1944,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1037,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1572.json",
+    "correct": true,
+    "prediction": "5",
+    "tokens": 6994,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5376,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/858.json",
+    "correct": false,
+    "prediction": "1",
+    "tokens": 13191,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 12038,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1338.json",
+    "correct": true,
+    "prediction": "66",
+    "tokens": 5219,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1520,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/116.json",
+    "correct": true,
+    "prediction": "4495",
+    "tokens": 6536,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5616,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/483.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": false,
+    "thinking_tokens": 32768,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/686.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 9529,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2328,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/368.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2071,
+    "extra_close_tags": 5326
+  },
+  {
+    "id": "test/algebra/529.json",
+    "correct": true,
+    "prediction": "81",
+    "tokens": 7922,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3037,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/precalculus/801.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 11124,
+    "extra_close_tags": 7077
+  },
+  {
+    "id": "test/prealgebra/1353.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 7768,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6459,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/1078.json",
+    "correct": false,
+    "prediction": "[-\\sqrt{3}, 0) \\cup (0, \\sqrt{3}]",
+    "tokens": 14550,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8397,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/intermediate_algebra/1166.json",
+    "correct": true,
+    "prediction": "100",
+    "tokens": 16013,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10646,
+    "extra_close_tags": 7
+  },
+  {
+    "id": "test/intermediate_algebra/860.json",
+    "correct": true,
+    "prediction": "ellipse",
+    "tokens": 14304,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9610,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/counting_and_probability/238.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3626,
+    "extra_close_tags": 12652
+  },
+  {
+    "id": "test/precalculus/826.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6690,
+    "extra_close_tags": 6799
+  },
+  {
+    "id": "test/algebra/251.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 1727,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1308,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/14.json",
+    "correct": true,
+    "prediction": "\\frac{1}{4}",
+    "tokens": 5738,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4914,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/1281.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8055,
+    "extra_close_tags": 6226
+  },
+  {
+    "id": "test/counting_and_probability/1014.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3980,
+    "extra_close_tags": 12697
+  },
+  {
+    "id": "test/algebra/1199.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 4465,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3449,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/96.json",
+    "correct": true,
+    "prediction": "1.75",
+    "tokens": 15158,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6972,
+    "extra_close_tags": 10
+  },
+  {
+    "id": "test/geometry/106.json",
+    "correct": true,
+    "prediction": "31",
+    "tokens": 2215,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1507,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/1289.json",
+    "correct": true,
+    "prediction": "-41",
+    "tokens": 1217,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 908,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/109.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 6526,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4617,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/intermediate_algebra/690.json",
+    "correct": false,
+    "prediction": "(1, -16, -4, 44)",
+    "tokens": 11040,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9138,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/1303.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 2023,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1516,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2264.json",
+    "correct": true,
+    "prediction": "1+2i",
+    "tokens": 7396,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6647,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/427.json",
+    "correct": true,
+    "prediction": "25",
+    "tokens": 4210,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 756,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1187.json",
+    "correct": false,
+    "prediction": "189",
+    "tokens": 11081,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6016,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/intermediate_algebra/955.json",
+    "correct": false,
+    "prediction": "2",
+    "tokens": 12460,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4705,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/intermediate_algebra/1407.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8579,
+    "extra_close_tags": 8269
+  },
+  {
+    "id": "test/prealgebra/1743.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 5603,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4092,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/geometry/538.json",
+    "correct": true,
+    "prediction": "(8,-2)",
+    "tokens": 7551,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6448,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1405.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3174,
+    "extra_close_tags": 9469
+  },
+  {
+    "id": "test/prealgebra/1865.json",
+    "correct": false,
+    "prediction": "12^{\\mathrm{th}}",
+    "tokens": 6768,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5433,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1298.json",
+    "correct": true,
+    "prediction": "15x - 80",
+    "tokens": 2635,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2223,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/820.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5699,
+    "extra_close_tags": 9924
+  },
+  {
+    "id": "test/prealgebra/2066.json",
+    "correct": false,
+    "prediction": "23",
+    "tokens": 4278,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3207,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/849.json",
+    "correct": true,
+    "prediction": "18",
+    "tokens": 743,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 468,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/1031.json",
+    "correct": true,
+    "prediction": "5.5",
+    "tokens": 4230,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3621,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/170.json",
+    "correct": true,
+    "prediction": "11",
+    "tokens": 5993,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2452,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/geometry/846.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 10835,
+    "extra_close_tags": 5187
+  },
+  {
+    "id": "test/algebra/101.json",
+    "correct": true,
+    "prediction": "[-2, 7]",
+    "tokens": 16686,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 15662,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/853.json",
+    "correct": true,
+    "prediction": "12",
+    "tokens": 9959,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6399,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/number_theory/1185.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5728,
+    "extra_close_tags": 11044
+  },
+  {
+    "id": "test/algebra/518.json",
+    "correct": true,
+    "prediction": "\\frac{3}{4}",
+    "tokens": 4588,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3456,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1992.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4258,
+    "extra_close_tags": 10397
+  },
+  {
+    "id": "test/geometry/795.json",
+    "correct": true,
+    "prediction": "\\frac{\\sqrt{21}}{5}",
+    "tokens": 16091,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8317,
+    "extra_close_tags": 9
+  },
+  {
+    "id": "test/counting_and_probability/188.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 8026,
+    "extra_close_tags": 9302
+  },
+  {
+    "id": "test/intermediate_algebra/1111.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6497,
+    "extra_close_tags": 11096
+  },
+  {
+    "id": "test/intermediate_algebra/1791.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 6766,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3562,
+    "extra_close_tags": 14
+  },
+  {
+    "id": "test/prealgebra/977.json",
+    "correct": true,
+    "prediction": "23",
+    "tokens": 2527,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2267,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/114.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 5022,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3996,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1784.json",
+    "correct": true,
+    "prediction": "326.5",
+    "tokens": 4924,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1856,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1991.json",
+    "correct": true,
+    "prediction": "Navin",
+    "tokens": 6281,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3444,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/counting_and_probability/761.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 8117,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 959,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1572.json",
+    "correct": true,
+    "prediction": "60",
+    "tokens": 1576,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1079,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/2277.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6641,
+    "extra_close_tags": 9629
+  },
+  {
+    "id": "test/precalculus/1291.json",
+    "correct": false,
+    "prediction": "-4 - 2i",
+    "tokens": 15157,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3645,
+    "extra_close_tags": 8
+  },
+  {
+    "id": "test/precalculus/902.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4093,
+    "extra_close_tags": 11473
+  },
+  {
+    "id": "test/number_theory/928.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 14025,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 879,
+    "extra_close_tags": 8
+  },
+  {
+    "id": "test/number_theory/132.json",
+    "correct": true,
+    "prediction": "0",
+    "tokens": 3546,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1654,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/1960.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 3043,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2244,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/1227.json",
+    "correct": true,
+    "prediction": "60",
+    "tokens": 7541,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6740,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/631.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7283,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/2680.json",
+    "correct": true,
+    "prediction": "5r^5",
+    "tokens": 5245,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4859,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/geometry/817.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4726,
+    "extra_close_tags": 12837
+  },
+  {
+    "id": "test/algebra/2391.json",
+    "correct": true,
+    "prediction": "10",
+    "tokens": 2427,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1284,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/1806.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7233,
+    "extra_close_tags": 4742
+  },
+  {
+    "id": "test/prealgebra/65.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 18483,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6872,
+    "extra_close_tags": 34
+  },
+  {
+    "id": "test/algebra/1796.json",
+    "correct": true,
+    "prediction": "2\\sqrt{5}",
+    "tokens": 6471,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4328,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/769.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 11401,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1984,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/776.json",
+    "correct": true,
+    "prediction": "-2",
+    "tokens": 10031,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9381,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/681.json",
+    "correct": true,
+    "prediction": "\\frac{1}{8}",
+    "tokens": 13781,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5127,
+    "extra_close_tags": 10
+  },
+  {
+    "id": "test/precalculus/145.json",
+    "correct": false,
+    "prediction": "(-7, 16, 5)",
+    "tokens": 10027,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2702,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/1339.json",
+    "correct": true,
+    "prediction": "600",
+    "tokens": 1770,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1168,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/precalculus/398.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6973,
+    "extra_close_tags": 8191
+  },
+  {
+    "id": "test/intermediate_algebra/1797.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3799,
+    "extra_close_tags": 8807
+  },
+  {
+    "id": "test/intermediate_algebra/2146.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7324,
+    "extra_close_tags": 10349
+  },
+  {
+    "id": "test/algebra/2743.json",
+    "correct": true,
+    "prediction": "29",
+    "tokens": 3404,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2859,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/625.json",
+    "correct": false,
+    "prediction": "\\frac{8}{7}",
+    "tokens": 14847,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10068,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/prealgebra/2019.json",
+    "correct": true,
+    "prediction": "4.5",
+    "tokens": 1043,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 644,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/geometry/843.json",
+    "correct": true,
+    "prediction": "6\\sqrt{2}",
+    "tokens": 11155,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10032,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/1002.json",
+    "correct": true,
+    "prediction": "1440",
+    "tokens": 20403,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3987,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/intermediate_algebra/1014.json",
+    "correct": true,
+    "prediction": "50",
+    "tokens": 14881,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10689,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/number_theory/410.json",
+    "correct": true,
+    "prediction": "0.35625",
+    "tokens": 8059,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4467,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/precalculus/1202.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7050,
+    "extra_close_tags": 10573
+  },
+  {
+    "id": "test/intermediate_algebra/2015.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 12884,
+    "extra_close_tags": 2416
+  },
+  {
+    "id": "test/prealgebra/1640.json",
+    "correct": true,
+    "prediction": "32",
+    "tokens": 7553,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2586,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/499.json",
+    "correct": true,
+    "prediction": "[\\pi^2/8, 5\\pi^2/4]",
+    "tokens": 21421,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 11384,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/algebra/2043.json",
+    "correct": true,
+    "prediction": "(-\\infty, 2) \\cup (3, \\infty)",
+    "tokens": 3951,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 735,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/number_theory/255.json",
+    "correct": true,
+    "prediction": "4",
+    "tokens": 3535,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2389,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2080.json",
+    "correct": true,
+    "prediction": "14",
+    "tokens": 2538,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1243,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/1133.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 13435,
+    "extra_close_tags": 8
+  },
+  {
+    "id": "test/prealgebra/2037.json",
+    "correct": true,
+    "prediction": "550",
+    "tokens": 3578,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2793,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/668.json",
+    "correct": true,
+    "prediction": "45",
+    "tokens": 2697,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2061,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/121.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 13114,
+    "extra_close_tags": 4279
+  },
+  {
+    "id": "test/algebra/1343.json",
+    "correct": true,
+    "prediction": "256",
+    "tokens": 5967,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 5351,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/intermediate_algebra/199.json",
+    "correct": true,
+    "prediction": "x^8 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 1",
+    "tokens": 10676,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3623,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/algebra/2430.json",
+    "correct": true,
+    "prediction": "8",
+    "tokens": 2845,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1738,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/996.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 1366,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 873,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/2789.json",
+    "correct": true,
+    "prediction": "47",
+    "tokens": 764,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 430,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/1553.json",
+    "correct": true,
+    "prediction": "3",
+    "tokens": 13896,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2780,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/intermediate_algebra/1462.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 14683,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/459.json",
+    "correct": true,
+    "prediction": "\\frac{639}{40}",
+    "tokens": 6331,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 107,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/13.json",
+    "correct": true,
+    "prediction": "64",
+    "tokens": 9451,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3184,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/1814.json",
+    "correct": true,
+    "prediction": "143",
+    "tokens": 8268,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6610,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/counting_and_probability/190.json",
+    "correct": true,
+    "prediction": "6",
+    "tokens": 2783,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1940,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/342.json",
+    "correct": true,
+    "prediction": "0",
+    "tokens": 887,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 684,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/1000.json",
+    "correct": true,
+    "prediction": "44",
+    "tokens": 14728,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 6161,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/counting_and_probability/10.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6555,
+    "extra_close_tags": 11293
+  },
+  {
+    "id": "test/intermediate_algebra/1102.json",
+    "correct": true,
+    "prediction": "1, -2",
+    "tokens": 16817,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 504,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/counting_and_probability/731.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3411,
+    "extra_close_tags": 11248
+  },
+  {
+    "id": "test/intermediate_algebra/1779.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6049,
+    "extra_close_tags": 9881
+  },
+  {
+    "id": "test/algebra/2780.json",
+    "correct": true,
+    "prediction": "18.9",
+    "tokens": 15635,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 2780,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/824.json",
+    "correct": true,
+    "prediction": "12",
+    "tokens": 3966,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1950,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/1425.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 5175,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 653,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/number_theory/679.json",
+    "correct": false,
+    "prediction": "0",
+    "tokens": 5959,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3213,
+    "extra_close_tags": 4
+  },
+  {
+    "id": "test/intermediate_algebra/834.json",
+    "correct": true,
+    "prediction": "9",
+    "tokens": 5968,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4638,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/224.json",
+    "correct": true,
+    "prediction": "8",
+    "tokens": 1987,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1383,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2476.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3545,
+    "extra_close_tags": 11942
+  },
+  {
+    "id": "test/precalculus/323.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4047,
+    "extra_close_tags": 9752
+  },
+  {
+    "id": "test/prealgebra/846.json",
+    "correct": true,
+    "prediction": "84",
+    "tokens": 1420,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 998,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/prealgebra/1114.json",
+    "correct": true,
+    "prediction": "15",
+    "tokens": 9357,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7245,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/algebra/2470.json",
+    "correct": true,
+    "prediction": "137\\frac{1}{2}",
+    "tokens": 2183,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1609,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/algebra/435.json",
+    "correct": true,
+    "prediction": "25",
+    "tokens": 7672,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1232,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/805.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3142,
+    "extra_close_tags": 13551
+  },
+  {
+    "id": "test/number_theory/72.json",
+    "correct": true,
+    "prediction": "121",
+    "tokens": 19522,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 13275,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1252.json",
+    "correct": false,
+    "prediction": "900",
+    "tokens": 5205,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 3639,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/prealgebra/914.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7716,
+    "extra_close_tags": 7726
+  },
+  {
+    "id": "test/intermediate_algebra/752.json",
+    "correct": false,
+    "prediction": "1",
+    "tokens": 14050,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 8817,
+    "extra_close_tags": 3
+  },
+  {
+    "id": "test/number_theory/22.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 10134,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4784,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/number_theory/1128.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 12912,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4588,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/precalculus/703.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 12043,
+    "extra_close_tags": 4650
+  },
+  {
+    "id": "test/intermediate_algebra/158.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2915,
+    "extra_close_tags": 3740
+  },
+  {
+    "id": "test/prealgebra/1930.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5108,
+    "extra_close_tags": 11078
+  },
+  {
+    "id": "test/counting_and_probability/1003.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 13373,
+    "extra_close_tags": 86
+  },
+  {
+    "id": "test/intermediate_algebra/1279.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3641,
+    "extra_close_tags": 12521
+  },
+  {
+    "id": "test/geometry/477.json",
+    "correct": true,
+    "prediction": "216",
+    "tokens": 6191,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4411,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/prealgebra/1203.json",
+    "correct": true,
+    "prediction": "36",
+    "tokens": 1480,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 1168,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/number_theory/239.json",
+    "correct": true,
+    "prediction": "2",
+    "tokens": 2127,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 595,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/precalculus/1252.json",
+    "correct": true,
+    "prediction": "1",
+    "tokens": 31252,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10049,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/intermediate_algebra/1467.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4759,
+    "extra_close_tags": 11636
+  },
+  {
+    "id": "test/prealgebra/1128.json",
+    "correct": false,
+    "prediction": "96",
+    "tokens": 8934,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4377,
+    "extra_close_tags": 8
+  },
+  {
+    "id": "test/number_theory/1090.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2893,
+    "extra_close_tags": 11928
+  },
+  {
+    "id": "test/precalculus/1082.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 2174,
+    "extra_close_tags": 9780
+  },
+  {
+    "id": "test/intermediate_algebra/101.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7586,
+    "extra_close_tags": 4309
+  },
+  {
+    "id": "test/precalculus/356.json",
+    "correct": true,
+    "prediction": "y = -2x",
+    "tokens": 11723,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 10963,
+    "extra_close_tags": 1
+  },
+  {
+    "id": "test/algebra/2779.json",
+    "correct": true,
+    "prediction": "20",
+    "tokens": 9419,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 4942,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/counting_and_probability/199.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7619,
+    "extra_close_tags": 8529
+  },
+  {
+    "id": "test/intermediate_algebra/1981.json",
+    "correct": false,
+    "prediction": "(2, 102)",
+    "tokens": 10573,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 9596,
+    "extra_close_tags": 2
+  },
+  {
+    "id": "test/intermediate_algebra/1232.json",
+    "correct": true,
+    "prediction": "\\frac{65}{169}",
+    "tokens": 8068,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 7413,
+    "extra_close_tags": 0
+  },
+  {
+    "id": "test/intermediate_algebra/1365.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 3690,
+    "extra_close_tags": 10296
+  },
+  {
+    "id": "test/intermediate_algebra/1350.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 4619,
+    "extra_close_tags": 8630
+  },
+  {
+    "id": "test/geometry/615.json",
+    "correct": true,
+    "prediction": "106^\\circ",
+    "tokens": 21191,
+    "cap": false,
+    "closed_thinking": true,
+    "thinking_tokens": 14071,
+    "extra_close_tags": 5
+  },
+  {
+    "id": "test/intermediate_algebra/1930.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 6294,
+    "extra_close_tags": 8123
+  },
+  {
+    "id": "test/geometry/561.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 5270,
+    "extra_close_tags": 10972
+  },
+  {
+    "id": "test/intermediate_algebra/1508.json",
+    "correct": false,
+    "prediction": null,
+    "tokens": 32768,
+    "cap": true,
+    "closed_thinking": true,
+    "thinking_tokens": 7705,
+    "extra_close_tags": 4502
+  }
+]

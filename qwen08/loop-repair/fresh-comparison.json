@@ -1,0 +1,26 @@
+{
+  "data": "16 fresh MATH-training problems; excluded from probe fitting and development selection",
+  "old": {
+    "correct": 9,
+    "problems": 16,
+    "caps": 7,
+    "mean_output_tokens": 5119.6875
+  },
+  "selected": {
+    "correct": 8,
+    "problems": 16,
+    "caps": 8,
+    "mean_output_tokens": 5249.4375
+  },
+  "newly_correct": [
+    "train/6752"
+  ],
+  "newly_wrong": [
+    "train/1373",
+    "train/2889"
+  ],
+  "candidate_frozen_before_check": true,
+  "used_to_refit": false,
+  "selection": "output-head-repair-f3b305519ce9",
+  "interpretation": "Small training holdout, 8192-token budget, one fixed-seed sample. Descriptive check, not final benchmark evidence."
+}

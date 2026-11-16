@@ -1,0 +1,14 @@
+{
+  "file": "Qwen3.5-0.8B-BF16-probe-graft.gguf",
+  "sha256": "f3b305519ce9f86f603c657f8d6513a84738946b211829c35163f64d0eeb5a88",
+  "bytes": 2066220288,
+  "base_hf_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "changed_output_rows": [
+    13428,
+    13784,
+    248069
+  ],
+  "unchanged_original_tensors": 299,
+  "experimental": true,
+  "known_failure": "Frequent repeated closing tags; see capped-answer audit and complete outputs."
+}

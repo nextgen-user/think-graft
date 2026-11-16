@@ -1,0 +1,21 @@
+{
+  "tools/capture_stats.cpp": "68d5b6e8ce71f22c3aa67c5d923729424db46d47c31c9b5af0909067f087de4b",
+  "tools/capture_stats": "67a55382211d50ccd196d4fc8853463d355cf1317087d3910857856675fafbd1",
+  "tools/sparse-presence-penalty.patch": "28711070b3334b98fc35a7b052c228ef5d1c963df9eef6cbb7cff4621bb3d982",
+  "data/fit_ids.txt": "f08d5a435a9be8a43fbb1daf9836e2350e1e04f0d5ac8e87a802b676d80aacc4",
+  "results/fit-traces.jsonl": "66edf80a112d7e6fd3c8ad67cd613680155a5d00394c433434e4756ba0b19160",
+  "PROTOCOL.md": "9681c1802a0de5e468e6c88851fa08f4b796adec0def7f3461f1757127f92764",
+  "fit08.py": "704faee0c69133e30c3837ed910ab7ecdcbb0e09a2fa19ada4a5aa07665388c0",
+  "sampling08.py": "9fb03ad51d0c9c13f357b43ff405df62959d158b99e1294cd99bf004addb26d2",
+  "upstream_source_commit": "3549c274dc22001d9118713fa56a10085b85de3b",
+  "capture08.py": "7f09292c41c6cc52f0592d201fd8c5398020ef70a2a4bbcba72d3e2dd91fa110",
+  "gen08.py": "06610d599bc851faf6ef5a037b9320b5a27505b36ae9ea658ca26ef48189c87e",
+  "verify08.py": "113abfef9ea0f9eaab20659901ba3764c9e87691c0a633b8d9cf45483f35d38a",
+  "eval08.sh": "09608bb88c070206d5bcd16be9c8c16e19065c54b1ce825675e7dcccba12d496",
+  "score08.py": "121028e3476ad9dc030668a85a05ac5f74c561ca4f92576bed1514ed989f6dbb",
+  "results/Qwen3.5-0.8B-edit.gguf": "23733fcd295849f5e1a99e73eab2ffdf3ea1bdd13fe59afd919b1008fc96bd38",
+  "base_hf_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "progress.sh": "17deba60c3c75ac6c6b232c7aa3021913fcca8a9ef6a8baa8272a090f54d8789",
+  "progress08.py": "003df16580d99ca2d3005c0a3f6457faacbc2328f9b7293576224183da4a89f4",
+  "data/reference-output-token-counts.json": "a5d338cca60d425f0f6d02f53e60470545d59673e7d406951e14a1a635a45460"
+}

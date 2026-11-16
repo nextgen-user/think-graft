@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/post-2", "destination": "/2/", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+    ] }
+  ]
+}

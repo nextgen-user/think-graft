@@ -1,0 +1,61 @@
+{
+  "reference_sampling": {
+    "seed": 0,
+    "n": 4
+  },
+  "selected_sample_index": 0,
+  "selection_rule": "RikiyaT: single globally highest-scoring index PER BENCHMARK; fixed for all its problems. Baseline index0. Token comparisons require matching sample index.",
+  "ours": {
+    "seed": 0,
+    "n": 1
+  },
+  "change_requested_by_user": true,
+  "updated_at": "2026-11-16T11:19:18.327592+00:00",
+  "validation": "All20 published first-sample texts per arm grade identically to correct[0].",
+  "interpretation": "Optimistic reference selection from four global sample indices; not an unbiased expected-accuracy estimate. No per-problem best-of-four selection. Different engines remain a confounder.",
+  "reference_correct_by_index": [
+    261,
+    254,
+    258,
+    247
+  ],
+  "reference_problems": 500,
+  "label": "Best of four reference sample indices (global selection)",
+  "per_benchmark": {
+    "math500": {
+      "edited_sample_index": 0,
+      "edited_correct_by_index": [
+        261,
+        254,
+        258,
+        247
+      ]
+    },
+    "gsm8k": {
+      "edited_sample_index": 1,
+      "edited_correct_by_index": [
+        867,
+        903
+      ],
+      "source": {
+        "repository": "RikiyaT/lm_understand-logs",
+        "revision": "4d09ba6d6a7e891dd8063974dfe81b3d78e3494f",
+        "variant": "p50c",
+        "shards": 10
+      }
+    },
+    "ifeval": {
+      "edited_sample_index": 1,
+      "edited_correct_by_index": [
+        329,
+        345
+      ],
+      "source": {
+        "repository": "RikiyaT/lm_understand-logs",
+        "revision": "4d09ba6d6a7e891dd8063974dfe81b3d78e3494f",
+        "variant": "p50c",
+        "shards": 5
+      }
+    }
+  }
+}

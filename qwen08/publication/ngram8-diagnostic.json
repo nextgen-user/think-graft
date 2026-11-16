@@ -1,0 +1,4022 @@
+{
+  "settings": {
+    "n": 8,
+    "lookback_tokens": 4096,
+    "density_span": 128,
+    "threshold": 0.8,
+    "minimum_position": 512
+  },
+  "interpretation": "Prefix-only alert coverage on existing edited outputs. Not precision/recall, not an intervention comparison, and not evidence that stopping at the alert yields a correct final answer.",
+  "groups": {
+    "capped": {
+      "traces": 165,
+      "alerted": 165
+    },
+    "finished": {
+      "traces": 335,
+      "alerted": 206
+    }
+  },
+  "per_problem": [
+    {
+      "id": "test/number_theory/572.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.14105263157894737
+    },
+    {
+      "id": "test/algebra/2036.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.0625
+    },
+    {
+      "id": "test/precalculus/807.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2536486236837244
+    },
+    {
+      "id": "test/number_theory/515.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3363,
+      "repeated_fraction": 0.3110567780494431
+    },
+    {
+      "id": "test/algebra/1349.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4133,
+      "repeated_fraction": 0.372615039281706
+    },
+    {
+      "id": "test/algebra/2584.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5033,
+      "repeated_fraction": 0.397276953730352
+    },
+    {
+      "id": "test/number_theory/1032.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2875,
+      "repeated_fraction": 0.5708222288026849
+    },
+    {
+      "id": "test/precalculus/927.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6359,
+      "repeated_fraction": 0.4574201628052599
+    },
+    {
+      "id": "test/number_theory/737.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4318,
+      "repeated_fraction": 0.3623003194888179
+    },
+    {
+      "id": "test/geometry/248.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6491,
+      "repeated_fraction": 0.3471887356543543
+    },
+    {
+      "id": "test/intermediate_algebra/134.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2356,
+      "repeated_fraction": 0.4296108291032149
+    },
+    {
+      "id": "test/precalculus/1303.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4681,
+      "repeated_fraction": 0.38953426409463926
+    },
+    {
+      "id": "test/precalculus/990.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5563,
+      "repeated_fraction": 0.3316638842515303
+    },
+    {
+      "id": "test/algebra/1098.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.06447831184056271
+    },
+    {
+      "id": "test/precalculus/1199.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6412,
+      "repeated_fraction": 0.2812456360843458
+    },
+    {
+      "id": "test/intermediate_algebra/1994.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5399,
+      "repeated_fraction": 0.797149658203125
+    },
+    {
+      "id": "test/prealgebra/1622.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5457,
+      "repeated_fraction": 0.804718017578125
+    },
+    {
+      "id": "test/prealgebra/1139.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3749,
+      "repeated_fraction": 0.87628173828125
+    },
+    {
+      "id": "test/algebra/2427.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3282,
+      "repeated_fraction": 0.23012718600953896
+    },
+    {
+      "id": "test/intermediate_algebra/1197.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4497,
+      "repeated_fraction": 0.815155029296875
+    },
+    {
+      "id": "test/algebra/2193.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 8772,
+      "repeated_fraction": 0.26270500101235067
+    },
+    {
+      "id": "test/precalculus/779.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.05575117370892019
+    },
+    {
+      "id": "test/counting_and_probability/666.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.15856856393644916
+    },
+    {
+      "id": "test/number_theory/864.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1382,
+      "repeated_fraction": 0.3529776674937965
+    },
+    {
+      "id": "test/geometry/434.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 8626,
+      "repeated_fraction": 0.66497802734375
+    },
+    {
+      "id": "test/intermediate_algebra/1000.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2951,
+      "repeated_fraction": 0.79058837890625
+    },
+    {
+      "id": "test/prealgebra/1302.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.21470588235294116
+    },
+    {
+      "id": "test/intermediate_algebra/607.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3017,
+      "repeated_fraction": 0.721099853515625
+    },
+    {
+      "id": "test/algebra/1837.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4554,
+      "repeated_fraction": 0.820465087890625
+    },
+    {
+      "id": "test/number_theory/627.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.18654884634266078
+    },
+    {
+      "id": "test/geometry/967.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.03266236232434486
+    },
+    {
+      "id": "test/algebra/24.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1684848484848485
+    },
+    {
+      "id": "test/algebra/1072.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4425,
+      "repeated_fraction": 0.3668588511637839
+    },
+    {
+      "id": "test/counting_and_probability/119.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6899,
+      "repeated_fraction": 0.3093595101564778
+    },
+    {
+      "id": "test/intermediate_algebra/1388.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1737,
+      "repeated_fraction": 0.602142333984375
+    },
+    {
+      "id": "test/prealgebra/930.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.050677666470241606
+    },
+    {
+      "id": "test/counting_and_probability/525.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3554,
+      "repeated_fraction": 0.87408447265625
+    },
+    {
+      "id": "test/number_theory/45.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1365,
+      "repeated_fraction": 0.292743953294412
+    },
+    {
+      "id": "test/algebra/2214.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3619,
+      "repeated_fraction": 0.24031753668510947
+    },
+    {
+      "id": "test/prealgebra/1840.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2945,
+      "repeated_fraction": 0.88824462890625
+    },
+    {
+      "id": "test/geometry/178.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.12532751091703057
+    },
+    {
+      "id": "test/algebra/1265.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.03345724907063197
+    },
+    {
+      "id": "test/intermediate_algebra/428.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2268,
+      "repeated_fraction": 0.40109256449165404
+    },
+    {
+      "id": "test/prealgebra/1388.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10812943962115233
+    },
+    {
+      "id": "test/algebra/305.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2046403712296984
+    },
+    {
+      "id": "test/prealgebra/1558.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4689,
+      "repeated_fraction": 0.3346298457150266
+    },
+    {
+      "id": "test/number_theory/1055.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2773,
+      "repeated_fraction": 0.385896939170864
+    },
+    {
+      "id": "test/prealgebra/572.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.0594059405940594
+    },
+    {
+      "id": "test/precalculus/1105.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.27267932489451474
+    },
+    {
+      "id": "test/prealgebra/951.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4436,
+      "repeated_fraction": 0.36157912124215397
+    },
+    {
+      "id": "test/intermediate_algebra/1217.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4849,
+      "repeated_fraction": 0.39915478077126254
+    },
+    {
+      "id": "test/algebra/722.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1682,
+      "repeated_fraction": 0.4036979969183359
+    },
+    {
+      "id": "test/counting_and_probability/134.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6610,
+      "repeated_fraction": 0.7578125
+    },
+    {
+      "id": "test/algebra/769.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.26545454545454544
+    },
+    {
+      "id": "test/intermediate_algebra/1168.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6155,
+      "repeated_fraction": 0.31384083044982697
+    },
+    {
+      "id": "test/prealgebra/1247.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6461,
+      "repeated_fraction": 0.28306288032454363
+    },
+    {
+      "id": "test/algebra/187.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4718,
+      "repeated_fraction": 0.4816597155384451
+    },
+    {
+      "id": "test/geometry/627.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5685,
+      "repeated_fraction": 0.697509765625
+    },
+    {
+      "id": "test/intermediate_algebra/1454.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3798,
+      "repeated_fraction": 0.737396240234375
+    },
+    {
+      "id": "test/prealgebra/1747.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.0639481000926784
+    },
+    {
+      "id": "test/precalculus/285.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1350,
+      "repeated_fraction": 0.813507080078125
+    },
+    {
+      "id": "test/precalculus/675.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4751,
+      "repeated_fraction": 0.37923137479424607
+    },
+    {
+      "id": "test/algebra/2046.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2970,
+      "repeated_fraction": 0.30574400723654455
+    },
+    {
+      "id": "test/number_theory/46.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4329,
+      "repeated_fraction": 0.3897241278645453
+    },
+    {
+      "id": "test/precalculus/1146.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3838,
+      "repeated_fraction": 0.584277803653677
+    },
+    {
+      "id": "test/intermediate_algebra/956.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2860,
+      "repeated_fraction": 0.869140625
+    },
+    {
+      "id": "test/intermediate_algebra/1247.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5862,
+      "repeated_fraction": 0.649322509765625
+    },
+    {
+      "id": "test/algebra/2253.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.0912280701754386
+    },
+    {
+      "id": "test/geometry/456.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.20967373944786677
+    },
+    {
+      "id": "test/precalculus/24313.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1848,
+      "repeated_fraction": 0.3877423389618512
+    },
+    {
+      "id": "test/algebra/1004.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.20610278372591007
+    },
+    {
+      "id": "test/intermediate_algebra/279.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2562,
+      "repeated_fraction": 0.82147216796875
+    },
+    {
+      "id": "test/prealgebra/192.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.0853413654618474
+    },
+    {
+      "id": "test/prealgebra/1233.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4083,
+      "repeated_fraction": 0.865997314453125
+    },
+    {
+      "id": "test/precalculus/1313.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4614,
+      "repeated_fraction": 0.6937255859375
+    },
+    {
+      "id": "test/intermediate_algebra/207.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3598,
+      "repeated_fraction": 0.84857177734375
+    },
+    {
+      "id": "test/algebra/1035.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5550,
+      "repeated_fraction": 0.3587602604019247
+    },
+    {
+      "id": "test/algebra/893.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.16752577319587628
+    },
+    {
+      "id": "test/geometry/353.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1782,
+      "repeated_fraction": 0.31615214994487323
+    },
+    {
+      "id": "test/number_theory/516.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2865,
+      "repeated_fraction": 0.9017333984375
+    },
+    {
+      "id": "test/prealgebra/307.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.053737373737373736
+    },
+    {
+      "id": "test/intermediate_algebra/2046.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5332,
+      "repeated_fraction": 0.4474908607510801
+    },
+    {
+      "id": "test/algebra/567.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2630491667814351
+    },
+    {
+      "id": "test/counting_and_probability/1114.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2583,
+      "repeated_fraction": 0.826202392578125
+    },
+    {
+      "id": "test/intermediate_algebra/623.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3771,
+      "repeated_fraction": 0.865875244140625
+    },
+    {
+      "id": "test/algebra/2023.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10130468150422103
+    },
+    {
+      "id": "test/algebra/873.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.24745895230648945
+    },
+    {
+      "id": "test/number_theory/357.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5608,
+      "repeated_fraction": 0.32724702556249263
+    },
+    {
+      "id": "test/intermediate_algebra/47.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5368,
+      "repeated_fraction": 0.7039794921875
+    },
+    {
+      "id": "test/counting_and_probability/377.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4260,
+      "repeated_fraction": 0.2601902173913043
+    },
+    {
+      "id": "test/prealgebra/1761.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4013,
+      "repeated_fraction": 0.33838814108025217
+    },
+    {
+      "id": "test/prealgebra/1924.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.084472049689441
+    },
+    {
+      "id": "test/prealgebra/105.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2042,
+      "repeated_fraction": 0.1560364464692483
+    },
+    {
+      "id": "test/intermediate_algebra/1849.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3098,
+      "repeated_fraction": 0.759368896484375
+    },
+    {
+      "id": "test/algebra/2700.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2704,
+      "repeated_fraction": 0.898101806640625
+    },
+    {
+      "id": "test/precalculus/34.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3099,
+      "repeated_fraction": 0.4141261498028909
+    },
+    {
+      "id": "test/intermediate_algebra/431.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4797,
+      "repeated_fraction": 0.37297584284576585
+    },
+    {
+      "id": "test/precalculus/1300.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2067,
+      "repeated_fraction": 0.4021955550772211
+    },
+    {
+      "id": "test/algebra/892.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3129,
+      "repeated_fraction": 0.858673095703125
+    },
+    {
+      "id": "test/intermediate_algebra/515.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.18304172274562583
+    },
+    {
+      "id": "test/prealgebra/1646.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 8022,
+      "repeated_fraction": 0.667694091796875
+    },
+    {
+      "id": "test/intermediate_algebra/662.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 8626,
+      "repeated_fraction": 0.602783203125
+    },
+    {
+      "id": "test/number_theory/914.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2574,
+      "repeated_fraction": 0.4326735092864125
+    },
+    {
+      "id": "test/geometry/183.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4131,
+      "repeated_fraction": 0.772705078125
+    },
+    {
+      "id": "test/prealgebra/1804.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2758,
+      "repeated_fraction": 0.5794830741079597
+    },
+    {
+      "id": "test/intermediate_algebra/582.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2986,
+      "repeated_fraction": 0.86627197265625
+    },
+    {
+      "id": "test/counting_and_probability/23957.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1488785769528229
+    },
+    {
+      "id": "test/algebra/2593.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1948,
+      "repeated_fraction": 0.4588373458602466
+    },
+    {
+      "id": "test/intermediate_algebra/558.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 8345,
+      "repeated_fraction": 0.434539794921875
+    },
+    {
+      "id": "test/algebra/2058.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4738,
+      "repeated_fraction": 0.5476014076680867
+    },
+    {
+      "id": "test/algebra/2157.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.14877161055505003
+    },
+    {
+      "id": "test/algebra/2251.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.04253731343283582
+    },
+    {
+      "id": "test/counting_and_probability/1060.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3623,
+      "repeated_fraction": 0.24683980694093313
+    },
+    {
+      "id": "test/intermediate_algebra/1898.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6556,
+      "repeated_fraction": 0.42339517463635573
+    },
+    {
+      "id": "test/intermediate_algebra/362.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2468,
+      "repeated_fraction": 0.62127685546875
+    },
+    {
+      "id": "test/prealgebra/505.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.13112667091024824
+    },
+    {
+      "id": "test/algebra/1332.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07648494711147275
+    },
+    {
+      "id": "test/intermediate_algebra/894.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7137,
+      "repeated_fraction": 0.73687744140625
+    },
+    {
+      "id": "test/algebra/972.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5332,
+      "repeated_fraction": 0.3820382389054552
+    },
+    {
+      "id": "test/precalculus/44.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1689,
+      "repeated_fraction": 0.786956787109375
+    },
+    {
+      "id": "test/algebra/2232.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07279344858962693
+    },
+    {
+      "id": "test/geometry/283.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6558,
+      "repeated_fraction": 0.3734623916112119
+    },
+    {
+      "id": "test/intermediate_algebra/345.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3877,
+      "repeated_fraction": 0.8271484375
+    },
+    {
+      "id": "test/number_theory/847.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5873,
+      "repeated_fraction": 0.3022424839822573
+    },
+    {
+      "id": "test/algebra/246.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1947401377582968
+    },
+    {
+      "id": "test/prealgebra/1686.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.26257861635220126
+    },
+    {
+      "id": "test/intermediate_algebra/232.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4572,
+      "repeated_fraction": 0.769805908203125
+    },
+    {
+      "id": "test/intermediate_algebra/1063.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5133,
+      "repeated_fraction": 0.4641258246936852
+    },
+    {
+      "id": "test/prealgebra/1733.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3730,
+      "repeated_fraction": 0.80303955078125
+    },
+    {
+      "id": "test/intermediate_algebra/128.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": false,
+      "first_alert_token": 1687,
+      "repeated_fraction": 0.957061767578125
+    },
+    {
+      "id": "test/prealgebra/1297.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2080,
+      "repeated_fraction": 0.35585703104617794
+    },
+    {
+      "id": "test/prealgebra/1807.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6789,
+      "repeated_fraction": 0.2829257347991923
+    },
+    {
+      "id": "test/number_theory/753.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3576,
+      "repeated_fraction": 0.6253942463920482
+    },
+    {
+      "id": "test/intermediate_algebra/1126.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4829,
+      "repeated_fraction": 0.4424895951570185
+    },
+    {
+      "id": "test/algebra/661.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2785,
+      "repeated_fraction": 0.911346435546875
+    },
+    {
+      "id": "test/number_theory/1257.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2131,
+      "repeated_fraction": 0.6782223983095615
+    },
+    {
+      "id": "test/geometry/1140.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7066,
+      "repeated_fraction": 0.726104736328125
+    },
+    {
+      "id": "test/precalculus/43.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.09191176470588236
+    },
+    {
+      "id": "test/number_theory/156.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5278,
+      "repeated_fraction": 0.44259591251344566
+    },
+    {
+      "id": "test/number_theory/612.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4193,
+      "repeated_fraction": 0.4500246184145741
+    },
+    {
+      "id": "test/algebra/1519.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.18815419964258362
+    },
+    {
+      "id": "test/precalculus/477.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6978,
+      "repeated_fraction": 0.28211845102505695
+    },
+    {
+      "id": "test/intermediate_algebra/1151.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5906,
+      "repeated_fraction": 0.4659063682974747
+    },
+    {
+      "id": "test/algebra/988.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4611,
+      "repeated_fraction": 0.36973454140836115
+    },
+    {
+      "id": "test/intermediate_algebra/1408.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1785,
+      "repeated_fraction": 0.5246908954664669
+    },
+    {
+      "id": "test/intermediate_algebra/2022.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5587,
+      "repeated_fraction": 0.5966796875
+    },
+    {
+      "id": "test/counting_and_probability/430.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6207,
+      "repeated_fraction": 0.75836181640625
+    },
+    {
+      "id": "test/counting_and_probability/159.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3528,
+      "repeated_fraction": 0.843536376953125
+    },
+    {
+      "id": "test/intermediate_algebra/966.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2649,
+      "repeated_fraction": 0.48895263671875
+    },
+    {
+      "id": "test/number_theory/931.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3794,
+      "repeated_fraction": 0.51727294921875
+    },
+    {
+      "id": "test/intermediate_algebra/964.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3947,
+      "repeated_fraction": 0.730682373046875
+    },
+    {
+      "id": "test/precalculus/986.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1404,
+      "repeated_fraction": 0.585845947265625
+    },
+    {
+      "id": "test/geometry/172.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2489,
+      "repeated_fraction": 0.87469482421875
+    },
+    {
+      "id": "test/algebra/621.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.15933528836754643
+    },
+    {
+      "id": "test/counting_and_probability/230.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3221,
+      "repeated_fraction": 0.81878662109375
+    },
+    {
+      "id": "test/algebra/1255.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.03743961352657005
+    },
+    {
+      "id": "test/algebra/2570.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4104,
+      "repeated_fraction": 0.3372541066720746
+    },
+    {
+      "id": "test/geometry/880.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5658,
+      "repeated_fraction": 0.745147705078125
+    },
+    {
+      "id": "test/intermediate_algebra/1410.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6833,
+      "repeated_fraction": 0.3990550915380073
+    },
+    {
+      "id": "test/prealgebra/1356.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4745,
+      "repeated_fraction": 0.249225777908863
+    },
+    {
+      "id": "test/algebra/478.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.03932584269662921
+    },
+    {
+      "id": "test/counting_and_probability/803.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6007,
+      "repeated_fraction": 0.71881103515625
+    },
+    {
+      "id": "test/geometry/802.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.09523809523809523
+    },
+    {
+      "id": "test/algebra/2517.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2384,
+      "repeated_fraction": 0.4192604727357828
+    },
+    {
+      "id": "test/prealgebra/1272.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.09449244060475162
+    },
+    {
+      "id": "test/precalculus/117.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6265,
+      "repeated_fraction": 0.79388427734375
+    },
+    {
+      "id": "test/algebra/841.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2487,
+      "repeated_fraction": 0.4039063939561452
+    },
+    {
+      "id": "test/algebra/351.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.12246192893401016
+    },
+    {
+      "id": "test/number_theory/521.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3400,
+      "repeated_fraction": 0.890869140625
+    },
+    {
+      "id": "test/prealgebra/1655.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2831,
+      "repeated_fraction": 0.725250244140625
+    },
+    {
+      "id": "test/precalculus/697.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1786,
+      "repeated_fraction": 0.701263427734375
+    },
+    {
+      "id": "test/prealgebra/1003.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7557,
+      "repeated_fraction": 0.7232666015625
+    },
+    {
+      "id": "test/intermediate_algebra/991.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2128433342903627
+    },
+    {
+      "id": "test/prealgebra/1113.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.21094091903719914
+    },
+    {
+      "id": "test/number_theory/598.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3367,
+      "repeated_fraction": 0.570365926814637
+    },
+    {
+      "id": "test/prealgebra/1922.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.057815845824411134
+    },
+    {
+      "id": "test/counting_and_probability/181.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4250,
+      "repeated_fraction": 0.7838134765625
+    },
+    {
+      "id": "test/prealgebra/1908.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3783,
+      "repeated_fraction": 0.348965799713291
+    },
+    {
+      "id": "test/algebra/1214.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1064406779661017
+    },
+    {
+      "id": "test/precalculus/659.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5741,
+      "repeated_fraction": 0.3490573417820543
+    },
+    {
+      "id": "test/algebra/297.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7603,
+      "repeated_fraction": 0.672607421875
+    },
+    {
+      "id": "test/algebra/2199.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.06723237597911227
+    },
+    {
+      "id": "test/algebra/686.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4665,
+      "repeated_fraction": 0.597198486328125
+    },
+    {
+      "id": "test/algebra/1275.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4277,
+      "repeated_fraction": 0.5107065680047148
+    },
+    {
+      "id": "test/algebra/109.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10673443456162643
+    },
+    {
+      "id": "test/algebra/1082.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4808,
+      "repeated_fraction": 0.5137602179836512
+    },
+    {
+      "id": "test/number_theory/978.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3274,
+      "repeated_fraction": 0.4014564247122387
+    },
+    {
+      "id": "test/intermediate_algebra/183.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 8971,
+      "repeated_fraction": 0.425668224544452
+    },
+    {
+      "id": "test/algebra/733.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2651,
+      "repeated_fraction": 0.4032
+    },
+    {
+      "id": "test/counting_and_probability/51.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5857,
+      "repeated_fraction": 0.33971072867081653
+    },
+    {
+      "id": "test/geometry/65.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6959,
+      "repeated_fraction": 0.79205322265625
+    },
+    {
+      "id": "test/algebra/1937.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.26710944267975745
+    },
+    {
+      "id": "test/prealgebra/1907.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.038272816486751716
+    },
+    {
+      "id": "test/counting_and_probability/508.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2398,
+      "repeated_fraction": 0.2329556366429806
+    },
+    {
+      "id": "test/geometry/221.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3934,
+      "repeated_fraction": 0.4709888313810951
+    },
+    {
+      "id": "test/prealgebra/2086.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6264,
+      "repeated_fraction": 0.4294383758137482
+    },
+    {
+      "id": "test/intermediate_algebra/591.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4585,
+      "repeated_fraction": 0.4557070407692814
+    },
+    {
+      "id": "test/intermediate_algebra/1422.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6295,
+      "repeated_fraction": 0.5010256186444376
+    },
+    {
+      "id": "test/algebra/291.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3233,
+      "repeated_fraction": 0.29339505073882854
+    },
+    {
+      "id": "test/geometry/702.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3881,
+      "repeated_fraction": 0.832763671875
+    },
+    {
+      "id": "test/counting_and_probability/389.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.11447811447811448
+    },
+    {
+      "id": "test/intermediate_algebra/1555.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6274,
+      "repeated_fraction": 0.3536454129674469
+    },
+    {
+      "id": "test/number_theory/1201.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07889672867222579
+    },
+    {
+      "id": "test/intermediate_algebra/2196.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3694,
+      "repeated_fraction": 0.880889892578125
+    },
+    {
+      "id": "test/precalculus/541.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4407,
+      "repeated_fraction": 0.3235745484594499
+    },
+    {
+      "id": "test/number_theory/234.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2477,
+      "repeated_fraction": 0.30762203080135736
+    },
+    {
+      "id": "test/prealgebra/1555.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4536,
+      "repeated_fraction": 0.4151607963246554
+    },
+    {
+      "id": "test/number_theory/838.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2901,
+      "repeated_fraction": 0.666961669921875
+    },
+    {
+      "id": "test/algebra/907.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2344388914129941
+    },
+    {
+      "id": "test/algebra/2102.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4860,
+      "repeated_fraction": 0.34793359237018723
+    },
+    {
+      "id": "test/prealgebra/1436.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.23298429319371727
+    },
+    {
+      "id": "test/algebra/864.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1063321385902031
+    },
+    {
+      "id": "test/number_theory/149.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3282,
+      "repeated_fraction": 0.78741455078125
+    },
+    {
+      "id": "test/intermediate_algebra/1510.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7149,
+      "repeated_fraction": 0.5797119140625
+    },
+    {
+      "id": "test/precalculus/263.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5647,
+      "repeated_fraction": 0.8648681640625
+    },
+    {
+      "id": "test/prealgebra/1961.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5352,
+      "repeated_fraction": 0.3869581464872945
+    },
+    {
+      "id": "test/prealgebra/378.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7115,
+      "repeated_fraction": 0.820892333984375
+    },
+    {
+      "id": "test/number_theory/183.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1420,
+      "repeated_fraction": 0.6138633442104222
+    },
+    {
+      "id": "test/intermediate_algebra/102.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3270,
+      "repeated_fraction": 0.526763916015625
+    },
+    {
+      "id": "test/number_theory/89.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4215,
+      "repeated_fraction": 0.455177933752001
+    },
+    {
+      "id": "test/counting_and_probability/765.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5318,
+      "repeated_fraction": 0.768524169921875
+    },
+    {
+      "id": "test/precalculus/819.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3698,
+      "repeated_fraction": 0.20739348370927319
+    },
+    {
+      "id": "test/counting_and_probability/71.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4368,
+      "repeated_fraction": 0.1696541990119972
+    },
+    {
+      "id": "test/number_theory/417.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3090,
+      "repeated_fraction": 0.88629150390625
+    },
+    {
+      "id": "test/algebra/2159.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2493,
+      "repeated_fraction": 0.5772944504047596
+    },
+    {
+      "id": "test/counting_and_probability/282.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6367,
+      "repeated_fraction": 0.7412109375
+    },
+    {
+      "id": "test/intermediate_algebra/986.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5282,
+      "repeated_fraction": 0.3364905889496053
+    },
+    {
+      "id": "test/prealgebra/2057.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 7839,
+      "repeated_fraction": 0.24396652393927598
+    },
+    {
+      "id": "test/geometry/547.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6394,
+      "repeated_fraction": 0.7867431640625
+    },
+    {
+      "id": "test/precalculus/441.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2274,
+      "repeated_fraction": 0.5237513986369647
+    },
+    {
+      "id": "test/prealgebra/153.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1983,
+      "repeated_fraction": 0.3117528048556189
+    },
+    {
+      "id": "test/precalculus/190.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1962,
+      "repeated_fraction": 0.9017333984375
+    },
+    {
+      "id": "test/intermediate_algebra/337.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2138,
+      "repeated_fraction": 0.3146181082448154
+    },
+    {
+      "id": "test/algebra/975.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 8021,
+      "repeated_fraction": 0.38947540715279483
+    },
+    {
+      "id": "test/precalculus/1056.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3889,
+      "repeated_fraction": 0.727020263671875
+    },
+    {
+      "id": "test/algebra/2626.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2178,
+      "repeated_fraction": 0.20319214241866176
+    },
+    {
+      "id": "test/algebra/1578.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4832,
+      "repeated_fraction": 0.82904052734375
+    },
+    {
+      "id": "test/geometry/254.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.06743088334457181
+    },
+    {
+      "id": "test/intermediate_algebra/1837.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2534,
+      "repeated_fraction": 0.576305298602779
+    },
+    {
+      "id": "test/algebra/1143.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3540,
+      "repeated_fraction": 0.48866602555296057
+    },
+    {
+      "id": "test/intermediate_algebra/1354.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3038,
+      "repeated_fraction": 0.86968994140625
+    },
+    {
+      "id": "test/algebra/1787.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3802,
+      "repeated_fraction": 0.459567122560085
+    },
+    {
+      "id": "test/intermediate_algebra/1123.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4747,
+      "repeated_fraction": 0.3860045146726862
+    },
+    {
+      "id": "test/precalculus/989.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3263,
+      "repeated_fraction": 0.879150390625
+    },
+    {
+      "id": "test/precalculus/920.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2797,
+      "repeated_fraction": 0.4521184438494251
+    },
+    {
+      "id": "test/algebra/1934.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.17585880869839268
+    },
+    {
+      "id": "test/prealgebra/1458.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.052840158520475564
+    },
+    {
+      "id": "test/counting_and_probability/894.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3274,
+      "repeated_fraction": 0.221964586846543
+    },
+    {
+      "id": "test/algebra/2064.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2880811078140455
+    },
+    {
+      "id": "test/geometry/229.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3018,
+      "repeated_fraction": 0.88751220703125
+    },
+    {
+      "id": "test/prealgebra/874.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4708,
+      "repeated_fraction": 0.8409423828125
+    },
+    {
+      "id": "test/geometry/473.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.05993930197268589
+    },
+    {
+      "id": "test/precalculus/452.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2408,
+      "repeated_fraction": 0.4125096924269837
+    },
+    {
+      "id": "test/algebra/694.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1157619359058208
+    },
+    {
+      "id": "test/precalculus/580.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1828092243186583
+    },
+    {
+      "id": "test/prealgebra/1317.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10650329877474081
+    },
+    {
+      "id": "test/intermediate_algebra/149.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5556,
+      "repeated_fraction": 0.25534571562353675
+    },
+    {
+      "id": "test/geometry/483.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3869,
+      "repeated_fraction": 0.2531969309462916
+    },
+    {
+      "id": "test/prealgebra/1995.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5296,
+      "repeated_fraction": 0.45167014613778705
+    },
+    {
+      "id": "test/algebra/524.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.053266331658291456
+    },
+    {
+      "id": "test/geometry/347.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2583956591875642
+    },
+    {
+      "id": "test/prealgebra/1742.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.045764362220058426
+    },
+    {
+      "id": "test/prealgebra/1251.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6609,
+      "repeated_fraction": 0.635040283203125
+    },
+    {
+      "id": "test/intermediate_algebra/1210.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4263,
+      "repeated_fraction": 0.837615966796875
+    },
+    {
+      "id": "test/algebra/2551.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.08010118043844856
+    },
+    {
+      "id": "test/number_theory/466.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1786,
+      "repeated_fraction": 0.4637086432418569
+    },
+    {
+      "id": "test/counting_and_probability/913.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3840,
+      "repeated_fraction": 0.3099455829570453
+    },
+    {
+      "id": "test/number_theory/1065.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2552,
+      "repeated_fraction": 0.78765869140625
+    },
+    {
+      "id": "test/algebra/346.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07780725022104333
+    },
+    {
+      "id": "test/counting_and_probability/1009.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3105,
+      "repeated_fraction": 0.809173583984375
+    },
+    {
+      "id": "test/prealgebra/1834.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.08328192473781616
+    },
+    {
+      "id": "test/algebra/1282.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6561,
+      "repeated_fraction": 0.3689111196614082
+    },
+    {
+      "id": "test/number_theory/691.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4119,
+      "repeated_fraction": 0.2152395915161037
+    },
+    {
+      "id": "test/geometry/826.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4369,
+      "repeated_fraction": 0.72882080078125
+    },
+    {
+      "id": "test/geometry/226.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3854,
+      "repeated_fraction": 0.87640380859375
+    },
+    {
+      "id": "test/number_theory/634.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3305,
+      "repeated_fraction": 0.867095947265625
+    },
+    {
+      "id": "test/number_theory/533.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2712,
+      "repeated_fraction": 0.893157958984375
+    },
+    {
+      "id": "test/prealgebra/1787.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2545,
+      "repeated_fraction": 0.35549777117384845
+    },
+    {
+      "id": "test/prealgebra/993.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2903,
+      "repeated_fraction": 0.842376708984375
+    },
+    {
+      "id": "test/geometry/686.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3334,
+      "repeated_fraction": 0.84136962890625
+    },
+    {
+      "id": "test/prealgebra/260.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2889,
+      "repeated_fraction": 0.4523617903794961
+    },
+    {
+      "id": "test/prealgebra/1512.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3978,
+      "repeated_fraction": 0.867431640625
+    },
+    {
+      "id": "test/number_theory/1287.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1496,
+      "repeated_fraction": 0.91973876953125
+    },
+    {
+      "id": "test/algebra/1184.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5560,
+      "repeated_fraction": 0.39599609375
+    },
+    {
+      "id": "test/counting_and_probability/25149.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.12184648416532474
+    },
+    {
+      "id": "test/intermediate_algebra/1300.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4139,
+      "repeated_fraction": 0.3548216364983593
+    },
+    {
+      "id": "test/precalculus/768.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4122,
+      "repeated_fraction": 0.845458984375
+    },
+    {
+      "id": "test/intermediate_algebra/1411.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4433,
+      "repeated_fraction": 0.5758056640625
+    },
+    {
+      "id": "test/intermediate_algebra/960.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4046,
+      "repeated_fraction": 0.741241455078125
+    },
+    {
+      "id": "test/number_theory/631.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3026,
+      "repeated_fraction": 0.875885009765625
+    },
+    {
+      "id": "test/algebra/634.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 8784,
+      "repeated_fraction": 0.3860747115196558
+    },
+    {
+      "id": "test/precalculus/1172.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3473,
+      "repeated_fraction": 0.86822509765625
+    },
+    {
+      "id": "test/algebra/2486.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2944976609489864
+    },
+    {
+      "id": "test/geometry/1097.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6481,
+      "repeated_fraction": 0.2552125800815376
+    },
+    {
+      "id": "test/number_theory/1172.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 7087,
+      "repeated_fraction": 0.3398890569843671
+    },
+    {
+      "id": "test/precalculus/881.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3100,
+      "repeated_fraction": 0.571081003721019
+    },
+    {
+      "id": "test/intermediate_algebra/90.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3387,
+      "repeated_fraction": 0.596038818359375
+    },
+    {
+      "id": "test/prealgebra/1044.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4177,
+      "repeated_fraction": 0.6288933068257124
+    },
+    {
+      "id": "test/number_theory/488.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5126,
+      "repeated_fraction": 0.805755615234375
+    },
+    {
+      "id": "test/precalculus/1201.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3981,
+      "repeated_fraction": 0.7664794921875
+    },
+    {
+      "id": "test/intermediate_algebra/754.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 8584,
+      "repeated_fraction": 0.704254150390625
+    },
+    {
+      "id": "test/intermediate_algebra/446.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3973,
+      "repeated_fraction": 0.37622765046587764
+    },
+    {
+      "id": "test/counting_and_probability/339.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2988,
+      "repeated_fraction": 0.788848876953125
+    },
+    {
+      "id": "test/algebra/2257.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1552,
+      "repeated_fraction": 0.49754885501309515
+    },
+    {
+      "id": "test/precalculus/695.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6175,
+      "repeated_fraction": 0.33339893721708325
+    },
+    {
+      "id": "test/intermediate_algebra/1714.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.0830860534124629
+    },
+    {
+      "id": "test/prealgebra/1423.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1448548411612707
+    },
+    {
+      "id": "test/prealgebra/465.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4357,
+      "repeated_fraction": 0.79644775390625
+    },
+    {
+      "id": "test/algebra/1842.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4145,
+      "repeated_fraction": 0.4319106751539184
+    },
+    {
+      "id": "test/geometry/1108.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07192042846212701
+    },
+    {
+      "id": "test/algebra/276.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2016835016835017
+    },
+    {
+      "id": "test/algebra/2735.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1581479254359591
+    },
+    {
+      "id": "test/algebra/425.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.09325396825396826
+    },
+    {
+      "id": "test/number_theory/911.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3206,
+      "repeated_fraction": 0.4762777181123255
+    },
+    {
+      "id": "test/geometry/965.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 9110,
+      "repeated_fraction": 0.48944091796875
+    },
+    {
+      "id": "test/algebra/1936.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.104091888011486
+    },
+    {
+      "id": "test/prealgebra/954.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.12305641936916926
+    },
+    {
+      "id": "test/intermediate_algebra/1544.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2127,
+      "repeated_fraction": 0.884521484375
+    },
+    {
+      "id": "test/geometry/73.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07258938244853738
+    },
+    {
+      "id": "test/algebra/791.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6768,
+      "repeated_fraction": 0.4444745395449621
+    },
+    {
+      "id": "test/geometry/711.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6322,
+      "repeated_fraction": 0.744842529296875
+    },
+    {
+      "id": "test/counting_and_probability/870.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4272,
+      "repeated_fraction": 0.35582089552238805
+    },
+    {
+      "id": "test/geometry/947.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5879,
+      "repeated_fraction": 0.4458704514570436
+    },
+    {
+      "id": "test/prealgebra/1973.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10982658959537572
+    },
+    {
+      "id": "test/number_theory/203.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1492,
+      "repeated_fraction": 0.784027099609375
+    },
+    {
+      "id": "test/algebra/509.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3293,
+      "repeated_fraction": 0.3892205906083589
+    },
+    {
+      "id": "test/counting_and_probability/216.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5006,
+      "repeated_fraction": 0.37533145841703497
+    },
+    {
+      "id": "test/algebra/1457.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.06870229007633588
+    },
+    {
+      "id": "test/intermediate_algebra/2152.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3529,
+      "repeated_fraction": 0.572296142578125
+    },
+    {
+      "id": "test/algebra/2592.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.17549896765313144
+    },
+    {
+      "id": "test/prealgebra/1730.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07342465753424658
+    },
+    {
+      "id": "test/intermediate_algebra/190.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4187,
+      "repeated_fraction": 0.400285276559776
+    },
+    {
+      "id": "test/geometry/465.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3914,
+      "repeated_fraction": 0.828399658203125
+    },
+    {
+      "id": "test/precalculus/742.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3322,
+      "repeated_fraction": 0.858123779296875
+    },
+    {
+      "id": "test/intermediate_algebra/117.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6021,
+      "repeated_fraction": 0.80816650390625
+    },
+    {
+      "id": "test/algebra/2176.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2572,
+      "repeated_fraction": 0.8123779296875
+    },
+    {
+      "id": "test/counting_and_probability/737.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.11583871686344398
+    },
+    {
+      "id": "test/prealgebra/1238.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6471,
+      "repeated_fraction": 0.3566564294298304
+    },
+    {
+      "id": "test/intermediate_algebra/1566.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6667,
+      "repeated_fraction": 0.5478971290489615
+    },
+    {
+      "id": "test/algebra/1529.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.21296758104738153
+    },
+    {
+      "id": "test/intermediate_algebra/776.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5320,
+      "repeated_fraction": 0.852935791015625
+    },
+    {
+      "id": "test/algebra/1547.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.26440329218106995
+    },
+    {
+      "id": "test/intermediate_algebra/1572.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4853,
+      "repeated_fraction": 0.27809551043751785
+    },
+    {
+      "id": "test/algebra/858.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.17519520885452203
+    },
+    {
+      "id": "test/algebra/1338.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4011,
+      "repeated_fraction": 0.3096378616593217
+    },
+    {
+      "id": "test/counting_and_probability/116.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3060,
+      "repeated_fraction": 0.48974908200734396
+    },
+    {
+      "id": "test/number_theory/483.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": false,
+      "first_alert_token": 2894,
+      "repeated_fraction": 0.930633544921875
+    },
+    {
+      "id": "test/number_theory/686.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1863,
+      "repeated_fraction": 0.4648966313359219
+    },
+    {
+      "id": "test/number_theory/368.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7087,
+      "repeated_fraction": 0.741607666015625
+    },
+    {
+      "id": "test/algebra/529.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2920,
+      "repeated_fraction": 0.3380459479929311
+    },
+    {
+      "id": "test/precalculus/801.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4616,
+      "repeated_fraction": 0.76654052734375
+    },
+    {
+      "id": "test/prealgebra/1353.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3580,
+      "repeated_fraction": 0.32427909371781666
+    },
+    {
+      "id": "test/algebra/1078.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5002,
+      "repeated_fraction": 0.4770446735395189
+    },
+    {
+      "id": "test/intermediate_algebra/1166.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 9910,
+      "repeated_fraction": 0.40342221944669954
+    },
+    {
+      "id": "test/intermediate_algebra/860.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 7430,
+      "repeated_fraction": 0.4714065995525727
+    },
+    {
+      "id": "test/counting_and_probability/238.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3368,
+      "repeated_fraction": 0.8709716796875
+    },
+    {
+      "id": "test/precalculus/826.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1669,
+      "repeated_fraction": 0.775909423828125
+    },
+    {
+      "id": "test/algebra/251.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.13144180660104227
+    },
+    {
+      "id": "test/counting_and_probability/14.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4775,
+      "repeated_fraction": 0.3100383408853259
+    },
+    {
+      "id": "test/precalculus/1281.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4269,
+      "repeated_fraction": 0.65875244140625
+    },
+    {
+      "id": "test/counting_and_probability/1014.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3861,
+      "repeated_fraction": 0.81988525390625
+    },
+    {
+      "id": "test/algebra/1199.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.24456886898096306
+    },
+    {
+      "id": "test/precalculus/96.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5401,
+      "repeated_fraction": 0.446562871091173
+    },
+    {
+      "id": "test/geometry/106.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2038,
+      "repeated_fraction": 0.15530474040632053
+    },
+    {
+      "id": "test/precalculus/1289.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.07970419063270337
+    },
+    {
+      "id": "test/number_theory/109.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3723,
+      "repeated_fraction": 0.46644192460925527
+    },
+    {
+      "id": "test/intermediate_algebra/690.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5120,
+      "repeated_fraction": 0.30643115942028987
+    },
+    {
+      "id": "test/algebra/1303.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10825506673257539
+    },
+    {
+      "id": "test/algebra/2264.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3331,
+      "repeated_fraction": 0.5116279069767442
+    },
+    {
+      "id": "test/number_theory/427.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2665083135391924
+    },
+    {
+      "id": "test/prealgebra/1187.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4660,
+      "repeated_fraction": 0.3350780615467918
+    },
+    {
+      "id": "test/intermediate_algebra/955.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3387,
+      "repeated_fraction": 0.4969502407704655
+    },
+    {
+      "id": "test/intermediate_algebra/1407.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1401,
+      "repeated_fraction": 0.790191650390625
+    },
+    {
+      "id": "test/prealgebra/1743.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1749063001963234
+    },
+    {
+      "id": "test/geometry/538.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1344,
+      "repeated_fraction": 0.38498212157330153
+    },
+    {
+      "id": "test/intermediate_algebra/1405.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2656,
+      "repeated_fraction": 0.748809814453125
+    },
+    {
+      "id": "test/prealgebra/1865.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4873,
+      "repeated_fraction": 0.3321513002364066
+    },
+    {
+      "id": "test/prealgebra/1298.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2872865275142315
+    },
+    {
+      "id": "test/number_theory/820.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3125,
+      "repeated_fraction": 0.819915771484375
+    },
+    {
+      "id": "test/prealgebra/2066.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2502,
+      "repeated_fraction": 0.3118279569892473
+    },
+    {
+      "id": "test/algebra/849.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.06460296096904442
+    },
+    {
+      "id": "test/algebra/1031.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1958,
+      "repeated_fraction": 0.366903073286052
+    },
+    {
+      "id": "test/algebra/170.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4478,
+      "repeated_fraction": 0.3620891039546137
+    },
+    {
+      "id": "test/geometry/846.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7207,
+      "repeated_fraction": 0.65966796875
+    },
+    {
+      "id": "test/algebra/101.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6098,
+      "repeated_fraction": 0.3488553278197291
+    },
+    {
+      "id": "test/algebra/853.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3631,
+      "repeated_fraction": 0.36509689727884326
+    },
+    {
+      "id": "test/number_theory/1185.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2219,
+      "repeated_fraction": 0.866668701171875
+    },
+    {
+      "id": "test/algebra/518.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2903,
+      "repeated_fraction": 0.3029642545771578
+    },
+    {
+      "id": "test/intermediate_algebra/1992.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3738,
+      "repeated_fraction": 0.841766357421875
+    },
+    {
+      "id": "test/geometry/795.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 7321,
+      "repeated_fraction": 0.37642160213784104
+    },
+    {
+      "id": "test/counting_and_probability/188.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4568,
+      "repeated_fraction": 0.770782470703125
+    },
+    {
+      "id": "test/intermediate_algebra/1111.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5815,
+      "repeated_fraction": 0.80853271484375
+    },
+    {
+      "id": "test/intermediate_algebra/1791.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3969,
+      "repeated_fraction": 0.39816730712385456
+    },
+    {
+      "id": "test/prealgebra/977.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.18005540166204986
+    },
+    {
+      "id": "test/algebra/114.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.22580645161290322
+    },
+    {
+      "id": "test/prealgebra/1784.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1699,
+      "repeated_fraction": 0.3576360682372055
+    },
+    {
+      "id": "test/prealgebra/1991.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4709,
+      "repeated_fraction": 0.29422066549912435
+    },
+    {
+      "id": "test/counting_and_probability/761.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.15806332388813601
+    },
+    {
+      "id": "test/prealgebra/1572.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.053934010152284266
+    },
+    {
+      "id": "test/algebra/2277.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6451,
+      "repeated_fraction": 0.739776611328125
+    },
+    {
+      "id": "test/precalculus/1291.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3631,
+      "repeated_fraction": 0.29451738470673616
+    },
+    {
+      "id": "test/precalculus/902.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3859,
+      "repeated_fraction": 0.8353271484375
+    },
+    {
+      "id": "test/number_theory/928.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4270,
+      "repeated_fraction": 0.48327985739750445
+    },
+    {
+      "id": "test/number_theory/132.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2625493513818387
+    },
+    {
+      "id": "test/algebra/1960.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.17647058823529413
+    },
+    {
+      "id": "test/prealgebra/1227.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5821,
+      "repeated_fraction": 0.3174645272510277
+    },
+    {
+      "id": "test/prealgebra/631.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6256,
+      "repeated_fraction": 0.804779052734375
+    },
+    {
+      "id": "test/algebra/2680.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4609,
+      "repeated_fraction": 0.28160152526215443
+    },
+    {
+      "id": "test/geometry/817.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3135,
+      "repeated_fraction": 0.883056640625
+    },
+    {
+      "id": "test/algebra/2391.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1668726823238566
+    },
+    {
+      "id": "test/intermediate_algebra/1806.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5011,
+      "repeated_fraction": 0.592559814453125
+    },
+    {
+      "id": "test/prealgebra/65.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5814,
+      "repeated_fraction": 0.5659795487745496
+    },
+    {
+      "id": "test/algebra/1796.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2971,
+      "repeated_fraction": 0.3283881934785968
+    },
+    {
+      "id": "test/number_theory/769.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1801,
+      "repeated_fraction": 0.3784755723182177
+    },
+    {
+      "id": "test/algebra/776.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5199,
+      "repeated_fraction": 0.39407835709301164
+    },
+    {
+      "id": "test/precalculus/681.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3428,
+      "repeated_fraction": 0.5469124156447283
+    },
+    {
+      "id": "test/precalculus/145.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 7284,
+      "repeated_fraction": 0.2803430737010073
+    },
+    {
+      "id": "test/algebra/1339.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1401129943502825
+    },
+    {
+      "id": "test/precalculus/398.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5803,
+      "repeated_fraction": 0.750823974609375
+    },
+    {
+      "id": "test/intermediate_algebra/1797.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3504,
+      "repeated_fraction": 0.82574462890625
+    },
+    {
+      "id": "test/intermediate_algebra/2146.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6486,
+      "repeated_fraction": 0.80206298828125
+    },
+    {
+      "id": "test/algebra/2743.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.15716803760282022
+    },
+    {
+      "id": "test/precalculus/625.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4963,
+      "repeated_fraction": 0.45241462921802383
+    },
+    {
+      "id": "test/prealgebra/2019.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.06615532118887824
+    },
+    {
+      "id": "test/geometry/843.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 9583,
+      "repeated_fraction": 0.24016136261766025
+    },
+    {
+      "id": "test/number_theory/1002.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3286,
+      "repeated_fraction": 0.48046855854531195
+    },
+    {
+      "id": "test/intermediate_algebra/1014.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 9100,
+      "repeated_fraction": 0.4365298031046301
+    },
+    {
+      "id": "test/number_theory/410.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2476,
+      "repeated_fraction": 0.3349050750713488
+    },
+    {
+      "id": "test/precalculus/1202.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5131,
+      "repeated_fraction": 0.819091796875
+    },
+    {
+      "id": "test/intermediate_algebra/2015.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6581,
+      "repeated_fraction": 0.613067626953125
+    },
+    {
+      "id": "test/prealgebra/1640.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.15874486958824308
+    },
+    {
+      "id": "test/precalculus/499.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 11189,
+      "repeated_fraction": 0.3916250408477662
+    },
+    {
+      "id": "test/algebra/2043.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.20501138952164008
+    },
+    {
+      "id": "test/number_theory/255.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.21895332390381894
+    },
+    {
+      "id": "test/algebra/2080.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2121,
+      "repeated_fraction": 0.3203309692671395
+    },
+    {
+      "id": "test/precalculus/1133.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 10590,
+      "repeated_fraction": 0.541290283203125
+    },
+    {
+      "id": "test/prealgebra/2037.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.17244270542202347
+    },
+    {
+      "id": "test/algebra/668.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1360771227289581
+    },
+    {
+      "id": "test/intermediate_algebra/121.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 8881,
+      "repeated_fraction": 0.619842529296875
+    },
+    {
+      "id": "test/algebra/1343.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4053,
+      "repeated_fraction": 0.26663314898609014
+    },
+    {
+      "id": "test/intermediate_algebra/199.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2662,
+      "repeated_fraction": 0.4533533158486324
+    },
+    {
+      "id": "test/algebra/2430.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.23796133567662567
+    },
+    {
+      "id": "test/prealgebra/996.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.0424597364568082
+    },
+    {
+      "id": "test/algebra/2789.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.12303664921465969
+    },
+    {
+      "id": "test/algebra/1553.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 8332,
+      "repeated_fraction": 0.3493811168681635
+    },
+    {
+      "id": "test/intermediate_algebra/1462.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6924,
+      "repeated_fraction": 0.507720947265625
+    },
+    {
+      "id": "test/number_theory/459.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4959,
+      "repeated_fraction": 0.23866687727057337
+    },
+    {
+      "id": "test/number_theory/13.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2819,
+      "repeated_fraction": 0.4187916622579621
+    },
+    {
+      "id": "test/algebra/1814.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2579,
+      "repeated_fraction": 0.2272617319787131
+    },
+    {
+      "id": "test/counting_and_probability/190.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.1117499101688825
+    },
+    {
+      "id": "test/number_theory/342.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.038331454340473504
+    },
+    {
+      "id": "test/number_theory/1000.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2032,
+      "repeated_fraction": 0.4246333514394351
+    },
+    {
+      "id": "test/counting_and_probability/10.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6150,
+      "repeated_fraction": 0.7886962890625
+    },
+    {
+      "id": "test/intermediate_algebra/1102.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 6504,
+      "repeated_fraction": 0.4152940476898377
+    },
+    {
+      "id": "test/counting_and_probability/731.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3131,
+      "repeated_fraction": 0.81805419921875
+    },
+    {
+      "id": "test/intermediate_algebra/1779.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6045,
+      "repeated_fraction": 0.775970458984375
+    },
+    {
+      "id": "test/algebra/2780.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 7817,
+      "repeated_fraction": 0.3213943076431084
+    },
+    {
+      "id": "test/algebra/824.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2793746848209783
+    },
+    {
+      "id": "test/algebra/1425.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.15961352657004832
+    },
+    {
+      "id": "test/number_theory/679.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3188,
+      "repeated_fraction": 0.3307601946635341
+    },
+    {
+      "id": "test/intermediate_algebra/834.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.20861260053619302
+    },
+    {
+      "id": "test/algebra/224.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10417715148465023
+    },
+    {
+      "id": "test/algebra/2476.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3290,
+      "repeated_fraction": 0.86212158203125
+    },
+    {
+      "id": "test/precalculus/323.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3593,
+      "repeated_fraction": 0.782012939453125
+    },
+    {
+      "id": "test/prealgebra/846.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.10633802816901408
+    },
+    {
+      "id": "test/prealgebra/1114.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5071,
+      "repeated_fraction": 0.3937159345944213
+    },
+    {
+      "id": "test/algebra/2470.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.15941365093907467
+    },
+    {
+      "id": "test/algebra/435.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3784,
+      "repeated_fraction": 0.43952033368091764
+    },
+    {
+      "id": "test/prealgebra/805.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2648,
+      "repeated_fraction": 0.920257568359375
+    },
+    {
+      "id": "test/number_theory/72.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.2861899395553734
+    },
+    {
+      "id": "test/prealgebra/1252.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3621,
+      "repeated_fraction": 0.22574447646493756
+    },
+    {
+      "id": "test/prealgebra/914.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 7304,
+      "repeated_fraction": 0.754547119140625
+    },
+    {
+      "id": "test/intermediate_algebra/752.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2789,
+      "repeated_fraction": 0.4201423487544484
+    },
+    {
+      "id": "test/number_theory/22.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 8528,
+      "repeated_fraction": 0.20465758831655811
+    },
+    {
+      "id": "test/number_theory/1128.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3160,
+      "repeated_fraction": 0.41860285006195785
+    },
+    {
+      "id": "test/precalculus/703.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2721,
+      "repeated_fraction": 0.726715087890625
+    },
+    {
+      "id": "test/intermediate_algebra/158.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 1336,
+      "repeated_fraction": 0.621490478515625
+    },
+    {
+      "id": "test/prealgebra/1930.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5023,
+      "repeated_fraction": 0.81903076171875
+    },
+    {
+      "id": "test/counting_and_probability/1003.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6590,
+      "repeated_fraction": 0.69256591796875
+    },
+    {
+      "id": "test/intermediate_algebra/1279.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3158,
+      "repeated_fraction": 0.89593505859375
+    },
+    {
+      "id": "test/geometry/477.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 3869,
+      "repeated_fraction": 0.19706024874818284
+    },
+    {
+      "id": "test/prealgebra/1203.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.09256756756756757
+    },
+    {
+      "id": "test/number_theory/239.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": null,
+      "repeated_fraction": 0.13916314057357781
+    },
+    {
+      "id": "test/precalculus/1252.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 5290,
+      "repeated_fraction": 0.5607961090490209
+    },
+    {
+      "id": "test/intermediate_algebra/1467.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 538,
+      "repeated_fraction": 0.8909912109375
+    },
+    {
+      "id": "test/prealgebra/1128.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2275,
+      "repeated_fraction": 0.3215804790687262
+    },
+    {
+      "id": "test/number_theory/1090.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2809,
+      "repeated_fraction": 0.858642578125
+    },
+    {
+      "id": "test/precalculus/1082.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2162,
+      "repeated_fraction": 0.821441650390625
+    },
+    {
+      "id": "test/intermediate_algebra/101.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2934,
+      "repeated_fraction": 0.60345458984375
+    },
+    {
+      "id": "test/precalculus/356.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 2545,
+      "repeated_fraction": 0.5565128380107481
+    },
+    {
+      "id": "test/algebra/2779.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 1992,
+      "repeated_fraction": 0.4386877587854337
+    },
+    {
+      "id": "test/counting_and_probability/199.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 6565,
+      "repeated_fraction": 0.7149658203125
+    },
+    {
+      "id": "test/intermediate_algebra/1981.json",
+      "correct": false,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 8379,
+      "repeated_fraction": 0.3719852454364892
+    },
+    {
+      "id": "test/intermediate_algebra/1232.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 4237,
+      "repeated_fraction": 0.360932077342588
+    },
+    {
+      "id": "test/intermediate_algebra/1365.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2468,
+      "repeated_fraction": 0.798797607421875
+    },
+    {
+      "id": "test/intermediate_algebra/1350.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 3045,
+      "repeated_fraction": 0.811126708984375
+    },
+    {
+      "id": "test/geometry/615.json",
+      "correct": true,
+      "cap": false,
+      "closed_thinking": true,
+      "first_alert_token": 9887,
+      "repeated_fraction": 0.39351611533198055
+    },
+    {
+      "id": "test/intermediate_algebra/1930.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 5976,
+      "repeated_fraction": 0.739410400390625
+    },
+    {
+      "id": "test/geometry/561.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 4370,
+      "repeated_fraction": 0.803863525390625
+    },
+    {
+      "id": "test/intermediate_algebra/1508.json",
+      "correct": false,
+      "cap": true,
+      "closed_thinking": true,
+      "first_alert_token": 2461,
+      "repeated_fraction": 0.7509765625
+    }
+  ]
+}

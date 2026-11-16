@@ -1,0 +1,2623 @@
+{
+  "method": "Retokenized published text using the pinned base tokenizer; approximate relative to original generation IDs, may omit EOS.",
+  "sets": {
+    "math500": {
+      "base": {
+        "test/precalculus/807.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 75301,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/1994.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 69237,
+          "source_sample": "first published text per problem"
+        },
+        "test/algebra/2584.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 79783,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/572.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 82836,
+          "source_sample": "first published text per problem"
+        },
+        "test/algebra/1349.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 64072,
+          "source_sample": "first published text per problem"
+        },
+        "test/prealgebra/1622.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 178994,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/515.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 86680,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/927.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 62349,
+          "source_sample": "first published text per problem"
+        },
+        "test/algebra/2036.json": {
+          "output_tokens_retokenized": 10590,
+          "characters": 26870,
+          "source_sample": "first published text per problem"
+        },
+        "test/prealgebra/1139.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 60151,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/1032.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 61881,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/1197.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 89578,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/737.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 68539,
+          "source_sample": "first published text per problem"
+        },
+        "test/geometry/248.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 91787,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/1303.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 99243,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/990.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 57030,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/134.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 67718,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/1199.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 72998,
+          "source_sample": "first published text per problem"
+        },
+        "test/geometry/434.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 90471,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/1000.json": {
+          "output_tokens_retokenized": 32766,
+          "characters": 83310,
+          "source_sample": "first published text per problem"
+        }
+      },
+      "edited": {
+        "test/precalculus/807.json": {
+          "output_tokens_retokenized": 10097,
+          "characters": 31343,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/1994.json": {
+          "output_tokens_retokenized": 31673,
+          "characters": 61319,
+          "source_sample": "first published text per problem"
+        },
+        "test/algebra/2584.json": {
+          "output_tokens_retokenized": 12501,
+          "characters": 30166,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/572.json": {
+          "output_tokens_retokenized": 8789,
+          "characters": 21855,
+          "source_sample": "first published text per problem"
+        },
+        "test/algebra/1349.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 121702,
+          "source_sample": "first published text per problem"
+        },
+        "test/prealgebra/1622.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 3471378,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/515.json": {
+          "output_tokens_retokenized": 24960,
+          "characters": 61106,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/927.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 3267179,
+          "source_sample": "first published text per problem"
+        },
+        "test/algebra/2036.json": {
+          "output_tokens_retokenized": 4096,
+          "characters": 11789,
+          "source_sample": "first published text per problem"
+        },
+        "test/prealgebra/1139.json": {
+          "output_tokens_retokenized": 16214,
+          "characters": 45550,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/1032.json": {
+          "output_tokens_retokenized": 32766,
+          "characters": 93993,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/1197.json": {
+          "output_tokens_retokenized": 18709,
+          "characters": 50396,
+          "source_sample": "first published text per problem"
+        },
+        "test/number_theory/737.json": {
+          "output_tokens_retokenized": 20014,
+          "characters": 41630,
+          "source_sample": "first published text per problem"
+        },
+        "test/geometry/248.json": {
+          "output_tokens_retokenized": 16022,
+          "characters": 48230,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/1303.json": {
+          "output_tokens_retokenized": 28530,
+          "characters": 83464,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/990.json": {
+          "output_tokens_retokenized": 20443,
+          "characters": 42548,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/134.json": {
+          "output_tokens_retokenized": 15604,
+          "characters": 37620,
+          "source_sample": "first published text per problem"
+        },
+        "test/precalculus/1199.json": {
+          "output_tokens_retokenized": 20001,
+          "characters": 59017,
+          "source_sample": "first published text per problem"
+        },
+        "test/geometry/434.json": {
+          "output_tokens_retokenized": 21272,
+          "characters": 130581,
+          "source_sample": "first published text per problem"
+        },
+        "test/intermediate_algebra/1000.json": {
+          "output_tokens_retokenized": 32768,
+          "characters": 71254,
+          "source_sample": "first published text per problem"
+        }
+      }
+    },
+    "gsm8k": {
+      "edited": {
+        "gsm8k/0": {
+          "output_tokens_retokenized": 11012,
+          "sample_index": 0
+        },
+        "gsm8k/10": {
+          "output_tokens_retokenized": 19083,
+          "sample_index": 0
+        },
+        "gsm8k/20": {
+          "output_tokens_retokenized": 21695,
+          "sample_index": 0
+        },
+        "gsm8k/30": {
+          "output_tokens_retokenized": 16666,
+          "sample_index": 0
+        },
+        "gsm8k/40": {
+          "output_tokens_retokenized": 5996,
+          "sample_index": 0
+        },
+        "gsm8k/50": {
+          "output_tokens_retokenized": 15176,
+          "sample_index": 0
+        },
+        "gsm8k/60": {
+          "output_tokens_retokenized": 9537,
+          "sample_index": 0
+        },
+        "gsm8k/70": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/80": {
+          "output_tokens_retokenized": 10056,
+          "sample_index": 0
+        },
+        "gsm8k/90": {
+          "output_tokens_retokenized": 5375,
+          "sample_index": 0
+        },
+        "gsm8k/100": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/110": {
+          "output_tokens_retokenized": 8557,
+          "sample_index": 0
+        },
+        "gsm8k/120": {
+          "output_tokens_retokenized": 5856,
+          "sample_index": 0
+        },
+        "gsm8k/130": {
+          "output_tokens_retokenized": 4666,
+          "sample_index": 0
+        },
+        "gsm8k/140": {
+          "output_tokens_retokenized": 8788,
+          "sample_index": 0
+        },
+        "gsm8k/150": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/160": {
+          "output_tokens_retokenized": 3754,
+          "sample_index": 0
+        },
+        "gsm8k/170": {
+          "output_tokens_retokenized": 4765,
+          "sample_index": 0
+        },
+        "gsm8k/180": {
+          "output_tokens_retokenized": 4541,
+          "sample_index": 0
+        },
+        "gsm8k/190": {
+          "output_tokens_retokenized": 1184,
+          "sample_index": 0
+        },
+        "gsm8k/1": {
+          "output_tokens_retokenized": 799,
+          "sample_index": 0
+        },
+        "gsm8k/11": {
+          "output_tokens_retokenized": 2594,
+          "sample_index": 0
+        },
+        "gsm8k/21": {
+          "output_tokens_retokenized": 12511,
+          "sample_index": 0
+        },
+        "gsm8k/31": {
+          "output_tokens_retokenized": 11148,
+          "sample_index": 0
+        },
+        "gsm8k/41": {
+          "output_tokens_retokenized": 19188,
+          "sample_index": 0
+        },
+        "gsm8k/51": {
+          "output_tokens_retokenized": 9503,
+          "sample_index": 0
+        },
+        "gsm8k/61": {
+          "output_tokens_retokenized": 15154,
+          "sample_index": 0
+        },
+        "gsm8k/71": {
+          "output_tokens_retokenized": 1888,
+          "sample_index": 0
+        },
+        "gsm8k/81": {
+          "output_tokens_retokenized": 3635,
+          "sample_index": 0
+        },
+        "gsm8k/91": {
+          "output_tokens_retokenized": 993,
+          "sample_index": 0
+        },
+        "gsm8k/101": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/111": {
+          "output_tokens_retokenized": 10684,
+          "sample_index": 0
+        },
+        "gsm8k/121": {
+          "output_tokens_retokenized": 5306,
+          "sample_index": 0
+        },
+        "gsm8k/131": {
+          "output_tokens_retokenized": 2165,
+          "sample_index": 0
+        },
+        "gsm8k/141": {
+          "output_tokens_retokenized": 13903,
+          "sample_index": 0
+        },
+        "gsm8k/151": {
+          "output_tokens_retokenized": 9201,
+          "sample_index": 0
+        },
+        "gsm8k/161": {
+          "output_tokens_retokenized": 4542,
+          "sample_index": 0
+        },
+        "gsm8k/171": {
+          "output_tokens_retokenized": 1825,
+          "sample_index": 0
+        },
+        "gsm8k/181": {
+          "output_tokens_retokenized": 9176,
+          "sample_index": 0
+        },
+        "gsm8k/191": {
+          "output_tokens_retokenized": 11949,
+          "sample_index": 0
+        },
+        "gsm8k/2": {
+          "output_tokens_retokenized": 12483,
+          "sample_index": 0
+        },
+        "gsm8k/12": {
+          "output_tokens_retokenized": 7355,
+          "sample_index": 0
+        },
+        "gsm8k/22": {
+          "output_tokens_retokenized": 5594,
+          "sample_index": 0
+        },
+        "gsm8k/32": {
+          "output_tokens_retokenized": 5214,
+          "sample_index": 0
+        },
+        "gsm8k/42": {
+          "output_tokens_retokenized": 4862,
+          "sample_index": 0
+        },
+        "gsm8k/52": {
+          "output_tokens_retokenized": 19479,
+          "sample_index": 0
+        },
+        "gsm8k/62": {
+          "output_tokens_retokenized": 7455,
+          "sample_index": 0
+        },
+        "gsm8k/72": {
+          "output_tokens_retokenized": 10416,
+          "sample_index": 0
+        },
+        "gsm8k/82": {
+          "output_tokens_retokenized": 16954,
+          "sample_index": 0
+        },
+        "gsm8k/92": {
+          "output_tokens_retokenized": 14310,
+          "sample_index": 0
+        },
+        "gsm8k/102": {
+          "output_tokens_retokenized": 13738,
+          "sample_index": 0
+        },
+        "gsm8k/112": {
+          "output_tokens_retokenized": 12788,
+          "sample_index": 0
+        },
+        "gsm8k/122": {
+          "output_tokens_retokenized": 18491,
+          "sample_index": 0
+        },
+        "gsm8k/132": {
+          "output_tokens_retokenized": 16501,
+          "sample_index": 0
+        },
+        "gsm8k/142": {
+          "output_tokens_retokenized": 12473,
+          "sample_index": 0
+        },
+        "gsm8k/152": {
+          "output_tokens_retokenized": 3337,
+          "sample_index": 0
+        },
+        "gsm8k/162": {
+          "output_tokens_retokenized": 16703,
+          "sample_index": 0
+        },
+        "gsm8k/172": {
+          "output_tokens_retokenized": 32765,
+          "sample_index": 0
+        },
+        "gsm8k/182": {
+          "output_tokens_retokenized": 12476,
+          "sample_index": 0
+        },
+        "gsm8k/192": {
+          "output_tokens_retokenized": 13513,
+          "sample_index": 0
+        },
+        "gsm8k/3": {
+          "output_tokens_retokenized": 5705,
+          "sample_index": 0
+        },
+        "gsm8k/13": {
+          "output_tokens_retokenized": 24428,
+          "sample_index": 0
+        },
+        "gsm8k/23": {
+          "output_tokens_retokenized": 1303,
+          "sample_index": 0
+        },
+        "gsm8k/33": {
+          "output_tokens_retokenized": 2285,
+          "sample_index": 0
+        },
+        "gsm8k/43": {
+          "output_tokens_retokenized": 15999,
+          "sample_index": 0
+        },
+        "gsm8k/53": {
+          "output_tokens_retokenized": 10886,
+          "sample_index": 0
+        },
+        "gsm8k/63": {
+          "output_tokens_retokenized": 11159,
+          "sample_index": 0
+        },
+        "gsm8k/73": {
+          "output_tokens_retokenized": 14328,
+          "sample_index": 0
+        },
+        "gsm8k/83": {
+          "output_tokens_retokenized": 6067,
+          "sample_index": 0
+        },
+        "gsm8k/93": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/103": {
+          "output_tokens_retokenized": 9841,
+          "sample_index": 0
+        },
+        "gsm8k/113": {
+          "output_tokens_retokenized": 20002,
+          "sample_index": 0
+        },
+        "gsm8k/123": {
+          "output_tokens_retokenized": 2741,
+          "sample_index": 0
+        },
+        "gsm8k/133": {
+          "output_tokens_retokenized": 1428,
+          "sample_index": 0
+        },
+        "gsm8k/143": {
+          "output_tokens_retokenized": 14582,
+          "sample_index": 0
+        },
+        "gsm8k/153": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/163": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/173": {
+          "output_tokens_retokenized": 15718,
+          "sample_index": 0
+        },
+        "gsm8k/183": {
+          "output_tokens_retokenized": 12200,
+          "sample_index": 0
+        },
+        "gsm8k/193": {
+          "output_tokens_retokenized": 16549,
+          "sample_index": 0
+        },
+        "gsm8k/4": {
+          "output_tokens_retokenized": 16145,
+          "sample_index": 0
+        },
+        "gsm8k/14": {
+          "output_tokens_retokenized": 18415,
+          "sample_index": 0
+        },
+        "gsm8k/24": {
+          "output_tokens_retokenized": 13501,
+          "sample_index": 0
+        },
+        "gsm8k/34": {
+          "output_tokens_retokenized": 13041,
+          "sample_index": 0
+        },
+        "gsm8k/44": {
+          "output_tokens_retokenized": 4068,
+          "sample_index": 0
+        },
+        "gsm8k/54": {
+          "output_tokens_retokenized": 8992,
+          "sample_index": 0
+        },
+        "gsm8k/64": {
+          "output_tokens_retokenized": 13575,
+          "sample_index": 0
+        },
+        "gsm8k/74": {
+          "output_tokens_retokenized": 20166,
+          "sample_index": 0
+        },
+        "gsm8k/84": {
+          "output_tokens_retokenized": 6485,
+          "sample_index": 0
+        },
+        "gsm8k/94": {
+          "output_tokens_retokenized": 13088,
+          "sample_index": 0
+        },
+        "gsm8k/104": {
+          "output_tokens_retokenized": 14575,
+          "sample_index": 0
+        },
+        "gsm8k/114": {
+          "output_tokens_retokenized": 13035,
+          "sample_index": 0
+        },
+        "gsm8k/124": {
+          "output_tokens_retokenized": 17716,
+          "sample_index": 0
+        },
+        "gsm8k/134": {
+          "output_tokens_retokenized": 3139,
+          "sample_index": 0
+        },
+        "gsm8k/144": {
+          "output_tokens_retokenized": 6984,
+          "sample_index": 0
+        },
+        "gsm8k/154": {
+          "output_tokens_retokenized": 10406,
+          "sample_index": 0
+        },
+        "gsm8k/164": {
+          "output_tokens_retokenized": 11565,
+          "sample_index": 0
+        },
+        "gsm8k/174": {
+          "output_tokens_retokenized": 7385,
+          "sample_index": 0
+        },
+        "gsm8k/184": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/194": {
+          "output_tokens_retokenized": 5507,
+          "sample_index": 0
+        },
+        "gsm8k/5": {
+          "output_tokens_retokenized": 23502,
+          "sample_index": 0
+        },
+        "gsm8k/15": {
+          "output_tokens_retokenized": 16142,
+          "sample_index": 0
+        },
+        "gsm8k/25": {
+          "output_tokens_retokenized": 4254,
+          "sample_index": 0
+        },
+        "gsm8k/35": {
+          "output_tokens_retokenized": 7887,
+          "sample_index": 0
+        },
+        "gsm8k/45": {
+          "output_tokens_retokenized": 13599,
+          "sample_index": 0
+        },
+        "gsm8k/55": {
+          "output_tokens_retokenized": 3274,
+          "sample_index": 0
+        },
+        "gsm8k/65": {
+          "output_tokens_retokenized": 15995,
+          "sample_index": 0
+        },
+        "gsm8k/75": {
+          "output_tokens_retokenized": 32132,
+          "sample_index": 0
+        },
+        "gsm8k/85": {
+          "output_tokens_retokenized": 13485,
+          "sample_index": 0
+        },
+        "gsm8k/95": {
+          "output_tokens_retokenized": 11293,
+          "sample_index": 0
+        },
+        "gsm8k/105": {
+          "output_tokens_retokenized": 3434,
+          "sample_index": 0
+        },
+        "gsm8k/115": {
+          "output_tokens_retokenized": 17807,
+          "sample_index": 0
+        },
+        "gsm8k/125": {
+          "output_tokens_retokenized": 16828,
+          "sample_index": 0
+        },
+        "gsm8k/135": {
+          "output_tokens_retokenized": 12205,
+          "sample_index": 0
+        },
+        "gsm8k/145": {
+          "output_tokens_retokenized": 8944,
+          "sample_index": 0
+        },
+        "gsm8k/155": {
+          "output_tokens_retokenized": 12919,
+          "sample_index": 0
+        },
+        "gsm8k/165": {
+          "output_tokens_retokenized": 7433,
+          "sample_index": 0
+        },
+        "gsm8k/175": {
+          "output_tokens_retokenized": 7542,
+          "sample_index": 0
+        },
+        "gsm8k/185": {
+          "output_tokens_retokenized": 4156,
+          "sample_index": 0
+        },
+        "gsm8k/195": {
+          "output_tokens_retokenized": 4644,
+          "sample_index": 0
+        },
+        "gsm8k/6": {
+          "output_tokens_retokenized": 1743,
+          "sample_index": 0
+        },
+        "gsm8k/16": {
+          "output_tokens_retokenized": 16778,
+          "sample_index": 0
+        },
+        "gsm8k/26": {
+          "output_tokens_retokenized": 6001,
+          "sample_index": 0
+        },
+        "gsm8k/36": {
+          "output_tokens_retokenized": 9014,
+          "sample_index": 0
+        },
+        "gsm8k/46": {
+          "output_tokens_retokenized": 16821,
+          "sample_index": 0
+        },
+        "gsm8k/56": {
+          "output_tokens_retokenized": 5287,
+          "sample_index": 0
+        },
+        "gsm8k/66": {
+          "output_tokens_retokenized": 12648,
+          "sample_index": 0
+        },
+        "gsm8k/76": {
+          "output_tokens_retokenized": 9475,
+          "sample_index": 0
+        },
+        "gsm8k/86": {
+          "output_tokens_retokenized": 8322,
+          "sample_index": 0
+        },
+        "gsm8k/96": {
+          "output_tokens_retokenized": 950,
+          "sample_index": 0
+        },
+        "gsm8k/106": {
+          "output_tokens_retokenized": 6870,
+          "sample_index": 0
+        },
+        "gsm8k/116": {
+          "output_tokens_retokenized": 17744,
+          "sample_index": 0
+        },
+        "gsm8k/126": {
+          "output_tokens_retokenized": 1210,
+          "sample_index": 0
+        },
+        "gsm8k/136": {
+          "output_tokens_retokenized": 13749,
+          "sample_index": 0
+        },
+        "gsm8k/146": {
+          "output_tokens_retokenized": 8792,
+          "sample_index": 0
+        },
+        "gsm8k/156": {
+          "output_tokens_retokenized": 7896,
+          "sample_index": 0
+        },
+        "gsm8k/166": {
+          "output_tokens_retokenized": 8276,
+          "sample_index": 0
+        },
+        "gsm8k/176": {
+          "output_tokens_retokenized": 12365,
+          "sample_index": 0
+        },
+        "gsm8k/186": {
+          "output_tokens_retokenized": 19024,
+          "sample_index": 0
+        },
+        "gsm8k/196": {
+          "output_tokens_retokenized": 11904,
+          "sample_index": 0
+        },
+        "gsm8k/7": {
+          "output_tokens_retokenized": 11957,
+          "sample_index": 0
+        },
+        "gsm8k/17": {
+          "output_tokens_retokenized": 14172,
+          "sample_index": 0
+        },
+        "gsm8k/27": {
+          "output_tokens_retokenized": 6704,
+          "sample_index": 0
+        },
+        "gsm8k/37": {
+          "output_tokens_retokenized": 24232,
+          "sample_index": 0
+        },
+        "gsm8k/47": {
+          "output_tokens_retokenized": 13183,
+          "sample_index": 0
+        },
+        "gsm8k/57": {
+          "output_tokens_retokenized": 11797,
+          "sample_index": 0
+        },
+        "gsm8k/67": {
+          "output_tokens_retokenized": 6373,
+          "sample_index": 0
+        },
+        "gsm8k/77": {
+          "output_tokens_retokenized": 11179,
+          "sample_index": 0
+        },
+        "gsm8k/87": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/97": {
+          "output_tokens_retokenized": 16297,
+          "sample_index": 0
+        },
+        "gsm8k/107": {
+          "output_tokens_retokenized": 16186,
+          "sample_index": 0
+        },
+        "gsm8k/117": {
+          "output_tokens_retokenized": 15931,
+          "sample_index": 0
+        },
+        "gsm8k/127": {
+          "output_tokens_retokenized": 8837,
+          "sample_index": 0
+        },
+        "gsm8k/137": {
+          "output_tokens_retokenized": 5549,
+          "sample_index": 0
+        },
+        "gsm8k/147": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/157": {
+          "output_tokens_retokenized": 11303,
+          "sample_index": 0
+        },
+        "gsm8k/167": {
+          "output_tokens_retokenized": 5335,
+          "sample_index": 0
+        },
+        "gsm8k/177": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/187": {
+          "output_tokens_retokenized": 5178,
+          "sample_index": 0
+        },
+        "gsm8k/197": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/8": {
+          "output_tokens_retokenized": 14656,
+          "sample_index": 0
+        },
+        "gsm8k/18": {
+          "output_tokens_retokenized": 7728,
+          "sample_index": 0
+        },
+        "gsm8k/28": {
+          "output_tokens_retokenized": 15816,
+          "sample_index": 0
+        },
+        "gsm8k/38": {
+          "output_tokens_retokenized": 27504,
+          "sample_index": 0
+        },
+        "gsm8k/48": {
+          "output_tokens_retokenized": 4442,
+          "sample_index": 0
+        },
+        "gsm8k/58": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/68": {
+          "output_tokens_retokenized": 7178,
+          "sample_index": 0
+        },
+        "gsm8k/78": {
+          "output_tokens_retokenized": 11638,
+          "sample_index": 0
+        },
+        "gsm8k/88": {
+          "output_tokens_retokenized": 968,
+          "sample_index": 0
+        },
+        "gsm8k/98": {
+          "output_tokens_retokenized": 12593,
+          "sample_index": 0
+        },
+        "gsm8k/108": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "gsm8k/118": {
+          "output_tokens_retokenized": 22058,
+          "sample_index": 0
+        },
+        "gsm8k/128": {
+          "output_tokens_retokenized": 9658,
+          "sample_index": 0
+        },
+        "gsm8k/138": {
+          "output_tokens_retokenized": 9589,
+          "sample_index": 0
+        },
+        "gsm8k/148": {
+          "output_tokens_retokenized": 6341,
+          "sample_index": 0
+        },
+        "gsm8k/158": {
+          "output_tokens_retokenized": 5775,
+          "sample_index": 0
+        },
+        "gsm8k/168": {
+          "output_tokens_retokenized": 6166,
+          "sample_index": 0
+        },
+        "gsm8k/178": {
+          "output_tokens_retokenized": 32747,
+          "sample_index": 0
+        },
+        "gsm8k/188": {
+          "output_tokens_retokenized": 6402,
+          "sample_index": 0
+        },
+        "gsm8k/198": {
+          "output_tokens_retokenized": 8741,
+          "sample_index": 0
+        },
+        "gsm8k/9": {
+          "output_tokens_retokenized": 2877,
+          "sample_index": 0
+        },
+        "gsm8k/19": {
+          "output_tokens_retokenized": 11714,
+          "sample_index": 0
+        },
+        "gsm8k/29": {
+          "output_tokens_retokenized": 32761,
+          "sample_index": 0
+        },
+        "gsm8k/39": {
+          "output_tokens_retokenized": 17710,
+          "sample_index": 0
+        },
+        "gsm8k/49": {
+          "output_tokens_retokenized": 6136,
+          "sample_index": 0
+        },
+        "gsm8k/59": {
+          "output_tokens_retokenized": 11809,
+          "sample_index": 0
+        },
+        "gsm8k/69": {
+          "output_tokens_retokenized": 1113,
+          "sample_index": 0
+        },
+        "gsm8k/79": {
+          "output_tokens_retokenized": 9954,
+          "sample_index": 0
+        },
+        "gsm8k/89": {
+          "output_tokens_retokenized": 11224,
+          "sample_index": 0
+        },
+        "gsm8k/99": {
+          "output_tokens_retokenized": 12357,
+          "sample_index": 0
+        },
+        "gsm8k/109": {
+          "output_tokens_retokenized": 5717,
+          "sample_index": 0
+        },
+        "gsm8k/119": {
+          "output_tokens_retokenized": 30711,
+          "sample_index": 0
+        },
+        "gsm8k/129": {
+          "output_tokens_retokenized": 13017,
+          "sample_index": 0
+        },
+        "gsm8k/139": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/149": {
+          "output_tokens_retokenized": 1477,
+          "sample_index": 0
+        },
+        "gsm8k/159": {
+          "output_tokens_retokenized": 9485,
+          "sample_index": 0
+        },
+        "gsm8k/169": {
+          "output_tokens_retokenized": 9591,
+          "sample_index": 0
+        },
+        "gsm8k/179": {
+          "output_tokens_retokenized": 864,
+          "sample_index": 0
+        },
+        "gsm8k/189": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/199": {
+          "output_tokens_retokenized": 5976,
+          "sample_index": 0
+        }
+      },
+      "base": {
+        "gsm8k/0": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/10": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/20": {
+          "output_tokens_retokenized": 32765,
+          "sample_index": 0
+        },
+        "gsm8k/30": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/40": {
+          "output_tokens_retokenized": 33519,
+          "sample_index": 0
+        },
+        "gsm8k/50": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/60": {
+          "output_tokens_retokenized": 6229,
+          "sample_index": 0
+        },
+        "gsm8k/70": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/80": {
+          "output_tokens_retokenized": 32292,
+          "sample_index": 0
+        },
+        "gsm8k/90": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/100": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/110": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/120": {
+          "output_tokens_retokenized": 2138,
+          "sample_index": 0
+        },
+        "gsm8k/130": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/140": {
+          "output_tokens_retokenized": 4609,
+          "sample_index": 0
+        },
+        "gsm8k/150": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/160": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/170": {
+          "output_tokens_retokenized": 6526,
+          "sample_index": 0
+        },
+        "gsm8k/180": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/190": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/1": {
+          "output_tokens_retokenized": 2443,
+          "sample_index": 0
+        },
+        "gsm8k/11": {
+          "output_tokens_retokenized": 32062,
+          "sample_index": 0
+        },
+        "gsm8k/21": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/31": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/41": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/51": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/61": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/71": {
+          "output_tokens_retokenized": 7617,
+          "sample_index": 0
+        },
+        "gsm8k/81": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/91": {
+          "output_tokens_retokenized": 849,
+          "sample_index": 0
+        },
+        "gsm8k/101": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/111": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/121": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/131": {
+          "output_tokens_retokenized": 32769,
+          "sample_index": 0
+        },
+        "gsm8k/141": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/151": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/161": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/171": {
+          "output_tokens_retokenized": 1978,
+          "sample_index": 0
+        },
+        "gsm8k/181": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/191": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/2": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/12": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "gsm8k/22": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/32": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/42": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/52": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/62": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/72": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/82": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/92": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/102": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/112": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/122": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/132": {
+          "output_tokens_retokenized": 32769,
+          "sample_index": 0
+        },
+        "gsm8k/142": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/152": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/162": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/172": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/182": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/192": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/3": {
+          "output_tokens_retokenized": 858,
+          "sample_index": 0
+        },
+        "gsm8k/13": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/23": {
+          "output_tokens_retokenized": 5982,
+          "sample_index": 0
+        },
+        "gsm8k/33": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/43": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/53": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/63": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/73": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/83": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/93": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/103": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/113": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/123": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/133": {
+          "output_tokens_retokenized": 1035,
+          "sample_index": 0
+        },
+        "gsm8k/143": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/153": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/163": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/173": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/183": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/193": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/4": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/14": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/24": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/34": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/44": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/54": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/64": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/74": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/84": {
+          "output_tokens_retokenized": 6526,
+          "sample_index": 0
+        },
+        "gsm8k/94": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/104": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/114": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/124": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/134": {
+          "output_tokens_retokenized": 3862,
+          "sample_index": 0
+        },
+        "gsm8k/144": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/154": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/164": {
+          "output_tokens_retokenized": 32730,
+          "sample_index": 0
+        },
+        "gsm8k/174": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/184": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/194": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/5": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/15": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "gsm8k/25": {
+          "output_tokens_retokenized": 2512,
+          "sample_index": 0
+        },
+        "gsm8k/35": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/45": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/55": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/65": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/75": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/85": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/95": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/105": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/115": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/125": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/135": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/145": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/155": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/165": {
+          "output_tokens_retokenized": 5330,
+          "sample_index": 0
+        },
+        "gsm8k/175": {
+          "output_tokens_retokenized": 32769,
+          "sample_index": 0
+        },
+        "gsm8k/185": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/195": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/6": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/16": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/26": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/36": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/46": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/56": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/66": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/76": {
+          "output_tokens_retokenized": 6917,
+          "sample_index": 0
+        },
+        "gsm8k/86": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/96": {
+          "output_tokens_retokenized": 5257,
+          "sample_index": 0
+        },
+        "gsm8k/106": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/116": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/126": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/136": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/146": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/156": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/166": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/176": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/186": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/196": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/7": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/17": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/27": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/37": {
+          "output_tokens_retokenized": 32696,
+          "sample_index": 0
+        },
+        "gsm8k/47": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/57": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/67": {
+          "output_tokens_retokenized": 32765,
+          "sample_index": 0
+        },
+        "gsm8k/77": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/87": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/97": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/107": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/117": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/127": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/137": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/147": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/157": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/167": {
+          "output_tokens_retokenized": 7163,
+          "sample_index": 0
+        },
+        "gsm8k/177": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/187": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/197": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/8": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/18": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/28": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/38": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/48": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/58": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/68": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/78": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/88": {
+          "output_tokens_retokenized": 3696,
+          "sample_index": 0
+        },
+        "gsm8k/98": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/108": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/118": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/128": {
+          "output_tokens_retokenized": 3647,
+          "sample_index": 0
+        },
+        "gsm8k/138": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/148": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "gsm8k/158": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/168": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "gsm8k/178": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "gsm8k/188": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/198": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/9": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/19": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/29": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "gsm8k/39": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/49": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/59": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/69": {
+          "output_tokens_retokenized": 2761,
+          "sample_index": 0
+        },
+        "gsm8k/79": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/89": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/99": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/109": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/119": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/129": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/139": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/149": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "gsm8k/159": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/169": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/179": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/189": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "gsm8k/199": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        }
+      }
+    },
+    "ifeval": {
+      "edited": {
+        "ifeval/1000": {
+          "output_tokens_retokenized": 2356,
+          "sample_index": 0
+        },
+        "ifeval/102": {
+          "output_tokens_retokenized": 2120,
+          "sample_index": 0
+        },
+        "ifeval/1072": {
+          "output_tokens_retokenized": 1501,
+          "sample_index": 0
+        },
+        "ifeval/1094": {
+          "output_tokens_retokenized": 2370,
+          "sample_index": 0
+        },
+        "ifeval/1127": {
+          "output_tokens_retokenized": 3018,
+          "sample_index": 0
+        },
+        "ifeval/1132": {
+          "output_tokens_retokenized": 2563,
+          "sample_index": 0
+        },
+        "ifeval/1153": {
+          "output_tokens_retokenized": 2683,
+          "sample_index": 0
+        },
+        "ifeval/1187": {
+          "output_tokens_retokenized": 3149,
+          "sample_index": 0
+        },
+        "ifeval/122": {
+          "output_tokens_retokenized": 2007,
+          "sample_index": 0
+        },
+        "ifeval/1242": {
+          "output_tokens_retokenized": 2492,
+          "sample_index": 0
+        },
+        "ifeval/1259": {
+          "output_tokens_retokenized": 2956,
+          "sample_index": 0
+        },
+        "ifeval/1281": {
+          "output_tokens_retokenized": 4531,
+          "sample_index": 0
+        },
+        "ifeval/1305": {
+          "output_tokens_retokenized": 4119,
+          "sample_index": 0
+        },
+        "ifeval/1332": {
+          "output_tokens_retokenized": 2155,
+          "sample_index": 0
+        },
+        "ifeval/1367": {
+          "output_tokens_retokenized": 2313,
+          "sample_index": 0
+        },
+        "ifeval/1381": {
+          "output_tokens_retokenized": 2002,
+          "sample_index": 0
+        },
+        "ifeval/1418": {
+          "output_tokens_retokenized": 4377,
+          "sample_index": 0
+        },
+        "ifeval/1466": {
+          "output_tokens_retokenized": 2473,
+          "sample_index": 0
+        },
+        "ifeval/1498": {
+          "output_tokens_retokenized": 4196,
+          "sample_index": 0
+        },
+        "ifeval/152": {
+          "output_tokens_retokenized": 2907,
+          "sample_index": 0
+        },
+        "ifeval/1001": {
+          "output_tokens_retokenized": 2836,
+          "sample_index": 0
+        },
+        "ifeval/1021": {
+          "output_tokens_retokenized": 4628,
+          "sample_index": 0
+        },
+        "ifeval/1075": {
+          "output_tokens_retokenized": 2142,
+          "sample_index": 0
+        },
+        "ifeval/1098": {
+          "output_tokens_retokenized": 2455,
+          "sample_index": 0
+        },
+        "ifeval/1128": {
+          "output_tokens_retokenized": 2954,
+          "sample_index": 0
+        },
+        "ifeval/1137": {
+          "output_tokens_retokenized": 2785,
+          "sample_index": 0
+        },
+        "ifeval/1154": {
+          "output_tokens_retokenized": 3961,
+          "sample_index": 0
+        },
+        "ifeval/1203": {
+          "output_tokens_retokenized": 7497,
+          "sample_index": 0
+        },
+        "ifeval/1220": {
+          "output_tokens_retokenized": 2676,
+          "sample_index": 0
+        },
+        "ifeval/1246": {
+          "output_tokens_retokenized": 1601,
+          "sample_index": 0
+        },
+        "ifeval/1262": {
+          "output_tokens_retokenized": 2205,
+          "sample_index": 0
+        },
+        "ifeval/1286": {
+          "output_tokens_retokenized": 2574,
+          "sample_index": 0
+        },
+        "ifeval/1307": {
+          "output_tokens_retokenized": 3697,
+          "sample_index": 0
+        },
+        "ifeval/1342": {
+          "output_tokens_retokenized": 2450,
+          "sample_index": 0
+        },
+        "ifeval/1372": {
+          "output_tokens_retokenized": 1947,
+          "sample_index": 0
+        },
+        "ifeval/1389": {
+          "output_tokens_retokenized": 3672,
+          "sample_index": 0
+        },
+        "ifeval/142": {
+          "output_tokens_retokenized": 5254,
+          "sample_index": 0
+        },
+        "ifeval/1476": {
+          "output_tokens_retokenized": 3073,
+          "sample_index": 0
+        },
+        "ifeval/1508": {
+          "output_tokens_retokenized": 8003,
+          "sample_index": 0
+        },
+        "ifeval/1531": {
+          "output_tokens_retokenized": 3308,
+          "sample_index": 0
+        },
+        "ifeval/1005": {
+          "output_tokens_retokenized": 2019,
+          "sample_index": 0
+        },
+        "ifeval/1040": {
+          "output_tokens_retokenized": 4083,
+          "sample_index": 0
+        },
+        "ifeval/1082": {
+          "output_tokens_retokenized": 2988,
+          "sample_index": 0
+        },
+        "ifeval/1107": {
+          "output_tokens_retokenized": 2576,
+          "sample_index": 0
+        },
+        "ifeval/1129": {
+          "output_tokens_retokenized": 2379,
+          "sample_index": 0
+        },
+        "ifeval/1139": {
+          "output_tokens_retokenized": 2407,
+          "sample_index": 0
+        },
+        "ifeval/1162": {
+          "output_tokens_retokenized": 3196,
+          "sample_index": 0
+        },
+        "ifeval/1216": {
+          "output_tokens_retokenized": 3951,
+          "sample_index": 0
+        },
+        "ifeval/1233": {
+          "output_tokens_retokenized": 8937,
+          "sample_index": 0
+        },
+        "ifeval/1248": {
+          "output_tokens_retokenized": 1910,
+          "sample_index": 0
+        },
+        "ifeval/1265": {
+          "output_tokens_retokenized": 4248,
+          "sample_index": 0
+        },
+        "ifeval/1287": {
+          "output_tokens_retokenized": 2243,
+          "sample_index": 0
+        },
+        "ifeval/1314": {
+          "output_tokens_retokenized": 3722,
+          "sample_index": 0
+        },
+        "ifeval/1348": {
+          "output_tokens_retokenized": 2289,
+          "sample_index": 0
+        },
+        "ifeval/1375": {
+          "output_tokens_retokenized": 3804,
+          "sample_index": 0
+        },
+        "ifeval/1392": {
+          "output_tokens_retokenized": 5610,
+          "sample_index": 0
+        },
+        "ifeval/143": {
+          "output_tokens_retokenized": 3231,
+          "sample_index": 0
+        },
+        "ifeval/1477": {
+          "output_tokens_retokenized": 2866,
+          "sample_index": 0
+        },
+        "ifeval/1512": {
+          "output_tokens_retokenized": 5073,
+          "sample_index": 0
+        },
+        "ifeval/1535": {
+          "output_tokens_retokenized": 2798,
+          "sample_index": 0
+        },
+        "ifeval/1012": {
+          "output_tokens_retokenized": 2482,
+          "sample_index": 0
+        },
+        "ifeval/1051": {
+          "output_tokens_retokenized": 2245,
+          "sample_index": 0
+        },
+        "ifeval/1087": {
+          "output_tokens_retokenized": 2825,
+          "sample_index": 0
+        },
+        "ifeval/1108": {
+          "output_tokens_retokenized": 2973,
+          "sample_index": 0
+        },
+        "ifeval/1130": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "ifeval/1147": {
+          "output_tokens_retokenized": 2599,
+          "sample_index": 0
+        },
+        "ifeval/1174": {
+          "output_tokens_retokenized": 7085,
+          "sample_index": 0
+        },
+        "ifeval/1217": {
+          "output_tokens_retokenized": 3459,
+          "sample_index": 0
+        },
+        "ifeval/1236": {
+          "output_tokens_retokenized": 2786,
+          "sample_index": 0
+        },
+        "ifeval/1251": {
+          "output_tokens_retokenized": 2183,
+          "sample_index": 0
+        },
+        "ifeval/1268": {
+          "output_tokens_retokenized": 2685,
+          "sample_index": 0
+        },
+        "ifeval/13": {
+          "output_tokens_retokenized": 3246,
+          "sample_index": 0
+        },
+        "ifeval/1322": {
+          "output_tokens_retokenized": 1391,
+          "sample_index": 0
+        },
+        "ifeval/136": {
+          "output_tokens_retokenized": 5227,
+          "sample_index": 0
+        },
+        "ifeval/1377": {
+          "output_tokens_retokenized": 1616,
+          "sample_index": 0
+        },
+        "ifeval/1393": {
+          "output_tokens_retokenized": 2286,
+          "sample_index": 0
+        },
+        "ifeval/1436": {
+          "output_tokens_retokenized": 3426,
+          "sample_index": 0
+        },
+        "ifeval/1480": {
+          "output_tokens_retokenized": 2542,
+          "sample_index": 0
+        },
+        "ifeval/1516": {
+          "output_tokens_retokenized": 7927,
+          "sample_index": 0
+        },
+        "ifeval/1537": {
+          "output_tokens_retokenized": 2664,
+          "sample_index": 0
+        },
+        "ifeval/1019": {
+          "output_tokens_retokenized": 2406,
+          "sample_index": 0
+        },
+        "ifeval/1069": {
+          "output_tokens_retokenized": 8046,
+          "sample_index": 0
+        },
+        "ifeval/1092": {
+          "output_tokens_retokenized": 1743,
+          "sample_index": 0
+        },
+        "ifeval/1122": {
+          "output_tokens_retokenized": 2638,
+          "sample_index": 0
+        },
+        "ifeval/1131": {
+          "output_tokens_retokenized": 2993,
+          "sample_index": 0
+        },
+        "ifeval/1148": {
+          "output_tokens_retokenized": 922,
+          "sample_index": 0
+        },
+        "ifeval/1180": {
+          "output_tokens_retokenized": 3679,
+          "sample_index": 0
+        },
+        "ifeval/1219": {
+          "output_tokens_retokenized": 8224,
+          "sample_index": 0
+        },
+        "ifeval/1237": {
+          "output_tokens_retokenized": 2414,
+          "sample_index": 0
+        },
+        "ifeval/1258": {
+          "output_tokens_retokenized": 2142,
+          "sample_index": 0
+        },
+        "ifeval/127": {
+          "output_tokens_retokenized": 2453,
+          "sample_index": 0
+        },
+        "ifeval/1300": {
+          "output_tokens_retokenized": 8225,
+          "sample_index": 0
+        },
+        "ifeval/1325": {
+          "output_tokens_retokenized": 3331,
+          "sample_index": 0
+        },
+        "ifeval/1361": {
+          "output_tokens_retokenized": 2253,
+          "sample_index": 0
+        },
+        "ifeval/1379": {
+          "output_tokens_retokenized": 2584,
+          "sample_index": 0
+        },
+        "ifeval/1402": {
+          "output_tokens_retokenized": 32763,
+          "sample_index": 0
+        },
+        "ifeval/1446": {
+          "output_tokens_retokenized": 3185,
+          "sample_index": 0
+        },
+        "ifeval/1481": {
+          "output_tokens_retokenized": 2708,
+          "sample_index": 0
+        },
+        "ifeval/1518": {
+          "output_tokens_retokenized": 2018,
+          "sample_index": 0
+        },
+        "ifeval/1546": {
+          "output_tokens_retokenized": 2376,
+          "sample_index": 0
+        }
+      },
+      "base": {
+        "ifeval/1000": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/102": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1072": {
+          "output_tokens_retokenized": 1856,
+          "sample_index": 0
+        },
+        "ifeval/1094": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1127": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1132": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "ifeval/1153": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1187": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/122": {
+          "output_tokens_retokenized": 1968,
+          "sample_index": 0
+        },
+        "ifeval/1242": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1259": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1281": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "ifeval/1305": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1332": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "ifeval/1367": {
+          "output_tokens_retokenized": 2480,
+          "sample_index": 0
+        },
+        "ifeval/1381": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1418": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1466": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1498": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/152": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1001": {
+          "output_tokens_retokenized": 32769,
+          "sample_index": 0
+        },
+        "ifeval/1021": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1075": {
+          "output_tokens_retokenized": 3289,
+          "sample_index": 0
+        },
+        "ifeval/1098": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1128": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1137": {
+          "output_tokens_retokenized": 32765,
+          "sample_index": 0
+        },
+        "ifeval/1154": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "ifeval/1203": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1220": {
+          "output_tokens_retokenized": 2482,
+          "sample_index": 0
+        },
+        "ifeval/1246": {
+          "output_tokens_retokenized": 3343,
+          "sample_index": 0
+        },
+        "ifeval/1262": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1286": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1307": {
+          "output_tokens_retokenized": 3466,
+          "sample_index": 0
+        },
+        "ifeval/1342": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1372": {
+          "output_tokens_retokenized": 2506,
+          "sample_index": 0
+        },
+        "ifeval/1389": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/142": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1476": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1508": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1531": {
+          "output_tokens_retokenized": 2208,
+          "sample_index": 0
+        },
+        "ifeval/1005": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "ifeval/1040": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1082": {
+          "output_tokens_retokenized": 3173,
+          "sample_index": 0
+        },
+        "ifeval/1107": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1129": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1139": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1162": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1216": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1233": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1248": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1265": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1287": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1314": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1348": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1375": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1392": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/143": {
+          "output_tokens_retokenized": 3550,
+          "sample_index": 0
+        },
+        "ifeval/1477": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1512": {
+          "output_tokens_retokenized": 3650,
+          "sample_index": 0
+        },
+        "ifeval/1535": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1012": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1051": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1087": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "ifeval/1108": {
+          "output_tokens_retokenized": 32767,
+          "sample_index": 0
+        },
+        "ifeval/1130": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "ifeval/1147": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1174": {
+          "output_tokens_retokenized": 32769,
+          "sample_index": 0
+        },
+        "ifeval/1217": {
+          "output_tokens_retokenized": 3661,
+          "sample_index": 0
+        },
+        "ifeval/1236": {
+          "output_tokens_retokenized": 2968,
+          "sample_index": 0
+        },
+        "ifeval/1251": {
+          "output_tokens_retokenized": 1772,
+          "sample_index": 0
+        },
+        "ifeval/1268": {
+          "output_tokens_retokenized": 2649,
+          "sample_index": 0
+        },
+        "ifeval/13": {
+          "output_tokens_retokenized": 2501,
+          "sample_index": 0
+        },
+        "ifeval/1322": {
+          "output_tokens_retokenized": 2262,
+          "sample_index": 0
+        },
+        "ifeval/136": {
+          "output_tokens_retokenized": 32744,
+          "sample_index": 0
+        },
+        "ifeval/1377": {
+          "output_tokens_retokenized": 2863,
+          "sample_index": 0
+        },
+        "ifeval/1393": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1436": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1480": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1516": {
+          "output_tokens_retokenized": 32763,
+          "sample_index": 0
+        },
+        "ifeval/1537": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1019": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1069": {
+          "output_tokens_retokenized": 4676,
+          "sample_index": 0
+        },
+        "ifeval/1092": {
+          "output_tokens_retokenized": 2183,
+          "sample_index": 0
+        },
+        "ifeval/1122": {
+          "output_tokens_retokenized": 32765,
+          "sample_index": 0
+        },
+        "ifeval/1131": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1148": {
+          "output_tokens_retokenized": 32769,
+          "sample_index": 0
+        },
+        "ifeval/1180": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1219": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1237": {
+          "output_tokens_retokenized": 2535,
+          "sample_index": 0
+        },
+        "ifeval/1258": {
+          "output_tokens_retokenized": 2511,
+          "sample_index": 0
+        },
+        "ifeval/127": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1300": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1325": {
+          "output_tokens_retokenized": 3017,
+          "sample_index": 0
+        },
+        "ifeval/1361": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1379": {
+          "output_tokens_retokenized": 32766,
+          "sample_index": 0
+        },
+        "ifeval/1402": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1446": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1481": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        },
+        "ifeval/1518": {
+          "output_tokens_retokenized": 2184,
+          "sample_index": 0
+        },
+        "ifeval/1546": {
+          "output_tokens_retokenized": 32768,
+          "sample_index": 0
+        }
+      }
+    }
+  }
+}

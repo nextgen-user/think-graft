@@ -1,0 +1,1664 @@
+{
+  "summary": {
+    "capped_runs": 165,
+    "protocol_correct": 0,
+    "full_response_last_box_correct": 0,
+    "any_correct_box_anywhere": 0,
+    "protocol_missing_box": 165,
+    "full_response_missing_box": 164,
+    "examples": []
+  },
+  "rows": [
+    {
+      "id": "test/intermediate_algebra/1994.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8820
+    },
+    {
+      "id": "test/prealgebra/1622.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 1,
+      "close_tags": 11486
+    },
+    {
+      "id": "test/prealgebra/1139.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11242
+    },
+    {
+      "id": "test/intermediate_algebra/1197.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10809
+    },
+    {
+      "id": "test/geometry/434.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4318
+    },
+    {
+      "id": "test/intermediate_algebra/1000.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10917
+    },
+    {
+      "id": "test/intermediate_algebra/607.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8196
+    },
+    {
+      "id": "test/algebra/1837.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11723
+    },
+    {
+      "id": "test/intermediate_algebra/1388.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 2198
+    },
+    {
+      "id": "test/counting_and_probability/525.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11767
+    },
+    {
+      "id": "test/prealgebra/1840.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 13398
+    },
+    {
+      "id": "test/counting_and_probability/134.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10655
+    },
+    {
+      "id": "test/geometry/627.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4407
+    },
+    {
+      "id": "test/intermediate_algebra/1454.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 5606
+    },
+    {
+      "id": "test/precalculus/285.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8035
+    },
+    {
+      "id": "test/intermediate_algebra/956.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10949
+    },
+    {
+      "id": "test/intermediate_algebra/1247.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 1288
+    },
+    {
+      "id": "test/intermediate_algebra/279.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10398
+    },
+    {
+      "id": "test/prealgebra/1233.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 13032
+    },
+    {
+      "id": "test/precalculus/1313.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 6627
+    },
+    {
+      "id": "test/intermediate_algebra/207.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11055
+    },
+    {
+      "id": "test/number_theory/516.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 13274
+    },
+    {
+      "id": "test/counting_and_probability/1114.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10838
+    },
+    {
+      "id": "test/intermediate_algebra/623.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11177
+    },
+    {
+      "id": "test/intermediate_algebra/47.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7506
+    },
+    {
+      "id": "test/intermediate_algebra/1849.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7290
+    },
+    {
+      "id": "test/algebra/2700.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12974
+    },
+    {
+      "id": "test/algebra/892.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 13032
+    },
+    {
+      "id": "test/prealgebra/1646.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8051
+    },
+    {
+      "id": "test/intermediate_algebra/662.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4765
+    },
+    {
+      "id": "test/geometry/183.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8970
+    },
+    {
+      "id": "test/intermediate_algebra/582.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11412
+    },
+    {
+      "id": "test/intermediate_algebra/558.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 1
+    },
+    {
+      "id": "test/intermediate_algebra/362.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 2457
+    },
+    {
+      "id": "test/intermediate_algebra/894.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8489
+    },
+    {
+      "id": "test/precalculus/44.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 2339
+    },
+    {
+      "id": "test/intermediate_algebra/345.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9165
+    },
+    {
+      "id": "test/intermediate_algebra/232.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8960
+    },
+    {
+      "id": "test/prealgebra/1733.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9838
+    },
+    {
+      "id": "test/intermediate_algebra/128.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 0
+    },
+    {
+      "id": "test/algebra/661.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": "\\infty",
+      "any_correct_box": false,
+      "box_count": 1,
+      "close_tags": 13744
+    },
+    {
+      "id": "test/geometry/1140.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8951
+    },
+    {
+      "id": "test/intermediate_algebra/2022.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 3650
+    },
+    {
+      "id": "test/counting_and_probability/430.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 5
+    },
+    {
+      "id": "test/counting_and_probability/159.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11583
+    },
+    {
+      "id": "test/intermediate_algebra/966.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9
+    },
+    {
+      "id": "test/number_theory/931.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 3
+    },
+    {
+      "id": "test/intermediate_algebra/964.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 6388
+    },
+    {
+      "id": "test/precalculus/986.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4370
+    },
+    {
+      "id": "test/geometry/172.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 13280
+    },
+    {
+      "id": "test/counting_and_probability/230.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11054
+    },
+    {
+      "id": "test/geometry/880.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10221
+    },
+    {
+      "id": "test/counting_and_probability/803.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8431
+    },
+    {
+      "id": "test/precalculus/117.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11118
+    },
+    {
+      "id": "test/number_theory/521.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 1,
+      "close_tags": 14104
+    },
+    {
+      "id": "test/prealgebra/1655.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8817
+    },
+    {
+      "id": "test/precalculus/697.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 245
+    },
+    {
+      "id": "test/prealgebra/1003.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8422
+    },
+    {
+      "id": "test/counting_and_probability/181.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7513
+    },
+    {
+      "id": "test/algebra/297.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 5729
+    },
+    {
+      "id": "test/algebra/686.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4301
+    },
+    {
+      "id": "test/geometry/65.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10474
+    },
+    {
+      "id": "test/geometry/702.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11772
+    },
+    {
+      "id": "test/intermediate_algebra/2196.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12809
+    },
+    {
+      "id": "test/number_theory/838.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4564
+    },
+    {
+      "id": "test/number_theory/149.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7614
+    },
+    {
+      "id": "test/intermediate_algebra/1510.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4737
+    },
+    {
+      "id": "test/precalculus/263.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10286
+    },
+    {
+      "id": "test/prealgebra/378.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 6287
+    },
+    {
+      "id": "test/intermediate_algebra/102.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4
+    },
+    {
+      "id": "test/counting_and_probability/765.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9258
+    },
+    {
+      "id": "test/number_theory/417.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12822
+    },
+    {
+      "id": "test/counting_and_probability/282.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7921
+    },
+    {
+      "id": "test/geometry/547.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11331
+    },
+    {
+      "id": "test/precalculus/190.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12289
+    },
+    {
+      "id": "test/precalculus/1056.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8475
+    },
+    {
+      "id": "test/algebra/1578.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7973
+    },
+    {
+      "id": "test/intermediate_algebra/1354.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10281
+    },
+    {
+      "id": "test/precalculus/989.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7857
+    },
+    {
+      "id": "test/geometry/229.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 13275
+    },
+    {
+      "id": "test/prealgebra/874.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10396
+    },
+    {
+      "id": "test/prealgebra/1251.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 1,
+      "close_tags": 4091
+    },
+    {
+      "id": "test/intermediate_algebra/1210.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11236
+    },
+    {
+      "id": "test/number_theory/1065.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9015
+    },
+    {
+      "id": "test/counting_and_probability/1009.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11293
+    },
+    {
+      "id": "test/geometry/826.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8374
+    },
+    {
+      "id": "test/geometry/226.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12809
+    },
+    {
+      "id": "test/number_theory/634.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10501
+    },
+    {
+      "id": "test/number_theory/533.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11883
+    },
+    {
+      "id": "test/prealgebra/993.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 1,
+      "close_tags": 9489
+    },
+    {
+      "id": "test/geometry/686.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12436
+    },
+    {
+      "id": "test/prealgebra/1512.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12834
+    },
+    {
+      "id": "test/number_theory/1287.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10063
+    },
+    {
+      "id": "test/algebra/1184.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 6
+    },
+    {
+      "id": "test/precalculus/768.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10580
+    },
+    {
+      "id": "test/intermediate_algebra/1411.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 659
+    },
+    {
+      "id": "test/intermediate_algebra/960.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 5337
+    },
+    {
+      "id": "test/number_theory/631.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 6
+    },
+    {
+      "id": "test/precalculus/1172.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10641
+    },
+    {
+      "id": "test/intermediate_algebra/90.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 1
+    },
+    {
+      "id": "test/number_theory/488.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12174
+    },
+    {
+      "id": "test/precalculus/1201.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9257
+    },
+    {
+      "id": "test/intermediate_algebra/754.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9466
+    },
+    {
+      "id": "test/counting_and_probability/339.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7389
+    },
+    {
+      "id": "test/prealgebra/465.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 1,
+      "close_tags": 4
+    },
+    {
+      "id": "test/geometry/965.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 118
+    },
+    {
+      "id": "test/intermediate_algebra/1544.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10627
+    },
+    {
+      "id": "test/geometry/711.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8101
+    },
+    {
+      "id": "test/number_theory/203.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7778
+    },
+    {
+      "id": "test/intermediate_algebra/2152.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 3268
+    },
+    {
+      "id": "test/geometry/465.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11650
+    },
+    {
+      "id": "test/precalculus/742.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10207
+    },
+    {
+      "id": "test/intermediate_algebra/117.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10671
+    },
+    {
+      "id": "test/algebra/2176.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9793
+    },
+    {
+      "id": "test/intermediate_algebra/776.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11804
+    },
+    {
+      "id": "test/number_theory/483.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 0
+    },
+    {
+      "id": "test/number_theory/368.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 5327
+    },
+    {
+      "id": "test/precalculus/801.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7078
+    },
+    {
+      "id": "test/counting_and_probability/238.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12653
+    },
+    {
+      "id": "test/precalculus/826.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 6800
+    },
+    {
+      "id": "test/precalculus/1281.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 6227
+    },
+    {
+      "id": "test/counting_and_probability/1014.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12698
+    },
+    {
+      "id": "test/intermediate_algebra/1407.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8270
+    },
+    {
+      "id": "test/intermediate_algebra/1405.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9470
+    },
+    {
+      "id": "test/number_theory/820.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9925
+    },
+    {
+      "id": "test/geometry/846.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 5188
+    },
+    {
+      "id": "test/number_theory/1185.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11045
+    },
+    {
+      "id": "test/intermediate_algebra/1992.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10398
+    },
+    {
+      "id": "test/counting_and_probability/188.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9303
+    },
+    {
+      "id": "test/intermediate_algebra/1111.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11097
+    },
+    {
+      "id": "test/algebra/2277.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9630
+    },
+    {
+      "id": "test/precalculus/902.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11474
+    },
+    {
+      "id": "test/prealgebra/631.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4
+    },
+    {
+      "id": "test/geometry/817.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12838
+    },
+    {
+      "id": "test/intermediate_algebra/1806.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4743
+    },
+    {
+      "id": "test/precalculus/398.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8192
+    },
+    {
+      "id": "test/intermediate_algebra/1797.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8808
+    },
+    {
+      "id": "test/intermediate_algebra/2146.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10350
+    },
+    {
+      "id": "test/precalculus/1202.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10574
+    },
+    {
+      "id": "test/intermediate_algebra/2015.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 2417
+    },
+    {
+      "id": "test/precalculus/1133.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9
+    },
+    {
+      "id": "test/intermediate_algebra/121.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4280
+    },
+    {
+      "id": "test/intermediate_algebra/1462.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 1
+    },
+    {
+      "id": "test/counting_and_probability/10.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11294
+    },
+    {
+      "id": "test/counting_and_probability/731.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11249
+    },
+    {
+      "id": "test/intermediate_algebra/1779.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9882
+    },
+    {
+      "id": "test/algebra/2476.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11943
+    },
+    {
+      "id": "test/precalculus/323.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 1,
+      "close_tags": 9753
+    },
+    {
+      "id": "test/prealgebra/805.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 13552
+    },
+    {
+      "id": "test/prealgebra/914.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 7727
+    },
+    {
+      "id": "test/precalculus/703.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4651
+    },
+    {
+      "id": "test/intermediate_algebra/158.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 3741
+    },
+    {
+      "id": "test/prealgebra/1930.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11079
+    },
+    {
+      "id": "test/counting_and_probability/1003.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 87
+    },
+    {
+      "id": "test/intermediate_algebra/1279.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 12522
+    },
+    {
+      "id": "test/intermediate_algebra/1467.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11637
+    },
+    {
+      "id": "test/number_theory/1090.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 11929
+    },
+    {
+      "id": "test/precalculus/1082.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 9781
+    },
+    {
+      "id": "test/intermediate_algebra/101.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4310
+    },
+    {
+      "id": "test/counting_and_probability/199.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8530
+    },
+    {
+      "id": "test/intermediate_algebra/1365.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10297
+    },
+    {
+      "id": "test/intermediate_algebra/1350.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8631
+    },
+    {
+      "id": "test/intermediate_algebra/1930.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 8124
+    },
+    {
+      "id": "test/geometry/561.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 10973
+    },
+    {
+      "id": "test/intermediate_algebra/1508.json",
+      "protocol_correct": false,
+      "protocol_answer": null,
+      "full_response_last_box_correct": false,
+      "full_response_last_box": null,
+      "any_correct_box": false,
+      "box_count": 0,
+      "close_tags": 4503
+    }
+  ],
+  "note": "Alternative extraction diagnostics only. Official reference-compatible scores unchanged. Any correct box anywhere can reward abandoned guesses and is not final-answer accuracy."
+}

@@ -1,0 +1,30 @@
+{
+  "math500": {
+    "repo": "HuggingFaceH4/MATH-500",
+    "revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+    "file": "test.jsonl",
+    "raw_sha256": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+    "rows": 500
+  },
+  "math_train": {
+    "repo": "DigitalLearningGmbH/MATH-lighteval",
+    "revision": "0530c78699ea5e8eb5530600900e1f328b48acad",
+    "file": "data/train-00000-of-00001.parquet",
+    "raw_sha256": "eca6e667f4305dd5e5ba09b4fd55e7f3174a0fbe361cdfd4c44758b593a76933",
+    "rows": 7500
+  },
+  "gsm8k": {
+    "repo": "openai/gsm8k",
+    "revision": "740312add88f781978c0658806c59bc2815b9866",
+    "file": "main/test-00000-of-00001.parquet",
+    "raw_sha256": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59",
+    "rows": 1319
+  },
+  "ifeval": {
+    "repo": "google/IFEval",
+    "revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+    "file": "ifeval_input_data.jsonl",
+    "raw_sha256": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2",
+    "rows": 541
+  }
+}

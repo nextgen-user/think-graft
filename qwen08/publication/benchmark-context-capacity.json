@@ -1,0 +1,11 @@
+{
+  "max_user_tokens": {
+    "math500": 847,
+    "gsm8k": 204,
+    "ifeval": 364
+  },
+  "chat_template_overhead_allowance": 100,
+  "context_per_slot": 34816,
+  "output_budget": 32768,
+  "status": "passed"
+}
