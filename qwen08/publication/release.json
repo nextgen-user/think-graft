@@ -1,0 +1,32 @@
+{
+  "post": "https://probe-graft.vercel.app/2/",
+  "previous_post": "https://probe-graft.vercel.app/",
+  "repository": "https://github.com/nextgen-user/think-graft",
+  "model": "https://huggingface.co/vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF",
+  "article_commit": "57ec534ca746af4f9ab2670badd05ae1ddb8b016",
+  "deployment_status": "READY",
+  "live_browser_checks": [
+    {
+      "view": "desktop",
+      "status": 200,
+      "horizontal_overflow": false,
+      "math_elements": 5,
+      "errors": []
+    },
+    {
+      "view": "mobile",
+      "status": 200,
+      "horizontal_overflow": false,
+      "math_elements": 5,
+      "errors": []
+    },
+    {
+      "view": "dark",
+      "status": 200,
+      "horizontal_overflow": false,
+      "math_elements": 5,
+      "errors": []
+    }
+  ],
+  "verification": "Production URLs, model download and repository returned HTTP 200; replay, math rendering, light/dark and phone layout checked. GSM8K still running; no benchmark restarted."
+}
