@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Reasoning loops, three output rows — Probe graft, post 2</title>
-<meta name="description" content="An output-head-only edit reaches 55.2% on all 500 MATH-500 problems. A small linear probe, a full benchmark, and a failure that the small tests hid.">
+<title>Does weight-space programming need to touch the hidden layers?</title>
+<meta name="description" content="A follow-up to the Astra and linear-program experiments: edit three output rows in Qwen, test all 500 MATH-500 questions, and inspect what still breaks.">
 <link rel="canonical" href="https://probe-graft.vercel.app/2/">
-<meta property="og:title" content="Reasoning loops, three output rows">
-<meta property="og:description" content="A simple output-head edit, 500 math problems, recorded reasoning and reproducible artifacts. Includes the failure cases.">
+<meta property="og:title" content="Does weight-space programming need to touch the hidden layers?">
+<meta property="og:description" content="Three output rows. 55.2% on MATH-500. A simpler place to intervene—and a failure that ending thinking does not fix.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://probe-graft.vercel.app/2/preview.png">
+<meta property="og:image" content="https://probe-graft.vercel.app/2/preview.png?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/2/style.css">
@@ -22,8 +22,8 @@
 <nav aria-label="Posts"><a class="brand" href="/">Probe graft</a><span>Post 02</span><a href="/">Read post 01 ↗</a></nav>
 <header>
 <p class="eyebrow">An output-head experiment · 17 November 2026</p>
-<h1>Reasoning loops,<br>three output rows.</h1>
-<p class="lede">I wanted to reduce reasoning loops without changing the transformer’s internal layers. A small classifier built into three output rows reached 55.2% on MATH-500. The full run also exposed a failure that the small tests had missed.</p>
+<h1>Does weight-space programming need to touch the hidden layers?</h1>
+<p class="lede">I tried leaving Qwen’s internal layers alone and editing only three rows that score its next token. The model reached 55.2% on MATH-500. Then I looked at the runs that still would not stop.</p>
 <div class="byline"><span>Vaibhav</span><a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08">Code &amp; raw outputs</a><a href="https://huggingface.co/vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF">Experimental GGUF</a></div>
 </header>
 
@@ -32,12 +32,15 @@
 <div><span class="metric">3</span><span class="metric-label">output rows changed</span></div>
 <div><span class="metric">0</span><span class="metric-label">transformer tensors changed</span></div>
 </section>
-<p class="opening">The useful simplification is <em>where</em> to edit. A reasoning model already has a token for ending its scratchpad: <code>&lt;/think&gt;</code>. Instead of searching for internal layers to change, I fit a small classifier to its final hidden state and build that classifier into a few output-layer weights. Inference then uses an ordinary weights file.</p>
-<aside class="finding"><strong>The limit matters.</strong> This prototype is not a robust loop fix: 165 of 500 runs reached the token limit. In 163, thinking had already closed and the output kept going. Repeated closing tags are a substantial failure, not removed from the results. <a href="#limits">See the audit.</a></aside>
+<p class="opening">In <a href="https://rikiyat.github.io/blog/weight-space-programming/">Sparks of Weight-Space Programming</a>, Astra improved Qwen3.5-0.8B by editing two internal feed-forward layers. <a href="https://nathan.rs/posts/weight-space-lp/">Nathan’s follow-up</a> showed how a linear program could find a related edit. My experiment asks a narrower question: how much of the result can we recover at the model’s final output layer?</p>
+<p>A reasoning model already has a token for ending its scratchpad: <code>&lt;/think&gt;</code>. I fitted small linear classifiers to the model’s final hidden state, then folded their weights into the rows for that token and two spellings of <code>Wait</code>. This changes when it stops or says “Wait” while preserving every original transformer tensor. The edited weights run without a separate classifier at inference time.</p>
+<p>On the full 500-question benchmark, this candidate scored <strong>55.2%</strong>, alongside <strong>52.2%</strong> for the selected published Astra-edited reference run. The runs use different engines, so this is evidence worth investigating—not proof of a better method. The more surprising result was where the remaining loops went.</p>
+<div class="article-links"><a href="#results">Compare all 500 questions ↓</a><a href="#replay">Replay successes and failures ↓</a></div>
+<aside class="finding"><strong>Ending thinking did not always end the loop.</strong> 165 of 500 runs reached the token limit. In 163, thinking had already closed and the output kept going. Repeated closing tags are a substantial failure, not removed from the results. <a href="#limits">See the audit.</a></aside>
 
 <section id="results">
 <div class="section-label"><span>01</span> The complete math result</div>
-<h2>A different intervention, comparable observed accuracy.</h2>
+<h2>Three output rows. 500 math questions.</h2>
 <p>All rows below cover the same 500 MATH-500 questions. Each uses one selected answer per question. The references come from external runs; this is a benchmark comparison, not a controlled same-engine experiment.</p>
 <div class="table-scroll"><table class="results"><caption>MATH-500 · thinking enabled · 32,768-token limit</caption><thead><tr><th scope="col">Model</th><th scope="col">Correct</th><th scope="col">Accuracy</th><th scope="col">Direct weight change</th></tr></thead><tbody>
 <tr><th scope="row">Unedited Qwen3.5-0.8B<sup>a</sup></th><td>35 / 500</td><td>7.0%</td><td>None</td></tr>
@@ -96,7 +99,7 @@
 <h2>Same problem. A different place to intervene.</h2>
 <p><a href="https://rikiyat.github.io/blog/weight-space-programming/">RikiyaT’s Astra experiment</a> removes a loop-associated direction from two internal feed-forward matrices. <a href="https://nathan.rs/posts/weight-space-lp/">Nathan’s LP follow-up</a> finds a related sparse internal edit. Here, the transformer computation is kept intact and the final token scores are edited directly.</p>
 <p>Both families use activations and can be state-dependent. “His is constant; ours is conditional” would be too broad: Nathan measured a near-constant effect for a particular LP edit. An ordinary checkpoint with no runtime hook is also a feature of his method, not unique to this one.</p>
-<p>The practical advantage I’m testing is a more mechanical recipe: record final states, fit a classifier, write a few output rows. Comparable accuracy from that recipe is interesting even without a higher headline score.</p>
+<p>The practical advantage I’m testing is a more mechanical recipe: record final states, fit a classifier, write a few known output rows. There is no search over which internal layers to alter. The similar observed scores make that recipe worth testing further; fewer edited weights alone do not guarantee fewer side effects.</p>
 <details><summary>Earlier 4B, DeepSeek and agent observations</summary><div class="detail-body"><p>The earlier single-row method was tested separately on Qwen3.5-4B and DeepSeek V4.1 Flash. On eight paired 4B math questions, both models got 8/8 while total tokens fell 54%. DeepSeek’s six shared solved questions used about 40% fewer total tokens. Agent examples showed selective thinking around planning, errors and new information.</p><p>Those are small exploratory studies with configuration caveats, not proof of universal transfer. Our local DeepSeek internal-layer interventions failed to shorten reasoning, but they were not a controlled reproduction of RikiyaT’s exact method. I cannot conclude his method fails on DeepSeek.</p><p>The algebra does not depend on a particular model size. Useful signals, calibration and quality do. Each model needs its own fit. <a href="/">Read the original experiments and limitations.</a></p></div></details>
 <p class="small">Related work already includes <a href="https://arxiv.org/abs/2504.05419">probe-guided stopping</a>, <a href="https://arxiv.org/abs/2506.08390">activation directions controlling reasoning length</a>, and <a href="https://arxiv.org/abs/2506.08343">NoWait token suppression</a>. The contribution here is an output-weight implementation and its measurements, not the invention of early stopping.</p>
 </section>

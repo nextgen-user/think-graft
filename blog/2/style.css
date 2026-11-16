@@ -5,3 +5,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .mobile-diagram{display:none}@media(max-width:560px){.mechanism{overflow:visible}.mechanism .desktop-diagram{display:none}.mechanism .mobile-diagram{display:block;min-width:0}.results tr>*:nth-child(4){display:none}.trace-panel pre{height:190px}}
+
+/* Keep the question readable without overwhelming the opening. */
+main>header h1{font-size:clamp(40px,6vw,64px);line-height:1.08;text-wrap:balance}.article-links{display:flex;flex-wrap:wrap;gap:10px 24px;margin:22px 0;font:600 13px/1.5 system-ui,sans-serif}@media(max-width:560px){main>header h1{font-size:43px}.article-links{flex-direction:column}}

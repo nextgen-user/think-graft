@@ -13,7 +13,7 @@ async def main():
             page.on('pageerror',lambda error:errors.append(str(error)))
             response=await page.goto(BASE+'/2/',wait_until='networkidle');assert response.status==200
             await page.locator('#play').wait_for(state='visible');await page.wait_for_function('document.querySelector("#play").disabled === false')
-            assert await page.locator('h1').inner_text()=='Reasoning loops,\nthree output rows.'
+            assert await page.locator('h1').inner_text()=='Does weight-space programming need to touch the hidden layers?'
             assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
             await page.locator('#play').click();await page.wait_for_timeout(500)
             assert await page.locator('#ours-text').inner_text()
