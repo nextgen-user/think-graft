@@ -2,7 +2,7 @@
 import asyncio,json,os,pathlib
 from playwright.async_api import async_playwright
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=pathlib.Path('/tmp/probe-graft-qa');OUT.mkdir(exist_ok=True)
-BASE='http://127.0.0.1:8765'
+BASE=os.environ.get('POST_BASE_URL','http://127.0.0.1:8765')
 async def main():
     checks=[]
     async with async_playwright() as p:

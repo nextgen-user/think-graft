@@ -11,11 +11,11 @@
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://probe-graft.vercel.app/2/preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./style.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/2/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-<script defer src="./post.js"></script>
+<script defer src="/2/post.js"></script>
 </head>
 <body>
 <main>
@@ -67,7 +67,7 @@
 <p class="caption" id="replay-note">Reference token positions are approximate: the published text was retokenized. Playback speed is a reading control, not measured inference throughput.</p>
 <div id="replay-error" role="alert" hidden></div>
 </div>
-<noscript><p>The replay needs JavaScript. <a href="data/traces.json">Download the trace index</a> or <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/results">read the raw outputs</a>.</p></noscript>
+<noscript><p>The replay needs JavaScript. <a href="/2/data/traces.json">Download the trace index</a> or <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/results">read the raw outputs</a>.</p></noscript>
 </section>
 
 <section id="method">
@@ -86,7 +86,7 @@
 <h2>A concrete example: 25 choose 2.</h2>
 <p>One fitting problem asks for <span class="inline-math" data-tex="\binom{25}{2}">C(25, 2)</span>. The base trace calculates <span class="inline-math" data-tex="25\times24/2 = 300">25 × 24 / 2 = 300</span>, states “Final Answer: 300,” and then keeps going to the 16,384-token fit limit.</p>
 <blockquote>Calculation: 25 × 12 = 300.<br>Final Answer: 300.<br><span>…followed by further checking.</span></blockquote>
-<p class="caption">A fitting example, <code>train/2006</code>, not a held-out benchmark question. <a href="data/fitting-example.json">Recorded excerpt</a>.</p>
+<p class="caption">A fitting example, <code>train/2006</code>, not a held-out benchmark question. <a href="/2/data/fitting-example.json">Recorded excerpt</a>.</p>
 <ol class="steps"><li><strong>Record the base model.</strong> Save its final hidden states while it reads its own reasoning traces.</li><li><strong>Label useful distinctions.</strong> Mark paragraph boundaries after an answer appears, and repeated-line regions; use other reasoning states as negatives.</li><li><strong>Fit the directions.</strong> Shrinkage linear discriminant analysis finds directions separating those groups. It is a linear-algebra fit with labels, not gradient descent or base-model retraining.</li><li><strong>Calibrate, then freeze.</strong> Fit on 80 MATH-training questions, select strengths on 16 separate training questions, and keep the chosen weights fixed throughout the benchmark.</li></ol>
 <p>The output location is easy to specify: known token rows, no search over internal layers. The data work is not trivial. Collecting traces can take hours; the matrix solve is the quick part. An answer appearing in text is also an imperfect label—it does not prove the model has finished checking it.</p>
 </section>
@@ -107,7 +107,7 @@
 <p>The largest failure became clear only after the full run. The edited model closed thinking in 163 of the 165 capped cases, then continued in the answer. Across 407 responses it emitted <strong>1,348,952 extra closing tags</strong>, around 17% of all generated tokens. The model has no hard phase gate; its stop boost can remain active after the first close.</p>
 <p>The grader does not automatically reject capped runs. It extracts the last boxed answer after the last close, or from the full response if thinking never closed. An audit found <strong>no correct boxed answer anywhere in the 165 capped responses</strong>. Unboxed candidates may still go uncredited under this protocol.</p>
 <p>A cheap 8-gram detector, applied to saved outputs, flagged all 165 capped runs and 206 of 335 completed runs. That is alert coverage, not independently annotated precision/recall. It does not establish that forcing a stop at the alert would produce the right answer.</p>
-<details><summary>Completed checks, open controls, and selection caveats</summary><div class="detail-body"><ul><li><strong>Done:</strong> complete MATH-500; separate fitting/development IDs; frozen weights; exact tensor comparison; sampler checks; capped-answer audit; a prefix-only repetition diagnostic; published raw results.</li><li><strong>Still missing:</strong> tuned penalty/sampling controls, avg@8 or larger repeated draws, independently labeled detector precision/recall, and systematic batch-invariance checks.</li><li>Presence penalty 1.5 is enabled. That is one setting, not a calibrated penalty sweep. A fixed seed does not remove serving noise.</li><li>The development set was reused for model selection. A fresh 16-question check scored 8/16 for this candidate versus 9/16 for the previous graft. This negative result is retained.</li><li>The earlier p = 0.0078 referred to token reductions on eight exploratory Qwen-4B pairs, not an accuracy improvement or a test that excludes sampling and serving noise.</li><li>Qwen’s tied embedding/head requires a new output matrix: roughly 0.51 GB extra. There is no extra transformer pass, but it is not zero memory overhead.</li><li>The reported p = 0.0078 from post 1 concerned token lengths on eight exploratory 4B pairs. It does not establish an accuracy gain here.</li><li>The current three-row model can change non-stop token choices. It must not be described as the old “only one logit changes” model.</li></ul><p><a href="data/study.json">Analysis snapshot</a> · <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/publication">Audits and provenance</a></p></div></details>
+<details><summary>Completed checks, open controls, and selection caveats</summary><div class="detail-body"><ul><li><strong>Done:</strong> complete MATH-500; separate fitting/development IDs; frozen weights; exact tensor comparison; sampler checks; capped-answer audit; a prefix-only repetition diagnostic; published raw results.</li><li><strong>Still missing:</strong> tuned penalty/sampling controls, avg@8 or larger repeated draws, independently labeled detector precision/recall, and systematic batch-invariance checks.</li><li>Presence penalty 1.5 is enabled. That is one setting, not a calibrated penalty sweep. A fixed seed does not remove serving noise.</li><li>The development set was reused for model selection. A fresh 16-question check scored 8/16 for this candidate versus 9/16 for the previous graft. This negative result is retained.</li><li>The earlier p = 0.0078 referred to token reductions on eight exploratory Qwen-4B pairs, not an accuracy improvement or a test that excludes sampling and serving noise.</li><li>Qwen’s tied embedding/head requires a new output matrix: roughly 0.51 GB extra. There is no extra transformer pass, but it is not zero memory overhead.</li><li>The current three-row model can change non-stop token choices. It must not be described as the old “only one logit changes” model.</li></ul><p><a href="/2/data/study.json">Analysis snapshot</a> · <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/publication">Audits and provenance</a></p></div></details>
 </section>
 
 <section id="reproduce">

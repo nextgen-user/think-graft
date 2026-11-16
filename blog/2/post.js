@@ -24,7 +24,7 @@ async function load(index){
   pause();const request=++state.request;state.trace=null;state.position=0;$('play').disabled=true;$('position').disabled=true;
   $('problem').textContent='Loading recorded output…';$('replay-error').hidden=true;
   try{
-    const response=await fetch('./data/'+index.file);if(!response.ok)throw Error(`Trace unavailable (${response.status})`);
+    const response=await fetch('/2/data/'+index.file);if(!response.ok)throw Error(`Trace unavailable (${response.status})`);
     const trace=await response.json();if(request!==state.request)return;
     state.trace=trace;$('case-id').textContent=trace.id.replace('test/','').replace('.json','');
     $('problem').textContent=trace.problem;$('position').max=String(Math.max(...Object.values(trace.trajectories).map(t=>t.tokens)));
@@ -49,7 +49,7 @@ async function init(){
   $('position').addEventListener('input',()=>{pause();state.position=Number($('position').value);draw();});
   document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
   try{
-    const response=await fetch('./data/traces.json');if(!response.ok)throw Error('Trace index unavailable');
+    const response=await fetch('/2/data/traces.json');if(!response.ok)throw Error('Trace index unavailable');
     const index=await response.json();$('trace-choice').replaceChildren(...index.map((r,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=r.label;return o;}));
     $('trace-choice').addEventListener('change',()=>load(index[Number($('trace-choice').value)]));
     await load(index[0]);

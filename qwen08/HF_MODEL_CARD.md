@@ -31,14 +31,14 @@ a robust drop-in loop fix. The original traces and failure audit are published.
 | RikiyaT independent rerun, strongest global index 0 |52.2%|
 | This candidate, local seed 0 |55.2%|
 
-Different engines and runs; not a controlled causal comparison. The3-point
-difference has exploratory paired-bootstrap95%CI[-0.4,6.4]points, descriptive
+Different engines and runs; not a controlled causal comparison. The 3-point
+difference has exploratory paired bootstrap 95% CI [-0.4, 6.4] points, descriptive
 McNemar p=0.110. This does not establish superiority or equivalence. RikiyaT's
-reference index was selected as the globally strongest of4, fixed for all problems.
+reference index was selected as the globally strongest of 4, fixed for all problems.
 
 Our mean total output length is 15,828.59 over 500 problems. On 20 shared published
-first-sample texts:15,340.15 vs approximately 21,638.15 retokenized reference
-tokens(-29.1%). That token comparison is limited to20 prompts.
+first-sample texts: 15,340.15 vs approximately 21,638.15 retokenized reference
+tokens (-29.1%). That token comparison is limited to 20 prompts.
 
 ## Use
 
@@ -49,11 +49,11 @@ llama-server -m Qwen3.5-0.8B-BF16-probe-graft.gguf \
   -ngl 99 -fa on -c 278528 -np 8 -b 256 -ub 256 --jinja --port 8200
 ```
 
-The file is approximately2.07GB. Untying the shared embedding/head adds roughly
-0.51GB compared with the base GGUF; transformer compute is unchanged.
+The file is approximately 2.07 GB. Untying the shared embedding/head adds roughly
+0.51 GB compared with the base GGUF; transformer compute is unchanged.
 
-Evaluation used temperature 0.6, top-p0.95, top-k20, min-p0, presence penalty1.5,
-frequency 0, repetition 1.0,32,768 output tokens, and seed 0 on every request.
+Evaluation used temperature 0.6, top-p 0.95, top-k 20, min-p 0, presence penalty 1.5,
+frequency 0, repetition 1.0, 32,768 output tokens, and seed 0 on every request.
 Explicit order: penalties -> top-k -> top-p -> temperature. These reproduce the
 reference's sampling values, not a claim to be the current general Qwen recommendation.
 
@@ -62,15 +62,15 @@ reference's sampling values, not a claim to be the current general Qwen recommen
 Base HF revision: `2fc06364715b967f1860aea9cf38778875588b17`.
 80 MATH-training problems fit the probes;16 separate training questions select
 candidate strengths. No MATH-500/GSM8K-test/IFEval examples enter parameter fitting.
-The repeatedly used development16 are not an independent test. On a fresh16
-training check this candidate scored 8/16 vs previous graft9/16.
+The repeatedly used development 16 are not an independent test. On a fresh 16
+training check this candidate scored 8/16 vs previous graft 9/16.
 
-The stop row receives12 times the re-checking probe plus24 times a loop-boundary
+The stop row receives 12 times the re-checking probe plus 24 times a loop-boundary
 probe. The two Wait rows receive minus 4 times an all-token loop probe. Labels are
 heuristics; the model does not have a guaranteed "answer settled" detector.
 There is no hard phase gate, explaining why unwanted closing tags remain possible.
 
-Recorded setup: RTX4060 Laptop8GB, Ubuntu26.04, CUDA13.2.78, driver595.71.05;
+Recorded setup: RTX 4060 Laptop 8 GB, Ubuntu 26.04, CUDA 13.2.78, driver 595.71.05;
 llama.cpp base commit `3549c274dc22001d9118713fa56a10085b85de3b` plus an arithmetic-
 identical sparse presence-penalty patch. Python and scorer versions, raw results,
 fitting scripts, probes, exact parameters, dataset revisions and checks are in
