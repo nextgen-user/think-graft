@@ -19,6 +19,17 @@ published outputs and token counts. Do not remove them before benchmarking.
 
 ## Results and interpretation
 
+All three evaluations are complete: **MATH-500 276/500 (55.2%), GSM8K 930/1,319 (70.5%), IFEval strict prompt-level 228/541 (42.1%)**. One seed-0 sample per problem, same frozen output-head model throughout. Token-limit rates: 33.0%, 4.2%, and 23.3%, respectively.
+
+| Model | MATH-500 (%) | GSM8K (%) | IFEval (%) | Hit token limit, MATH-500 (%) |
+|---|---:|---:|---:|---:|
+| Base, author-reported aggregate |7.9|13.8|21.0|93.0|
+| Astra/RikiyaT, author-reported aggregate |48.1|67.1|62.3|33.1|
+| Our three-row graft, one sample |55.2|70.5|42.1|33.0|
+
+Reference rows are published multi-sample aggregates, unlike our single sample and serving engine. IFEval is 20.2 percentage points below the published Astra result: maths performance did not transfer cleanly to instruction following. Full outputs and summary provenance are in `results/` and `publication/completed-benchmarks.json`.
+
+
 | Full MATH-500; one selected answer per problem | Correct |
 |---|---:|
 | Unedited, original upstream evaluation sample 0 |35/500 (7.0%)|
@@ -36,8 +47,7 @@ equivalence. The original paper's multi-sample baseline average was7.9%; the
 Mean output length is 15,828.59 tokens over our500 outputs. On 20 shared published
 reference first-sample texts, ours averages15,340.15 vs approximately 21,638.15
 retokenized tokens (-29.1%). That saving is for those 20 prompts, not all 500.
-GSM8K and IFEval are separate evaluations; do not infer their final scores from
-incomplete progress. No test result was used as a probe-fitting example.
+GSM8K and IFEval are complete separate evaluations. No test result was used as a probe-fitting example.
 
 ## Run the released model
 

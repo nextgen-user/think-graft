@@ -1,0 +1,16 @@
+{
+  "problems": 541,
+  "generations": 541,
+  "samples_per_problem": {
+    "1": 541
+  },
+  "accuracy": 0.4214417744916821,
+  "accuracy_problem_bootstrap_95CI": [
+    0.3789279112754159,
+    0.46395563770794823
+  ],
+  "cap_rate": 0.23290203327171904,
+  "mean_tokens": 8341.80776340111,
+  "mean_thinking_tokens": 907.1293900184843,
+  "comparison": "External reference scores are not a controlled paired baseline."
+}

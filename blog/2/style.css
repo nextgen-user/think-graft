@@ -8,3 +8,5 @@
 
 /* Keep the question readable without overwhelming the opening. */
 main>header h1{font-size:clamp(40px,6vw,64px);line-height:1.08;text-wrap:balance}.article-links{display:flex;flex-wrap:wrap;gap:10px 24px;margin:22px 0;font:600 13px/1.5 system-ui,sans-serif}@media(max-width:560px){main>header h1{font-size:43px}.article-links{flex-direction:column}}
+
+.benchmark-results{min-width:670px}.benchmark-results tr>*:nth-child(4){display:table-cell}.benchmark-results th,.benchmark-results td{padding:12px 9px}.benchmark-results thead th{text-transform:none;font-size:12px;letter-spacing:0}.benchmark-results tbody td{font-size:14px}.run-breakdown{min-width:560px}

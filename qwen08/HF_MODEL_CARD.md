@@ -25,6 +25,17 @@ a robust drop-in loop fix. The original traces and failure audit are published.
 
 ## Results
 
+All three evaluations are complete: **MATH-500 276/500 (55.2%), GSM8K 930/1,319 (70.5%), IFEval strict prompt-level 228/541 (42.1%)**. One seed-0 sample per problem, same frozen output-head model throughout. Token-limit rates: 33.0%, 4.2%, and 23.3%, respectively.
+
+| Model | MATH-500 (%) | GSM8K (%) | IFEval (%) | Hit token limit, MATH-500 (%) |
+|---|---:|---:|---:|---:|
+| Base, author-reported aggregate |7.9|13.8|21.0|93.0|
+| Astra/RikiyaT, author-reported aggregate |48.1|67.1|62.3|33.1|
+| Our three-row graft, one sample |55.2|70.5|42.1|33.0|
+
+Reference rows are published multi-sample aggregates, unlike our single sample and serving engine. IFEval is 20.2 percentage points below the published Astra result: maths performance did not transfer cleanly to instruction following. Full outputs and summary provenance are in `results/` and `publication/completed-benchmarks.json`.
+
+
 | MATH-500, one selected answer per problem | Accuracy |
 |---|---:|
 | Unedited original upstream sample 0 |7.0%|

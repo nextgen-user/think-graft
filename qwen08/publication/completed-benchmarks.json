@@ -1,0 +1,96 @@
+{
+  "protocol": "One sample per problem, seed 0, frozen three-row output-head model. External references use different serving engines.",
+  "benchmarks": {
+    "math500": {
+      "problems": 500,
+      "correct": 276,
+      "accuracy_percent": 55.2,
+      "capped": 165,
+      "cap_percent": 33.0,
+      "total_output_tokens": 7914295,
+      "mean_output_tokens": 15828.59,
+      "accuracy_bootstrap95CI": [
+        0.51,
+        0.596
+      ],
+      "capped_after_close": 163,
+      "extra_closing_tags": 1348952,
+      "responses_with_extra_closing_tags": 407,
+      "selected_reference": {
+        "sample_index": 0,
+        "correct": 261,
+        "accuracy_percent": 52.2,
+        "ours_only": 46,
+        "reference_only": 31,
+        "descriptive_mcnemar_p": 0.11001559898513334,
+        "limitation": "Retrospectively selected strongest global reference index; external serving engine. Not a causal superiority test."
+      }
+    },
+    "gsm8k": {
+      "problems": 1319,
+      "correct": 930,
+      "accuracy_percent": 70.50796057619408,
+      "capped": 55,
+      "cap_percent": 4.169825625473844,
+      "total_output_tokens": 7231302,
+      "mean_output_tokens": 5482.412433661865,
+      "accuracy_bootstrap95CI": [
+        0.6808188021228203,
+        0.7293404094010614
+      ],
+      "capped_after_close": 54,
+      "extra_closing_tags": 526602,
+      "responses_with_extra_closing_tags": 793,
+      "selected_reference": {
+        "sample_index": 1,
+        "correct": 903,
+        "accuracy_percent": 68.46095526914328,
+        "ours_only": 133,
+        "reference_only": 106,
+        "descriptive_mcnemar_p": 0.09239942566307559,
+        "limitation": "Retrospectively selected strongest global reference index; external serving engine. Not a causal superiority test."
+      }
+    },
+    "ifeval": {
+      "problems": 541,
+      "correct": 228,
+      "accuracy_percent": 42.144177449168204,
+      "capped": 126,
+      "cap_percent": 23.290203327171906,
+      "total_output_tokens": 4512918,
+      "mean_output_tokens": 8341.80776340111,
+      "accuracy_bootstrap95CI": [
+        0.3789279112754159,
+        0.46395563770794823
+      ],
+      "capped_after_close": 121,
+      "extra_closing_tags": 1646716,
+      "responses_with_extra_closing_tags": 244,
+      "selected_reference": {
+        "sample_index": 1,
+        "correct": 345,
+        "accuracy_percent": 63.77079482439926,
+        "ours_only": 43,
+        "reference_only": 160,
+        "descriptive_mcnemar_p": 4.825934259214272e-17,
+        "limitation": "Retrospectively selected strongest global reference index; external serving engine. Not a causal superiority test."
+      }
+    }
+  },
+  "published_reference": {
+    "base": {
+      "math500": 7.9,
+      "gsm8k": 13.8,
+      "ifeval": 21.0,
+      "math500_cap": 93.0
+    },
+    "astra": {
+      "math500": 48.1,
+      "gsm8k": 67.1,
+      "ifeval": 62.3,
+      "math500_cap": 33.1
+    },
+    "source": "https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming",
+    "interpretation": "Author-reported multi-sample aggregates, distinct from selected-index comparison above. Cap column is MATH-500 only."
+  }
+}

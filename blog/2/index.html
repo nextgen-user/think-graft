@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Does weight-space programming need to touch the hidden layers?</title>
-<meta name="description" content="A follow-up to the Astra and linear-program experiments: edit three output rows in Qwen, test all 500 MATH-500 questions, and inspect what still breaks.">
+<meta name="description" content="A follow-up to the Astra and linear-program experiments: edit three output rows in Qwen, complete MATH-500, GSM8K and IFEval, and inspect what still breaks.">
 <link rel="canonical" href="https://probe-graft.vercel.app/2/">
 <meta property="og:title" content="Does weight-space programming need to touch the hidden layers?">
-<meta property="og:description" content="Three output rows. 55.2% on MATH-500. A simpler place to intervene—and a failure that ending thinking does not fix.">
+<meta property="og:description" content="Three output rows. MATH-500 55.2%, GSM8K 70.5%, IFEval 42.1%. Complete benchmarks and the instruction-following trade-off.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://probe-graft.vercel.app/2/preview.png?v=2">
+<meta property="og:image" content="https://probe-graft.vercel.app/2/preview.png?v=3">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/2/style.css">
@@ -23,7 +23,7 @@
 <header>
 <p class="eyebrow">An output-head experiment · 17 November 2026</p>
 <h1>Does weight-space programming need to touch the hidden layers?</h1>
-<p class="lede">I tried leaving Qwen’s internal layers alone and editing only three rows that score its next token. The model reached 55.2% on MATH-500. Then I looked at the runs that still would not stop.</p>
+<p class="lede">I tried leaving Qwen’s internal layers alone and editing only three rows that score its next token. It reached 55.2% on MATH-500 and 70.5% on GSM8K, but only 42.1% on instruction following. Then I looked at the runs that still would not stop.</p>
 <div class="byline"><span>Vaibhav</span><a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08">Code &amp; raw outputs</a><a href="https://huggingface.co/vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF">Experimental GGUF</a></div>
 </header>
 
@@ -34,23 +34,32 @@
 </section>
 <p class="opening">In <a href="https://rikiyat.github.io/blog/weight-space-programming/">Sparks of Weight-Space Programming</a>, Astra improved Qwen3.5-0.8B by editing two internal feed-forward layers. <a href="https://nathan.rs/posts/weight-space-lp/">Nathan’s follow-up</a> showed how a linear program could find a related edit. My experiment asks a narrower question: how much of the result can we recover at the model’s final output layer?</p>
 <p>A reasoning model already has a token for ending its scratchpad: <code>&lt;/think&gt;</code>. I fitted small linear classifiers to the model’s final hidden state, then folded their weights into the rows for that token and two spellings of <code>Wait</code>. This changes when it stops or says “Wait” while preserving every original transformer tensor. The edited weights run without a separate classifier at inference time.</p>
-<p>On the full 500-question benchmark, this candidate scored <strong>55.2%</strong>, alongside <strong>52.2%</strong> for the selected published Astra-edited reference run. The runs use different engines, so this is evidence worth investigating—not proof of a better method. The more surprising result was where the remaining loops went.</p>
-<div class="article-links"><a href="#results">Compare all 500 questions ↓</a><a href="#replay">Replay successes and failures ↓</a></div>
+<p>On the full 500-question benchmark, this candidate scored <strong>55.2%</strong>, alongside <strong>52.2%</strong> for the selected published Astra-edited reference run. The runs use different engines, so this is evidence worth investigating—not proof of a better method. The completed follow-up tests also show a trade-off: strong maths scores did not carry over cleanly to instruction following.</p>
+<div class="article-links"><a href="#results">Compare all three benchmarks ↓</a><a href="#replay">Replay successes and failures ↓</a></div>
 <aside class="finding"><strong>Ending thinking did not always end the loop.</strong> 165 of 500 runs reached the token limit. In 163, thinking had already closed and the output kept going. Repeated closing tags are a substantial failure, not removed from the results. <a href="#limits">See the audit.</a></aside>
 
 <section id="results">
-<div class="section-label"><span>01</span> The complete math result</div>
-<h2>Three output rows. 500 math questions.</h2>
-<p>All rows below cover the same 500 MATH-500 questions. Each uses one selected answer per question. The references come from external runs; this is a benchmark comparison, not a controlled same-engine experiment.</p>
-<div class="table-scroll"><table class="results"><caption>MATH-500 · thinking enabled · 32,768-token limit</caption><thead><tr><th scope="col">Model</th><th scope="col">Correct</th><th scope="col">Accuracy</th><th scope="col">Direct weight change</th></tr></thead><tbody>
-<tr><th scope="row">Unedited Qwen3.5-0.8B<sup>a</sup></th><td>35 / 500</td><td>7.0%</td><td>None</td></tr>
-<tr><th scope="row">RikiyaT / Astra edit<sup>b</sup></th><td>261 / 500</td><td>52.2%</td><td>Feed-forward layers 15 and 19</td></tr>
-<tr class="ours"><th scope="row">Output-head probe graft</th><td>276 / 500</td><td><strong>55.2%</strong></td><td>Three output rows</td></tr>
+<div class="section-label"><span>01</span> All three benchmarks, complete</div>
+<h2>Good maths results. A weaker transfer result.</h2>
+<p>The frozen output-head edit has now finished all <strong>2,360 problems</strong>: 500 MATH-500, 1,319 GSM8K and 541 IFEval. GSM8K tests grade-school maths; IFEval checks whether a response follows explicit instructions. All three used the same model, one sample per question and seed 0.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Complete benchmark comparison"><table class="results benchmark-results"><caption>Qwen3.5-0.8B · accuracy (%) · thinking enabled · 32,768-token limit</caption><thead><tr><th scope="col">Qwen3.5-0.8B</th><th scope="col">MATH-500 (%)</th><th scope="col">GSM8K (%)</th><th scope="col">IFEval (%)</th><th scope="col">Hit token limit (%)<sup>†</sup></th></tr></thead><tbody>
+<tr><th scope="row">Base<sup>a</sup></th><td>7.9</td><td>13.8</td><td>21.0</td><td>93.0</td></tr>
+<tr><th scope="row">Astra / RikiyaT edit<sup>a</sup></th><td>48.1</td><td>67.1</td><td>62.3</td><td>33.1</td></tr>
+<tr class="ours"><th scope="row">Output-head graft (ours)<sup>b</sup></th><td><strong>55.2</strong></td><td><strong>70.5</strong></td><td><strong>42.1</strong></td><td><strong>33.0</strong></td></tr>
 </tbody></table></div>
-<p class="caption"><sup>a</sup> Sample 0 of the original author’s full unedited evaluation, not the 25-question smoke test. <sup>b</sup> Sample 0 of the independent Hugging Face rerun, the strongest of its four global sample indices. The same index is used for every problem. Different engines and random draws remain confounders.</p>
-<p>The observed lead is three percentage points. There are <strong>46 questions only our sample gets right and 31 only the reference gets right</strong>. An exploratory paired bootstrap gives a difference interval of −0.4 to +6.4 points; descriptive McNemar <i>p</i> = 0.110. This does not establish superiority or equivalence.</p>
-<p>Our mean total output is <strong>15,829 tokens</strong>. On the 20 questions with published reference sample text, ours averages 15,340 versus about 21,638 retokenized reference tokens: <strong>29.1% fewer on that subset</strong>. That is not a 500-question token-saving estimate.</p>
-<p class="status"><span class="dot"></span> GSM8K and IFEval are follow-up evaluations. Their final results are not included in this release. <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/results">Frozen results</a></p>
+<p class="caption"><sup>†</sup> The last column is the <strong>MATH-500</strong> token-limit rate, matching the reference table; it is not a pooled rate across datasets. <sup>a</sup> Author-reported multi-sample aggregates from <a href="https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming">RikiyaT’s model card</a>. <sup>b</sup> Our single seed-0 sample per question. The engines and sample counts differ; these are external benchmark comparisons, not controlled estimates of improvement.</p>
+<p>The pattern is mixed. Our observed maths scores are above the published reference, while <strong>IFEval is 20.2 percentage points lower</strong>. Fitting on maths did not preserve the reference edit’s instruction-following performance. The result supports testing output-layer interventions; it does not support replacing internal edits across tasks.</p>
+<div class="table-scroll"><table class="run-breakdown"><caption>Our complete run · total output includes thinking, answers and repeated tags</caption><thead><tr><th>Benchmark</th><th>Correct / total</th><th>Hit limit</th><th>Mean output tokens</th></tr></thead><tbody>
+<tr><th>MATH-500</th><td>276 / 500</td><td>165 / 500 (33.0%)</td><td>15,829</td></tr>
+<tr><th>GSM8K</th><td>930 / 1,319</td><td>55 / 1,319 (4.2%)</td><td>5,482</td></tr>
+<tr><th>IFEval</th><td>228 / 541</td><td>126 / 541 (23.3%)</td><td>8,342</td></tr>
+</tbody></table></div>
+<details><summary>Selected-reference comparison, uncertainty and token savings</summary><div class="detail-body"><p>The table above uses the author’s published aggregates so it can be read alongside the original release. The earlier comparison on this page used one retrospectively selected reference sample index per benchmark. These are different reference summaries, not changed model results.</p>
+<div class="table-scroll"><table><thead><tr><th>Benchmark</th><th>Ours (%)</th><th>Selected reference (%)</th><th>Reference index</th></tr></thead><tbody><tr><th>MATH-500</th><td>55.2</td><td>52.2</td><td>0</td></tr><tr><th>GSM8K</th><td>70.5</td><td>68.5</td><td>1</td></tr><tr><th>IFEval</th><td>42.1</td><td>63.8</td><td>1</td></tr></tbody></table></div>
+<p>Each reference index is its globally highest-scoring available index, held fixed across all questions; there is no per-question best-of selection. MATH uses the independent Hugging Face rerun (four indices), while GSM8K and IFEval use the upstream logs (two indices). This selection and the different serving engines limit the statistical interpretation.</p>
+<p>On MATH-500, 46 questions are correct only in our sample and 31 only in the reference sample. An exploratory paired bootstrap gives a 95% difference interval of −0.4 to +6.4 points; descriptive McNemar <i>p</i> = 0.110. On GSM8K the discordant counts are 133 versus 106 (<i>p</i> = 0.092). These do not establish superiority or equivalence. On IFEval the counts are 43 versus 160: the observed disadvantage is substantial.</p>
+<p>On the 20 MATH questions with published reference sample text, ours averages 15,340 versus about 21,638 retokenized reference tokens: 29.1% fewer on that subset. That is not a full-benchmark token-saving estimate.</p>
+<p><a href="/2/data/completed-benchmarks.json">Complete analysis snapshot</a> · <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/results">All saved outputs and scores</a></p></div></details>
 </section>
 
 <section id="replay" class="wide">
@@ -107,10 +116,10 @@
 <section id="limits">
 <div class="section-label"><span>06</span> What the criticism changed</div>
 <h2>Ending thinking is not enough.</h2>
-<p>The largest failure became clear only after the full run. The edited model closed thinking in 163 of the 165 capped cases, then continued in the answer. Across 407 responses it emitted <strong>1,348,952 extra closing tags</strong>, around 17% of all generated tokens. The model has no hard phase gate; its stop boost can remain active after the first close.</p>
+<p>The largest failure became clear only after the full run. The edited model closed thinking in 163 of the 165 capped cases, then continued in the answer. Across 407 responses it emitted <strong>1,348,952 extra closing tags</strong>, around 17% of all generated tokens. The model has no hard phase gate; its stop boost can remain active after the first close. This failure extends beyond MATH: 54 of 55 capped GSM8K runs and 121 of 126 capped IFEval runs had already closed thinking. IFEval alone contains 1,646,716 extra closing tags. Suppressing Wait and boosting a closing tag does not solve answer-phase repetition or guarantee instruction following.</p>
 <p>The grader does not automatically reject capped runs. It extracts the last boxed answer after the last close, or from the full response if thinking never closed. An audit found <strong>no correct boxed answer anywhere in the 165 capped responses</strong>. Unboxed candidates may still go uncredited under this protocol.</p>
 <p>A cheap 8-gram detector, applied to saved outputs, flagged all 165 capped runs and 206 of 335 completed runs. That is alert coverage, not independently annotated precision/recall. It does not establish that forcing a stop at the alert would produce the right answer.</p>
-<details><summary>Completed checks, open controls, and selection caveats</summary><div class="detail-body"><ul><li><strong>Done:</strong> complete MATH-500; separate fitting/development IDs; frozen weights; exact tensor comparison; sampler checks; capped-answer audit; a prefix-only repetition diagnostic; published raw results.</li><li><strong>Still missing:</strong> tuned penalty/sampling controls, avg@8 or larger repeated draws, independently labeled detector precision/recall, and systematic batch-invariance checks.</li><li>Presence penalty 1.5 is enabled. That is one setting, not a calibrated penalty sweep. A fixed seed does not remove serving noise.</li><li>The development set was reused for model selection. A fresh 16-question check scored 8/16 for this candidate versus 9/16 for the previous graft. This negative result is retained.</li><li>The earlier p = 0.0078 referred to token reductions on eight exploratory Qwen-4B pairs, not an accuracy improvement or a test that excludes sampling and serving noise.</li><li>Qwen’s tied embedding/head requires a new output matrix: roughly 0.51 GB extra. There is no extra transformer pass, but it is not zero memory overhead.</li><li>The current three-row model can change non-stop token choices. It must not be described as the old “only one logit changes” model.</li></ul><p><a href="/2/data/study.json">Analysis snapshot</a> · <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/publication">Audits and provenance</a></p></div></details>
+<details><summary>Completed checks, open controls, and selection caveats</summary><div class="detail-body"><ul><li><strong>Done:</strong> complete MATH-500, GSM8K and IFEval; separate fitting/development IDs; frozen weights; exact tensor comparison; sampler checks; capped-answer audit; a prefix-only repetition diagnostic; published raw results.</li><li><strong>Still missing:</strong> tuned penalty/sampling controls, avg@8 or larger repeated draws, independently labeled detector precision/recall, and systematic batch-invariance checks.</li><li>Presence penalty 1.5 is enabled. That is one setting, not a calibrated penalty sweep. A fixed seed does not remove serving noise.</li><li>The development set was reused for model selection. A fresh 16-question check scored 8/16 for this candidate versus 9/16 for the previous graft. This negative result is retained.</li><li>The earlier p = 0.0078 referred to token reductions on eight exploratory Qwen-4B pairs, not an accuracy improvement or a test that excludes sampling and serving noise.</li><li>Qwen’s tied embedding/head requires a new output matrix: roughly 0.51 GB extra. There is no extra transformer pass, but it is not zero memory overhead.</li><li>The current three-row model can change non-stop token choices. It must not be described as the old “only one logit changes” model.</li></ul><p><a href="/2/data/study.json">Analysis snapshot</a> · <a href="https://github.com/nextgen-user/think-graft/tree/main/qwen08/publication">Audits and provenance</a></p></div></details>
 </section>
 
 <section id="reproduce">
