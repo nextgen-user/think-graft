@@ -3,7 +3,7 @@
   "previous_post": "https://probe-graft.vercel.app/",
   "repository": "https://github.com/nextgen-user/think-graft",
   "model": "https://huggingface.co/vaibhavrpi/Qwen3.5-0.8B-probe-graft-GGUF",
-  "article_commit": "57ec534ca746af4f9ab2670badd05ae1ddb8b016",
+  "article_commit": "1deecd1048926e8d88d0ab67babb60af0b738798",
   "deployment_status": "READY",
   "live_browser_checks": [
     {
@@ -28,5 +28,10 @@
       "errors": []
     }
   ],
-  "verification": "Production URLs, model download and repository returned HTTP 200; replay, math rendering, light/dark and phone layout checked. GSM8K still running; no benchmark restarted."
+  "verification": "Complete MATH-500, GSM8K and IFEval results published; live table and JSON snapshot verified. No inference reruns.",
+  "benchmarks_complete": [
+    "math500",
+    "gsm8k",
+    "ifeval"
+  ]
 }
